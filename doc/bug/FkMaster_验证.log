@@ -1,0 +1,33 @@
+################################################################################
+				Software Name:                     FkMaster
+				Software Version:                    v0.0.1
+				Author:                       figkey-leiwei
+				Compilation Date:               Oct 31 2024
+				Compilation Time:                  16:04:22
+				Running Platform:                   windows
+				Running Time:      Thu Oct 31 16:06:02 2024
+################################################################################
+2024-10-31 16:06:02.044 [INF] Main UI thread id: 14124
+2024-10-31 16:06:10.606 [INF] Connected to server: 192.168.201.131
+2024-10-31 16:06:10.607 [ERR] Failed to send data. Error: 0
+2024-10-31 16:06:10.607 [INF] Start read message thread 1948
+2024-10-31 16:06:10.607 [ERR] Failed to read data. Error: 0, Message: No error
+2024-10-31 16:06:10.607 [INF] Stop read message thread 1948
+2024-10-31 16:06:11.107 [INF] Disconnected from server: 192.168.201.131
+2024-10-31 16:06:11.108 [ERR] Open Device-1failed, Unable to read version information
+################################################################################
+				Software Name:                     FkMaster
+				Software Version:                    v0.0.1
+				Author:                       figkey-leiwei
+				Compilation Date:               Oct 31 2024
+				Compilation Time:                  09:35:11
+				Running Platform:                   windows
+				Running Time:      Thu Oct 31 16:11:54 2024
+################################################################################
+2024-10-31 16:11:54.217 [INF] Main UI thread id: 8840
+2024-10-31 16:12:00.560 [INF] Connected to server: 192.168.201.130
+2024-10-31 16:12:00.561 [DBG] SD: aa 55 0f 60 00 00 01 00 01 00
+2024-10-31 16:12:00.562 [INF] Start read message thread 1176
+2024-10-31 16:12:01.054 [INF] Disconnected from server: 192.168.201.130
+2024-10-31 16:12:01.054 [INF] Stop read message thread 1176
+2024-10-31 16:12:01.056 [ERR] Open Device-1failed, Unable to read version information

@@ -1,0 +1,8 @@
+range byte= 0x00, voltage range = 0~60V
+range byte = 0x01, voltage range = 0~30V
+range byte = 0x02, voltage range = 0~15V
+range byte = 0x03, voltage range = 0~7.5V
+range byte = 0x04, voltage range = 0~3.75V
+range byte = 0x05, voltage range = 0~1.88V
+range byte = 0x06, voltage range = 0~0.94V
+range byte = 0x07, voltage range = 0~0.47V

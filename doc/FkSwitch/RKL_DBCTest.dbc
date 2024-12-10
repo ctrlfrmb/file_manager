@@ -1,0 +1,114 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: TleCtBox Control
+VAL_TABLE_ WorkModeDataType 1 "DirectrPwmMode" 0 "CurrentMode" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ VDD : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HalPerTarg : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatVol : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HalPerAct : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PwmReal : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 258 Test2: 8 Vector__XXX
+ SG_ RunFailCnt : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RunTotalCnt : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotCtRefCnt : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ClamLastStus : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ClamStus : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 257 Test1: 8 Vector__XXX
+ SG_ Rev1 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotCtRunRefCounter : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ EepAvFlag : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ REV : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RklType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SelfLearnStus : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 256 Test: 8 Vector__XXX
+ SG_ uBat : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hall_ADC : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DiagFlag : 24|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ PowerStus : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RKL_LastStus : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RKL_NowStus : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566881609 J1939RSP: 8 Vector__XXX
+ SG_ ActuatorPwmDuty : 56|8@1+ (1,-125) [0|0] "" Vector__XXX
+ SG_ ActuatorOperateMode : 54|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NA1 : 52|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PowerState : 50|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TargetPosition : 40|10@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrCode : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Temperature : 24|8@1+ (1,-40) [0|0] "" Vector__XXX
+ SG_ NA : 18|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MsgPeriodStatus : 21|3@1- (1,0) [0|0] "" Vector__XXX
+ SG_ ActuatorState : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ActuatorPosition : 8|10@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566881280 J1939CT: 8 Vector__XXX
+ SG_ UnUsedData8 : 56|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ UnUsedData7 : 48|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ UnUsedData6 : 40|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ UnUsedData5 : 35|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MsgPeriodStatusSet : 32|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UnUsedData4 : 28|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PowerStatus : 26|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PowerOffStatus : 24|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CommandedState : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UnUsedData2 : 10|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DesiredPosition : 0|10@1+ (1,0) [0|102] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "Tc_DBC";
+

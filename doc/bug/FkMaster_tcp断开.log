@@ -1,0 +1,111 @@
+################################################################################
+				Software Name:                  Switch Tool
+				Software Version:                    v0.0.1
+				Author:                       figkey-leiwei
+				Compilation Date:               Oct 31 2024
+				Compilation Time:                  16:41:48
+				Running Platform:                   windows
+				Running Time:      Thu Oct 31 16:42:40 2024
+################################################################################
+2024-10-31 16:42:40.210 [INF] Main UI thread id: 4400
+2024-10-31 16:43:07.072 [INF] Connected to server: 192.168.201.131
+2024-10-31 16:43:07.072 [INF] Start read message thread 17836
+2024-10-31 16:43:07.072 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.073 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.073 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.073 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.073 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.073 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.073 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.074 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.074 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.074 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.074 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.074 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.074 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.074 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.074 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.074 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.080 [INF] Successfully open Device1 CAN2
+2024-10-31 16:43:07.083 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.083 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.084 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.085 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.086 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.086 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.086 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.086 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.087 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.088 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.089 [ERR] Error frame (0x1FFFFFFF) received: 00 00 00 08
+2024-10-31 16:43:07.089 [INF] Successfully open Device1 CAN1
+2024-10-31 16:43:34.045 [ERR] Failed to read data. Error: 0, Message: No error
+2024-10-31 16:43:34.045 [INF] Stop read message thread 17836

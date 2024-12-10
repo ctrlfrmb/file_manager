@@ -1,0 +1,660 @@
+VERSION "0.0"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ECU BCM ABS EBS AEBS sBOX ICU TCU TPMS EPS
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ HRLFC_DslPrtclteFilter1SotMss : 0|8@1+ (0.1,0) [0|127.5] "g" Vector__XXX
+
+BO_ 2566908416 Gaseous_Information5: 8 ECU
+ SG_ VD_CNGTotalVehicleDistance : 32|32@1+ (0.125,0) [0|526385151.9] "km" Vector__XXX
+
+BO_ 2565865472 ERC1_Electronic_Retarder_Control: 8 Vector__XXX
+ SG_ ERC1_ActualRetarderPercentTorque : 8|8@1+ (1,-125) [-125|0] "%" Vector__XXX
+
+BO_ 2364539648 EEC2_Electronic_Engine_Controlle: 8 Vector__XXX
+ SG_ EEC2_AccelPedalPos1 : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ EEC2_EngPercentLoadAtCurrentSpee : 16|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ EEC2_DPFThermalManagementActive : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EEC2_ActlMxAvailableEngPercentTo : 48|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2364539904 EEC1_Electronic_Engine_Controlle: 8 Vector__XXX
+ SG_ EEC1_EngTorqueMode : 0|4@1+ (1,0) [0|15] ""  sBOX
+ SG_ EEC1_ActlEngPrcntTrqueHighResolu : 4|4@1+ (0.125,0) [0|0.875] "%" Vector__XXX
+ SG_ EEC1_DriversDemandEngPercentTorq : 8|8@1+ (1,-125) [-125|125] "%"  sBOX
+ SG_ EEC1_ActualEngPercentTorque : 16|8@1+ (1,-125) [-125|125] "%"  sBOX
+ SG_ EEC1_EngSpeed : 24|16@1+ (0.125,0) [0|8031.875] "rpm"  sBOX,ICU
+ SG_ EEC1_EngDemandPercentTorque : 56|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ EEC1_ECU_SA : 40|8@1+ (1,0) [0|253] "" Vector__XXX
+
+BO_ 2364541440 EGF1_Engine_Gas_Flow_Rate: 8 Vector__XXX
+ SG_ EGF1_EngExhstGsRcrclton1MassFlow : 0|16@1+ (0.05,0) [0|3212.75] "kg/h" Vector__XXX
+ SG_ EGF1_EngIntakeAirMassFlowRate : 16|16@1+ (0.05,0) [0|3212.75] "kg/h" Vector__XXX
+
+BO_ 2432498944 EEC9_Electronic_Engine_Controlle: 8 Vector__XXX
+ SG_ EEC9_CmdedEngFuelRailPress : 32|16@1+ (0.00390625,0) [0|250.996] "Mpa" Vector__XXX
+
+BO_ 2566719232 DLCC1_Direct_Lamp_Control_Comman: 8 Vector__XXX
+ SG_ DLCC1_EngAmberWarningLampCmd : 2|2@1+ (1,0) [0|3] ""  sBOX,ICU
+ SG_ DLCC1_EngRedStopLampCmd : 4|2@1+ (1,0) [0|3] ""  sBOX,ICU
+ SG_ DLCC1_OBDMalfunctionIndicatorLam : 6|2@1+ (1,0) [0|3] ""  sBOX,ICU
+ SG_ DLCC1_EngBrakeActiveLampCmd : 8|2@1+ (1,0) [0|3] ""  sBOX,ICU
+ SG_ DLCC1_EngOilPressLowLampCmd : 12|2@1+ (1,0) [0|3] ""  sBOX,ICU
+ SG_ DLCC1_EngCoolantTempHighLampCmd : 14|2@1+ (1,0) [0|3] ""  sBOX,ICU
+ SG_ DLCC1_EngCoolantLevelLowLampCmd : 16|2@1+ (1,0) [0|3] ""  sBOX,ICU
+
+BO_ 2566719744 HRLFC_High_Resolution_Fuel_Consu: 8 Vector__XXX
+ SG_ HRLFC_HiRsltnEngTrpFuel : 0|32@1+ (0.001,0) [0|4211081.215] "L" Vector__XXX
+ SG_ HRLFC_HiRsltnEngTotFuelUsed : 32|32@1+ (0.001,0) [0|4211081.215] "L" Vector__XXX
+
+BO_ 2566724608 DPF1S_Diesel_Particulate_Filter_: 2 Vector__XXX
+ SG_ HRLFC_DslPrtclteFilter1SotMss : 0|8@1+ (4,0) [0|1000] "g" Vector__XXX
+ SG_ HRLFC_DslPrtclteFilter1SotDnsty : 8|8@1+ (0.08,0) [0|20] "g/L" Vector__XXX
+
+BO_ 2566725632 A1DOC_Aftertreatment_1_Diesel_Ox: 8 Vector__XXX
+ SG_ A1DOC_Aftrtrtmnt1DslOxdtnCtlystI : 0|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+ SG_ A1DOC_Aftrtrtmnt1DslOxdtnCtlystO : 16|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+
+BO_ 2499624448 A1SCREGT1_Aftertreatment_1_SCR_E: 8 Vector__XXX
+ SG_ A1SCREGT1_Aftrtrtmnt1SCRCtlystIn : 0|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+ SG_ A1SCREGT1_Aftrtrtmnt1SCRCtlystOt : 24|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+
+BO_ 2566748928 AT1S_Aftertreatment_1_Service: 8 Vector__XXX
+ SG_ AT1S_DslPrtclteFilter1AshLoadPer : 0|8@1+ (1,0) [0|250] "%" Vector__XXX
+
+BO_ 2566749184 DPFC1_Diesel_Particulate_Filter_: 8 Vector__XXX
+ SG_ DPFC1_DieselParticulateFilterLam : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DPFC1_DslPrtcltFltrPssvRgnrtionS : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFC1_DslPrtcltFltrActvRgnrtionS : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFC1_DieselParticulateFilterSta : 12|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DPFC1_DslPrtcltFltrActvRgnrtnInh : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFC1_ExhaustSystemHighTempLampC : 50|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2365428224 EOI_Engine_Operation_information: 8 Vector__XXX
+ SG_ EOI_EngOperatingState : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ EOI_EngDerateReq : 56|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566755328 EEC7_Electronic_Engine_Controlle: 8 Vector__XXX
+ SG_ EEC7_EngExhstGsRcirculation1Valv : 0|16@1+ (0.0025,0) [0|160.6375] "%" Vector__XXX
+
+BO_ 2566756608 AT2HI_Aftertreatment_2_Historica: 8 Vector__XXX
+ SG_ AT2HI_Aftrtrtmnt2TotalFuelUsed : 0|32@1+ (0.5,0) [0|2105540607.5] "L" Vector__XXX
+
+BO_ 2566757283 AT1HI_Aftertreatment_1_Historica: 8 Vector__XXX
+ SG_ AT1HI_Aftrtrtmnt1DslExhstFldConc : 8|8@1+ (0.25,0) [0|62.5] "%" Vector__XXX
+
+BO_ 2566758656 AT1FC1_Aftertreatment_1_Fuel_Con: 8 Vector__XXX
+ SG_ AT1FC1_Aftrtrtmnt1FuelRate : 16|16@1+ (0.05,0) [0|3212.75] "L/h" Vector__XXX
+
+BO_ 2566763008 AT1IMG_Aftertreatment_1_Intermed: 8 Vector__XXX
+ SG_ AT1IMG_Aftrtrtmnt1DslPrtcltFltrI : 16|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+ SG_ AT1IMG_Aftrtrtmnt1DslPrtcltFltrD : 32|16@1+ (0.1,0) [0|6425.5] "kpa" Vector__XXX
+
+BO_ 2566763264 AT1OG2_Aftertreatment_1_Outlet_G: 8 Vector__XXX
+ SG_ AT1OG2_Aftrtrtmnt1DslPrtcltFltrO : 16|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+
+BO_ 2566763520 AT1IG_Aftertreatment_1_Intake_Ga: 8 Vector__XXX
+ SG_ AT1IG_Aftrtrtmnt1DslPrtcltFltrIn : 16|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+
+BO_ 2566771968 EEC5_Electronic_Engine_Controlle: 8 Vector__XXX
+ SG_ EEC5_EngTrb1ClcltedTurbineIntake : 0|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+ SG_ EEC5_EngTrb1ClcltedTurbineOutlet : 16|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+ SG_ EEC5_EngExhstGsRcrculation1Valve : 32|16@1+ (0.0025,0) [0|160.6375] "%" Vector__XXX
+
+BO_ 2566804992 AT1T1I_Aftertreatment_1_Diesel_E: 8 Vector__XXX
+ SG_ AT1T1I_Aftrtrtmnt1SCRCatalystTan : 0|8@1+ (0.4,0) [0|100] "%"  sBOX,ICU
+ SG_ AT1T1I_Aftrtrtment1SCRCatalystTa : 8|8@1+ (1,-40) [-40|210] "℃"  sBOX
+ SG_ AT1T1I_Aftrtrtmnt1SCRCtalystTank : 16|8@1+ (0.4,0) [0|100] "%"  sBOX
+
+BO_ 2566819840 ETH_Engine_Torque_History: 8 Vector__XXX
+ SG_ ETH_EngineTorqueLimitFeature : 50|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2566832128 EES_Engine_Electrical_System_Mod: 8 Vector__XXX
+ SG_ EES_ServiceComponentIdentificati : 0|8@1+ (1,0) [0|250] "" Vector__XXX
+
+BO_ 2633936640 GFC_Fuel_Consumption_Gaseous: 8 Vector__XXX
+ SG_ GFC_TripGaseous : 0|32@1+ (0.5,0) [0|2105540607.5] "kg" Vector__XXX
+ SG_ GFC_TotalGaseousUsed : 32|32@1+ (0.5,0) [0|2105540607.5] "kg" Vector__XXX
+
+BO_ 2566831360 FD1_Fan_Drive_1: 8 Vector__XXX
+ SG_ FD1_FanDriveState : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FD1_FanSpeed : 16|16@1+ (0.125,0) [0|8031.875] "rpm" Vector__XXX
+
+BO_ 2566833664 Gaseous_Information1: 8 Vector__XXX
+ SG_ GI1_GaseousTemp : 0|8@1+ (1,-40) [-40|210] "℃" Vector__XXX
+ SG_ GI1_GaseousPress : 8|8@1+ (4,0) [0|1000] "kpa"  ICU
+ SG_ GI1_GaseousBottlePress : 16|16@1+ (1,0) [0|64255] "kpa"  ICU
+ SG_ GI1_ReducValveTemp : 32|8@1+ (1,-40) [-40|210] "℃" Vector__XXX
+
+BO_ 2566838016 Gaseous_Information2: 8 Vector__XXX
+ SG_ GI2_GaseousConvSwtSt : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ GI2_ReducValveSt : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566838272 Gaseous_Information3: 8 Vector__XXX
+ SG_ GI3_CNGLampSt : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566838784 SOFT_Software_Identification: 8 Vector__XXX
+ SG_ SOFT_NmbrOfSftwrIdentificationFi : 0|8@1+ (1,0) [0|250] "" Vector__XXX
+
+BO_ 2566839296 IO_Idle_Operation: 8 Vector__XXX
+ SG_ IO_EngTotalIdleFuelUsed : 0|32@1+ (0.5,0) [0|2105540607.5] "" Vector__XXX
+ SG_ IO_EngTotalIdleHours : 32|32@1+ (0.05,0) [0|210554060.75] "" Vector__XXX
+
+BO_ 2566840064 EEC3_tronic_Engine_Controller_3: 8 Vector__XXX
+ SG_ EEC3_NominalFrictionPercentTorqu : 0|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ EEC3_EngsDesiredOperatingSpeed : 8|8@1+ (0.125,0) [0|8031.875] "rpm" Vector__XXX
+ SG_ EEC3_Aftertreatment1IntakeDewPoi : 56|2@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ EEC3_Aftertreatment1ExhaustDewPo : 58|2@1+ (1,0) [0|2] "" Vector__XXX
+
+BO_ 2566840320 VD_Vehicle_Distance: 8 Vector__XXX
+ SG_ VD_TripDistance : 0|32@1+ (0.125,0) [0|526385151.9] "km" Vector__XXX
+ SG_ VD_TotalVehicleDistance : 32|32@1+ (0.125,0) [0|526385151.9] "km" Vector__XXX
+
+BO_ 2566841088 EC1_Engine_Configuration_1: 8 Vector__XXX
+ SG_ EC1_EngReferenceTorque : 48|16@1+ (1,0) [0|64255] "Nm" Vector__XXX
+
+BO_ 2566841344 SHUTDN_Shutdown: 8 Vector__XXX
+ SG_ SHUTDN_EngWaitToStartLamp : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566841600 HOURS_Engine_Hours_Revolutions: 8 Vector__XXX
+ SG_ HOURS_EngTotalHoursOfOperation : 0|32@1+ (0.05,0) [0|210554060.75] "h" Vector__XXX
+ SG_ HOURS_EngTotalRevolutions : 32|32@1+ (0.05,0) [0|4211081215000] "r" Vector__XXX
+
+BO_ 2566842624 HRLFC_High_Resolution_Fuel__0000: 8 Vector__XXX
+ SG_ HRLFC_EngTripFuel : 0|32@1+ (0.5,0) [0|2105540607.5] "h" Vector__XXX
+ SG_ HRLFC_EngTotalFuelUsed : 32|32@1+ (0.5,0) [0|2105540607.5] "L" Vector__XXX
+
+BO_ 2566843904 ET1_Engine_Temperature_1: 8 Vector__XXX
+ SG_ ET1_EngCoolantTemp : 0|8@1+ (1,-40) [-40|210] "℃" Vector__XXX
+ SG_ ET1_EngOilTemp1 : 16|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+
+BO_ 2566844160 EFL_P1_Engine_Fluid_Level_Pressu: 8 Vector__XXX
+ SG_ EFL_P1_EngOilLevel : 16|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ EFL_P1_EngOilPress : 24|8@1+ (4,0) [0|1000] "kpa" Vector__XXX
+ SG_ EFL_P1_EngCoolantLevel : 56|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566844672 CCVS1_Cruise_Control_Vehicle_Spe: 8 ECU
+ SG_ TwoSpeedAxleSwitch : 0|2@1+ (1,0) [0|3] ""  ABS,EBS
+ SG_ CCVS1_ParkingBrakeSwitch : 2|2@1+ (1,0) [0|3] ""  ABS,EBS
+ SG_ CCVS1_WheelBasedVehicleSpeed : 8|16@1+ (0.00390625,0) [0|250.996] ""  ABS,EBS
+ SG_ CCVS1_CruiseCtrlActive : 24|2@1+ (1,0) [0|3] ""  ABS,EBS,ICU
+ SG_ CCVS1_CruiseCtrlEnableSwitch : 26|2@1+ (1,0) [0|3] ""  ABS,EBS
+ SG_ CCVS1_BrakeSwitch : 28|2@1+ (1,0) [0|3] ""  ABS,EBS
+ SG_ CCVS1_ClutchSwitch : 30|2@1+ (1,0) [0|3] ""  ABS,EBS
+ SG_ CCVS1_CruiseCtrlSetSwitch : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCVS1_CruiseCtrlCoastSwitch : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCVS1_CruiseCtrlResumeSwitch : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCVS1_CruiseCtrlAccelerateSwitch : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCVS1_CruiseCtrlSetSpeed : 40|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ CCVS1_PTOGovernorState : 48|5@1+ (1,0) [0|31] ""  ABS,EBS,ICU
+ SG_ CCVS1_CruiseCtrlStates : 53|3@1+ (1,0) [0|7] ""  ICU
+
+BO_ 2566844928 LFE1_Fuel_Economy_Liquid: 8 Vector__XXX
+ SG_ LFE1_EngFuelRate : 0|16@1+ (0.05,0) [0|3212.75] "L/h" Vector__XXX
+ SG_ LFE1_EngInstantaneousFuelEconomy : 16|16@1+ (0.001953125,0) [0|125.5] "km/L"  ICU
+ SG_ LFE1_EngAverageFuelEconomy : 32|16@1+ (0.001953125,0) [0|125.5] "km/L"  ICU
+ SG_ LFE1_EngThrottleValve1Pos : 48|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566845696 AMB_Ambient_Conditions: 8 Vector__XXX
+ SG_ AMB_BarometricPress : 0|8@1+ (0.5,0) [0|125] "kpa" Vector__XXX
+ SG_ LFE1_AmbientAirTemp : 24|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+ SG_ LFE1_EngAirIntakeTemp : 40|8@1+ (1,-40) [-40|210] "℃" Vector__XXX
+
+BO_ 2566845952 IC1_Intake_Exhaust_Conditions_1: 8 Vector__XXX
+ SG_ IC1_EngDslPrtclateFilterIntakePr : 0|8@1+ (0.5,0) [0|125] "kpa" Vector__XXX
+ SG_ IC1_EngIntakeManifold1Press : 8|8@1+ (2,0) [0|500] "kpa" Vector__XXX
+ SG_ IC1_EngIntakeManifold1Temp : 16|8@1+ (1,-40) [-40|210] "℃" Vector__XXX
+ SG_ IC1_EngAirIntakePress : 24|8@1+ (2,0) [0|500] "kpa" Vector__XXX
+ SG_ IC1_EngExhaustGasTemp : 40|16@1+ (0.03125,-273) [-273|1734.96875] "℃" Vector__XXX
+
+BO_ 2566846208 VEP1_Vehicle_Electrical_Power_1: 8 Vector__XXX
+ SG_ VEP1_BatteryPotential_PowerInput : 32|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ VEP1_KeyswitchBatteryPotential : 48|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+
+BO_ 2566848256 OI_Operator_indicators: 8 Vector__XXX
+ SG_ OI_WaterInFuelIndicator : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OI_DrvWarnSysIdctrSt : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ OI_EmiCtlSysOpInducementSeverity : 11|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2566899712 GaseousInformation4: 8 Vector__XXX
+ SG_ GI4_GaseousLeakLamp : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ GI4_GaseousLeakLamp : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ GI4_GaseousLeakLamp : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566910208 ErrorReminder: 8 Vector__XXX
+ SG_ ER_DPF_FrequentRegeneration : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ER_VehRegenerationDsitanceShort : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ER_ExhaustFluidLowQuality : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566834688 DM1: 8 Vector__XXX
+ SG_ DM1_ProtectLampStatus : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DM1_MalfunctionIndicatorLampStat : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DM1_RedStopLampState : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566842094 TD_Time_Date: 8 sBOX
+ SG_ Seconds : 0|8@1+ (0.25,0) [0|62.5] "s"  ECU,EBS,AEBS
+ SG_ Minutes : 8|8@1+ (1,0) [0|250] "mins"  ECU,EBS,AEBS
+ SG_ Hours : 16|8@1+ (1,0) [0|250] "hr"  ECU,EBS,AEBS
+ SG_ Month : 24|8@1+ (1,0) [0|250] "months"  ECU,EBS,AEBS
+ SG_ Day : 32|8@1+ (0.25,0) [0|62.5] "days"  ECU,EBS,AEBS
+ SG_ Year : 40|8@1+ (1,1985) [1985|2235] "years"  ECU,EBS,AEBS
+ SG_ LocalMinuteOffset : 48|8@1+ (1,-125) [-125|125] "mins"  ECU
+ SG_ LocalHourOffset : 56|8@1+ (1,-125) [-125|125] "hr"  ECU
+
+BO_ 2432593706 ACC1_Adaptive_Cruise_Control_1: 8 AEBS
+ SG_ SpeedOfForwardVehicle : 0|8@1+ (1,0) [0|250] "km/h"  ECU,ICU
+ SG_ DistanceToForwardVehicle : 8|8@1+ (1,0) [0|250] "m"  ECU,ICU
+
+BO_ 2348810251 TSC1_Torque_Speed_Control_1: 8 ABS
+ SG_ EngOverrideCtrlMode : 0|2@1+ (1,0) [0|3] ""  ECU
+ SG_ RequestedSpeedControlConditions : 2|2@1+ (1,0) [0|3] ""  ECU
+ SG_ OverrideCtrlModePriority : 4|2@1+ (1,0) [0|3] ""  ECU
+ SG_ EngRqedTorque_TorqueLimit : 24|8@1+ (1,-125) [-125|125] "%"  ECU
+ SG_ MessageCounter : 56|4@1+ (1,0) [0|15] ""  ECU
+ SG_ MessageChecksum : 60|4@1+ (1,0) [0|15] ""  ECU
+
+BO_ 2348810400 TSC1_Torque_Speed_Control_1: 8 AEBS
+ SG_ EngOverrideCtrlMode : 0|2@1+ (1,0) [0|3] ""  ECU
+ SG_ RequestedSpeedControlConditions : 2|2@1+ (1,0) [0|3] ""  ECU
+ SG_ OverrideCtrlModePriority : 4|2@1+ (1,0) [0|3] ""  ECU
+ SG_ EngRqedTorque_TorqueLimit : 24|8@1+ (1,-125) [-125|125] "%"  ECU
+ SG_ MessageCounter : 56|4@1+ (1,0) [0|15] ""  ECU
+ SG_ MessageChecksum : 60|4@1+ (1,0) [0|15] ""  ECU
+
+BO_ 2566803211 VDC1_Vehicle_Dynamic_Stability_C: 8 ABS
+ SG_ VDC1_VDCInformationSignal : 0|2@1+ (1,0) [0|3] ""  ECU,AEBS,ICU
+ SG_ VDC1_VDCFullyOperational : 2|2@1+ (1,0) [0|3] ""  ECU,AEBS,ICU
+ SG_ VDC1_VDCbrakelightrequest : 4|2@1+ (1,0) [0|3] ""  ECU,BCM,AEBS
+ SG_ VDC1_ROPEngCtrlActive : 8|2@1+ (1,0) [0|3] ""  ECU,AEBS
+ SG_ VDC1_ROPBrakeCtrlActive : 10|2@1+ (1,0) [0|3] ""  ECU,AEBS
+ SG_ VDC1_YCEngCtrlActive : 12|2@1+ (1,0) [0|3] ""  ECU,AEBS
+ SG_ VDC1_YCBrakeCtrlActive : 14|2@1+ (1,0) [0|3] ""  ECU,AEBS
+
+BO_ 2365484270 TCO1_Tachograph: 8 Vector__XXX
+ SG_ TCO1_TchgrphVehclSpd : 48|16@1+ (0.00390625,0) [0|250.996] "km/h" Vector__XXX
+ SG_ TCO1_TachographOutputShaftSpeed : 32|16@1+ (0.125,0) [0|8031.875] "rpm" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 2565865472 ERC1_ActualRetarderPercentTorque "排气制动";
+CM_ SG_ 2364539648 EEC2_AccelPedalPos1 "The ratio of actual position of the analog engine speed/torque request input device (such as an accelerator pedal or
+throttle lever) to the maximum position of the input device油门开度";
+CM_ SG_ 2364539648 EEC2_EngPercentLoadAtCurrentSpee "当前转速下负荷百分比";
+CM_ SG_ 2364539648 EEC2_DPFThermalManagementActive "DPF热能管理激活";
+CM_ SG_ 2364539648 EEC2_ActlMxAvailableEngPercentTo "实际最大可用发动机转矩百分比";
+CM_ SG_ 2364539904 EEC1_EngTorqueMode "State signal which indicates which engine torque mode is currently generating, limiting, or controlling the torque发动机扭矩模式";
+CM_ SG_ 2364539904 EEC1_ActlEngPrcntTrqueHighResolu "This parameter displays an additional torque in percent of the reference engine torque.高精度的实际扭矩百分比";
+CM_ SG_ 2364539904 EEC1_DriversDemandEngPercentTorq "The requested torque output of the engine by the driver.驾驶需求扭矩百分比";
+CM_ SG_ 2364539904 EEC1_ActualEngPercentTorque "The calculated output torque of the engine.实际扭矩百分比";
+CM_ SG_ 2364539904 EEC1_EngSpeed "Actual engine speed which is calculated over a minimum crankshaft angle of 720 degrees divided by the number of cylinders发动机转速";
+CM_ SG_ 2364539904 EEC1_EngDemandPercentTorque "发动机需求扭矩百分比";
+CM_ SG_ 2364539904 EEC1_ECU_SA "Source Address of Controlling Device for Engine Control
+控制器装置源地址";
+CM_ SG_ 2364541440 EGF1_EngExhstGsRcrclton1MassFlow "废气再循环流量";
+CM_ SG_ 2364541440 EGF1_EngIntakeAirMassFlowRate "发动机进气量";
+CM_ SG_ 2432498944 EEC9_CmdedEngFuelRailPress "轨压设定值";
+CM_ SG_ 2566719232 DLCC1_EngAmberWarningLampCmd "SVS故障指示灯";
+CM_ SG_ 2566719232 DLCC1_EngRedStopLampCmd "发动机红色警告灯（停机）";
+CM_ SG_ 2566719232 DLCC1_OBDMalfunctionIndicatorLam "OBD故障指示灯  ";
+CM_ SG_ 2566719232 DLCC1_EngBrakeActiveLampCmd "排气制动指示灯";
+CM_ SG_ 2566719232 DLCC1_EngOilPressLowLampCmd "机油压力指示灯";
+CM_ SG_ 2566719232 DLCC1_EngCoolantTempHighLampCmd "水温高指示灯";
+CM_ SG_ 2566719232 DLCC1_EngCoolantLevelLowLampCmd "冷却水液位低指示灯";
+CM_ SG_ 2566719744 HRLFC_HiRsltnEngTrpFuel "单次行程中消耗的燃油量-高分辨率";
+CM_ SG_ 2566719744 HRLFC_HiRsltnEngTotFuelUsed "发动机使用的总燃料-高分辨率";
+CM_ SG_ 2566724608 HRLFC_DslPrtclteFilter1SotMss "DPF碳载量DPF碳载量";
+CM_ SG_ 2566724608 HRLFC_DslPrtclteFilter1SotDnsty "DPF碳密度";
+CM_ SG_ 2566725632 A1DOC_Aftrtrtmnt1DslOxdtnCtlystI "DOC进气温度";
+CM_ SG_ 2566725632 A1DOC_Aftrtrtmnt1DslOxdtnCtlystO "DOC排气温度";
+CM_ SG_ 2499624448 A1SCREGT1_Aftrtrtmnt1SCRCtlystIn "SCR后处理进气温度  ";
+CM_ SG_ 2499624448 A1SCREGT1_Aftrtrtmnt1SCRCtlystOt "SCR后处理出口温度 ";
+CM_ SG_ 2566748928 AT1S_DslPrtclteFilter1AshLoadPer "DPF灰分百分比";
+CM_ SG_ 2566749184 DPFC1_DieselParticulateFilterLam "DPF灯指令";
+CM_ SG_ 2566749184 DPFC1_DslPrtcltFltrPssvRgnrtionS "DPF被动再生状态";
+CM_ SG_ 2566749184 DPFC1_DslPrtcltFltrActvRgnrtionS "DPF主动再生状态";
+CM_ SG_ 2566749184 DPFC1_DieselParticulateFilterSta "再生需求";
+CM_ SG_ 2566749184 DPFC1_DslPrtcltFltrActvRgnrtnInh "禁止再生指示灯";
+CM_ SG_ 2566749184 DPFC1_ExhaustSystemHighTempLampC "高排气温度报警灯";
+CM_ SG_ 2365428224 EOI_EngOperatingState "发动机工作状态  ";
+CM_ SG_ 2365428224 EOI_EngDerateReq "发动机减压请求";
+CM_ SG_ 2566755328 EEC7_EngExhstGsRcirculation1Valv "EGR阀开度";
+CM_ SG_ 2566756608 AT2HI_Aftrtrtmnt2TotalFuelUsed "远后喷油量（总量）";
+CM_ SG_ 2566757283 AT1HI_Aftrtrtmnt1DslExhstFldConc "尿素浓度";
+CM_ SG_ 2566758656 AT1FC1_Aftrtrtmnt1FuelRate "远后喷油量（实际）";
+CM_ SG_ 2566763008 AT1IMG_Aftrtrtmnt1DslPrtcltFltrI "DPF内部温度";
+CM_ SG_ 2566763008 AT1IMG_Aftrtrtmnt1DslPrtcltFltrD "DPF压差";
+CM_ SG_ 2566763264 AT1OG2_Aftrtrtmnt1DslPrtcltFltrO "DPF排气温度";
+CM_ SG_ 2566763520 AT1IG_Aftrtrtmnt1DslPrtcltFltrIn "DPF进气温度";
+CM_ SG_ 2566771968 EEC5_EngTrb1ClcltedTurbineIntake "涡轮增压器进气温度";
+CM_ SG_ 2566771968 EEC5_EngTrb1ClcltedTurbineOutlet "涡轮增压器出口温度";
+CM_ SG_ 2566771968 EEC5_EngExhstGsRcrculation1Valve "EGR阀开度";
+CM_ SG_ 2566804992 AT1T1I_Aftrtrtmnt1SCRCatalystTan "尿素液位";
+CM_ SG_ 2566804992 AT1T1I_Aftrtrtment1SCRCatalystTa "尿素箱温度";
+CM_ SG_ 2566804992 AT1T1I_Aftrtrtmnt1SCRCtalystTank "尿素加热百分比";
+CM_ SG_ 2566819840 ETH_EngineTorqueLimitFeature "驾驶员报警系统";
+CM_ SG_ 2566832128 EES_ServiceComponentIdentificati "保养指示灯";
+CM_ SG_ 2633936640 GFC_TripGaseous "单程累计燃气消耗量";
+CM_ SG_ 2633936640 GFC_TotalGaseousUsed "累计燃气消耗量";
+CM_ SG_ 2566831360 FD1_FanDriveState "风扇状态";
+CM_ SG_ 2566831360 FD1_FanSpeed "风扇转速";
+CM_ SG_ 2566833664 GI1_GaseousTemp "燃气温度";
+CM_ SG_ 2566833664 GI1_GaseousPress "燃气压力";
+CM_ SG_ 2566833664 GI1_GaseousBottlePress "气瓶压力";
+CM_ SG_ 2566833664 GI1_ReducValveTemp "减压阀水温";
+CM_ SG_ 2566838016 GI2_GaseousConvSwtSt "燃气转化开关状态";
+CM_ SG_ 2566838016 GI2_ReducValveSt "减压阀状态";
+CM_ SG_ 2566838272 GI3_CNGLampSt "CNG灯状态";
+CM_ SG_ 2566838784 SOFT_NmbrOfSftwrIdentificationFi "软件识别字段的数量";
+CM_ SG_ 2566839296 IO_EngTotalIdleFuelUsed "发动机累计怠速燃油消耗量";
+CM_ SG_ 2566839296 IO_EngTotalIdleHours "发动机累计怠速时间";
+CM_ SG_ 2566840064 EEC3_NominalFrictionPercentTorqu "摩擦力扭矩百分比";
+CM_ SG_ 2566840064 EEC3_EngsDesiredOperatingSpeed "发动机期望转速";
+CM_ SG_ 2566840064 EEC3_Aftertreatment1IntakeDewPoi "后处理进气露点";
+CM_ SG_ 2566840064 EEC3_Aftertreatment1ExhaustDewPo "后处理排气露点";
+CM_ SG_ 2566840320 VD_TripDistance "单次驾驶循环里程";
+CM_ SG_ 2566840320 VD_TotalVehicleDistance "总里程";
+CM_ SG_ 2566841088 EC1_EngReferenceTorque "发动机参考扭矩";
+CM_ SG_ 2566841344 SHUTDN_EngWaitToStartLamp "预热信号";
+CM_ SG_ 2566841600 HOURS_EngTotalHoursOfOperation "发动机累计运行时间";
+CM_ SG_ 2566841600 HOURS_EngTotalRevolutions "发动机累计转数";
+CM_ SG_ 2566842624 HRLFC_EngTripFuel "发动机单程油耗";
+CM_ SG_ 2566842624 HRLFC_EngTotalFuelUsed "发动机累计燃油消耗量";
+CM_ SG_ 2566843904 ET1_EngCoolantTemp "发动机冷却水温度";
+CM_ SG_ 2566843904 ET1_EngOilTemp1 "机油温度";
+CM_ SG_ 2566844160 EFL_P1_EngOilLevel "发动机机油液位";
+CM_ SG_ 2566844160 EFL_P1_EngOilPress "机油压力";
+CM_ SG_ 2566844160 EFL_P1_EngCoolantLevel "冷却液液位";
+CM_ SG_ 2566844672 TwoSpeedAxleSwitch "Switch signal which indicates the current axle range.";
+CM_ SG_ 2566844672 CCVS1_ParkingBrakeSwitch "手刹开关状态";
+CM_ SG_ 2566844672 CCVS1_WheelBasedVehicleSpeed "车速（ECU巡航）";
+CM_ SG_ 2566844672 CCVS1_CruiseCtrlActive "巡航控制激活状态标识
+（巡航指示灯）";
+CM_ SG_ 2566844672 CCVS1_CruiseCtrlEnableSwitch "巡航使能开关
+（开关信号）";
+CM_ SG_ 2566844672 CCVS1_BrakeSwitch "制动开关状态";
+CM_ SG_ 2566844672 CCVS1_ClutchSwitch "离合开关状态";
+CM_ SG_ 2566844672 CCVS1_CruiseCtrlSetSwitch "巡航OFF开关状态";
+CM_ SG_ 2566844672 CCVS1_CruiseCtrlCoastSwitch "巡航DEC开关状态";
+CM_ SG_ 2566844672 CCVS1_CruiseCtrlResumeSwitch "巡航RES开关状态";
+CM_ SG_ 2566844672 CCVS1_CruiseCtrlAccelerateSwitch "巡航ACC开关状态";
+CM_ SG_ 2566844672 CCVS1_CruiseCtrlSetSpeed "巡航设定车速";
+CM_ SG_ 2566844672 CCVS1_PTOGovernorState "PTO状态";
+CM_ SG_ 2566844672 CCVS1_CruiseCtrlStates "巡航控制状态";
+CM_ SG_ 2566844928 LFE1_EngFuelRate "燃油消耗率";
+CM_ SG_ 2566844928 LFE1_EngInstantaneousFuelEconomy "发动机瞬时油耗率";
+CM_ SG_ 2566844928 LFE1_EngAverageFuelEconomy "发动机平均油耗率";
+CM_ SG_ 2566844928 LFE1_EngThrottleValve1Pos "节气门开度";
+CM_ SG_ 2566845696 AMB_BarometricPress "大气压力";
+CM_ SG_ 2566845696 LFE1_AmbientAirTemp "大气温度";
+CM_ SG_ 2566845696 LFE1_EngAirIntakeTemp "发动机进气温度 ";
+CM_ SG_ 2566845952 IC1_EngDslPrtclateFilterIntakePr "DPF进气压力";
+CM_ SG_ 2566845952 IC1_EngIntakeManifold1Press "进气歧管压力";
+CM_ SG_ 2566845952 IC1_EngIntakeManifold1Temp "进气歧管温度";
+CM_ SG_ 2566845952 IC1_EngAirIntakePress "进气压力信号";
+CM_ SG_ 2566845952 IC1_EngExhaustGasTemp "排气（离开发动机）温度";
+CM_ SG_ 2566846208 VEP1_BatteryPotential_PowerInput "ECM输入电压";
+CM_ SG_ 2566846208 VEP1_KeyswitchBatteryPotential "蓄电池电压";
+CM_ SG_ 2566848256 OI_WaterInFuelIndicator "油中含水指示灯";
+CM_ SG_ 2566848256 OI_DrvWarnSysIdctrSt "驾驶员警告指示灯";
+CM_ SG_ 2566848256 OI_EmiCtlSysOpInducementSeverity "驾驶性能限制";
+CM_ SG_ 2566899712 GI4_GaseousLeakLamp "燃气泄露指示灯/泄露传感器故障指示灯燃气泄露指示灯/泄露传感器故障指示灯燃气泄露指示灯/泄露传感器故障指示灯";
+CM_ SG_ 2566910208 ER_DPF_FrequentRegeneration "DPF频繁再生，请尽快检修车辆";
+CM_ SG_ 2566910208 ER_VehRegenerationDsitanceShort "车辆再生里程短，请检修车辆或加注合格燃油";
+CM_ SG_ 2566910208 ER_ExhaustFluidLowQuality "尿素液品质不合格，请更换合格尿素液";
+CM_ SG_ 2566834688 DM1_ProtectLampStatus "发动机非排放故障灯";
+CM_ SG_ 2566834688 DM1_MalfunctionIndicatorLampStat "发动机排放故障灯";
+CM_ SG_ 2566834688 DM1_RedStopLampState "发动机故障灯-停机";
+CM_ SG_ 2566842094 Seconds "The seconds component of the current time of day.";
+CM_ SG_ 2566842094 Minutes "The minutes component of the current time of day.";
+CM_ SG_ 2566842094 Hours "The hour component of the current time of day.";
+CM_ SG_ 2566842094 Month "The month component of the current calendar date.";
+CM_ SG_ 2566842094 Day "The day component of the current calendar date.";
+CM_ SG_ 2566842094 Year "The year component of the current calendar date.";
+CM_ SG_ 2566842094 LocalMinuteOffset "The minute component of the offset between the UTC time and date and a local time zone time and date.";
+CM_ SG_ 2566842094 LocalHourOffset "The hour component of the offset between the UTC (Universal Time Coordinate) time and date and a local time zone time";
+CM_ SG_ 2432593706 SpeedOfForwardVehicle "Absolute velocity of the preceding vehicle situated within 250 m in the same lane and moving in the same direction.前车车速";
+CM_ SG_ 2432593706 DistanceToForwardVehicle "Distance to the preceding vehicle situated within 250 m in the same lane and moving in the same direction.前车距离";
+CM_ SG_ 2348810251 EngOverrideCtrlMode "The override control mode defines which sort of command is used控制模式";
+CM_ SG_ 2348810251 RequestedSpeedControlConditions "This mode tells the engine control system the governor characteristics that are desired during speed control请求转速控制条件";
+CM_ SG_ 2348810251 OverrideCtrlModePriority "控制模式优先级";
+CM_ SG_ 2348810251 EngRqedTorque_TorqueLimit "Parameter provided to the engine or retarder in the torque/speed control message for controlling or limiting the output torque.目标扭矩/扭矩限制";
+CM_ SG_ 2348810251 MessageCounter "The message counter is used to detect situations where the transmitting ECU malfunction repeats the same frame all the time.";
+CM_ SG_ 2348810251 MessageChecksum "The checksum is used to verify the signal path from the transmitting device to the receiving device.";
+CM_ SG_ 2348810400 EngOverrideCtrlMode "The override control mode defines which sort of command is used控制模式";
+CM_ SG_ 2348810400 RequestedSpeedControlConditions "This mode tells the engine control system the governor characteristics that are desired during speed control请求转速控制条件";
+CM_ SG_ 2348810400 OverrideCtrlModePriority "控制模式优先级";
+CM_ SG_ 2348810400 EngRqedTorque_TorqueLimit "Parameter provided to the engine or retarder in the torque/speed control message for controlling or limiting the output torque.目标扭矩/扭矩限制";
+CM_ SG_ 2348810400 MessageCounter "The message counter is used to detect situations where the transmitting ECU malfunction repeats the same frame all the time.";
+CM_ SG_ 2348810400 MessageChecksum "The checksum is used to verify the signal path from the transmitting device to the receiving device.";
+CM_ SG_ 2566803211 VDC1_VDCInformationSignal "VDC 信息信号（ESP灯）";
+CM_ SG_ 2566803211 VDC1_VDCFullyOperational "VDC 完全运行";
+CM_ SG_ 2566803211 VDC1_VDCbrakelightrequest "VDC 制动灯请求";
+CM_ SG_ 2566803211 VDC1_ROPEngCtrlActive "ROP发动机控制激活";
+CM_ SG_ 2566803211 VDC1_ROPBrakeCtrlActive "ROP制动控制激活";
+CM_ SG_ 2566803211 VDC1_YCEngCtrlActive "YC发动机控制激活";
+CM_ SG_ 2566803211 VDC1_YCBrakeCtrlActive "YC制动控制激活";
+CM_ SG_ 2365484270 TCO1_TchgrphVehclSpd "车速";
+CM_ SG_ 2365484270 TCO1_TachographOutputShaftSpeed "输出轴转速";
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 0;
+BA_DEF_ SG_  "SignalType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 10000;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_ BO_  "SystemMessageLongSymbol" STRING ;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "SignalType" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_DEF_DEF_  "SystemMessageLongSymbol" "";
+BA_ "GenMsgCycleTime" BO_ 2566908416 100;
+BA_ "GenMsgCycleTime" BO_ 2565865472 100;
+BA_ "SystemMessageLongSymbol" BO_ 2565865472 "ERC1_Electronic_Retarder_Controller_1";
+BA_ "GenMsgCycleTime" BO_ 2364539648 50;
+BA_ "SystemMessageLongSymbol" BO_ 2364539648 "EEC2_Electronic_Engine_Controller_2";
+BA_ "GenMsgCycleTime" BO_ 2364539904 20;
+BA_ "SystemMessageLongSymbol" BO_ 2364539904 "EEC1_Electronic_Engine_Controller_1";
+BA_ "GenMsgCycleTime" BO_ 2364541440 50;
+BA_ "GenMsgCycleTime" BO_ 2432498944 100;
+BA_ "SystemMessageLongSymbol" BO_ 2432498944 "EEC9_Electronic_Engine_Controller_9";
+BA_ "GenMsgCycleTime" BO_ 2566719232 100;
+BA_ "SystemMessageLongSymbol" BO_ 2566719232 "DLCC1_Direct_Lamp_Control_Command_1";
+BA_ "GenMsgCycleTime" BO_ 2566719744 1000;
+BA_ "SystemMessageLongSymbol" BO_ 2566719744 "HRLFC_High_Resolution_Fuel_Consumption_Liquid";
+BA_ "GenMsgCycleTime" BO_ 2566724608 1000;
+BA_ "SystemMessageLongSymbol" BO_ 2566724608 "DPF1S_Diesel_Particulate_Filter_1_Soot";
+BA_ "GenMsgCycleTime" BO_ 2566725632 500;
+BA_ "SystemMessageLongSymbol" BO_ 2566725632 "A1DOC_Aftertreatment_1_Diesel_Oxidation_Catalyst";
+BA_ "GenMsgCycleTime" BO_ 2499624448 500;
+BA_ "SystemMessageLongSymbol" BO_ 2499624448 "A1SCREGT1_Aftertreatment_1_SCR_Exhaust_Gas_Temperature_1";
+BA_ "GenMsgCycleTime" BO_ 2566748928 100;
+BA_ "GenMsgCycleTime" BO_ 2566749184 100;
+BA_ "SystemMessageLongSymbol" BO_ 2566749184 "DPFC1_Diesel_Particulate_Filter_Control_1";
+BA_ "GenMsgCycleTime" BO_ 2365428224 250;
+BA_ "GenMsgCycleTime" BO_ 2566755328 100;
+BA_ "SystemMessageLongSymbol" BO_ 2566755328 "EEC7_Electronic_Engine_Controller_7";
+BA_ "GenMsgCycleTime" BO_ 2566756608 100;
+BA_ "SystemMessageLongSymbol" BO_ 2566756608 "AT2HI_Aftertreatment_2_Historical_Information";
+BA_ "GenMsgCycleTime" BO_ 2566757283 1000;
+BA_ "SystemMessageLongSymbol" BO_ 2566757283 "AT1HI_Aftertreatment_1_Historical_Information";
+BA_ "GenMsgCycleTime" BO_ 2566758656 500;
+BA_ "SystemMessageLongSymbol" BO_ 2566758656 "AT1FC1_Aftertreatment_1_Fuel_Control_1";
+BA_ "GenMsgCycleTime" BO_ 2566763008 500;
+BA_ "SystemMessageLongSymbol" BO_ 2566763008 "AT1IMG_Aftertreatment_1_Intermediate_Gas";
+BA_ "GenMsgCycleTime" BO_ 2566763264 500;
+BA_ "SystemMessageLongSymbol" BO_ 2566763264 "AT1OG2_Aftertreatment_1_Outlet_Gas_2";
+BA_ "GenMsgCycleTime" BO_ 2566763520 500;
+BA_ "SystemMessageLongSymbol" BO_ 2566763520 "AT1IG_Aftertreatment_1_Intake_Gas_2";
+BA_ "GenMsgCycleTime" BO_ 2566771968 100;
+BA_ "SystemMessageLongSymbol" BO_ 2566771968 "EEC5_Electronic_Engine_Controller_5";
+BA_ "GenMsgCycleTime" BO_ 2566804992 1000;
+BA_ "SystemMessageLongSymbol" BO_ 2566804992 "AT1T1I_Aftertreatment_1_Diesel_Exhaust_Fluid_Tank_1_Information";
+BA_ "GenMsgCycleTime" BO_ 2566819840 100;
+BA_ "GenMsgCycleTime" BO_ 2566832128 100;
+BA_ "SystemMessageLongSymbol" BO_ 2566832128 "EES_Engine_Electrical_System_Module_Information";
+BA_ "GenMsgCycleTime" BO_ 2633936640 100;
+BA_ "GenMsgCycleTime" BO_ 2566831360 1000;
+BA_ "GenMsgCycleTime" BO_ 2566833664 500;
+BA_ "GenMsgCycleTime" BO_ 2566838016 500;
+BA_ "GenMsgCycleTime" BO_ 2566838272 1000;
+BA_ "GenMsgCycleTime" BO_ 2566838784 100;
+BA_ "GenMsgCycleTime" BO_ 2566839296 100;
+BA_ "GenMsgCycleTime" BO_ 2566840064 250;
+BA_ "GenMsgCycleTime" BO_ 2566840320 100;
+BA_ "GenMsgCycleTime" BO_ 2566841088 500;
+BA_ "GenMsgCycleTime" BO_ 2566841344 1000;
+BA_ "GenMsgCycleTime" BO_ 2566841600 100;
+BA_ "GenMsgCycleTime" BO_ 2566842624 100;
+BA_ "SystemMessageLongSymbol" BO_ 2566842624 "HRLFC_High_Resolution_Fuel_Consumption_Liquid";
+BA_ "GenMsgCycleTime" BO_ 2566843904 1000;
+BA_ "GenMsgCycleTime" BO_ 2566844160 500;
+BA_ "SystemMessageLongSymbol" BO_ 2566844160 "EFL_P1_Engine_Fluid_Level_Pressure_1";
+BA_ "GenMsgCycleTime" BO_ 2566844672 100;
+BA_ "SystemMessageLongSymbol" BO_ 2566844672 "CCVS1_Cruise_Control_Vehicle_Speed_1";
+BA_ "GenMsgCycleTime" BO_ 2566844928 100;
+BA_ "GenMsgCycleTime" BO_ 2566845696 1000;
+BA_ "GenMsgCycleTime" BO_ 2566845952 500;
+BA_ "GenMsgCycleTime" BO_ 2566846208 1000;
+BA_ "GenMsgCycleTime" BO_ 2566848256 1000;
+BA_ "GenMsgCycleTime" BO_ 2566899712 100;
+BA_ "GenMsgCycleTime" BO_ 2566910208 1000;
+BA_ "GenMsgCycleTime" BO_ 2566834688 1000;
+BA_ "GenMsgCycleTime" BO_ 2566842094 1000;
+BA_ "GenMsgCycleTime" BO_ 2432593706 100;
+BA_ "GenMsgCycleTime" BO_ 2348810251 10;
+BA_ "GenMsgCycleTime" BO_ 2348810400 10;
+BA_ "GenMsgCycleTime" BO_ 2566803211 100;
+BA_ "SystemMessageLongSymbol" BO_ 2566803211 "VDC1_Vehicle_Dynamic_Stability_Control_1";
+BA_ "GenMsgCycleTime" BO_ 2365484270 50;
+BA_ "SystemSignalLongSymbol" SG_ 2364539648 EEC2_EngPercentLoadAtCurrentSpee "EEC2_EngPercentLoadAtCurrentSpeed";
+BA_ "SystemSignalLongSymbol" SG_ 2364539648 EEC2_ActlMxAvailableEngPercentTo "EEC2_ActlMxAvailableEngPercentTorque";
+BA_ "SystemSignalLongSymbol" SG_ 2364539904 EEC1_ActlEngPrcntTrqueHighResolu "EEC1_ActlEngPrcntTrqueHighResolution";
+BA_ "SystemSignalLongSymbol" SG_ 2364539904 EEC1_DriversDemandEngPercentTorq "EEC1_DriversDemandEngPercentTorque";
+BA_ "SystemSignalLongSymbol" SG_ 2364541440 EGF1_EngExhstGsRcrclton1MassFlow "EGF1_EngExhstGsRcrclton1MassFlowRate";
+BA_ "SystemSignalLongSymbol" SG_ 2566719232 DLCC1_OBDMalfunctionIndicatorLam "DLCC1_OBDMalfunctionIndicatorLampCmd";
+BA_ "SystemSignalLongSymbol" SG_ 2566725632 A1DOC_Aftrtrtmnt1DslOxdtnCtlystI "A1DOC_Aftrtrtmnt1DslOxdtnCtlystIn_0000";
+BA_ "SystemSignalLongSymbol" SG_ 2566725632 A1DOC_Aftrtrtmnt1DslOxdtnCtlystO "A1DOC_Aftrtrtmnt1DslOxdtnCtlystOt_0000";
+BA_ "SystemSignalLongSymbol" SG_ 2499624448 A1SCREGT1_Aftrtrtmnt1SCRCtlystIn "A1SCREGT1_Aftrtrtmnt1SCRCtlystIntkGasTemp";
+BA_ "SystemSignalLongSymbol" SG_ 2499624448 A1SCREGT1_Aftrtrtmnt1SCRCtlystOt "A1SCREGT1_Aftrtrtmnt1SCRCtlystOtltGasTemp";
+BA_ "SystemSignalLongSymbol" SG_ 2566748928 AT1S_DslPrtclteFilter1AshLoadPer "AT1S_DslPrtclteFilter1AshLoadPercent";
+BA_ "SystemSignalLongSymbol" SG_ 2566749184 DPFC1_DieselParticulateFilterLam "DPFC1_DieselParticulateFilterLampCmd";
+BA_ "SystemSignalLongSymbol" SG_ 2566749184 DPFC1_DslPrtcltFltrPssvRgnrtionS "DPFC1_DslPrtcltFltrPssvRgnrtionStatus";
+BA_ "SystemSignalLongSymbol" SG_ 2566749184 DPFC1_DslPrtcltFltrActvRgnrtionS "DPFC1_DslPrtcltFltrActvRgnrtionStatus";
+BA_ "SystemSignalLongSymbol" SG_ 2566749184 DPFC1_DieselParticulateFilterSta "DPFC1_DieselParticulateFilterStatus";
+BA_ "SystemSignalLongSymbol" SG_ 2566749184 DPFC1_DslPrtcltFltrActvRgnrtnInh "DPFC1_DslPrtcltFltrActvRgnrtnInhbtdDTI";
+BA_ "SystemSignalLongSymbol" SG_ 2566749184 DPFC1_ExhaustSystemHighTempLampC "DPFC1_ExhaustSystemHighTempLampCmd";
+BA_ "SystemSignalLongSymbol" SG_ 2566755328 EEC7_EngExhstGsRcirculation1Valv "EEC7_EngExhstGsRcirculation1ValvePos";
+BA_ "SystemSignalLongSymbol" SG_ 2566763008 AT1IMG_Aftrtrtmnt1DslPrtcltFltrI "AT1IMG_Aftrtrtmnt1DslPrtcltFltrInt_0001";
+BA_ "SystemSignalLongSymbol" SG_ 2566763008 AT1IMG_Aftrtrtmnt1DslPrtcltFltrD "AT1IMG_Aftrtrtmnt1DslPrtcltFltrDffPrss";
+BA_ "SystemSignalLongSymbol" SG_ 2566763264 AT1OG2_Aftrtrtmnt1DslPrtcltFltrO "AT1OG2_Aftrtrtmnt1DslPrtcltFltrOtltGsTm";
+BA_ "SystemSignalLongSymbol" SG_ 2566763520 AT1IG_Aftrtrtmnt1DslPrtcltFltrIn "AT1IG_Aftrtrtmnt1DslPrtcltFltrInt_0000";
+BA_ "SystemSignalLongSymbol" SG_ 2566771968 EEC5_EngTrb1ClcltedTurbineIntake "EEC5_EngTrb1ClcltedTurbineIntakeTemp";
+BA_ "SystemSignalLongSymbol" SG_ 2566771968 EEC5_EngTrb1ClcltedTurbineOutlet "EEC5_EngTrb1ClcltedTurbineOutletTemp";
+BA_ "SystemSignalLongSymbol" SG_ 2566771968 EEC5_EngExhstGsRcrculation1Valve "EEC5_EngExhstGsRcrculation1ValveCtrl";
+BA_ "SystemSignalLongSymbol" SG_ 2566804992 AT1T1I_Aftrtrtmnt1SCRCatalystTan "AT1T1I_Aftrtrtmnt1SCRCatalystTankLevel";
+BA_ "SystemSignalLongSymbol" SG_ 2566804992 AT1T1I_Aftrtrtment1SCRCatalystTa "AT1T1I_Aftrtrtment1SCRCatalystTankTemp";
+BA_ "SystemSignalLongSymbol" SG_ 2566804992 AT1T1I_Aftrtrtmnt1SCRCtalystTank "AT1T1I_Aftrtrtmnt1SCRCtalystTankHeater";
+BA_ "SystemSignalLongSymbol" SG_ 2566832128 EES_ServiceComponentIdentificati "EES_ServiceComponentIdentificationA";
+BA_ "SystemSignalLongSymbol" SG_ 2566838784 SOFT_NmbrOfSftwrIdentificationFi "SOFT_NmbrOfSftwrIdentificationFields";
+BA_ "SystemSignalLongSymbol" SG_ 2566840064 EEC3_NominalFrictionPercentTorqu "EEC3_NominalFrictionPercentTorque";
+BA_ "SystemSignalLongSymbol" SG_ 2566840064 EEC3_Aftertreatment1IntakeDewPoi "EEC3_Aftertreatment1IntakeDewPoint";
+BA_ "SystemSignalLongSymbol" SG_ 2566840064 EEC3_Aftertreatment1ExhaustDewPo "EEC3_Aftertreatment1ExhaustDewPoint";
+BA_ "SystemSignalLongSymbol" SG_ 2566845952 IC1_EngDslPrtclateFilterIntakePr "IC1_EngDslPrtclateFilterIntakePress";
+BA_ "SystemSignalLongSymbol" SG_ 2566846208 VEP1_BatteryPotential_PowerInput "VEP1_BatteryPotential_PowerInput1";
+BA_ "SystemSignalLongSymbol" SG_ 2566834688 DM1_MalfunctionIndicatorLampStat "DM1_MalfunctionIndicatorLampStatus";
+VAL_ 2364539648 EEC2_DPFThermalManagementActive 0 "再生时排温未升高 " 1 "再生时排温已升高" 2 "保留 " 3 "未定义" ;
+VAL_ 2364539904 EEC1_EngTorqueMode 0 " 低速怠速调速器输出/无请求（默认模式）" 1 " 加速踏板/操作者选择" 2 " 巡航控制" 3 " PTO 调速器" 4 " 道路速度调速器" 5 " ASR 控制" 6 " 传动系统控制" 7 " ABS 控制" 8 " 转矩限制" 9 " 高速调速器" 10 " 制动系统" 11 " 遥控加速器" 12 " 服务程序（蜂鸣器报警）" 13 " 未定义" 14 " 其他 " 15 " 不可用" ;
+VAL_ 2566719232 DLCC1_EngAmberWarningLampCmd 0 "Lamp Off 灯灭" 1 "Lamp On 灯亮" 2 "Reserved 预留 " 3 "Not available无效" ;
+VAL_ 2566719232 DLCC1_EngRedStopLampCmd 0 "Lamp Off 灯灭" 1 "Lamp On 灯亮" 2 "Reserved 预留 " 3 "Not available无效" ;
+VAL_ 2566719232 DLCC1_OBDMalfunctionIndicatorLam 0 "Lamp Off 灯灭" 1 "Lamp On 灯亮" 2 "Reserved 预留 " 3 "Not available无效" ;
+VAL_ 2566719232 DLCC1_EngBrakeActiveLampCmd 0 "排气制动灯不亮" 1 "排气制动灯点亮" 2 "Reserved 预留 " 3 "Reserved 预留" ;
+VAL_ 2566719232 DLCC1_EngOilPressLowLampCmd 0 "Lamp Off 灯灭" 1 "Lamp On 灯亮" 2 "Reserved 预留 " 3 "Not available无效" ;
+VAL_ 2566719232 DLCC1_EngCoolantTempHighLampCmd 0 " LampOff" 1 " LampOn" 2 " Reserved" 3 " NotAvailable" ;
+VAL_ 2566719232 DLCC1_EngCoolantLevelLowLampCmd 0 " LampOff" 1 " LampOn" 2 " Reserved" 3 " NotAvailable" ;
+VAL_ 2566749184 DPFC1_DieselParticulateFilterLam 0 "关闭（不再生）" 1 "点亮（再生过程中）" 2 "红色常亮（服务再生需求指示）" 4 "快闪（1HZ驻车再生需求指示）" 7 " not available" ;
+VAL_ 2566749184 DPFC1_DslPrtcltFltrPssvRgnrtionS 0 "not active" 1 "active" 2 "reserved for SAE assignment" 3 "not available" ;
+VAL_ 2566749184 DPFC1_DslPrtcltFltrActvRgnrtionS 0 "not active" 1 "active" 2 "regeneration needed" 3 "not available" ;
+VAL_ 2566749184 DPFC1_DieselParticulateFilterSta 0 " Regeneration not needed" 1 "Regeneration needed lowest level" 2 " Regeneration needed moderate level" 3 " Regeneration needed highest level" 4 " not available" ;
+VAL_ 2566749184 DPFC1_DslPrtcltFltrActvRgnrtnInh 0 "not inhibited" 1 "inhibited" 2 "reserved for SAE assignment" 3 "not available" ;
+VAL_ 2566749184 DPFC1_ExhaustSystemHighTempLampC 0 "Off" 1 "On – solid" 2 "reserved for SAE assignment" 3 "reserved for SAE assignment" 4 "reserved for SAE assignment" 5 "reserved for SAE assignment" 6 "reserved for SAE assignment" 7 "not available" ;
+VAL_ 2365428224 EOI_EngOperatingState 0 "Stopped" 1 "Pre Start" 2 "Starting" 3 "Warm Up" 4 "Running" 5 "Cooldown" 6 "Engine Stopping" 7 "PostRun" 8 "available for SAE assignment8" 9 "available for SAE assignment9" 10 "available for SAE assignmentA" 11 "available for SAE assignmentB" 12 "available for SAE assignmentC" 13 "available for SAE assignmentD" 14 "reserved" 15 "not available" ;
+VAL_ 2566819840 ETH_EngineTorqueLimitFeature 0 "不限扭且蜂鸣器关闭" 1 "限扭25%外特性扭矩且蜂鸣器间隔响" 2 "限速20km/h且蜂鸣器长鸣" 3 "保留3" 4 "保留4" 5 "保留5" 6 "保留6" 7 "不可用" ;
+VAL_ 2566831360 FD1_FanDriveState 0 "风扇关闭" 1 "发动机系统—常规" 2 "发动机气温过高" 3 "发动机油温过高" 4 "发动机冷却液温度过高" 5 "未定义1" 6 "未定义6" 7 "未定义7" 8 "未定义8" 9 "手动控制" 10 "传动减速器" 11 "空调系统" 12 "定时器" 13 "发动机制动" 14 "其他" 15 "不可用" ;
+VAL_ 2566838016 GI2_GaseousConvSwtSt 0 "燃气转化开关松开" 1 "燃气转化开关摁下" 2 "错误" 3 "不可用" ;
+VAL_ 2566838016 GI2_ReducValveSt 0 "关闭" 1 "打开" 2 "保留" 3 "不可用" ;
+VAL_ 2566838272 GI3_CNGLampSt 1 "灯灭" 2 "灯亮" 3 "保留" 4 "不可用" ;
+VAL_ 2566840064 EEC3_Aftertreatment1IntakeDewPoi 0 "没有超过露点" 1 "超过露点" 2 "错误 " 3 "不可用" ;
+VAL_ 2566840064 EEC3_Aftertreatment1ExhaustDewPo 0 "没有超过露点" 1 "超过露点" 2 "错误 " 3 "不可用" ;
+VAL_ 2566841344 SHUTDN_EngWaitToStartLamp 0 "预热关" 1 "预热开" 2 "错误" 3 "不可用" ;
+VAL_ 2566844672 TwoSpeedAxleSwitch 0 " LowSpeedRange" 1 " HighSpeedRange" 2 " Error" 3 " NotAvailable" ;
+VAL_ 2566844672 CCVS1_ParkingBrakeSwitch 0 "Parking brake not set手刹未拉起" 1 "Parking brake set手刹拉起" 2 "故障 " 3 "Not available无效" ;
+VAL_ 2566844672 CCVS1_CruiseCtrlActive 0 "Cruise control switched off" 1 "Cruise control switched on" 2 "Error " 3 "Not available无效" ;
+VAL_ 2566844672 CCVS1_CruiseCtrlEnableSwitch 0 "Cruise control off" 1 "Cruise control on" 2 "故障 " 3 "Not available无效" ;
+VAL_ 2566844672 CCVS1_BrakeSwitch 0 "Brake pedal released" 1 "Brake pedal depressed" 2 "故障 " 3 "Not available无效" ;
+VAL_ 2566844672 CCVS1_ClutchSwitch 0 "Clutch pedal released" 1 "Clutch pedal depressed" 2 "故障 " 3 "Not available无效" ;
+VAL_ 2566844672 CCVS1_CruiseCtrlSetSwitch 0 "未开启巡航OFF开关" 1 "开启巡航OFF开关" 2 "错误" 3 "不可用" ;
+VAL_ 2566844672 CCVS1_CruiseCtrlCoastSwitch 0 "未开启巡航DEC开关" 1 "开启巡航DEC开关" 2 "错误" 3 "不可用" ;
+VAL_ 2566844672 CCVS1_CruiseCtrlResumeSwitch 0 "未开启巡航RES开关" 1 "开启巡航RES开关" 2 "错误" 3 "不可用" ;
+VAL_ 2566844672 CCVS1_CruiseCtrlAccelerateSwitch 0 "未开启巡航ACC开关" 1 "开启巡航ACC开关" 2 "错误" 3 "不可用" ;
+VAL_ 2566844672 CCVS1_PTOGovernorState 0 "Disable/Off" 1 "Hold" 2 "Not used" 3 "Standby" 4 "Not used" 5 "Set" 6 "Decelerate" 7 "Resume" 8 "Acc" 9 "Not used" 10 "Programmed set speed 0" 11 "Programmed set speed 1" 12 "Programmed set speed 2" 13 "Programmed set speed 3" 31 "Not available" ;
+VAL_ 2566844672 CCVS1_CruiseCtrlStates 0 "Off/Disable" 1 "Hold" 2 "Acc" 3 "Dec" 4 "Resume" 5 "Set" 6 "Acc Override" ;
+VAL_ 2566848256 OI_WaterInFuelIndicator 0 "No" 1 "Yes" ;
+VAL_ 2566848256 OI_DrvWarnSysIdctrSt 0 "关" 1 "常亮" 2 "保留" 3 "保留" 4 "闪亮" 5 "保留" 6 "保留" 7 "不可用" ;
+VAL_ 2566848256 OI_EmiCtlSysOpInducementSeverity 2 "初级驾驶性能限制即将激活即将限制扭矩 75%" 3 "初级驾驶性能限制已激活已限扭 75%" 4 "严重驾驶性能限制即将激活即将限制车速 20km/h" 5 "严重驾驶性能限制已激活已限速 20km/h" ;
+VAL_ 2566899712 GI4_GaseousLeakLamp 0 "Normal/探测器正常" 1 "Gas leak/气体泄漏(泄露指示灯)" 2 "Error/探测器故障或连线故障（传感器故障指示灯）" 3 "不可用" ;
+VAL_ 2566910208 ER_DPF_FrequentRegeneration 0 "灯灭" 1 "灯亮" ;
+VAL_ 2566910208 ER_VehRegenerationDsitanceShort 0 "灯灭" 1 "灯亮" ;
+VAL_ 2566910208 ER_ExhaustFluidLowQuality 0 "合格" 1 "不合格" ;
+VAL_ 2566834688 DM1_ProtectLampStatus 0 "关" 1 "点亮 " 2 "错误 " 3 "不可用" ;
+VAL_ 2566834688 DM1_MalfunctionIndicatorLampStat 0 "关" 1 "点亮 " 2 "错误 " 3 "不可用" ;
+VAL_ 2566834688 DM1_RedStopLampState 0 "关" 1 "点亮 " 2 "错误 " 3 "不可用" ;
+VAL_ 2348810251 EngOverrideCtrlMode 0 " OvrrdDsbldDsblAnyExstngCtrlCmdd 不使能" 1 " SpdCtrlGvrnSpdTInclddDsrdSpdVle 转速控制" 2 " TrqCtrlCntrlTrqTInclddDsrdTrqVl 扭矩控制" 3 " Spd_TrqLmtCtrlLmtSpdAnd_OrTrqBs 转速/扭矩控制" ;
+VAL_ 2348810251 RequestedSpeedControlConditions 0 " Transient Optimized for driveline disengaged and non lockup conditions 科密不支持" 1 " Stability Optimized for driveline disengaged and non lockup conditions 科密不支持" 2 " Stability Optimized for driveline engaged and/or in lockup condition 1 " 3 "始终设置" ;
+VAL_ 2348810251 OverrideCtrlModePriority 0 " HghstPrrtyUsdFrSttnsThtRqrImmdt最高优先级" 1 " HighPriority 高优先级" 2 " MdmPrrtyUsdFrPwrtrnCtrlOprtnsWh中优先级" 3 " LowPriority低优先级" ;
+VAL_ 2348810251 MessageCounter 8 " Reserved8" 9 " Reserved9" 10 " ReservedA" 11 " ReservedB" 12 " ReservedC" 13 " ReservedD" 14 " ReservedE" 15 " Not Available" ;
+VAL_ 2348810251 MessageChecksum 15 " Not Available" ;
+VAL_ 2348810400 EngOverrideCtrlMode 0 " OvrrdDsbldDsblAnyExstngCtrlCmdd 不使能" 1 " SpdCtrlGvrnSpdTInclddDsrdSpdVle 转速控制" 2 " TrqCtrlCntrlTrqTInclddDsrdTrqVl 扭矩控制" 3 " Spd_TrqLmtCtrlLmtSpdAnd_OrTrqBs 转速/扭矩控制" ;
+VAL_ 2348810400 RequestedSpeedControlConditions 0 " Transient Optimized for driveline disengaged and non lockup conditions 科密不支持" 1 " Stability Optimized for driveline disengaged and nonlockup conditions 科密不支持" 2 " Stability Optimized for driveline engaged and/or in lockup condition 1 科密不支持" 3 "Stability Optimized for driveline engaged and/or in lockup condition 2 " ;
+VAL_ 2348810400 OverrideCtrlModePriority 0 " HghstPrrtyUsdFrSttnsThtRqrImmdt最高优先级" 1 " HighPriority 高优先级" 2 " MdmPrrtyUsdFrPwrtrnCtrlOprtnsWh中优先级" 3 " LowPriority低优先级" ;
+VAL_ 2348810400 MessageCounter 8 " Reserved8" 9 " Reserved9" 10 " Reserved10" 11 " Reserved11" 12 " Reserved12" 13 " Reserved13" 14 " Reserved14" 15 " Not Available" ;
+VAL_ 2348810400 MessageChecksum 15 " Not Available" ;
+VAL_ 2566803211 VDC1_VDCInformationSignal 0 " Off" 1 " On" 2 " Reserved" 3 " DontCare_TakeNoAction无效值" ;
+VAL_ 2566803211 VDC1_VDCFullyOperational 0 " NotFullyOperational" 1 " FullyOperational" 2 " Reserved" 3 " DontCare_TakeNoAction" ;
+VAL_ 2566803211 VDC1_VDCbrakelightrequest 0 " Turn brake light not on制动灯不亮" 1 " Turn brake light on点亮制动灯" 2 " Reserved保留" 3 " Don't care/Take no action无效值" ;
+VAL_ 2566803211 VDC1_ROPEngCtrlActive 0 " ROPEngCtrlPassiveButInstalled发动机控制未激活，已安装" 1 " ROPEngCtrlActive发动机控制激活" 2 " Reserved" 3 " DontCare_TakeNoAction" ;
+VAL_ 2566803211 VDC1_ROPBrakeCtrlActive 0 " ROPBrakeCtrlPassiveButInstalled制动控制未激活，已安装。说明有ROP功能，但没有控制车轮。" 1 " ROPBrakeCtrlActive制动控制激活" 2 " Reserved" 3 " DontCare_TakeNoAction" ;
+VAL_ 2566803211 VDC1_YCEngCtrlActive 0 " YCEngCtrlPassiveButInstalled 发动机控制未激活，已安装" 1 " YCEngCtrlActive发动机控制激活" 2 " Reserved" 3 " DontCare_TakeNoAction" ;
+VAL_ 2566803211 VDC1_YCBrakeCtrlActive 0 " YCBrakeCtrlPassiveButInstalled制动控制未激活，已安装" 1 " YCBrakeCtrlActive制动控制激活" 2 " Reserved" 3 " DontCare_TakeNoAction" ;
+
