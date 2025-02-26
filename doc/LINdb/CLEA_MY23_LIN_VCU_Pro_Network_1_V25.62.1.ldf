@@ -1,0 +1,239 @@
+/*******************************************************************************/
+/*                                                                             */
+/* Description:                                                                */
+/*                                                                             */
+/* Created: 2024-03-06                                                         */
+/*                                                                             */
+/* Author:                                                                     */
+/*                                                                             */
+/*******************************************************************************/
+
+
+LIN_description_file;
+
+LIN_protocol_version = "J2602_1_1.0";
+LIN_language_version = "J2602_3_1.0";
+
+LIN_speed = 10.417 kbps;
+
+Nodes {
+	Master: VCU_Pro, 10 ms ,0.1 ms ,34 bits ,1 % ;
+	Slaves: SWC ;
+}
+
+Signals {
+	SWCAPINFO0_60_1: 1, 0, SWC, VCU_Pro; 
+	SWCAPINFO1_60_1: 1, 0, SWC, VCU_Pro; 
+	SWCAPINFO2_60_1: 1, 0, SWC, VCU_Pro; 
+	SWCAPINFO3_60_1: 1, 0, SWC, VCU_Pro; 
+	SWCAPINFO4_60_1: 1, 0, SWC, VCU_Pro; 
+	SWCJ2602Error_60_1: 3, 0, SWC, VCU_Pro; 
+	SWC_FavUp_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_FavDn_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_VolUp_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_VolDn_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_Up_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_Down_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_SET_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_Cluster_View_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_Source_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_Phone_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_VR_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_HangUp_Mute_60_1: 1, 0, SWC, VCU_Pro; 
+	SWC_InfoMulti_60_1: 1, 0, SWC, VCU_Pro; 
+	SWCAnyStckSw_60_1: 1, 0, SWC, VCU_Pro; 
+	StrgWhlCtlIndDimVal_60_1: 16, 0, VCU_Pro, SWC; 
+	StrgWhlCtlBklgtDimVal_60_1: 16, 0, VCU_Pro, SWC; 
+	SWC_PartNumber_60_1: 32, {0,0,0,0}, SWC, VCU_Pro; 
+	DayNightMode_60_1: 1, 0, VCU_Pro, SWC; 
+	StrgWhlCtlDeadFrtDimVal_60_1: 16, 0, VCU_Pro, SWC; 
+}
+
+Diagnostic_signals {
+	MasterReqB0: 8,0;
+	MasterReqB1: 8,0;
+	MasterReqB2: 8,0;
+	MasterReqB3: 8,0;
+	MasterReqB4: 8,0;
+	MasterReqB5: 8,0;
+	MasterReqB6: 8,0;
+	MasterReqB7: 8,0;
+	SlaveRespB0: 8,0;
+	SlaveRespB1: 8,0;
+	SlaveRespB2: 8,0;
+	SlaveRespB3: 8,0;
+	SlaveRespB4: 8,0;
+	SlaveRespB5: 8,0;
+	SlaveRespB6: 8,0;
+	SlaveRespB7: 8,0;
+}
+
+Frames {
+
+	SWC_Status: 0x20, SWC, 3{
+		SWCAPINFO0_60_1, 0;
+		SWCAPINFO1_60_1, 1;
+		SWCAPINFO2_60_1, 2;
+		SWCAPINFO3_60_1, 3;
+		SWCAPINFO4_60_1, 4;
+		SWCJ2602Error_60_1, 5;
+		SWC_FavUp_60_1, 8;
+		SWC_FavDn_60_1, 9;
+		SWC_VolUp_60_1, 10;
+		SWC_VolDn_60_1, 11;
+		SWC_Up_60_1, 12;
+		SWC_Down_60_1, 13;
+		SWC_SET_60_1, 14;
+		SWC_Cluster_View_60_1, 15;
+		SWC_Source_60_1, 16;
+		SWC_Phone_60_1, 17;
+		SWC_VR_60_1, 18;
+		SWC_HangUp_Mute_60_1, 19;
+		SWC_InfoMulti_60_1, 20;
+		SWCAnyStckSw_60_1, 21;
+	}
+
+	SWC_DimmingLevel: 0x21, VCU_Pro, 4{
+		StrgWhlCtlIndDimVal_60_1, 0;
+		StrgWhlCtlBklgtDimVal_60_1, 16;
+	}
+
+	SWC_DiagnosticReport: 0x22, SWC, 4{
+		SWC_PartNumber_60_1, 0;
+	}
+
+	SWC_Misc2: 0x23, VCU_Pro, 3{
+		DayNightMode_60_1, 0;
+		StrgWhlCtlDeadFrtDimVal_60_1, 8;
+	}
+
+}
+
+Diagnostic_frames {
+
+	MasterReq: 0x3c	{
+		MasterReqB0, 0;
+		MasterReqB1, 8;
+		MasterReqB2, 16;
+		MasterReqB3, 24;
+		MasterReqB4, 32;
+		MasterReqB5, 40;
+		MasterReqB6, 48;
+		MasterReqB7, 56;
+}
+
+	SlaveResp: 0x3d	{
+		SlaveRespB0, 0;
+		SlaveRespB1, 8;
+		SlaveRespB2, 16;
+		SlaveRespB3, 24;
+		SlaveRespB4, 32;
+		SlaveRespB5, 40;
+		SlaveRespB6, 48;
+		SlaveRespB7, 56;
+}
+
+}
+
+Node_attributes {
+	SWC {
+		LIN_protocol = "J2602_1_1.0";
+		configured_NAD = 0x60;
+		product_id = 0x0000,0x0000,0;
+		response_error = SWCJ2602Error_60_1;
+		P2_min = 0 ms;
+		ST_min = 0 ms;
+		configurable_frames {
+			SWC_Status = 0x20;
+SWC_DimmingLevel = 0x21;
+SWC_DiagnosticReport = 0x22;
+SWC_Misc2 = 0x23;
+		}
+		response_tolerance = 35 %;
+	}
+}
+
+Schedule_tables {
+	Cy_Normal_Cyclic {
+		SWC_Status delay 20 ms ;
+		SWC_DimmingLevel delay 20 ms ;
+		SWC_DiagnosticReport delay 20 ms ;
+		SWC_Misc2 delay 20 ms ;
+	}
+}
+
+Signal_encoding_types {
+	SWCAPINFO0_60_1 {
+		logical_value, 0, "No (Communication) Continue Requested" ;
+		logical_value, 1, "(Communication) Continue Requested" ;
+	}
+
+	SWCAPINFO1_60_1 {
+		logical_value, 0, "No Diagnostic Information" ;
+		logical_value, 1, "Diagnostic Information" ;
+	}
+
+	SWCAPINFO2_60_1 {
+		logical_value, 0, "No Reset" ;
+		logical_value, 1, "Reset" ;
+	}
+
+	SWCAPINFO3_60_1 {
+		logical_value, 0, "Configured" ;
+		logical_value, 1, "Un-configured" ;
+	}
+
+	SWCAPINFO4_60_1 {
+		logical_value, 0, "No Hardware or Software error" ;
+		logical_value, 1, "Hardware or Software error" ;
+	}
+
+	SWCJ2602Error_60_1 {
+		logical_value, 0, "No Detected Fault" ;
+		logical_value, 1, "Reset" ;
+		logical_value, 2, "Reserved" ;
+		logical_value, 3, "Reserved" ;
+		logical_value, 4, "Tx Bit Error" ;
+		logical_value, 5, "Checksum Error" ;
+		logical_value, 6, "Byte Field Framing Error" ;
+		logical_value, 7, "ID Parity Error" ;
+	}
+
+	BLN {
+		logical_value, 0, "False" ;
+		logical_value, 1, "True" ;
+	}
+
+	StrgWhlCtlIndDimVal_60_1 {
+		physical_value, 0, 65535, 0.0015259, 0, "%" ;
+	}
+
+	StrgWhlCtlBklgtDimVal_60_1 {
+		physical_value, 0, 65535, 0.0015259, 0, "%" ;
+	}
+
+	DayNightMode_60_1 {
+		logical_value, 0, "Night" ;
+		logical_value, 1, "Day" ;
+	}
+
+	StrgWhlCtlDeadFrtDimVal_60_1 {
+		physical_value, 0, 65535, 0.0015259, 0, "%" ;
+	}
+
+}
+
+Signal_representation {
+	SWCAPINFO0_60_1: SWCAPINFO0_60_1 ;
+	SWCAPINFO1_60_1: SWCAPINFO1_60_1 ;
+	SWCAPINFO2_60_1: SWCAPINFO2_60_1 ;
+	SWCAPINFO3_60_1: SWCAPINFO3_60_1 ;
+	SWCAPINFO4_60_1: SWCAPINFO4_60_1 ;
+	SWCJ2602Error_60_1: SWCJ2602Error_60_1 ;
+	BLN: SWC_FavUp_60_1,SWC_FavDn_60_1,SWC_VolUp_60_1,SWC_VolDn_60_1,SWC_Up_60_1,SWC_Down_60_1,SWC_SET_60_1,SWC_Cluster_View_60_1,SWC_Source_60_1,SWC_Phone_60_1,SWC_VR_60_1,SWC_HangUp_Mute_60_1,SWC_InfoMulti_60_1,SWCAnyStckSw_60_1 ;
+	StrgWhlCtlIndDimVal_60_1: StrgWhlCtlIndDimVal_60_1 ;
+	StrgWhlCtlBklgtDimVal_60_1: StrgWhlCtlBklgtDimVal_60_1 ;
+	DayNightMode_60_1: DayNightMode_60_1 ;
+	StrgWhlCtlDeadFrtDimVal_60_1: StrgWhlCtlDeadFrtDimVal_60_1 ;
+}
+
