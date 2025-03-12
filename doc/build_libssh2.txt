@@ -1,0 +1,54 @@
+### 编译 libssh2 的关键步骤：
+
+1. **下载 libssh2 源码**
+   - 从 GitHub 克隆：`git clone https://github.com/libssh2/libssh2.git`
+
+2. **安装 OpenSSL 依赖**
+   - 确保安装了 32 位版本的 OpenSSL（如您所示位于 `C:\Program Files (x86)\OpenSSL-Win32\lib\VC\x86\MT`）
+
+3. **使用 CMake 配置**
+   - 创建 build 目录并进入
+   - **关键步骤**：在 CMake GUI 或命令行中，选择 Visual Studio 2022 作为生成器
+   - **指定目标架构为 x86**（32位）- 这一步非常重要
+   - 配置 OpenSSL 路径：`-DCMAKE_USE_OPENSSL=ON -DOPENSSL_ROOT_DIR="C:\Program Files (x86)\OpenSSL-Win32"`
+   - 设置静态库编译：`-DBUILD_SHARED_LIBS=OFF` 如果需要静态库
+
+4. **编译库**
+   - 使用 Visual Studio 2022 打开生成的解决方案
+   - 确保选择 Release x86 配置
+   - 构建解决方案
+
+5. **整理库文件**
+   - 将生成的静态库（.lib）和头文件组织到适当的目录结构中
+
+### 在 Qt 项目中使用 libssh2（通过 PRI 文件）：
+
+从您分享的 PRI 文件可以看到配置方式：
+
+1. **设置库根目录**
+   ```qmake
+   LIBSSH2_ROOT = D:/source/FKMaster/3rdParty/libssh2
+   OPENSSL_ROOT = "C:\Program Files (x86)\OpenSSL-Win32\lib\VC\x86\MT"
+   ```
+
+2. **添加头文件路径**
+   ```qmake
+   INCLUDEPATH += $$LIBSSH2_ROOT/include
+   ```
+
+3. **根据平台配置链接库**
+   ```qmake
+   win32: {
+       isEmpty(QMAKE_TARGET.arch): {
+           message("Please specify the target architecture (x86 or x64).")
+       } else: {
+           # 添加 libssh2 静态库
+           LIBS += -L$$LIBSSH2_ROOT/lib/$$QMAKE_TARGET.arch -llibssh2_static
+           # 添加 OpenSSL 库（libssh2 依赖）
+           LIBS += -L$$OPENSSL_ROOT -llibssl_static -llibcrypto_static
+           # 添加 Windows 套接字库（libssh2 依赖）
+           LIBS += -lws2_32
+       }
+   }
+   ```
+
