@@ -1,0 +1,472 @@
+/********************************************************************************/
+/*                                                                              */
+/* Description: LIN Description File for Steering Wheel Switches (Gen2, Preh)   */
+/*                                                                              */
+/* Modified:    March 2, 2023                                                   */
+/*                                                                              */
+/* Author:      Kendrick Lau                                                    */
+/*                                                                              */
+/* Version:     1.0                                                             */
+/*                                                                              */
+/* Project:     SWS                                                             */
+/*                                                                              */
+/* Release Notes                                                                */
+/*                                                                              */
+/* v1.0                                                                         */
+/* - Remove the safety press interface, given the ASIL-B agreements             */
+/* - Add vehicle temperature data interface                                     */
+/* - Expand temperature representation to 255                                   */
+/* - Re-align counter and checksum signals                                      */
+/*                                                                              */
+/* v0.12                                                                        */
+/* - Remove LED_FAULT from diagnostics bit-field due to no HW capability        */
+/*                                                                              */
+/* v0.11                                                                        */
+/* - Add voltage and current for heater mat                                     */
+/* - Add fault state for NTC resistor                                           */
+/* - Remove second stage target interface                                       */
+/* - Modify press representation to exclude second stage                        */
+/*                                                                              */
+/********************************************************************************/
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+    Master: VCM, 5 ms, 0.25 ms;
+    Slaves: SWSL, SWSR;
+}
+
+Signals {
+    // Commands to SWSx
+    VCM_buttonLightBrightness:                  10, 0, VCM, SWSL, SWSR ;
+    VCM_buttonLightRamp:                        4, 0, VCM, SWSL, SWSR ;
+    VCM_buttonHapticIntensity:                  8, 0, VCM, SWSL, SWSR ;
+    VCM_buttonPressTarget:                      5, 0, VCM, SWSL, SWSR ;
+    VCM_buttonReleaseTarget:                    5, 0, VCM, SWSL, SWSR ;
+
+    VCM_leftContextHapticProfile:               3, 0, VCM, SWSL ;
+    VCM_rightContextHapticProfile:              3, 0, VCM, SWSR ;
+
+    VCM_heaterPWM:                              8, 0, VCM, SWSL ;
+
+    VCM_vehicleTemperature:                     8, 0, VCM, SWSL, SWSR ;
+
+    // Preh Specific
+    VCM_rightScrollWheelChallenge:              10, 0, VCM, SWSR ;
+    VCM_rollingCounter:                         4, 0, VCM, SWSR ;
+    VCM_checksum:                               8, 0, VCM, SWSR ;
+
+    // Responses from SWSx
+    SWSL_scrollWheelTicks:                      5, 0, SWSL, VCM ;
+    SWSR_scrollWheelTicks:                      5, 0, SWSR, VCM ;
+    SWSL_scrollWheelPress:                      2, 0, SWSL, VCM ;
+    SWSR_scrollWheelPress:                      2, 0, SWSR, VCM ;
+    SWSL_scrollWheelTilt:                       2, 0, SWSL, VCM ;
+    SWSR_scrollWheelTilt:                       2, 0, SWSR, VCM ;
+    SWSL_scrollWheelDoublePress:                1, 0, SWSL, VCM ;
+    SWSR_scrollWheelDoublePress:                1, 0, SWSR, VCM ;
+
+    // Preh Specific
+    SWSR_scrollWheelPressRaw0:                  8, 0, SWSR, VCM ;
+    SWSR_scrollWheelPressRaw1:                  8, 0, SWSR, VCM ;
+
+    SWSL_button1Status:                         2, 0, SWSL, VCM ;
+    SWSL_button2Status:                         2, 0, SWSL, VCM ;
+    SWSL_button3Status:                         2, 0, SWSL, VCM ;
+
+    SWSR_button4Status:                         2, 0, SWSR, VCM ;
+    SWSR_button5Status:                         2, 0, SWSR, VCM ;
+    SWSR_button6Status:                         2, 0, SWSR, VCM ;
+
+    SWSL_button1StatusForce:                    8, 0, SWSL, VCM ;
+    SWSL_button2StatusForce:                    8, 0, SWSL, VCM ;
+    SWSL_button3StatusForce:                    8, 0, SWSL, VCM ;
+
+    SWSR_button4StatusForce:                    8, 0, SWSR, VCM ;
+    SWSR_button5StatusForce:                    8, 0, SWSR, VCM ;
+    SWSR_button6StatusForce:                    8, 0, SWSR, VCM ;
+
+    SWSL_button1StatusTouch:                    2, 0, SWSL, VCM ;
+    SWSL_button2StatusTouch:                    2, 0, SWSL, VCM ;
+    SWSL_button3StatusTouch:                    2, 0, SWSL, VCM ;
+
+    SWSR_button4StatusTouch:                    2, 0, SWSR, VCM ;
+    SWSR_button5StatusTouch:                    2, 0, SWSR, VCM ;
+    SWSR_button6StatusTouch:                    2, 0, SWSR, VCM ;
+
+    SWSL_heaterNTCTemperature:                  8, 0, SWSL, VCM ;
+    SWSL_heaterStatus:                          2, 0, SWSL, VCM ;
+    SWSL_heaterVoltage:                         7, 0, SWSL, VCM ;
+    SWSL_heaterCurrent:                         7, 0, SWSL, VCM ;
+
+    SWSR_hornSwitchStatus:                      2, 0, SWSR, VCM ;
+
+    SWSL_rollingCounter:                        4, 0, SWSL, VCM ;
+    SWSL_checksum:                              8, 0, SWSL, VCM ;
+
+    SWSR_rollingCounter:                        4, 0, SWSR, VCM ;
+    SWSR_checksum:                              8, 0, SWSR, VCM ;
+
+    SWSL_responseError:                         1, 0, SWSL, VCM ;
+    SWSR_responseError:                         1, 0, SWSR, VCM ;
+
+    SWSL_diagnosticsError:                      8, 0, SWSL, VCM ;
+    SWSR_diagnosticsError:                      8, 0, SWSR, VCM ;
+
+    SWS_debug0: 6, 0, SWSL, VCM;
+    SWS_debug1: 6, 0, SWSL, VCM;
+    SWS_debug2: 6, 0, SWSL, VCM;
+    SWS_debug3: 6, 0, SWSL, VCM;
+    SWS_debug4: 6, 0, SWSL, VCM;
+}
+
+Diagnostic_signals {
+    MasterReqB0: 8, 0 ;
+    MasterReqB1: 8, 0 ;
+    MasterReqB2: 8, 0 ;
+    MasterReqB3: 8, 0 ;
+    MasterReqB4: 8, 0 ;
+    MasterReqB5: 8, 0 ;
+    MasterReqB6: 8, 0 ;
+    MasterReqB7: 8, 0 ;
+    SlaveRespB0: 8, 0 ;
+    SlaveRespB1: 8, 0 ;
+    SlaveRespB2: 8, 0 ;
+    SlaveRespB3: 8, 0 ;
+    SlaveRespB4: 8, 0 ;
+    SlaveRespB5: 8, 0 ;
+    SlaveRespB6: 8, 0 ;
+    SlaveRespB7: 8, 0 ;
+}
+
+Frames {
+    VCM_request1: 40, VCM, 5 {
+        VCM_buttonLightBrightness,                  0 ;  
+        VCM_buttonLightRamp,                        10 ; 
+        VCM_buttonHapticIntensity,                  14 ; 
+        VCM_buttonPressTarget,                      22 ; 
+        VCM_buttonReleaseTarget,                    27 ;
+        VCM_vehicleTemperature,                     32 ; // 40
+    }
+
+    VCM_request2: 41, VCM, 5 {
+        VCM_leftContextHapticProfile,               0 ;
+        VCM_rightContextHapticProfile,              3 ;
+        VCM_heaterPWM,                              6 ;
+        VCM_rightScrollWheelChallenge,              14 ; // Preh-Specific
+        VCM_rollingCounter,                         24 ; // 24 - Byte-aligned
+        VCM_checksum,                               32 ; // 32 - Byte-aligned
+    }
+
+    SWSL_response1: 42, SWSL, 7 {
+        SWSL_scrollWheelTicks,                      0 ; 
+        SWSL_scrollWheelPress,                      5 ; 
+        SWSL_scrollWheelTilt,                       7 ; 
+        SWSL_button1Status,                         9 ; 
+        SWSL_button2Status,                         11 ; 
+        SWSL_button3Status,                         13 ;
+        SWSL_heaterNTCTemperature,                  15 ;
+        SWSL_heaterStatus,                          23 ;
+        SWSL_heaterVoltage,                         25 ;
+        SWSL_heaterCurrent,                         32 ;
+        SWSL_responseError,                         39 ; 
+        SWSL_rollingCounter,                        40 ;
+        SWSL_checksum,                              48 ; // 48 - Byte-aligned
+    }
+
+    SWSL_response2: 44, SWSL, 5 {
+        SWSL_button1StatusForce,                    0 ; 
+        SWSL_button2StatusForce,                    8 ; 
+        SWSL_button3StatusForce,                    16 ;
+        SWSL_button1StatusTouch,                    24 ; 
+        SWSL_button2StatusTouch,                    26 ;
+        SWSL_button3StatusTouch,                    28 ;
+        SWSL_diagnosticsError,                      30 ;
+    }
+
+    SWSR_response1: 43, SWSR, 6 {
+        SWSR_scrollWheelTicks,                      0 ; 
+        SWSR_scrollWheelPress,                      5 ; 
+        SWSR_scrollWheelTilt,                       7 ;
+        SWSR_scrollWheelDoublePress,                9 ;
+        SWSR_button4Status,                         10 ; 
+        SWSR_button5Status,                         12 ; 
+        SWSR_button6Status,                         14 ;
+        SWSR_hornSwitchStatus,                      16 ;
+        SWSR_scrollWheelPressRaw0,                  18 ;
+        SWSR_scrollWheelPressRaw1,                  26 ;
+        SWSR_rollingCounter,                        34 ;
+        SWSR_responseError,                         38 ;
+        SWSR_checksum,                              40 ; // 40 - Byte-aligned
+    }
+
+    SWSR_response2: 45, SWSR, 5 {
+        SWSR_button4StatusForce,                    0 ;
+        SWSR_button5StatusForce,                    8 ;
+        SWSR_button6StatusForce,                    16 ;
+        SWSR_button4StatusTouch,                    24 ;
+        SWSR_button5StatusTouch,                    26 ;
+        SWSR_button6StatusTouch,                    28 ;
+        SWSR_diagnosticsError,                      30 ;
+    }
+
+    SWS_debug: 46, SWSL, 4 {
+        SWS_debug0, 0;
+        SWS_debug1, 6;
+        SWS_debug2, 12;
+        SWS_debug3, 18;
+        SWS_debug4, 24;
+    }
+}
+
+Diagnostic_frames {
+    MasterReq: 0x3c {
+        MasterReqB0, 0;
+        MasterReqB1, 8;
+        MasterReqB2, 16;
+        MasterReqB3, 24;
+        MasterReqB4, 32;
+        MasterReqB5, 40;
+        MasterReqB6, 48;
+        MasterReqB7, 56;
+    }
+    SlaveResp: 0x3d {
+        SlaveRespB0, 0;
+        SlaveRespB1, 8;
+        SlaveRespB2, 16;
+        SlaveRespB3, 24;
+        SlaveRespB4, 32;
+        SlaveRespB5, 40;
+        SlaveRespB6, 48;
+        SlaveRespB7, 56;
+    }
+}
+
+Node_attributes {
+    SWSL{
+        LIN_protocol = "2.1";
+        configured_NAD = 0x11;
+        initial_NAD = 0x11;
+        product_id = 0x0, 0x0, 0;
+        response_error = SWSL_responseError;
+        P2_min = 50 ms;
+        ST_min = 0 ms;
+        N_As_timeout = 1000 ms;
+        N_Cr_timeout = 1000 ms;
+        configurable_frames {
+            VCM_request1;
+            VCM_request2;
+            SWSL_response1;
+            SWSL_response2;
+            SWS_debug;
+        }
+    }
+    SWSR{
+        LIN_protocol = "2.1";
+        configured_NAD = 0x12;
+        initial_NAD = 0x12;
+        product_id = 0x0, 0x0, 0;
+        response_error = SWSR_responseError;
+        P2_min = 50 ms;
+        ST_min = 0 ms;
+        N_As_timeout = 1000 ms;
+        N_Cr_timeout = 1000 ms;
+        configurable_frames {
+            VCM_request1;
+            VCM_request2;
+            SWSR_response1;
+            SWSR_response2;
+        }
+    }
+}
+
+Schedule_tables {
+    Normal_SWS {
+        VCM_request2        delay 10 ms;
+        VCM_request1        delay 10 ms;
+        SWSL_response1      delay 10 ms;
+        SWSL_response2      delay 10 ms;
+        SWSR_response2      delay 10 ms;
+        SWSR_response1      delay 10 ms; // shall be placed as far as possible after VCM_request2
+    }
+    Debug {
+        SWS_debug delay 5 ms;
+    }
+    DiagRequest {
+        MasterReq           delay 10 ms ;
+    }
+    DiagResponse {
+        SlaveResp           delay 10 ms ;
+    }
+}
+
+Signal_encoding_types {
+
+    representationOnOff {
+        logical_value, 0, "OFF" ;
+        logical_value, 1, "ON" ;
+    }
+    representationPercentage {
+        physical_value, 0, 200, 0.5, 0, "%" ;
+    }
+    representationBrightness {
+        physical_value, 0, 1000, 0.1, 0, "%" ;
+    }
+    representationBrightnessRamp {
+        physical_value, 0, 15, 0.05, 0, "%/ms";
+    }
+    representationHapticProfile {
+        logical_value, 0, "NONE" ;
+        logical_value, 1, "PROFILE_1" ;
+        logical_value, 2, "PROFILE_2" ;
+        logical_value, 3, "PROFILE_3" ;
+        logical_value, 4, "PROFILE_4" ;
+        logical_value, 5, "PROFILE_5" ;
+        logical_value, 6, "PROFILE_6" ;
+        logical_value, 7, "PROFILE_7" ;
+    }
+    representationForceTarget {
+        physical_value, 0, 30, 0.5, 0, "N";
+    }
+    representationTicks {
+        physical_value, 0, 23, 1, -12, "TICKS" ;
+    }
+    representationPress {
+        logical_value, 0, "NOT_PRESSED" ;
+        logical_value, 1, "PRESSED" ;
+        logical_value, 2, "FAULT" ;
+    }
+    representationTilt {
+        logical_value, 0, "NO_TILT" ;
+        logical_value, 1, "LEFT_TILT" ;
+        logical_value, 2, "RIGHT_TILT" ;
+        logical_value, 3, "FAULT" ;
+    }
+    representationDoublePress {
+        logical_value, 0, "NOT_DOUBLE_PRESSED" ;
+        logical_value, 1, "DOUBLE_PRESSED" ;
+    }
+    representationForce {
+        physical_value, 0, 255, 0.1, 0, "N" ;
+    }
+    representationTouch {
+        logical_value, 0, "NOT_TOUCHED" ;
+        logical_value, 1, "TOUCHED" ;
+        logical_value, 2, "FAULT" ;
+    }
+    representationTemperature {
+        physical_value, 0, 254, 0.5, -40, "C" ;
+        logical_value, 255, "FAULT" ;
+    }
+    representationHeaterStatus {
+        logical_value, 0, "OFF" ;
+        logical_value, 1, "ON" ;
+        logical_value, 2, "FAULT" ;
+    }
+    representationRollingCounter {
+        physical_value, 0, 15, 1, 0, "COUNT" ;
+    }
+    representationChecksum {
+        physical_value, 0, 255, 1, 0, "SUM" ;
+    }
+    representationScrollWheelChallenge {
+        physical_value, 0, 1023, 1, 0, "COUNT" ;
+    }
+    representationScrollWheelRaw {
+        physical_value, 0, 255, 1, 0, "COUNT" ;
+    }
+    representationDiagnosticsStatus {
+        logical_value, 0x00, "NO_FAULT" ;
+        logical_value, 0x01, "VBAT_UNDERVOLTAGE_FAULT" ;
+        logical_value, 0x02, "VBAT_OVERVOLTAGE_FAULT" ;
+        logical_value, 0x04, "FORCE_SENSOR_FAULT" ;
+        logical_value, 0x08, "CAPACITIVE_SENSOR_FAULT" ;
+        logical_value, 0x10, "SCROLL_WHEEL_FAULT" ;
+        logical_value, 0x20, "HAPTIC_MOTOR_FAULT" ;
+    }
+    representationHeaterVoltage {
+        physical_value, 0, 100, 0.1, 8, "VOLTS" ;
+    }
+    representationHeaterCurrent {
+        physical_value, 0, 100, 0.1, 0, "AMPS" ; 
+    }
+}
+
+Signal_representation {
+    representationOnOff:                        SWSL_responseError,
+                                                SWSR_responseError ;
+
+    representationPercentage:                   VCM_buttonHapticIntensity,
+                                                VCM_heaterPWM ;
+    
+    representationBrightness:                   VCM_buttonLightBrightness ;
+
+    representationBrightnessRamp:               VCM_buttonLightRamp ;
+        
+    representationHapticProfile:                VCM_leftContextHapticProfile,
+                                                VCM_rightContextHapticProfile ;
+        
+    representationForceTarget:                  VCM_buttonPressTarget, 
+                                                VCM_buttonReleaseTarget ;
+           
+    representationTicks:                        SWSL_scrollWheelTicks, 
+                                                SWSR_scrollWheelTicks ;
+        
+    representationPress:                        SWSL_scrollWheelPress, 
+                                                SWSR_scrollWheelPress,
+                                                SWSL_button1Status, 
+                                                SWSL_button2Status, 
+                                                SWSL_button3Status, 
+                                                SWSR_button4Status, 
+                                                SWSR_button5Status, 
+                                                SWSR_button6Status,
+                                                SWSR_hornSwitchStatus ;
+        
+    representationTilt:                         SWSL_scrollWheelTilt, 
+                                                SWSR_scrollWheelTilt ;
+        
+    representationDoublePress:                  SWSL_scrollWheelDoublePress, 
+                                                SWSR_scrollWheelDoublePress ;            
+        
+    representationForce:                        SWSL_button1StatusForce,
+                                                SWSL_button2StatusForce,
+                                                SWSL_button3StatusForce,
+                                                SWSR_button4StatusForce, 
+                                                SWSR_button5StatusForce,
+                                                SWSR_button6StatusForce ; 
+        
+    representationTouch:                        SWSL_button1StatusTouch, 
+                                                SWSL_button2StatusTouch, 
+                                                SWSL_button3StatusTouch, 
+                                                SWSR_button4StatusTouch, 
+                                                SWSR_button5StatusTouch,
+                                                SWSR_button6StatusTouch ;
+
+    representationTemperature:                  SWSL_heaterNTCTemperature,
+                                                VCM_vehicleTemperature ;
+        
+    representationHeaterStatus:                 SWSL_heaterStatus ;
+
+    representationScrollWheelChallenge:         VCM_rightScrollWheelChallenge ; // Preh-Specific
+
+    representationScrollWheelRaw:               SWSR_scrollWheelPressRaw0,
+                                                SWSR_scrollWheelPressRaw1 ;
+        
+    representationRollingCounter:               SWSL_rollingCounter, 
+                                                SWSR_rollingCounter,
+                                                VCM_rollingCounter ;
+        
+    representationChecksum:                     SWSL_checksum, 
+                                                SWSR_checksum,
+                                                VCM_checksum ;
+
+    representationDiagnosticsStatus:            SWSL_diagnosticsError,
+                                                SWSR_diagnosticsError ;
+
+    representationHeaterVoltage:                SWSL_heaterVoltage ;
+
+    representationHeaterCurrent:                SWSL_heaterCurrent ;
+}
