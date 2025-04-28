@@ -1,0 +1,578 @@
+/****************************************************************************/
+/*                                                                          */
+/* Description: LIN Description file                                        */
+/* Created:     09th.Oct.2012                                               */
+/* Author:      weilin.ge                                                   */
+/* Version:     1.0                                                         */
+/* Project:		FAW A Class                                                 */
+/*                                                                          */
+/****************************************************************************/
+/*                                                                          */
+/* History:                                                                 */
+/*                                                                          */
+/* 1.0;0        09.10.2012    weilin.ge                                     */
+/*     N: First version created for FAW A Class project.                    */
+/*     Contains three slave nodes: EBS, GEN, AC.                            */
+/*     EBS has three frames, 0x34, 0x35, 0x36                               */
+/*     GEN has three frames, 0x29, 0x15, 0x12                               */
+/*     AC  has three frames, 0x16, 0x17, 0x19                               */
+/*                                                                          */
+/*                                                                          */
+/****************************************************************************/
+
+// Global Definitions
+
+LIN_description_file;
+LIN_protocol_version = "2.0";
+LIN_language_version = "2.0";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: EMS, 10 ms, 0.1 ms ;
+  Slaves: EBS, ALT ;
+}
+
+Signals {
+  U_BATT: 14, 16383, EBS, EMS ;
+  I_Range: 2, 3, EBS, EMS ;
+  I_BATT: 16, 65535, EBS, EMS ;
+  T_BATT: 8, 255, EBS, EMS ;
+  IBATT_QUIESCENT: 8, 255, EBS, EMS ;
+  Status_Current: 2, 0, EBS, EMS ;
+  Status_Voltage: 2, 0, EBS, EMS ;
+  Status_Temp: 2, 0, EBS, EMS ;
+  ERROR_Calib: 1, 0, EBS, EMS ;
+  ERROR_IDENT: 1, 0, EBS, EMS ;
+  Resp_Error: 1, 0, EBS, EMS ;
+  FLAG_INCONSISTENCY: 1, 0, EBS, EMS ;
+  EBS_Reserved1: 6, 0, EBS, EMS ;
+  SOC: 8, 255, EBS, EMS ;
+  SOC_T: 8, 255, EBS, EMS ;
+  SOF_V1: 8, 255, EBS, EMS ;
+  SOF_V2: 8, 255, EBS, EMS ;
+  SOH: 8, 255, EBS, EMS ;
+  ChargeCurrWU_Sts: 1, 1, EBS, EMS ;
+  SOC_STATE: 2, 3, EBS, EMS ;
+  SOC_T_STATE: 2, 3, EBS, EMS ;
+  SOF_V1_STATE: 2, 3, EBS, EMS ;
+  SOF_V2_STATE: 2, 3, EBS, EMS ;
+  SOH_STATE: 2, 3, EBS, EMS ;
+  Q_Charge: 16, 65535, EBS, EMS ;
+  Q_Discharge: 16, 65535, EBS, EMS ;
+  SetVoltage: 6, 39, EMS, ALT ;
+  Reserved1: 2, 0, EMS, ALT ;
+  Ramptime: 4, 3, EMS, ALT ;
+  RampCOSpeed: 4, 4, EMS, ALT ;
+  ExicLimit: 5, 0, EMS, ALT ;
+  Reserved2: 3, 0, EMS, ALT ;
+  DataSelect: 3, 0, EMS, ALT ;
+  BlindZone_TVS: 1, 0, EMS, ALT ;
+  HT_CutoffThreshold: 3, 0, EMS, ALT ;
+  RegulationParameterSet: 1, 0, EMS, ALT ;
+  Fault_HT: 1, 0, ALT, EMS ;
+  Fault_Mec: 1, 0, ALT, EMS ;
+  Fault_El: 1, 0, ALT, EMS ;
+  ExicDutyCycle: 5, 0, ALT, EMS ;
+  ExicCurrent: 8, 0, ALT, EMS ;
+  Monitorbit: 3, 0, ALT, EMS ;
+  Reserved3: 3, 0, ALT, EMS ;
+  Fault_CE: 1, 0, ALT, EMS ;
+  Fault_TO: 1, 0, ALT, EMS ;
+  B4: 8, 0, ALT, EMS ;
+  ID_supplier: 3, 0, ALT, EMS ;
+  ID_alternator: 5, 0, ALT, EMS ;
+  ID_ChipSupplier: 3, 0, ALT, EMS ;
+  ID_Chip: 5, 0, ALT, EMS ;
+  DisChargeCurrWU_Sts: 1, 1, EBS, EMS ;
+  SOCWU_Sts: 1, 1, EBS, EMS ;
+  DisChargeCurrWU: 1, 0, EBS, EMS ;
+  ChargeCurrWU: 1, 0, EBS, EMS ;
+  SOCWU: 1, 0, EBS, EMS ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+Frames {
+  IBS_1: 52, EBS, 8 {
+    U_BATT, 0 ;
+    I_Range, 14 ;
+    I_BATT, 16 ;
+    T_BATT, 32 ;
+    IBATT_QUIESCENT, 40 ;
+    Status_Current, 48 ;
+    Status_Voltage, 50 ;
+    Status_Temp, 52 ;
+    ERROR_Calib, 54 ;
+    ERROR_IDENT, 55 ;
+    Resp_Error, 56 ;
+    FLAG_INCONSISTENCY, 57 ;
+    EBS_Reserved1, 58 ;
+  }
+  IBS_2: 53, EBS, 8 {
+    SOC, 0 ;
+    SOC_T, 8 ;
+    SOF_V1, 16 ;
+    SOF_V2, 24 ;
+    SOH, 32 ;
+    ChargeCurrWU_Sts, 41 ;
+    SOC_STATE, 50 ;
+    SOC_T_STATE, 52 ;
+    SOF_V1_STATE, 54 ;
+    SOF_V2_STATE, 56 ;
+    SOH_STATE, 58 ;
+    DisChargeCurrWU_Sts, 40 ;
+    SOCWU_Sts, 42 ;
+    DisChargeCurrWU, 43 ;
+    ChargeCurrWU, 44 ;
+    SOCWU, 45 ;
+  }
+  IBS_3: 54, EBS, 4 {
+    Q_Charge, 0 ;
+    Q_Discharge, 16 ;
+  }
+  EMS_2: 41, EMS, 4 {
+    SetVoltage, 0 ;
+    Reserved1, 6 ;
+    Ramptime, 8 ;
+    RampCOSpeed, 12 ;
+    ExicLimit, 16 ;
+    Reserved2, 21 ;
+    DataSelect, 24 ;
+    BlindZone_TVS, 27 ;
+    HT_CutoffThreshold, 28 ;
+    RegulationParameterSet, 31 ;
+  }
+  ALT_1: 21, ALT, 4 {
+    Fault_HT, 0 ;
+    Fault_Mec, 1 ;
+    Fault_El, 2 ;
+    ExicDutyCycle, 3 ;
+    ExicCurrent, 8 ;
+    Monitorbit, 16 ;
+    Reserved3, 19 ;
+    Fault_CE, 22 ;
+    Fault_TO, 23 ;
+    B4, 24 ;
+  }
+  ALT_2: 18, ALT, 2 {
+    ID_supplier, 0 ;
+    ID_alternator, 3 ;
+    ID_ChipSupplier, 8 ;
+    ID_Chip, 11 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  EBS{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x47 ;
+    product_id = 0x7D, 0x7D, 255 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      IBS_1 = 0x0 ;
+      IBS_2 = 0x0 ;
+      IBS_3 = 0x0 ;
+    }
+  }
+  ALT{
+    LIN_protocol = "1.3" ;
+    configured_NAD = 0x46 ;
+  }
+}
+
+Schedule_tables {
+ EBS_GEN {
+    IBS_1 delay 10 ms ;
+    EMS_2 delay 10 ms ;
+    IBS_2 delay 10 ms ;
+    ALT_1 delay 20 ms ;
+    IBS_3 delay 50 ms ;
+  }
+ Diagnose {
+    IBS_1 delay 10 ms ;
+    MasterReq delay 20 ms ;
+    IBS_2 delay 10 ms ;
+    IBS_3 delay 10 ms ;
+    SlaveResp delay 20 ms ;
+    EMS_2 delay 10 ms ;
+    ALT_1 delay 30 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  Battery_accumulate {
+    physical_value, 0, 65534, 0.125, 0, "Ah" ;
+    logical_value, 65535, "invalid" ;
+  }
+  Battery_inconsistency {
+    logical_value, 0, "no battery inconsistency" ;
+    logical_value, 1, "battery inconsistency" ;
+  }
+  BlindZone_TVS {
+    logical_value, 0, "3.1%" ;
+    logical_value, 1, "12.6%" ;
+  }
+  ChargeCurrWU_Encoding {
+    logical_value, 0, "No Wake Up with charge current" ;
+    logical_value, 1, "Wake Up with charge current" ;
+  }
+  Current_16Bit {
+    physical_value, 0, 65534, 1, -32768 ;
+    logical_value, 65535, "invalid" ;
+  }
+  Current_8Bit {
+    physical_value, 0, 252, 0.00390625, 0, "A" ;
+    logical_value, 253, "Overflow" ;
+    logical_value, 254, "Out of bounds" ;
+    logical_value, 255, "invalid" ;
+  }
+  Current_Range {
+    logical_value, 0, "Current range[-1A~1A]" ;
+    logical_value, 1, "Current range[-200A~200A]" ;
+    logical_value, 2, "Current range[-1500A~1500A]" ;
+    logical_value, 3, "Error" ;
+  }
+  Data_Trans {
+    logical_value, 0, "Rx/Byte4 invalid" ;
+    logical_value, 1, "U set" ;
+    logical_value, 2, "U measured" ;
+    logical_value, 3, "T ic" ;
+    logical_value, 4, "n gen" ;
+    logical_value, 5, "0x00" ;
+    logical_value, 6, "Reserved for manufacturer" ;
+    logical_value, 7, "Rx/Byte4 invalid" ;
+  }
+  DisChargeCurrWU_Encoding {
+    logical_value, 0, "No Wake Up with discharge current" ;
+    logical_value, 1, "Wake Up with discharge current" ;
+  }
+  Enable_1bit {
+    logical_value, 0, "Disabled" ;
+    logical_value, 1, "Enabled" ;
+  }
+  ErrorStatus_1Bit {
+    logical_value, 0, "No error" ;
+    logical_value, 1, "Error" ;
+  }
+  FunctionStatus_1BIT {
+    logical_value, 0, "Inactive" ;
+    logical_value, 1, "Active" ;
+  }
+  GEN_ExicCurrent {
+    physical_value, 0, 255, 0.05, 0, "A" ;
+  }
+  GEN_ExicDutyCycle {
+    logical_value, 0, "0%" ;
+    logical_value, 1, "3.23%" ;
+    logical_value, 2, "6.45%" ;
+    logical_value, 3, "9.68%" ;
+    logical_value, 4, "12.90%" ;
+    logical_value, 5, "16.13%" ;
+    logical_value, 6, "19.35%" ;
+    logical_value, 7, "22.58%" ;
+    logical_value, 8, "25.81%" ;
+    logical_value, 9, "29.03%" ;
+    logical_value, 10, "32.26%" ;
+    logical_value, 11, "35.48%" ;
+    logical_value, 12, "38.71%" ;
+    logical_value, 13, "41.94%" ;
+    logical_value, 14, "45.16%" ;
+    logical_value, 15, "48.39%" ;
+    logical_value, 16, "51.61%" ;
+    logical_value, 17, "54.84%" ;
+    logical_value, 18, "58.06%" ;
+    logical_value, 19, "61.29%" ;
+    logical_value, 20, "64.52%" ;
+    logical_value, 21, "67.74%" ;
+    logical_value, 22, "70.97%" ;
+    logical_value, 23, "74.19%" ;
+    logical_value, 24, "77.42%" ;
+    logical_value, 25, "80.65%" ;
+    logical_value, 26, "83.87%" ;
+    logical_value, 27, "87.10%" ;
+    logical_value, 28, "90.32%" ;
+    logical_value, 29, "93.55%" ;
+    logical_value, 30, "96.77%" ;
+    logical_value, 31, "100%" ;
+  }
+  GEN_ExicLimit {
+    logical_value, 0, "no limit(default)" ;
+    logical_value, 1, "2A" ;
+    logical_value, 2, "2A" ;
+    logical_value, 3, "2A" ;
+    logical_value, 4, "2A" ;
+    logical_value, 5, "2A" ;
+    logical_value, 6, "2A" ;
+    logical_value, 7, "2A" ;
+    logical_value, 8, "2A" ;
+    logical_value, 9, "2.2A" ;
+    logical_value, 10, "2.5A" ;
+    logical_value, 11, "2.7A" ;
+    logical_value, 12, "3A" ;
+    logical_value, 13, "3.2A" ;
+    logical_value, 14, "3.5A" ;
+    logical_value, 15, "3.7A" ;
+    logical_value, 16, "4A" ;
+    logical_value, 17, "4.2A" ;
+    logical_value, 18, "4.5A" ;
+    logical_value, 19, "4.7A" ;
+    logical_value, 20, "5A" ;
+    logical_value, 21, "5.2A" ;
+    logical_value, 22, "5.5A" ;
+    logical_value, 23, "5.7A" ;
+    logical_value, 24, "6A" ;
+    logical_value, 25, "6.2A" ;
+    logical_value, 26, "6.5A" ;
+    logical_value, 27, "6.7A" ;
+    logical_value, 28, "7A" ;
+    logical_value, 29, "7.2A" ;
+    logical_value, 30, "7.5A" ;
+    logical_value, 31, "7.7A" ;
+  }
+  GEN_Fault_Mec {
+    logical_value, 0, "Running" ;
+    logical_value, 1, "Stopped" ;
+  }
+  GEN_ID_ChipSupplier {
+    logical_value, 0, "BOSCH" ;
+    logical_value, 1, "Reserved" ;
+    logical_value, 2, "Reserved" ;
+    logical_value, 3, "Reserved" ;
+    logical_value, 4, "Reserved" ;
+    logical_value, 5, "Reserved" ;
+    logical_value, 6, "Reserved" ;
+    logical_value, 7, "Reserved" ;
+  }
+  GEN_ID_supplier {
+    logical_value, 0, "BOSCH" ;
+    logical_value, 1, "VALEO" ;
+    logical_value, 2, "DENSO" ;
+    logical_value, 3, "HITACHI" ;
+    logical_value, 4, "DELCO-REMY" ;
+    logical_value, 5, "MELCO" ;
+    logical_value, 6, "VISTEON" ;
+    logical_value, 7, "other" ;
+  }
+  GEN_RampCOSpeed {
+    logical_value, 0, "2400rpm" ;
+    logical_value, 1, "2530rpm" ;
+    logical_value, 2, "2670rpm" ;
+    logical_value, 3, "2820rpm" ;
+    logical_value, 4, "3000rpm" ;
+    logical_value, 5, "3200rpm" ;
+    logical_value, 6, "3430rpm" ;
+    logical_value, 7, "3690rpm" ;
+    logical_value, 8, "4000rpm" ;
+    logical_value, 9, "4360rpm" ;
+    logical_value, 10, "4800rpm" ;
+    logical_value, 11, "5330rpm" ;
+    logical_value, 12, "6000rpm" ;
+    logical_value, 13, "6860rpm" ;
+    logical_value, 14, "8000rpm" ;
+    logical_value, 15, "always active" ;
+  }
+  GEN_Ramptime {
+    logical_value, 0, "0s" ;
+    logical_value, 1, "0.25s" ;
+    logical_value, 2, "0.5s" ;
+    logical_value, 3, "0.75s" ;
+    logical_value, 4, "1s" ;
+    logical_value, 5, "2s" ;
+    logical_value, 6, "3s" ;
+    logical_value, 7, "4s" ;
+    logical_value, 8, "5s" ;
+    logical_value, 9, "6s" ;
+    logical_value, 10, "7s" ;
+    logical_value, 11, "8s" ;
+    logical_value, 12, "9s" ;
+    logical_value, 13, "10s" ;
+    logical_value, 14, "12s" ;
+    logical_value, 15, "15s" ;
+  }
+  GEN_SetVoltage {
+    physical_value, 0, 53, 0.1, 10.6, "V" ;
+    physical_value, 54, 63, 0, 16, "V" ;
+  }
+  HT_CutoffThreshold {
+    logical_value, 0, "HTkn+/-0" ;
+    logical_value, 1, "-16" ;
+    logical_value, 2, "-12" ;
+    logical_value, 3, "-8" ;
+    logical_value, 4, "-4" ;
+    logical_value, 5, "+4" ;
+    logical_value, 6, "+8" ;
+    logical_value, 7, "+12" ;
+  }
+  Percent_8BIT {
+    physical_value, 0, 100, 1, 0, "%" ;
+    physical_value, 101, 254, 1, 0, "reserved" ;
+    logical_value, 255, "invalid" ;
+  }
+  RegulationParameterSet {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "w/o baterry" ;
+  }
+  SOCWU_Encoding {
+    logical_value, 0, "No Wake Up with Low SOC" ;
+    logical_value, 1, "Wake Up with Low SOC" ;
+  }
+  SOC_State {
+    logical_value, 0, "deviation > 15%" ;
+    logical_value, 1, "deviation < 15%" ;
+    logical_value, 2, "deviation < 10%" ;
+    logical_value, 3, "invalid" ;
+  }
+  SOC_T_STATE_Encoding {
+    logical_value, 0, "deviation higher 15%" ;
+    logical_value, 1, "deviation lower 15%" ;
+    logical_value, 2, "deviation lower 10%" ;
+    logical_value, 3, "invalid" ;
+  }
+  SOF_V_STATE {
+    logical_value, 0, "Deviation 800mV" ;
+    logical_value, 1, "Deviation 400mV" ;
+    logical_value, 2, "Deviation 400mV" ;
+    logical_value, 3, "Invalid Value" ;
+  }
+  SOH_STATE_Encoding {
+    logical_value, 0, "deviation higher 15%" ;
+    logical_value, 1, "deviation lower 15%" ;
+    logical_value, 2, "deviation lower 10%" ;
+    logical_value, 3, "invalid" ;
+  }
+  Status_Current {
+    logical_value, 0, "No error" ;
+    logical_value, 1, "Error Open circuit" ;
+    logical_value, 2, "HW defect (out of range or ADC defect)" ;
+    logical_value, 3, "LIN saturation (no HW defect)" ;
+  }
+  Status_Temp {
+    logical_value, 0, "No error" ;
+    logical_value, 1, "not used" ;
+    logical_value, 2, "HW defect (ADC defect)" ;
+    logical_value, 3, "LIN saturation (no HW defect)" ;
+  }
+  Status_Voltage {
+    logical_value, 0, "No error" ;
+    logical_value, 1, "Error Open circuit" ;
+    logical_value, 2, "HW defect (ADC defect)" ;
+    logical_value, 3, "LIN saturation (no HW defect)" ;
+  }
+  Temperature_o40_8Bit {
+    physical_value, 0, 145, 1, -40, "C" ;
+    physical_value, 146, 254, 1, -40, "reserved" ;
+    logical_value, 255, "invalid" ;
+  }
+  Voltage_14Bit {
+    physical_value, 0, 15360, 0.0009765625, 3, "V" ;
+    physical_value, 15361, 16382, 0.0009765625, 3, "reserved" ;
+    logical_value, 16383, "invalid" ;
+  }
+  Voltage_8Bit {
+    physical_value, 0, 254, 0.0625, 0, "V" ;
+    logical_value, 255, "invalid" ;
+  }
+  EngineSpeed_16BIT {
+    physical_value, 0, 65534, 0.25, 0, "rpm" ;
+    logical_value, 65535, "invalid" ;
+  }
+  Pressure_12BIT {
+    physical_value, 0, 4094, 0.01, 0, "Mpa" ;
+    logical_value, 4095, "invalid" ;
+  }
+  Temperature_11BIT {
+    physical_value, 0, 2046, 0.1, -40, "C" ;
+    logical_value, 2047, "invalid" ;
+  }
+  Temperature_8BIT {
+    physical_value, 0, 254, 0.75, -48, "C" ;
+    logical_value, 255, "invalid" ;
+  }
+  VehicleSpeed_ABS_15BIT {
+    physical_value, 0, 32766, 0.01, 0, "km/h" ;
+    logical_value, 32767, "invalid" ;
+  }
+}
+
+Signal_representation {
+  Battery_accumulate: Q_Charge, Q_Discharge ;
+  Battery_inconsistency: FLAG_INCONSISTENCY ;
+  BlindZone_TVS: BlindZone_TVS ;
+  ChargeCurrWU_Encoding: ChargeCurrWU ;
+  Current_16Bit: I_BATT ;
+  Current_8Bit: IBATT_QUIESCENT ;
+  Current_Range: I_Range ;
+  Data_Trans: DataSelect, Monitorbit ;
+  DisChargeCurrWU_Encoding: DisChargeCurrWU ;
+  Enable_1bit: ChargeCurrWU_Sts, DisChargeCurrWU_Sts, SOCWU_Sts ;
+  ErrorStatus_1Bit: ERROR_Calib, ERROR_IDENT, Resp_Error, Fault_El, Fault_CE, Fault_TO ;
+  FunctionStatus_1BIT: Fault_HT ;
+  GEN_ExicCurrent: ExicCurrent ;
+  GEN_ExicDutyCycle: ExicDutyCycle ;
+  GEN_ExicLimit: ExicLimit ;
+  GEN_Fault_Mec: Fault_Mec ;
+  GEN_ID_ChipSupplier: ID_ChipSupplier ;
+  GEN_ID_supplier: ID_supplier ;
+  GEN_RampCOSpeed: RampCOSpeed ;
+  GEN_Ramptime: Ramptime ;
+  GEN_SetVoltage: SetVoltage ;
+  HT_CutoffThreshold: HT_CutoffThreshold ;
+  Percent_8BIT: SOC, SOC_T, SOH ;
+  RegulationParameterSet: RegulationParameterSet ;
+  SOCWU_Encoding: SOCWU ;
+  SOC_State: SOC_STATE ;
+  SOC_T_STATE_Encoding: SOC_T_STATE ;
+  SOF_V_STATE: SOF_V1_STATE, SOF_V2_STATE ;
+  SOH_STATE_Encoding: SOH_STATE ;
+  Status_Current: Status_Current ;
+  Status_Temp: Status_Temp ;
+  Status_Voltage: Status_Voltage ;
+  Temperature_o40_8Bit: T_BATT ;
+  Voltage_14Bit: U_BATT ;
+  Voltage_8Bit: SOF_V1, SOF_V2 ;
+}

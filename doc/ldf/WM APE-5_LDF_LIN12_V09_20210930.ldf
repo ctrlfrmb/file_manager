@@ -1,0 +1,1320 @@
+/*************************************************************************************/
+//
+
+// Description: 
+
+// Created: 
+
+// Author: 
+
+// Version: 
+
+// Vehicle Project: 
+
+//
+
+/*************************************************************************************/
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: BCML, 5 ms, 0.1 ms ;
+  Slaves: FLL, FRL, FML, ELL, ERL;
+}
+Signals {
+  BCM_LoBeamCtrl: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Low Beam ON/OFF Control 近光灯开闭控制
+  BCM_HiBeamCtrl: 1, 0, BCML, FLL, FRL ;   //High Beam ON/OFF Control 远光灯开闭控制
+  BCM_DaytiLiCtrl: 1, 0, BCML, FLL, FRL, ELL, ERL ;   //Daytime Running Light ON/OFF Control 日间行车灯开闭控制
+  BCM_LeTurnLiCtrl: 1, 0, BCML, FLL ;   //Left Turn Indicator Control 左转向灯开闭控制
+  BCM_RiTurnLiCtrl: 1, 0, BCML, FRL ;   //Right Turn Indicator ON/OFF Control 右转向灯开闭开闭控制
+  BCM_TurnLiFlowEna: 1, 0, BCML, FLL, FRL ;   //Turn Indicator Running Enabled 转向灯流水使能
+  BCM_PosnLiCtrl: 1, 0, BCML, FLL, FRL ;   //Position Light ON/OFF Control 位置灯开闭控制
+  BCM_WelcomeScLiCtrl: 2, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Welcome Scene Light Control 迎宾场景灯光控制
+  BCM_BTCnctScLiCtrl: 2, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Bluetooth Connect Scene Light Control 蓝牙连接场景灯光控制
+  BCM_UnlockScLiCtrl: 2, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Unlock Scene Light Control 解锁场景灯光控制
+  BCM_LockScLiCtrl: 2, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Lock Scene Light Control 上锁场景灯光控制
+  BCM_ExtAmbLiEna: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //External Ambient Light Enabled 车外氛围灯使能
+  BCM_FolwMeHomeLiCtrl: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Follow Me Home Scene Control 伴我回家场景灯光控制
+  BCM_CarLocnScLiCtrl: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Car Locating Scene Light Control 寻车场景灯光控制
+  BCM_MusicFolwCtrl: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Music Following Control 音乐随动控制
+  BCM_ParkingScLiCtrl: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Parking Interaction Scene Light Control 停车交互开闭
+  BCM_MusicLiShowCtrl: 3, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Lighting Music Show Control 音乐灯光秀控制
+  BCM_AutopilotScLiCtrl: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Autopilot Scene Light Control 自动驾驶场景灯光控制
+  BCM_ExpressScLiCtrl: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Express Mode Scene Light Control 快递模式灯光控制
+  BCM_SentryScLiCtrl: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Sentry Mode Scene Light Control 哨兵模式灯光控制
+  BCM_AutoparkScLiCtrl: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Autopark Mode Scene Light Control 自动泊车场景灯光控制
+  BCM_ChrgSts: 2, 0, BCML, FML ;   //Charging Status 充电状态
+  BCM_LightIntensity: 2, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Light Intensity 白天黑夜状态
+  BCM_VolumeVal: 8, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Volume value 多媒体音量值
+  BCM_BatSOC: 10, 0, BCML, FML ;   //Battery state of charge 电池电量
+  BCM_LOGOCtrl: 2, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //LOGO Light on/off Control LOGO灯开闭控制
+  BCM_MusicLiShowV: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Lighting Music Show Validity 音乐灯光秀使能
+  BCM_PosnLiInten: 1, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Intensity Position Light Function ON/OFF  位置灯强化功能控制
+  BCML_FolwLampNo: 8, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Following Lamp number 小灯跟随编号
+  BCM_SysPwrMode: 2, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //System Power Mode 系统电源模式
+  ESC_EPB_SystemState: 4, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //EPB执行机构统一状态
+  ESC_VehicleSpeed: 13, 0, BCML, FLL, FRL, FML, ELL, ERL ;   //Vehicle Speed
+  FLL_LoBeamSta: 1, 0, FLL, BCML ;   //Low Beam operation state Feedback 近光灯工作状态反馈
+  FLL_HiBeamSta: 1, 0, FLL, BCML ;   //High Beam operation state Feedback 远光灯工作状态反馈
+  FLL_PosnLiSta: 1, 0, FLL, BCML ;   //Position Lamp operation state Feedback 位置灯工作状态反馈
+  FLL_LoBeamHWV: 1, 0, FLL, BCML ;   //Low Beam Hard-wire Validity 近光灯硬线信号有效性
+  FLL_HiBeamHWV: 1, 0, FLL, BCML ;   //High Beam Hard-wire Validity 远光灯硬线信号有效性
+  FLL_DaytiLiHWV: 1, 0, FLL, BCML ;   //Daytime Running Light Hard-wire Validity 日间行车灯硬线信号有效性
+  FLL_TurnLiHWV: 1, 0, FLL, BCML ;   //Left Turn Indicator  Hard-wire Validity 左转向灯硬线信号有效性
+  FLL_TurnLiFlowHWV: 1, 0, FLL, BCML ;   //Turn Indicator Running Hard-wire Validity 转向灯流水使能硬线有效性
+  FLL_PosnLiHWV: 1, 0, FLL, BCML ;   //Position Light Hard-wire Validity 位置灯硬线信号有效性
+  FLL_DaytiLiSta: 1, 0, FLL, BCML ;   //Daytime Running Light operation state Feedback 日间行车灯工作状态反馈
+  FLL_TurnLiSta: 2, 0, FLL, BCML ;   //Left Turn Indicator operation state Feedback 左转向灯工作状态反馈
+  FLL_SideTurnLiSta: 1, 0, FLL, BCML ;   //Left side turnning lamp operation state  侧转向灯(左)工作状态反馈
+  FLL_AuxLoBeamSta: 1, 0, FLL, BCML ;   //Low Beam Auxiliary operation state Feedback 近光辅助灯工作状态反馈
+  FLL_TurnLiFaultFb: 2, 0, FLL, BCML ;   //Left Turn Light Fault Feedback signal  左转向灯故障状态反馈
+  FLL_LIN_Response_Error: 1, 0, FLL, BCML ;   //LIN Communication ERROR LIN通讯错误
+  FRL_LoBeamHWV: 1, 0, FRL, BCML ;   //Low Beam Hard-wire Validity 近光灯硬线信号有效性
+  FRL_HiBeamHWV: 1, 0, FRL, BCML ;   //High Beam Hard-wire Validity 远光灯硬线信号有效性
+  FRL_DaytiLiHWV: 1, 0, FRL, BCML ;   //Daytime Running Light Hard-wire Validity 日间行车灯硬线信号有效性
+  FRL_TurnLiHWV: 1, 0, FRL, BCML ;   //Left Turn Indicator  Hard-wire Validity 右转向灯硬线信号有效性
+  FRL_TurnLiFlowHWV: 1, 0, FRL, BCML ;   //Turn Indicator Running Hard-wire Validity 转向灯流水使能硬线有效性
+  FRL_PosnLiHWV: 1, 0, FRL, BCML ;   //Position Light Hard-wire Validity 位置灯硬线信号有效性
+  FRL_LoBeamSta: 1, 0, FRL, BCML ;   //Low Beam operation state Feedback 近光灯工作状态反馈
+  FRL_HiBeamSta: 1, 0, FRL, BCML ;   //High Beam operation state Feedback 远光灯工作状态反馈
+  FRL_PosnLiSta: 1, 0, FRL, BCML ;   //Position Lamp operation state Feedback 位置灯工作状态反馈
+  FRL_DaytiLiSta: 1, 0, FRL, BCML ;   //Daytime Running Light operation state Feedback 日间行车灯工作状态反馈
+  FRL_TurnLiSta: 2, 0, FRL, BCML ;   //Left Turn Indicator operation state Feedback 右转向灯工作状态反馈
+  FRL_SideTurnLiSta: 1, 0, FRL, BCML ;   //Left side turnning lamp operation state  侧转向灯(右)工作状态反馈
+  FRL_AuxLoBeamSta: 1, 0, FRL, BCML ;   //Low Beam Auxiliary operation state Feedback 近光辅助灯工作状态反馈
+  FRL_TurnLiFaultFb: 2, 0, FRL, BCML ;   //Left Turn Light Fault Feedback signal  右转向灯故障状态反馈
+  FRL_LIN_Response_Error: 1, 0, FRL, BCML ;   //LIN Communication ERROR LIN通讯错误
+  FML_LoBeamHWV: 1, 0, FML, BCML ;   //Low Beam Hard-wire Switch Validity 近光灯硬线信号有效性
+  FML_AudioSigV: 1, 0, FML, BCML ;   //Audio Signal validity 音频信号有效性
+  FML_MusicFolwSta: 1, 0, FML, BCML ;   //Music Following state 音乐随动模式状态
+  FML_MusicLiShowSta: 3, 0, FML, BCML ;   //Lighting Music Show state 音乐灯光秀运行状态
+  FML_AmbLiSta: 1, 0, FML, BCML ;   //Ambient Light state 氛围灯状态
+  FML_LIN_Response_Error: 1, 0, FML, BCML ;   //LIN Communication ERROR LIN通讯错误
+  FML_LOGOLiSta1: 1, 0, FML, BCML ;   //LOGO Light state--1 LOGO灯状态
+  FML_LOGOLiSta2: 1, 0, FML, BCML ;   //LOGO Light state--2 LOGO灯状态
+  FML_LOGOLiSta3: 1, 0, FML, BCML ;   //LOGO Light state--3 LOGO灯状态
+  FML_LOGOLiSta4: 1, 0, FML, BCML ;   //LOGO Light state--4 LOGO灯状态
+  FML_LOGOLiSta5: 1, 0, FML, BCML ;   //LOGO Light state--5 LOGO灯状态
+  FML_MusicFolwData: 8, 0, FML, BCML, FLL, FRL, ELL, ERL ;   //Music follow up control light data,Control the number of lights in the participating headlights 音乐随动控灯数据,控制参与大灯的亮灯颗数
+  ELL_LoBeamHWV: 1, 0, ELL, BCML ;   //Low Beam Hard-wire Validity 近光灯硬线信号有效性
+  ELL_DaytiLiHWV: 1, 0, ELL, BCML ;   //Daytime Running Light Hard-wire Validity 日间行车灯硬线信号有效性
+  ELL_TurnLiHWV: 1, 0, ELL, BCML ;   //Left Turn Indicator  Hard-wire Validity 左转向灯硬线信号有效性
+  ELL_LeTurnLiFlowHWV: 1, 0, ELL, BCML ;   //Left Turn Indicator Running Hard-wire Validity 转向灯流水使能硬线有效性
+  ELL_DaytiLiSta: 1, 0, ELL, BCML ;   //Daytime Running Light operation state Feedback 日间行车灯工作状态反馈
+  ELL_TurnLiSta: 2, 0, ELL, BCML ;   //Left Turn Indicator operation state Feedback 左转向灯工作状态反馈
+  ELL_AuxLoBeamSta: 1, 0, ELL, BCML ;   //Low Beam Auxiliary operation state Feedback 近光辅助灯工作状态反馈
+  ELL_TurnLiFaultFb: 2, 0, ELL, BCML ;   //Left Turn Light Fault Feedback signal  左转向灯故障状态反馈
+  ELL_LIN_Response_Error: 1, 0, ELL, BCML ;   //LIN Communication ERROR LIN通讯错误
+  ERL_LoBeamHWV: 1, 0, ERL, BCML ;   //Low Beam Hard-wire Validity 近光灯硬线信号有效性
+  ERL_DaytiLiHWV: 1, 0, ERL, BCML ;   //Daytime Running Light Hard-wire Validity 日间行车灯硬线信号有效性
+  ERL_TurnLiHWV: 1, 0, ERL, BCML ;   //Left Turn Indicator  Hard-wire Validity 右转向灯硬线信号有效性
+  ERL_RiTurnLiFlowHWV: 1, 0, ERL, BCML ;   //Right Turn Indicator Running Hard-wire Validity 右转向灯流水使能硬线有效性
+  ERL_DaytiLiSta: 1, 0, ERL, BCML ;   //Daytime Running Light operation state Feedback 日间行车灯工作状态反馈
+  ERL_TurnLiSta: 2, 0, ERL, BCML ;   //Left Turn Indicator operation state Feedback 右转向灯工作状态反馈
+  ERL_AuxLoBeamSta: 1, 0, ERL, BCML ;   //Low Beam Auxiliary operation state Feedback 近光辅助灯工作状态反馈
+  ERL_TurnLiFaultFb: 2, 0, ERL, BCML ;   //Left Turn Light Fault Feedback signal  右转向灯故障状态反馈
+  ERL_LIN_Response_Error: 1, 0, ERL, BCML ;   //LIN Communication ERROR LIN通讯错误
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+Frames {
+  LIN12_BCM_Cmd: 16, BCML, 8 {
+    BCM_LoBeamCtrl, 0 ;
+    BCM_HiBeamCtrl, 1 ;
+    BCM_DaytiLiCtrl, 2 ;
+    BCM_LeTurnLiCtrl, 3 ;
+    BCM_RiTurnLiCtrl, 4 ;
+    BCM_TurnLiFlowEna, 5 ;
+    BCM_PosnLiCtrl, 6 ;
+    BCM_WelcomeScLiCtrl, 7 ;
+    BCM_BTCnctScLiCtrl, 9 ;
+    BCM_UnlockScLiCtrl, 11 ;
+    BCM_LockScLiCtrl, 14 ;
+    BCM_ExtAmbLiEna, 16 ;
+    BCM_FolwMeHomeLiCtrl, 17 ;
+    BCM_CarLocnScLiCtrl, 18 ;
+    BCM_MusicFolwCtrl, 19 ;
+    BCM_ParkingScLiCtrl, 20 ;
+    BCM_MusicLiShowCtrl, 21 ;
+    BCM_AutopilotScLiCtrl, 24 ;
+    BCM_ExpressScLiCtrl, 25 ;
+    BCM_SentryScLiCtrl, 26 ;
+    BCM_AutoparkScLiCtrl, 27 ;
+    BCM_ChrgSts, 28 ;
+    BCM_LightIntensity, 30 ;
+    BCM_VolumeVal, 32 ;
+    BCM_BatSOC, 40 ;
+    BCM_LOGOCtrl, 50 ;
+    BCM_MusicLiShowV, 52 ;
+    BCM_PosnLiInten, 53 ;
+    BCML_FolwLampNo, 56 ;
+  }
+  LIN12_BCM2_Cmd: 23, BCML, 4 {
+    BCM_SysPwrMode, 0 ;
+    ESC_EPB_SystemState, 2 ;
+    ESC_VehicleSpeed, 8 ;
+  }
+  LIN12_FLL_State: 8, FLL, 4 {
+    FLL_LoBeamSta, 0 ;
+    FLL_HiBeamSta, 1 ;
+    FLL_PosnLiSta, 2 ;
+    FLL_LoBeamHWV, 3 ;
+    FLL_HiBeamHWV, 4 ;
+    FLL_DaytiLiHWV, 5 ;
+    FLL_TurnLiHWV, 6 ;
+    FLL_TurnLiFlowHWV, 7 ;
+    FLL_PosnLiHWV, 8 ;
+    FLL_DaytiLiSta, 9 ;
+    FLL_TurnLiSta, 10 ;
+    FLL_SideTurnLiSta, 12 ;
+    FLL_AuxLoBeamSta, 13 ;
+    FLL_TurnLiFaultFb, 14 ;
+    FLL_LIN_Response_Error, 16 ;
+  }
+  LIN12_FRL_State: 9, FRL, 4 {
+    FRL_LoBeamHWV, 0 ;
+    FRL_HiBeamHWV, 1 ;
+    FRL_DaytiLiHWV, 2 ;
+    FRL_TurnLiHWV, 3 ;
+    FRL_TurnLiFlowHWV, 4 ;
+    FRL_PosnLiHWV, 5 ;
+    FRL_LoBeamSta, 6 ;
+    FRL_HiBeamSta, 7 ;
+    FRL_PosnLiSta, 8 ;
+    FRL_DaytiLiSta, 9 ;
+    FRL_TurnLiSta, 10 ;
+    FRL_SideTurnLiSta, 12 ;
+    FRL_AuxLoBeamSta, 13 ;
+    FRL_TurnLiFaultFb, 14 ;
+    FRL_LIN_Response_Error, 16 ;
+  }
+  LIN12_FML_State: 10, FML, 4 {
+    FML_LoBeamHWV, 0 ;
+    FML_AudioSigV, 1 ;
+    FML_MusicFolwSta, 2 ;
+    FML_MusicLiShowSta, 3 ;
+    FML_AmbLiSta, 6 ;
+    FML_LIN_Response_Error, 10 ;
+    FML_LOGOLiSta1, 14 ;
+    FML_LOGOLiSta2, 15 ;
+    FML_LOGOLiSta3, 16 ;
+    FML_LOGOLiSta4, 17 ;
+    FML_LOGOLiSta5, 18 ;
+    FML_MusicFolwData, 24 ;
+  }
+  LIN12_ELL_State: 11, ELL, 4 {
+    ELL_LoBeamHWV, 0 ;
+    ELL_DaytiLiHWV, 1 ;
+    ELL_TurnLiHWV, 2 ;
+    ELL_LeTurnLiFlowHWV, 3 ;
+    ELL_DaytiLiSta, 4 ;
+    ELL_TurnLiSta, 5 ;
+    ELL_AuxLoBeamSta, 7 ;
+    ELL_TurnLiFaultFb, 8 ;
+    ELL_LIN_Response_Error, 10 ;
+  }
+  LIN12_ERL_State: 12, ERL, 4 {
+    ERL_LoBeamHWV, 0 ;
+    ERL_DaytiLiHWV, 1 ;
+    ERL_TurnLiHWV, 2 ;
+    ERL_RiTurnLiFlowHWV, 3 ;
+    ERL_DaytiLiSta, 4 ;
+    ERL_TurnLiSta, 5 ;
+    ERL_AuxLoBeamSta, 7 ;
+    ERL_TurnLiFaultFb, 8 ;
+    ERL_LIN_Response_Error, 10 ;
+  }
+}
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  FLL{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x08 ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = FLL_LIN_Response_Error ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      LIN12_FLL_State; 
+      LIN12_BCM_Cmd; 
+      LIN12_BCM2_Cmd; 
+      LIN12_FML_State; 
+    }
+  }
+  FRL{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x09 ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = FRL_LIN_Response_Error ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      LIN12_FRL_State; 
+      LIN12_BCM_Cmd; 
+      LIN12_BCM2_Cmd; 
+      LIN12_FML_State; 
+    }
+  }
+  FML{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x0A ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = FML_LIN_Response_Error ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      LIN12_FML_State; 
+      LIN12_BCM_Cmd; 
+      LIN12_BCM2_Cmd; 
+    }
+  }
+  ELL{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x0B ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = ELL_LIN_Response_Error ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      LIN12_ELL_State; 
+      LIN12_BCM_Cmd; 
+      LIN12_BCM2_Cmd; 
+      LIN12_FML_State; 
+    }
+  }
+  ERL{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x0C ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = ERL_LIN_Response_Error ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      LIN12_ERL_State; 
+      LIN12_BCM_Cmd; 
+      LIN12_BCM2_Cmd; 
+      LIN12_FML_State; 
+    }
+  }
+}
+
+Schedule_tables {
+Schedule1 {
+    LIN12_BCM_Cmd delay 10 ms ;
+    LIN12_BCM2_Cmd delay 10 ms ;
+    LIN12_FML_State delay 10 ms ;
+    LIN12_ELL_State delay 10 ms ;
+    LIN12_BCM_Cmd delay 10 ms ;
+    LIN12_BCM2_Cmd delay 10 ms ;
+    LIN12_FML_State delay 10 ms ;
+    LIN12_FLL_State delay 10 ms ;
+    LIN12_BCM_Cmd delay 10 ms ;
+    LIN12_BCM2_Cmd delay 10 ms ;
+    LIN12_FML_State delay 10 ms ;
+    LIN12_FRL_State delay 10 ms ;
+    LIN12_BCM_Cmd delay 10 ms ;
+    LIN12_BCM2_Cmd delay 10 ms ;
+    LIN12_FML_State delay 10 ms ;
+    LIN12_ERL_State delay 10 ms ;
+  }
+Diagnose_RQ {
+    MasterReq delay 10 ms ;
+  }
+Diagnose_RSP {
+    SlaveResp delay 10 ms ;
+  }
+}
+Signal_encoding_types {
+  BCM_LoBeamCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_HiBeamCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_DaytiLiCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_LeTurnLiCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_RiTurnLiCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_TurnLiFlowEna {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  BCM_PosnLiCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_WelcomeScLiCtrl {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "No Command" ;
+    logical_value, 1, "normal mode" ;
+    logical_value, 2, "shortage mode" ;
+    logical_value, 3, "Reserved" ;
+  }
+  BCM_BTCnctScLiCtrl {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "No Command" ;
+    logical_value, 1, "normal mode" ;
+    logical_value, 2, "shortage mode" ;
+    logical_value, 3, "Reserved" ;
+  }
+  BCM_UnlockScLiCtrl {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "No Command" ;
+    logical_value, 1, "normal unlock" ;
+    logical_value, 2, "NFC unlock" ;
+    logical_value, 3, "shortage unlock" ;
+  }
+  BCM_LockScLiCtrl {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "No Command" ;
+    logical_value, 1, "normal lock" ;
+    logical_value, 2, "NFC lock" ;
+    logical_value, 3, "reversed" ;
+  }
+  BCM_ExtAmbLiEna {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  BCM_FolwMeHomeLiCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_CarLocnScLiCtrl {
+    logical_value, 0, "No Command" ;
+    logical_value, 1, "Command" ;
+  }
+  BCM_MusicFolwCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_ParkingScLiCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_MusicLiShowCtrl {
+    physical_value, 0x0, 0x7, 1, 0, "" ;
+    logical_value, 0, "No Command" ;
+    logical_value, 1, "OFF" ;
+    logical_value, 2, "mode 1" ;
+    logical_value, 3, "mode 2" ;
+    logical_value, 4, "mode 3" ;
+    logical_value, 5, "mode 4" ;
+    logical_value, 6, "mode 5" ;
+    logical_value, 7, "reversed" ;
+  }
+  BCM_AutopilotScLiCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_ExpressScLiCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_SentryScLiCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_AutoparkScLiCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_ChrgSts {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "NO charge" ;
+    logical_value, 1, "慢充 trickle charge" ;
+    logical_value, 2, "快充 rapid charge" ;
+    logical_value, 3, "reserved" ;
+  }
+  BCM_LightIntensity {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "default" ;
+    logical_value, 1, "Daytime" ;
+    logical_value, 2, "Night" ;
+    logical_value, 3, "reserved" ;
+  }
+  BCM_VolumeVal {
+    physical_value, 0x0, 0xff, 1, 0, "%" ;
+    logical_value, 101, "reserved" ;
+    logical_value, 102, "reserved" ;
+    logical_value, 103, "reserved" ;
+    logical_value, 104, "reserved" ;
+    logical_value, 105, "reserved" ;
+    logical_value, 106, "reserved" ;
+    logical_value, 107, "reserved" ;
+    logical_value, 108, "reserved" ;
+    logical_value, 109, "reserved" ;
+    logical_value, 110, "reserved" ;
+    logical_value, 111, "reserved" ;
+    logical_value, 112, "reserved" ;
+    logical_value, 113, "reserved" ;
+    logical_value, 114, "reserved" ;
+    logical_value, 115, "reserved" ;
+    logical_value, 116, "reserved" ;
+    logical_value, 117, "reserved" ;
+    logical_value, 118, "reserved" ;
+    logical_value, 119, "reserved" ;
+    logical_value, 120, "reserved" ;
+    logical_value, 121, "reserved" ;
+    logical_value, 122, "reserved" ;
+    logical_value, 123, "reserved" ;
+    logical_value, 124, "reserved" ;
+    logical_value, 125, "reserved" ;
+    logical_value, 126, "reserved" ;
+    logical_value, 127, "reserved" ;
+    logical_value, 128, "reserved" ;
+    logical_value, 129, "reserved" ;
+    logical_value, 130, "reserved" ;
+    logical_value, 131, "reserved" ;
+    logical_value, 132, "reserved" ;
+    logical_value, 133, "reserved" ;
+    logical_value, 134, "reserved" ;
+    logical_value, 135, "reserved" ;
+    logical_value, 136, "reserved" ;
+    logical_value, 137, "reserved" ;
+    logical_value, 138, "reserved" ;
+    logical_value, 139, "reserved" ;
+    logical_value, 140, "reserved" ;
+    logical_value, 141, "reserved" ;
+    logical_value, 142, "reserved" ;
+    logical_value, 143, "reserved" ;
+    logical_value, 144, "reserved" ;
+    logical_value, 145, "reserved" ;
+    logical_value, 146, "reserved" ;
+    logical_value, 147, "reserved" ;
+    logical_value, 148, "reserved" ;
+    logical_value, 149, "reserved" ;
+    logical_value, 150, "reserved" ;
+    logical_value, 151, "reserved" ;
+    logical_value, 152, "reserved" ;
+    logical_value, 153, "reserved" ;
+    logical_value, 154, "reserved" ;
+    logical_value, 155, "reserved" ;
+    logical_value, 156, "reserved" ;
+    logical_value, 157, "reserved" ;
+    logical_value, 158, "reserved" ;
+    logical_value, 159, "reserved" ;
+    logical_value, 160, "reserved" ;
+    logical_value, 161, "reserved" ;
+    logical_value, 162, "reserved" ;
+    logical_value, 163, "reserved" ;
+    logical_value, 164, "reserved" ;
+    logical_value, 165, "reserved" ;
+    logical_value, 166, "reserved" ;
+    logical_value, 167, "reserved" ;
+    logical_value, 168, "reserved" ;
+    logical_value, 169, "reserved" ;
+    logical_value, 170, "reserved" ;
+    logical_value, 171, "reserved" ;
+    logical_value, 172, "reserved" ;
+    logical_value, 173, "reserved" ;
+    logical_value, 174, "reserved" ;
+    logical_value, 175, "reserved" ;
+    logical_value, 176, "reserved" ;
+    logical_value, 177, "reserved" ;
+    logical_value, 178, "reserved" ;
+    logical_value, 179, "reserved" ;
+    logical_value, 180, "reserved" ;
+    logical_value, 181, "reserved" ;
+    logical_value, 182, "reserved" ;
+    logical_value, 183, "reserved" ;
+    logical_value, 184, "reserved" ;
+    logical_value, 185, "reserved" ;
+    logical_value, 186, "reserved" ;
+    logical_value, 187, "reserved" ;
+    logical_value, 188, "reserved" ;
+    logical_value, 189, "reserved" ;
+    logical_value, 190, "reserved" ;
+    logical_value, 191, "reserved" ;
+    logical_value, 192, "reserved" ;
+    logical_value, 193, "reserved" ;
+    logical_value, 194, "reserved" ;
+    logical_value, 195, "reserved" ;
+    logical_value, 196, "reserved" ;
+    logical_value, 197, "reserved" ;
+    logical_value, 198, "reserved" ;
+    logical_value, 199, "reserved" ;
+    logical_value, 200, "reserved" ;
+    logical_value, 201, "reserved" ;
+    logical_value, 202, "reserved" ;
+    logical_value, 203, "reserved" ;
+    logical_value, 204, "reserved" ;
+    logical_value, 205, "reserved" ;
+    logical_value, 206, "reserved" ;
+    logical_value, 207, "reserved" ;
+    logical_value, 208, "reserved" ;
+    logical_value, 209, "reserved" ;
+    logical_value, 210, "reserved" ;
+    logical_value, 211, "reserved" ;
+    logical_value, 212, "reserved" ;
+    logical_value, 213, "reserved" ;
+    logical_value, 214, "reserved" ;
+    logical_value, 215, "reserved" ;
+    logical_value, 216, "reserved" ;
+    logical_value, 217, "reserved" ;
+    logical_value, 218, "reserved" ;
+    logical_value, 219, "reserved" ;
+    logical_value, 220, "reserved" ;
+    logical_value, 221, "reserved" ;
+    logical_value, 222, "reserved" ;
+    logical_value, 223, "reserved" ;
+    logical_value, 224, "reserved" ;
+    logical_value, 225, "reserved" ;
+    logical_value, 226, "reserved" ;
+    logical_value, 227, "reserved" ;
+    logical_value, 228, "reserved" ;
+    logical_value, 229, "reserved" ;
+    logical_value, 230, "reserved" ;
+    logical_value, 231, "reserved" ;
+    logical_value, 232, "reserved" ;
+    logical_value, 233, "reserved" ;
+    logical_value, 234, "reserved" ;
+    logical_value, 235, "reserved" ;
+    logical_value, 236, "reserved" ;
+    logical_value, 237, "reserved" ;
+    logical_value, 238, "reserved" ;
+    logical_value, 239, "reserved" ;
+    logical_value, 240, "reserved" ;
+    logical_value, 241, "reserved" ;
+    logical_value, 242, "reserved" ;
+    logical_value, 243, "reserved" ;
+    logical_value, 244, "reserved" ;
+    logical_value, 245, "reserved" ;
+    logical_value, 246, "reserved" ;
+    logical_value, 247, "reserved" ;
+    logical_value, 248, "reserved" ;
+    logical_value, 249, "reserved" ;
+    logical_value, 250, "reserved" ;
+    logical_value, 251, "reserved" ;
+    logical_value, 252, "reserved" ;
+    logical_value, 253, "reserved" ;
+    logical_value, 254, "reserved" ;
+    logical_value, 255, "reserved" ;
+  }
+  BCM_BatSOC {
+    physical_value, 0x0, 0x3E8, 0.1, 0, "" ;
+  }
+  BCM_LOGOCtrl {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  BCM_MusicLiShowV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  BCM_PosnLiInten {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  BCML_FolwLampNo {
+    physical_value, 0x0, 0xff, 1, 0, "" ;
+    logical_value, 0, "No Command" ;
+    logical_value, 1, "OFF" ;
+    logical_value, 2, "No 1" ;
+    logical_value, 3, "No 2" ;
+    logical_value, 4, "No 3" ;
+    logical_value, 5, "No 4" ;
+    logical_value, 6, "No 5" ;
+    logical_value, 7, "No 6" ;
+    logical_value, 8, "No 7" ;
+    logical_value, 9, "No 8" ;
+    logical_value, 10, "No 9" ;
+    logical_value, 11, "No 10" ;
+    logical_value, 12, "No 11" ;
+    logical_value, 13, "No 12" ;
+    logical_value, 14, "No 13" ;
+    logical_value, 15, "No 14" ;
+    logical_value, 16, "No 15" ;
+    logical_value, 17, "No 16" ;
+    logical_value, 18, "No 17" ;
+    logical_value, 19, "No 18" ;
+    logical_value, 20, "No 19" ;
+    logical_value, 21, "No 20" ;
+    logical_value, 22, "No 21" ;
+    logical_value, 23, "No 22" ;
+    logical_value, 24, "No 23" ;
+    logical_value, 25, "No 24" ;
+    logical_value, 26, "No 25" ;
+    logical_value, 27, "No 26" ;
+    logical_value, 28, "No 27" ;
+    logical_value, 29, "No 28" ;
+    logical_value, 30, "No 29" ;
+    logical_value, 31, "No 30" ;
+    logical_value, 32, "No 31" ;
+    logical_value, 33, "No 32" ;
+    logical_value, 34, "No 33" ;
+    logical_value, 35, "No 34" ;
+    logical_value, 36, "No 35" ;
+    logical_value, 37, "No 36" ;
+    logical_value, 38, "No 37" ;
+    logical_value, 39, "No 38" ;
+    logical_value, 40, "No 39" ;
+    logical_value, 41, "No 40" ;
+    logical_value, 42, "No 41" ;
+    logical_value, 43, "No 42" ;
+    logical_value, 44, "No 43" ;
+    logical_value, 45, "No 44" ;
+    logical_value, 46, "No 45" ;
+    logical_value, 47, "No 46" ;
+    logical_value, 48, "No 47" ;
+    logical_value, 49, "No 48" ;
+    logical_value, 50, "No 49" ;
+    logical_value, 51, "No 50" ;
+    logical_value, 52, "No 51" ;
+    logical_value, 53, "No 52" ;
+    logical_value, 54, "No 53" ;
+    logical_value, 55, "No 54" ;
+    logical_value, 56, "No 55" ;
+    logical_value, 57, "No 56" ;
+    logical_value, 58, "No 57" ;
+    logical_value, 59, "No 58" ;
+    logical_value, 60, "No 59" ;
+    logical_value, 61, "No 60" ;
+    logical_value, 62, "No 61" ;
+    logical_value, 63, "No 62" ;
+    logical_value, 64, "No 63" ;
+    logical_value, 65, "No 64" ;
+    logical_value, 66, "No 65" ;
+    logical_value, 67, "No 66" ;
+    logical_value, 68, "No 67" ;
+    logical_value, 69, "No 68" ;
+    logical_value, 70, "No 69" ;
+    logical_value, 71, "No 70" ;
+    logical_value, 72, "No 71" ;
+    logical_value, 73, "No 72" ;
+    logical_value, 74, "No 73" ;
+    logical_value, 75, "No 74" ;
+    logical_value, 76, "No 75" ;
+    logical_value, 77, "No 76" ;
+    logical_value, 78, "No 77" ;
+    logical_value, 79, "No 78" ;
+    logical_value, 80, "No 79" ;
+    logical_value, 81, "No 80" ;
+    logical_value, 82, "No 81" ;
+    logical_value, 83, "No 82" ;
+    logical_value, 84, "No 83" ;
+    logical_value, 85, "No 84" ;
+    logical_value, 86, "No 85" ;
+    logical_value, 87, "No 86" ;
+    logical_value, 88, "No 87" ;
+    logical_value, 89, "No 88" ;
+    logical_value, 90, "No 89" ;
+    logical_value, 91, "No 90" ;
+    logical_value, 92, "No 91" ;
+    logical_value, 93, "No 92" ;
+    logical_value, 94, "No 93" ;
+    logical_value, 95, "No 94" ;
+    logical_value, 96, "No 95" ;
+    logical_value, 97, "No 96" ;
+    logical_value, 98, "No 97" ;
+    logical_value, 99, "No 98" ;
+    logical_value, 100, "No 99" ;
+    logical_value, 101, "No 100" ;
+    logical_value, 102, "No 101" ;
+    logical_value, 103, "No 102" ;
+    logical_value, 104, "No 103" ;
+    logical_value, 105, "No 104" ;
+    logical_value, 106, "No 105" ;
+    logical_value, 107, "No 106" ;
+    logical_value, 108, "No 107" ;
+    logical_value, 109, "No 108" ;
+    logical_value, 110, "No 109" ;
+    logical_value, 111, "No 110" ;
+    logical_value, 112, "No 111" ;
+    logical_value, 113, "No 112" ;
+    logical_value, 114, "No 113" ;
+    logical_value, 115, "No 114" ;
+    logical_value, 116, "No 115" ;
+    logical_value, 117, "No 116" ;
+    logical_value, 118, "No 117" ;
+    logical_value, 119, "No 118" ;
+    logical_value, 120, "No 119" ;
+    logical_value, 121, "No 120" ;
+    logical_value, 122, "No 121" ;
+    logical_value, 123, "No 122" ;
+    logical_value, 124, "No 123" ;
+    logical_value, 125, "No 124" ;
+    logical_value, 126, "No 125" ;
+    logical_value, 127, "No 126" ;
+    logical_value, 128, "No 127" ;
+    logical_value, 129, "No 128" ;
+    logical_value, 130, "No 129" ;
+    logical_value, 131, "No 130" ;
+    logical_value, 132, "No 131" ;
+    logical_value, 133, "No 132" ;
+    logical_value, 134, "No 133" ;
+    logical_value, 135, "No 134" ;
+    logical_value, 136, "No 135" ;
+    logical_value, 137, "No 136" ;
+    logical_value, 138, "No 137" ;
+    logical_value, 139, "No 138" ;
+    logical_value, 140, "No 139" ;
+    logical_value, 141, "No 140" ;
+    logical_value, 142, "No 141" ;
+    logical_value, 143, "No 142" ;
+    logical_value, 144, "No 143" ;
+    logical_value, 145, "No 144" ;
+    logical_value, 146, "No 145" ;
+    logical_value, 147, "No 146" ;
+    logical_value, 148, "No 147" ;
+    logical_value, 149, "No 148" ;
+    logical_value, 150, "No 149" ;
+    logical_value, 151, "No 150" ;
+    logical_value, 152, "No 151" ;
+    logical_value, 153, "No 152" ;
+    logical_value, 154, "No 153" ;
+    logical_value, 155, "No 154" ;
+    logical_value, 156, "No 155" ;
+    logical_value, 157, "No 156" ;
+    logical_value, 158, "No 157" ;
+    logical_value, 159, "No 158" ;
+    logical_value, 160, "No 159" ;
+    logical_value, 161, "No 160" ;
+    logical_value, 162, "No 161" ;
+    logical_value, 163, "No 162" ;
+    logical_value, 164, "No 163" ;
+    logical_value, 165, "No 164" ;
+    logical_value, 166, "No 165" ;
+    logical_value, 167, "No 166" ;
+    logical_value, 168, "No 167" ;
+    logical_value, 169, "No 168" ;
+    logical_value, 170, "reserved" ;
+    logical_value, 171, "reserved" ;
+    logical_value, 172, "reserved" ;
+    logical_value, 173, "reserved" ;
+    logical_value, 174, "reserved" ;
+    logical_value, 175, "reserved" ;
+    logical_value, 176, "reserved" ;
+    logical_value, 177, "reserved" ;
+    logical_value, 178, "reserved" ;
+    logical_value, 179, "reserved" ;
+    logical_value, 180, "reserved" ;
+    logical_value, 181, "reserved" ;
+    logical_value, 182, "reserved" ;
+    logical_value, 183, "reserved" ;
+    logical_value, 184, "reserved" ;
+    logical_value, 185, "reserved" ;
+    logical_value, 186, "reserved" ;
+    logical_value, 187, "reserved" ;
+    logical_value, 188, "reserved" ;
+    logical_value, 189, "reserved" ;
+    logical_value, 190, "reserved" ;
+    logical_value, 191, "reserved" ;
+    logical_value, 192, "reserved" ;
+    logical_value, 193, "reserved" ;
+    logical_value, 194, "reserved" ;
+    logical_value, 195, "reserved" ;
+    logical_value, 196, "reserved" ;
+    logical_value, 197, "reserved" ;
+    logical_value, 198, "reserved" ;
+    logical_value, 199, "reserved" ;
+    logical_value, 200, "reserved" ;
+    logical_value, 201, "reserved" ;
+    logical_value, 202, "reserved" ;
+    logical_value, 203, "reserved" ;
+    logical_value, 204, "reserved" ;
+    logical_value, 205, "reserved" ;
+    logical_value, 206, "reserved" ;
+    logical_value, 207, "reserved" ;
+    logical_value, 208, "reserved" ;
+    logical_value, 209, "reserved" ;
+    logical_value, 210, "reserved" ;
+    logical_value, 211, "reserved" ;
+    logical_value, 212, "reserved" ;
+    logical_value, 213, "reserved" ;
+    logical_value, 214, "reserved" ;
+    logical_value, 215, "reserved" ;
+    logical_value, 216, "reserved" ;
+    logical_value, 217, "reserved" ;
+    logical_value, 218, "reserved" ;
+    logical_value, 219, "reserved" ;
+    logical_value, 220, "reserved" ;
+    logical_value, 221, "reserved" ;
+    logical_value, 222, "reserved" ;
+    logical_value, 223, "reserved" ;
+    logical_value, 224, "reserved" ;
+    logical_value, 225, "reserved" ;
+    logical_value, 226, "reserved" ;
+    logical_value, 227, "reserved" ;
+    logical_value, 228, "reserved" ;
+    logical_value, 229, "reserved" ;
+    logical_value, 230, "reserved" ;
+    logical_value, 231, "reserved" ;
+    logical_value, 232, "reserved" ;
+    logical_value, 233, "reserved" ;
+    logical_value, 234, "reserved" ;
+    logical_value, 235, "reserved" ;
+    logical_value, 236, "reserved" ;
+    logical_value, 237, "reserved" ;
+    logical_value, 238, "reserved" ;
+    logical_value, 239, "reserved" ;
+    logical_value, 240, "reserved" ;
+    logical_value, 241, "reserved" ;
+    logical_value, 242, "reserved" ;
+    logical_value, 243, "reserved" ;
+    logical_value, 244, "reserved" ;
+    logical_value, 245, "reserved" ;
+    logical_value, 246, "reserved" ;
+    logical_value, 247, "reserved" ;
+    logical_value, 248, "reserved" ;
+    logical_value, 249, "reserved" ;
+    logical_value, 250, "reserved" ;
+    logical_value, 251, "reserved" ;
+    logical_value, 252, "reserved" ;
+    logical_value, 253, "reserved" ;
+    logical_value, 254, "reserved" ;
+    logical_value, 255, "reserved" ;
+  }
+  BCM_SysPwrMode {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ACC_Reserved" ;
+    logical_value, 2, "ON" ;
+    logical_value, 3, "START_Reserved" ;
+  }
+  ESC_EPB_SystemState {
+    physical_value, 0x0, 0xF, 1, 0, "" ;
+    logical_value, 0, "Not Initialized" ;
+    logical_value, 1, "Brake Released" ;
+    logical_value, 2, "Brake Applied" ;
+    logical_value, 3, "Brake Applying" ;
+    logical_value, 4, "Brake Releasing" ;
+    logical_value, 5, "reversed" ;
+    logical_value, 6, "reversed" ;
+    logical_value, 7, "reversed" ;
+  }
+  ESC_VehicleSpeed {
+    physical_value, 0x0, 0x1FFE, 0.05625, 0, "KPH" ;
+  }
+  FLL_LoBeamSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FLL_HiBeamSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FLL_PosnLiSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FLL_LoBeamHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FLL_HiBeamHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FLL_DaytiLiHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FLL_TurnLiHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FLL_TurnLiFlowHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FLL_PosnLiHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FLL_DaytiLiSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FLL_TurnLiSta {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "Running" ;
+    logical_value, 2, "blink" ;
+    logical_value, 3, "Reserved" ;
+  }
+  FLL_SideTurnLiSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FLL_AuxLoBeamSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FLL_TurnLiFaultFb {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "normal" ;
+    logical_value, 1, "short circuit" ;
+    logical_value, 2, "open circuit" ;
+    logical_value, 3, "Reserved" ;
+  }
+  FLL_LIN_Response_Error {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Error" ;
+  }
+  FRL_LoBeamHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FRL_HiBeamHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FRL_DaytiLiHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FRL_TurnLiHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FRL_TurnLiFlowHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FRL_PosnLiHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FRL_LoBeamSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FRL_HiBeamSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FRL_PosnLiSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FRL_DaytiLiSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FRL_TurnLiSta {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "Running" ;
+    logical_value, 2, "blink" ;
+    logical_value, 3, "Reserved" ;
+  }
+  FRL_SideTurnLiSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FRL_AuxLoBeamSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FRL_TurnLiFaultFb {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "normal" ;
+    logical_value, 1, "short circuit" ;
+    logical_value, 2, "open circuit" ;
+    logical_value, 3, "Reserved" ;
+  }
+  FRL_LIN_Response_Error {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Error" ;
+  }
+  FML_LoBeamHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FML_AudioSigV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  FML_MusicFolwSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FML_MusicLiShowSta {
+    physical_value, 0x0, 0x7, 1, 0, "" ;
+    logical_value, 0, "reserve" ;
+    logical_value, 1, "OFF" ;
+    logical_value, 2, "摇滚 Rock Music" ;
+    logical_value, 3, "流行 pop music" ;
+    logical_value, 4, "古典 classical music" ;
+    logical_value, 5, "无声 Silent" ;
+    logical_value, 6, "reversed" ;
+    logical_value, 7, "reversed" ;
+  }
+  FML_AmbLiSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FML_LIN_Response_Error {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Error" ;
+  }
+  FML_LOGOLiSta1 {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FML_LOGOLiSta2 {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FML_LOGOLiSta3 {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FML_LOGOLiSta4 {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FML_LOGOLiSta5 {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  FML_MusicFolwData {
+    physical_value, 0x0, 0xFF, 1, 0, "" ;
+    logical_value, 0, "Turn off all light" ;
+    logical_value, 1, "Turn on 1 light" ;
+    logical_value, 2, "Turn on 2 lights" ;
+    logical_value, 255, "Turn on 255 lights" ;
+  }
+  ELL_LoBeamHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  ELL_DaytiLiHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  ELL_TurnLiHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  ELL_LeTurnLiFlowHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  ELL_DaytiLiSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  ELL_TurnLiSta {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "Running" ;
+    logical_value, 2, "blink" ;
+    logical_value, 3, "Reserved" ;
+  }
+  ELL_AuxLoBeamSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  ELL_TurnLiFaultFb {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "normal" ;
+    logical_value, 1, "short circuit" ;
+    logical_value, 2, "open circuit" ;
+    logical_value, 3, "Reserved" ;
+  }
+  ELL_LIN_Response_Error {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Error" ;
+  }
+  ERL_LoBeamHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  ERL_DaytiLiHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  ERL_TurnLiHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  ERL_RiTurnLiFlowHWV {
+    logical_value, 0, "valid" ;
+    logical_value, 1, "Invalid" ;
+  }
+  ERL_DaytiLiSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  ERL_TurnLiSta {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "Running" ;
+    logical_value, 2, "blink" ;
+    logical_value, 3, "Reserved" ;
+  }
+  ERL_AuxLoBeamSta {
+    logical_value, 0, "OFF" ;
+    logical_value, 1, "ON" ;
+  }
+  ERL_TurnLiFaultFb {
+    physical_value, 0x0, 0x3, 1, 0, "" ;
+    logical_value, 0, "normal" ;
+    logical_value, 1, "short circuit" ;
+    logical_value, 2, "open circuit" ;
+    logical_value, 3, "Reserved" ;
+  }
+  ERL_LIN_Response_Error {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Error" ;
+  }
+}
+Signal_representation {
+  BCM_LoBeamCtrl: BCM_LoBeamCtrl ;
+  BCM_HiBeamCtrl: BCM_HiBeamCtrl ;
+  BCM_DaytiLiCtrl: BCM_DaytiLiCtrl ;
+  BCM_LeTurnLiCtrl: BCM_LeTurnLiCtrl ;
+  BCM_RiTurnLiCtrl: BCM_RiTurnLiCtrl ;
+  BCM_TurnLiFlowEna: BCM_TurnLiFlowEna ;
+  BCM_PosnLiCtrl: BCM_PosnLiCtrl ;
+  BCM_WelcomeScLiCtrl: BCM_WelcomeScLiCtrl ;
+  BCM_BTCnctScLiCtrl: BCM_BTCnctScLiCtrl ;
+  BCM_UnlockScLiCtrl: BCM_UnlockScLiCtrl ;
+  BCM_LockScLiCtrl: BCM_LockScLiCtrl ;
+  BCM_ExtAmbLiEna: BCM_ExtAmbLiEna ;
+  BCM_FolwMeHomeLiCtrl: BCM_FolwMeHomeLiCtrl ;
+  BCM_CarLocnScLiCtrl: BCM_CarLocnScLiCtrl ;
+  BCM_MusicFolwCtrl: BCM_MusicFolwCtrl ;
+  BCM_ParkingScLiCtrl: BCM_ParkingScLiCtrl ;
+  BCM_MusicLiShowCtrl: BCM_MusicLiShowCtrl ;
+  BCM_AutopilotScLiCtrl: BCM_AutopilotScLiCtrl ;
+  BCM_ExpressScLiCtrl: BCM_ExpressScLiCtrl ;
+  BCM_SentryScLiCtrl: BCM_SentryScLiCtrl ;
+  BCM_AutoparkScLiCtrl: BCM_AutoparkScLiCtrl ;
+  BCM_ChrgSts: BCM_ChrgSts ;
+  BCM_LightIntensity: BCM_LightIntensity ;
+  BCM_VolumeVal: BCM_VolumeVal ;
+  BCM_BatSOC: BCM_BatSOC ;
+  BCM_LOGOCtrl: BCM_LOGOCtrl ;
+  BCM_MusicLiShowV: BCM_MusicLiShowV ;
+  BCM_PosnLiInten: BCM_PosnLiInten ;
+  BCML_FolwLampNo: BCML_FolwLampNo ;
+  BCM_SysPwrMode: BCM_SysPwrMode ;
+  ESC_EPB_SystemState: ESC_EPB_SystemState ;
+  ESC_VehicleSpeed: ESC_VehicleSpeed ;
+  FLL_LoBeamSta: FLL_LoBeamSta ;
+  FLL_HiBeamSta: FLL_HiBeamSta ;
+  FLL_PosnLiSta: FLL_PosnLiSta ;
+  FLL_LoBeamHWV: FLL_LoBeamHWV ;
+  FLL_HiBeamHWV: FLL_HiBeamHWV ;
+  FLL_DaytiLiHWV: FLL_DaytiLiHWV ;
+  FLL_TurnLiHWV: FLL_TurnLiHWV ;
+  FLL_TurnLiFlowHWV: FLL_TurnLiFlowHWV ;
+  FLL_PosnLiHWV: FLL_PosnLiHWV ;
+  FLL_DaytiLiSta: FLL_DaytiLiSta ;
+  FLL_TurnLiSta: FLL_TurnLiSta ;
+  FLL_SideTurnLiSta: FLL_SideTurnLiSta ;
+  FLL_AuxLoBeamSta: FLL_AuxLoBeamSta ;
+  FLL_TurnLiFaultFb: FLL_TurnLiFaultFb ;
+  FLL_LIN_Response_Error: FLL_LIN_Response_Error ;
+  FRL_LoBeamHWV: FRL_LoBeamHWV ;
+  FRL_HiBeamHWV: FRL_HiBeamHWV ;
+  FRL_DaytiLiHWV: FRL_DaytiLiHWV ;
+  FRL_TurnLiHWV: FRL_TurnLiHWV ;
+  FRL_TurnLiFlowHWV: FRL_TurnLiFlowHWV ;
+  FRL_PosnLiHWV: FRL_PosnLiHWV ;
+  FRL_LoBeamSta: FRL_LoBeamSta ;
+  FRL_HiBeamSta: FRL_HiBeamSta ;
+  FRL_PosnLiSta: FRL_PosnLiSta ;
+  FRL_DaytiLiSta: FRL_DaytiLiSta ;
+  FRL_TurnLiSta: FRL_TurnLiSta ;
+  FRL_SideTurnLiSta: FRL_SideTurnLiSta ;
+  FRL_AuxLoBeamSta: FRL_AuxLoBeamSta ;
+  FRL_TurnLiFaultFb: FRL_TurnLiFaultFb ;
+  FRL_LIN_Response_Error: FRL_LIN_Response_Error ;
+  FML_LoBeamHWV: FML_LoBeamHWV ;
+  FML_AudioSigV: FML_AudioSigV ;
+  FML_MusicFolwSta: FML_MusicFolwSta ;
+  FML_MusicLiShowSta: FML_MusicLiShowSta ;
+  FML_AmbLiSta: FML_AmbLiSta ;
+  FML_LIN_Response_Error: FML_LIN_Response_Error ;
+  FML_LOGOLiSta1: FML_LOGOLiSta1 ;
+  FML_LOGOLiSta2: FML_LOGOLiSta2 ;
+  FML_LOGOLiSta3: FML_LOGOLiSta3 ;
+  FML_LOGOLiSta4: FML_LOGOLiSta4 ;
+  FML_LOGOLiSta5: FML_LOGOLiSta5 ;
+  FML_MusicFolwData: FML_MusicFolwData ;
+  ELL_LoBeamHWV: ELL_LoBeamHWV ;
+  ELL_DaytiLiHWV: ELL_DaytiLiHWV ;
+  ELL_TurnLiHWV: ELL_TurnLiHWV ;
+  ELL_LeTurnLiFlowHWV: ELL_LeTurnLiFlowHWV ;
+  ELL_DaytiLiSta: ELL_DaytiLiSta ;
+  ELL_TurnLiSta: ELL_TurnLiSta ;
+  ELL_AuxLoBeamSta: ELL_AuxLoBeamSta ;
+  ELL_TurnLiFaultFb: ELL_TurnLiFaultFb ;
+  ELL_LIN_Response_Error: ELL_LIN_Response_Error ;
+  ERL_LoBeamHWV: ERL_LoBeamHWV ;
+  ERL_DaytiLiHWV: ERL_DaytiLiHWV ;
+  ERL_TurnLiHWV: ERL_TurnLiHWV ;
+  ERL_RiTurnLiFlowHWV: ERL_RiTurnLiFlowHWV ;
+  ERL_DaytiLiSta: ERL_DaytiLiSta ;
+  ERL_TurnLiSta: ERL_TurnLiSta ;
+  ERL_AuxLoBeamSta: ERL_AuxLoBeamSta ;
+  ERL_TurnLiFaultFb: ERL_TurnLiFaultFb ;
+  ERL_LIN_Response_Error: ERL_LIN_Response_Error ;
+}
