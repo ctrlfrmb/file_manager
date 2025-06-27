@@ -35,7 +35,7 @@ ssh_api/
         ├── ssh_api.lib
 ```
 
-注意：运行时需要拷贝依赖库，如common_api/Qt/SSH库
+注意：运行时需要拷贝依赖库，如Qt/SSH库
 
 ## 🚀 快速开始
 
