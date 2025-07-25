@@ -1,0 +1,42 @@
+VERSION ""
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+
+BS_:
+
+BU_: ECU PKE IP MCR
+
+BO_ 288 ECU_RPM_UP60: 8 ECU
+ SG_ EngineSpeed : 8|16@0+ (1,0) [0|20000] "rpm"  PKE,IP,MCR
+ SG_ EngineSpeedSignalFailure : 31|1@0+ (1,0) [0|1] ""  PKE,IP,MCR
+
+CM_ SG_ 288 EngineSpeedSignalFailure "0x0:正常 0x1:故障";
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_ "GenMsgSendType" ENUM "Cyclic","Event","CyclicIfActive","SpontanWithDelay","CyclicAndSpontan","CyclicAndEvent";
+BA_DEF_ SG_ "GenSigStartValue" FLOAT 0 0;
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+BA_DEF_DEF_ "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_ "GenSigStartValue" 0;
+BA_ "GenMsgCycleTime" BO_ 288 20;
+BA_ "GenMsgSendType" BO_ 288 0;
+VAL_ 288 EngineSpeedSignalFailure 0 "正常" 1 "故障" ;

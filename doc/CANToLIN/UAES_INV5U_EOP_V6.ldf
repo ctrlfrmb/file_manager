@@ -1,0 +1,449 @@
+/* **********************************************************************/
+/*  LIN DESCRIPTION FILE                                                */
+/*                                                                      */
+/*  Date:          17.02.2022                                           */
+/*  Project:       ELOP063												*/
+/*  Release:       5                                                    */
+/*  Network:       ECU_LIN                                              */
+/*  Slave(s):      ELOP063												*/
+/*  Master:        EE				     	                			*/
+/*                                                                      */
+/*  UPDATE HISTORY:            											*/
+/*	- 17.02.2022 --> ProtoB Development Release							*/
+/*	- 25.10.2021 --> First Release to the customer						*/
+/*                                                                      */
+/*                                                                      */
+/*                                                                      */
+/*                                                                      */
+/*                                                                      */
+/*                                                                      */
+/* **********************************************************************/
+
+LIN_description_file;
+LIN_protocol_version = "2.2";
+LIN_language_version = "2.2";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: MASTER_INV, 10 ms, 0.1 ms ;
+  Slaves: SLAVE_EOP ;
+}
+
+Signals {
+  INV2EOP_Req0R1ngCtr: 4, 0, MASTER_INV, SLAVE_EOP ;
+  INV2EOP_Req0ChkSm: 8, 0, MASTER_INV, SLAVE_EOP ;
+  INV2EOP_TargetState: 4, 1, MASTER_INV, SLAVE_EOP ;
+  INV2EOP_TargetFlowRate: 8, 0, MASTER_INV, SLAVE_EOP ;
+  INV2EOP_TargetSpeed: 16, 0, MASTER_INV, SLAVE_EOP ;
+  INV23OP_Reserved3: 8, 0, MASTER_INV, SLAVE_EOP ;
+  INV23OP_Reserved4: 8, 0, MASTER_INV, SLAVE_EOP ;
+  INV23OP_Reserved5: 8, 0, MASTER_INV, SLAVE_EOP ;
+  EOP_Rsp0ChkSm: 8, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_Res0RlngCtr: 4, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_ActualSpeed: 16, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_PhaseCurrent: 16, 32768, SLAVE_EOP, MASTER_INV ;
+  EOP_DCCurrent: 16, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_Reserved1: 4, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_Res1ChkSm: 8, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_Res1RlngCtr: 4, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_ActualState: 4, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_DCVoltage: 16, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_OilTemperature: 8, 70, SLAVE_EOP, MASTER_INV ;
+  EOP_NTCTemperature: 8, 70, SLAVE_EOP, MASTER_INV ;
+  EOP_OilPressure: 8, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_ActualFlowRate: 8, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_Res2ChkSm: 8, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_Res2RlngCtr: 4, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_SWID: 4, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_SWVerNum: 8, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_HWVerNum: 4, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_BTVerNum: 4, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_PreBTVerNum: 4, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_OEMID: 4, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_InternalFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_LINComFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_DryRotationFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_OverloadFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_OvervoltageFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_UndervoltageFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_OvertemperatureFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_SWOvercurrentFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_HWOvercurrentFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_NTCFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_MotorBlockFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_AngleSensorFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_BootstrapCircuitFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_EEPROMCalibrationDataFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_OilOvertempDeratingFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_Req0ToutFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_Req0ChkSmFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_Req0RlngCtrFault: 1, 0, SLAVE_EOP, MASTER_INV ;
+  EOP_Reserved2: 6, 0, SLAVE_EOP, MASTER_INV ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  INV_Req: 28, MASTER_INV, 8 {
+    INV2EOP_Req0R1ngCtr, 8 ;
+    INV2EOP_Req0ChkSm, 0 ;
+    INV2EOP_TargetState, 12 ;
+    INV2EOP_TargetFlowRate, 16 ;
+    INV2EOP_TargetSpeed, 24 ;
+    INV23OP_Reserved3, 40 ;
+    INV23OP_Reserved4, 48 ;
+    INV23OP_Reserved5, 56 ;
+  }
+  EOP_Rsp0: 17, SLAVE_EOP, 8 {
+    EOP_Rsp0ChkSm, 0 ;
+    EOP_Res0RlngCtr, 8 ;
+    EOP_ActualSpeed, 12 ;
+    EOP_PhaseCurrent, 28 ;
+    EOP_DCCurrent, 44 ;
+    EOP_Reserved1, 60 ;
+  }
+  EOP_Rsp1: 18, SLAVE_EOP, 8 {
+    EOP_Res1ChkSm, 0 ;
+    EOP_Res1RlngCtr, 8 ;
+    EOP_ActualState, 12 ;
+    EOP_DCVoltage, 16 ;
+    EOP_OilTemperature, 32 ;
+    EOP_NTCTemperature, 40 ;
+    EOP_OilPressure, 48 ;
+    EOP_ActualFlowRate, 56 ;
+  }
+  EOP_Rsp2: 19, SLAVE_EOP, 8 {
+    EOP_Res2ChkSm, 0 ;
+    EOP_Res2RlngCtr, 8 ;
+    EOP_SWID, 12 ;
+    EOP_SWVerNum, 16 ;
+    EOP_HWVerNum, 24 ;
+    EOP_BTVerNum, 28 ;
+    EOP_PreBTVerNum, 32 ;
+    EOP_OEMID, 36 ;
+    EOP_InternalFault, 40 ;
+    EOP_LINComFault, 41 ;
+    EOP_DryRotationFault, 42 ;
+    EOP_OverloadFault, 43 ;
+    EOP_OvervoltageFault, 44 ;
+    EOP_UndervoltageFault, 45 ;
+    EOP_OvertemperatureFault, 46 ;
+    EOP_SWOvercurrentFault, 47 ;
+    EOP_HWOvercurrentFault, 48 ;
+    EOP_NTCFault, 49 ;
+    EOP_MotorBlockFault, 50 ;
+    EOP_AngleSensorFault, 51 ;
+    EOP_BootstrapCircuitFault, 52 ;
+    EOP_EEPROMCalibrationDataFault, 53 ;
+    EOP_OilOvertempDeratingFault, 54 ;
+    EOP_Req0ToutFault, 55 ;
+    EOP_Req0ChkSmFault, 56 ;
+    EOP_Req0RlngCtrFault, 57 ;
+    EOP_Reserved2, 58 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  SLAVE_EOP{
+    LIN_protocol = "2.2" ;
+    configured_NAD = 0x85 ;
+    initial_NAD = 0x85 ;
+    product_id = 0x2, 0x0, 255 ;
+    response_error = EOP_LINComFault ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      INV_Req ;
+      EOP_Rsp0 ;
+      EOP_Rsp1 ;
+      EOP_Rsp2 ;
+    }
+  }
+}
+
+Schedule_tables {
+ DiagRequest {
+    MasterReq delay 10 ms ;
+  }
+ DiagResponse {
+    SlaveResp delay 10 ms ;
+  }
+ ELOP_MAIN {
+    INV_Req delay 10 ms ;
+    EOP_Rsp0 delay 10 ms ;
+    EOP_Rsp1 delay 10 ms ;
+    EOP_Rsp2 delay 10 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  EOP_ActualFlowRate_Encoding {
+    physical_value, 0, 254, 0.1, 0, "L/Min" ;
+    logical_value, 255, "Invalid Value" ;
+  }
+  EOP_ActualSpeed_Encoding {
+    physical_value, 0, 65534, 1, 0, "rpm" ;
+    logical_value, 65535, "Invalid Value" ;
+  }
+  EOP_ActualState_Encoding {
+    physical_value, 0, 14, 1, 0 ;
+    logical_value, 0, "Stop Mode" ;
+    logical_value, 1, "Normal Operation" ;
+    logical_value, 4, "Failure Mode" ;
+    logical_value, 5, "Lame Mode" ;
+    logical_value, 15, "Invalid Value" ;
+  }
+  EOP_AngleSensorFault_Encoding {
+    logical_value, 0, "Noraml" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_BTVerNum_Encoding {
+    physical_value, 0, 14, 1, 0 ;
+    logical_value, 15, "Invalid Value" ;
+  }
+  EOP_BootstrapCircuitFault_Encoding {
+    logical_value, 0, "Noraml" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_DCCurrent_Encoding {
+    physical_value, 0, 65534, 1, 0, "mA" ;
+    logical_value, 65535, "Invalid Value" ;
+  }
+  EOP_DCVoltage_Encoding {
+    physical_value, 0, 65534, 1, 0, "mV" ;
+    logical_value, 65535, "Invalid Value" ;
+  }
+  EOP_DryRotationFault_Encoding {
+    logical_value, 0, "Noraml" ;
+    logical_value, 1, "Value" ;
+  }
+  EOP_EEPROMCalibrationDataFault_Encoding {
+    logical_value, 0, "Noraml" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_HWOvercurrentFault_Encoding {
+    logical_value, 0, "Noraml" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_HWVerNum_Encoding {
+    physical_value, 0, 14, 1, 0 ;
+    logical_value, 15, "Invalid Value" ;
+  }
+  EOP_InternalFault_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_LINComFault_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_MotorBlockFault_Encoding {
+    logical_value, 0, "Noraml" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_NTCFault_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_NTCTemperature_Encoding {
+    physical_value, 0, 254, 1, -50, "degC" ;
+    logical_value, 255, "Invalid Value" ;
+  }
+  EOP_OEMID_Encoding {
+    physical_value, 0, 14, 1, 0 ;
+    logical_value, 0, "INV5U Platform" ;
+    logical_value, 15, "Invalid Value" ;
+  }
+  EOP_OilOvertempDeratingFault_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_OilPressure_Encoding {
+    physical_value, 0, 254, 0.04, 0, "bar" ;
+    logical_value, 255, "Invalid Value" ;
+  }
+  EOP_OilTemperature_Encoding {
+    physical_value, 0, 254, 1, -50, "degC" ;
+    logical_value, 255, "Invalid Value" ;
+  }
+  EOP_OverloadFault_Encoding {
+    logical_value, 0, "Noramal" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_OvertemperatureFault_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_OvervoltageFault_Encoding {
+    logical_value, 0, "Noraml" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_PhaseCurrent_Encoding {
+    physical_value, 0, 65534, 0.01, -327.68, "A" ;
+    logical_value, 65535, "Invalid Value" ;
+  }
+  EOP_PreBTVerNum_Encoding {
+    physical_value, 0, 14, 1, 0 ;
+    logical_value, 15, "Invalid Value" ;
+  }
+  EOP_Req0ChkSmFault_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_Req0RlngCtrFault_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_Req0ToutFault_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_Res0RlngCtr_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+  }
+  EOP_Res1ChkSm_Encoding {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  EOP_Res1RlngCtr_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+  }
+  EOP_Res2ChkSm_Encoding {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  EOP_Res2RlngCtr_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+  }
+  EOP_Rsp0ChkSm_Encoding {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  EOP_SWID_Encoding {
+    physical_value, 0, 14, 1, 0 ;
+    logical_value, 0, "PHP" ;
+    logical_value, 15, "Invalid Value" ;
+  }
+  EOP_SWOvercurrentFault_Encoding {
+    logical_value, 0, "Noraml" ;
+    logical_value, 1, "Failure" ;
+  }
+  EOP_SWVerNum_Encoding {
+    physical_value, 0, 254, 1, 0 ;
+    logical_value, 255, "Invalid Value" ;
+  }
+  EOP_UndervoltageFault_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Failure" ;
+  }
+  INV2EOP_Req0ChkSm_Encoding {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  INV2EOP_Req0R1ngCtr_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+  }
+  INV2EOP_TargetFlowRate_Encoding {
+    physical_value, 0, 254, 0.1, 0, "L/MIN" ;
+    logical_value, 255, "Invalid Value" ;
+  }
+  INV2EOP_TargetSpeed_Encoding {
+    physical_value, 0, 65534, 1, 0, "rpm" ;
+    logical_value, 65535, "Invalid Value" ;
+  }
+  INV2EOP_TargetState_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+    logical_value, 1, "Normal Operation" ;
+    logical_value, 2, "Sleep Mode" ;
+  }
+}
+
+Signal_representation {
+  EOP_ActualFlowRate_Encoding: EOP_ActualFlowRate ;
+  EOP_ActualSpeed_Encoding: EOP_ActualSpeed ;
+  EOP_ActualState_Encoding: EOP_ActualState ;
+  EOP_AngleSensorFault_Encoding: EOP_AngleSensorFault ;
+  EOP_BTVerNum_Encoding: EOP_BTVerNum ;
+  EOP_BootstrapCircuitFault_Encoding: EOP_BootstrapCircuitFault ;
+  EOP_DCCurrent_Encoding: EOP_DCCurrent ;
+  EOP_DCVoltage_Encoding: EOP_DCVoltage ;
+  EOP_DryRotationFault_Encoding: EOP_DryRotationFault ;
+  EOP_EEPROMCalibrationDataFault_Encoding: EOP_EEPROMCalibrationDataFault ;
+  EOP_HWOvercurrentFault_Encoding: EOP_HWOvercurrentFault ;
+  EOP_HWVerNum_Encoding: EOP_HWVerNum ;
+  EOP_InternalFault_Encoding: EOP_InternalFault ;
+  EOP_LINComFault_Encoding: EOP_LINComFault ;
+  EOP_MotorBlockFault_Encoding: EOP_MotorBlockFault ;
+  EOP_NTCFault_Encoding: EOP_NTCFault ;
+  EOP_NTCTemperature_Encoding: EOP_NTCTemperature ;
+  EOP_OEMID_Encoding: EOP_OEMID ;
+  EOP_OilOvertempDeratingFault_Encoding: EOP_OilOvertempDeratingFault ;
+  EOP_OilPressure_Encoding: EOP_OilPressure ;
+  EOP_OilTemperature_Encoding: EOP_OilTemperature ;
+  EOP_OverloadFault_Encoding: EOP_OverloadFault ;
+  EOP_OvertemperatureFault_Encoding: EOP_OvertemperatureFault ;
+  EOP_OvervoltageFault_Encoding: EOP_OvervoltageFault ;
+  EOP_PhaseCurrent_Encoding: EOP_PhaseCurrent ;
+  EOP_PreBTVerNum_Encoding: EOP_PreBTVerNum ;
+  EOP_Req0ChkSmFault_Encoding: EOP_Req0ChkSmFault ;
+  EOP_Req0RlngCtrFault_Encoding: EOP_Req0RlngCtrFault ;
+  EOP_Req0ToutFault_Encoding: EOP_Req0ToutFault ;
+  EOP_Res0RlngCtr_Encoding: EOP_Res0RlngCtr ;
+  EOP_Res1ChkSm_Encoding: EOP_Res1ChkSm ;
+  EOP_Res1RlngCtr_Encoding: EOP_Res1RlngCtr ;
+  EOP_Res2ChkSm_Encoding: EOP_Res2ChkSm ;
+  EOP_Res2RlngCtr_Encoding: EOP_Res2RlngCtr ;
+  EOP_Rsp0ChkSm_Encoding: EOP_Rsp0ChkSm ;
+  EOP_SWID_Encoding: EOP_SWID ;
+  EOP_SWOvercurrentFault_Encoding: EOP_SWOvercurrentFault ;
+  EOP_SWVerNum_Encoding: EOP_SWVerNum ;
+  EOP_UndervoltageFault_Encoding: EOP_UndervoltageFault ;
+  INV2EOP_Req0ChkSm_Encoding: INV2EOP_Req0ChkSm ;
+  INV2EOP_Req0R1ngCtr_Encoding: INV2EOP_Req0R1ngCtr ;
+  INV2EOP_TargetFlowRate_Encoding: INV2EOP_TargetFlowRate ;
+  INV2EOP_TargetSpeed_Encoding: INV2EOP_TargetSpeed ;
+  INV2EOP_TargetState_Encoding: INV2EOP_TargetState ;
+}
