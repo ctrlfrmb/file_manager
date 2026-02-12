@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>智能网联汽车车载网络测试系统开发创新平台 - 登录</title>
+
+  <style>
+    :root{
+      --bgA:#f5f9ff;
+      --bgB:#eef6ff;
+      --bgC:#f2fbff;
+
+      --card: rgba(255,255,255,0.80);
+      --card2: rgba(255,255,255,0.66);
+      --stroke: rgba(15, 41, 77, 0.10);
+
+      --text: rgba(9, 21, 40, 0.92);
+      --muted: rgba(9, 21, 40, 0.62);
+
+      --brand1:#2b7bff;
+      --brand2:#20d3ff;
+
+      --shadow: 0 16px 50px rgba(12, 30, 60, 0.10);
+      --shadow2: 0 10px 26px rgba(12, 30, 60, 0.10);
+      --radius: 22px;
+    }
+
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+                   Arial, "Noto Sans", "Liberation Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 520px at 18% 22%, rgba(43,123,255,0.16), transparent 62%),
+        radial-gradient(820px 520px at 86% 28%, rgba(32,211,255,0.14), transparent 62%),
+        linear-gradient(180deg, var(--bgA), var(--bgB) 52%, var(--bgC));
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      background:
+        linear-gradient(rgba(20,60,120,0.06) 1px, transparent 1px) 0 0/36px 36px,
+        linear-gradient(90deg, rgba(20,60,120,0.06) 1px, transparent 1px) 0 0/36px 36px;
+      mask-image: radial-gradient(760px 520px at 35% 45%, rgba(0,0,0,0.80), transparent 72%);
+      pointer-events:none;
+      opacity:0.45;
+    }
+
+    /* 页面撑满并垂直居中，避免下方空白 */
+    .page{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 26px 0;
+    }
+
+    .wrap{
+      width:min(1320px, 94vw);
+      position:relative;
+    }
+
+    .wrap::before{
+      content:"";
+      position:absolute;
+      inset:-80px -120px -80px -120px;
+      background:
+        radial-gradient(520px 520px at 12% 16%, rgba(43,123,255,0.10), transparent 62%),
+        radial-gradient(520px 520px at 92% 22%, rgba(32,211,255,0.10), transparent 62%);
+      pointer-events:none;
+      z-index:0;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom: 14px;
+      position:relative;
+      z-index:1;
+    }
+
+    .brand{
+      display:flex; align-items:center; gap:12px;
+    }
+
+    .brand-badge{
+      width:44px; height:44px;
+      border-radius:16px;
+      background: linear-gradient(135deg, rgba(43,123,255,0.95), rgba(32,211,255,0.88));
+      box-shadow: 0 14px 34px rgba(43,123,255,0.16);
+      display:grid; place-items:center;
+      border: 1px solid rgba(255,255,255,0.55);
+    }
+    .brand-badge svg{ width:22px; height:22px; fill:white; opacity:0.96; }
+
+    .brand-title{
+      display:flex; flex-direction:column; line-height:1.12;
+    }
+    .brand-title .h1{
+      font-weight: 950;
+      letter-spacing:0.25px;
+      font-size: 18px;
+    }
+    .brand-title .sub{
+      color: var(--muted);
+      font-size: 12.5px;
+      margin-top: 5px;
+    }
+
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .pill{
+      padding:8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.62);
+      border: 1px solid rgba(15, 41, 77, 0.10);
+      color: rgba(9, 21, 40, 0.72);
+      font-size: 12px;
+      display:flex; gap:8px; align-items:center;
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(10px);
+    }
+    .dot{
+      width:8px; height:8px; border-radius:99px;
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+      box-shadow: 0 0 0 4px rgba(32,211,255,0.14);
+    }
+
+    .panel{
+      display:grid;
+      grid-template-columns: 1.45fr 0.85fr; /* 左图更大，右侧登录更集中 */
+      gap: 18px;
+      align-items:stretch;
+      position:relative;
+      z-index:1;
+    }
+
+    .left, .right{
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      overflow:hidden;
+    }
+
+    /* ===== 左侧图片卡片 ===== */
+    .left{
+      padding: 16px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      position:relative;
+    }
+
+    .left-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 14px;
+    }
+
+    .left-head .title{
+      font-weight: 950;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      margin: 0;
+    }
+    .left-head .tip{
+      margin: 5px 0 0 0;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    .left-actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+
+    .btn-lite{
+      border: 1px solid rgba(43,123,255,0.22);
+      background: linear-gradient(135deg, rgba(43,123,255,0.14), rgba(32,211,255,0.10));
+      color: rgba(9, 21, 40, 0.86);
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 12px;
+      cursor:pointer;
+      box-shadow: var(--shadow2);
+      transition: transform .18s ease, filter .18s ease;
+      white-space: nowrap;
+    }
+    .btn-lite:hover{ transform: translateY(-1px); filter: brightness(1.02); }
+
+    .img-frame{
+      flex: 1;
+      min-height: 520px; /* 关键：保证页面饱满，减少空白 */
+      border-radius: 18px;
+      border: 1px solid rgba(15, 41, 77, 0.10);
+      background: rgba(255,255,255,0.72);
+      box-shadow: var(--shadow2);
+      padding: 10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+    }
+
+    .arch-img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;    /* 完整显示不裁切 */
+      border-radius: 14px;
+      cursor: zoom-in;
+      user-select:none;
+    }
+
+    .img-caption{
+      color: rgba(9, 21, 40, 0.55);
+      font-size: 12px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      padding: 2px 4px 0 4px;
+    }
+
+    /* ===== 右侧登录 ===== */
+    .right{
+      padding: 24px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      position:relative;
+    }
+
+    .right::before{
+      content:"";
+      position:absolute;
+      inset:-90px -130px auto auto;
+      width:480px; height:480px;
+      background: radial-gradient(circle at 55% 40%, rgba(32,211,255,0.14), transparent 60%);
+      pointer-events:none;
+    }
+
+    .login{
+      position:relative;
+      z-index:1;
+    }
+    .login h3{
+      margin:0;
+      font-size: 18px;
+      letter-spacing:0.2px;
+      font-weight: 950;
+    }
+    .login .hint{
+      margin:8px 0 18px 0;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+
+    .form{
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+    }
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap: 7px;
+    }
+    label{
+      font-size: 12.5px;
+      color: rgba(9, 21, 40, 0.74);
+      font-weight: 750;
+    }
+    input{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(15, 41, 77, 0.12);
+      background: rgba(255,255,255,0.86);
+      color: rgba(9, 21, 40, 0.90);
+      outline:none;
+      transition: border-color .16s ease, background .16s ease, box-shadow .16s ease;
+      box-shadow: 0 8px 18px rgba(12,30,60,0.06);
+    }
+    input:focus{
+      border-color: rgba(43,123,255,0.42);
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 10px 24px rgba(43,123,255,0.10);
+    }
+
+    .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .chk{
+      display:flex; align-items:center; gap:8px;
+      color: rgba(9, 21, 40, 0.72);
+      font-size: 12.5px;
+      user-select:none;
+      font-weight: 650;
+    }
+    .chk input{ width:auto; padding:0; }
+
+    .link{
+      color: rgba(43,123,255,0.92);
+      text-decoration:none;
+      font-size: 12.5px;
+      font-weight: 800;
+    }
+    .link:hover{ text-decoration:underline; }
+
+    .btn{
+      margin-top: 10px;
+      width:100%;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(43,123,255,0.26);
+      background: linear-gradient(135deg, rgba(43,123,255,0.95), rgba(32,211,255,0.82));
+      color: white;
+      font-weight: 950;
+      letter-spacing:0.3px;
+      cursor:pointer;
+      transition: transform .18s ease, filter .18s ease;
+      box-shadow: 0 18px 44px rgba(43,123,255,0.16);
+    }
+    .btn:hover{ transform: translateY(-1px); filter: brightness(1.03); }
+
+    .split{
+      height:1px;
+      background: rgba(15, 41, 77, 0.10);
+      margin: 14px 0;
+    }
+
+    .foot{
+      margin-top: 4px;
+      color: rgba(9, 21, 40, 0.55);
+      font-size: 12px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    /* ===== 图片放大预览（Modal） ===== */
+    .modal{
+      position:fixed; inset:0;
+      background: rgba(9, 21, 40, 0.45);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding: 22px;
+      z-index: 999;
+      backdrop-filter: blur(6px);
+    }
+    .modal.show{ display:flex; }
+
+    .modal-card{
+      width: min(1200px, 96vw);
+      height: min(86vh, 860px);
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(15, 41, 77, 0.14);
+      border-radius: 18px;
+      box-shadow: 0 22px 70px rgba(0,0,0,0.22);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .modal-bar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(15, 41, 77, 0.10);
+    }
+    .modal-bar .mt{
+      font-weight: 950;
+      font-size: 13px;
+      color: rgba(9, 21, 40, 0.88);
+    }
+    .modal-bar button{
+      border: 1px solid rgba(15, 41, 77, 0.14);
+      background: rgba(255,255,255,0.80);
+      color: rgba(9, 21, 40, 0.82);
+      padding: 8px 10px;
+      border-radius: 12px;
+      cursor:pointer;
+      font-weight: 900;
+      font-size: 12px;
+    }
+    .modal-body{
+      flex:1;
+      padding: 10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(255,255,255,0.70);
+    }
+    .modal-body img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+      user-select:none;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .topbar{ flex-direction:column; align-items:flex-start; }
+      .meta{ justify-content:flex-start; }
+      .panel{ grid-template-columns: 1fr; }
+      .img-frame{ min-height: 360px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <div class="brand-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4zm0 4.2L6 8.8v3.3c0 3.6 2.3 6.9 6 7.8 3.7-.9 6-4.2 6-7.8V8.8l-6-2.6z"/>
+            </svg>
+          </div>
+          <div class="brand-title">
+            <div class="h1">智能网联汽车车载网络测试系统开发创新平台</div>
+            <div class="sub">In-Vehicle Network Test Platform · Secure · Modular · Traceable</div>
+          </div>
+        </div>
+
+        <div class="meta">
+          <div class="pill"><span class="dot"></span>平台状态：在线</div>
+          <div class="pill"><span class="dot"></span>版本：V1.0</div>
+          <div class="pill"><span class="dot"></span>环境：实验室 / HIL</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <!-- LEFT: 直接放架构图 -->
+        <section class="left">
+          <div class="left-head">
+            <div>
+              <p class="title">平台总体架构与信息/能量流示意</p>
+              <p class="tip">点击图片可放大预览。若图片不显示，请确认图片文件与本 HTML 同目录，且文件名为 <b>arch.png</b>（或修改代码里的路径）。</p>
+            </div>
+            <div class="left-actions">
+              <button class="btn-lite" type="button" onclick="openModal()">放大查看</button>
+              <button class="btn-lite" type="button" onclick="fitToggle()">切换填充模式</button>
+            </div>
+          </div>
+
+          <div class="img-frame">
+            <!-- 重要：把 src 改成你的图片路径即可 -->
+            <img id="archImg" class="arch-img" src="arch.png" alt="平台架构图" title="点击放大预览" onclick="openModal()" />
+          </div>
+
+          <div class="img-caption">
+            <span>提示：建议图片宽度 ≥ 1600px，显示更清晰</span>
+            <span>支持：自适应缩放 / 放大预览</span>
+          </div>
+        </section>
+
+        <!-- RIGHT: login -->
+        <aside class="right">
+          <div class="login">
+            <h3>平台登录</h3>
+            <div class="hint">请输入账号信息进入系统。支持项目制权限、统一审计与操作留痕。</div>
+
+            <form class="form" onsubmit="return login();">
+              <div class="field">
+                <label for="user">账号</label>
+                <input id="user" name="user" type="text" placeholder="请输入账号 / 工号" autocomplete="username" required />
+              </div>
+
+              <div class="field">
+                <label for="pass">密码</label>
+                <input id="pass" name="pass" type="password" placeholder="请输入密码" autocomplete="current-password" required />
+              </div>
+
+              <div class="field">
+                <label for="tenant">工作空间</label>
+                <input id="tenant" name="tenant" type="text" placeholder="例如：HIL-Lab / Project-A" autocomplete="organization" />
+              </div>
+
+              <div class="row">
+                <label class="chk">
+                  <input type="checkbox" id="remember" />
+                  记住我
+                </label>
+                <a class="link" href="javascript:void(0)" onclick="forgot()">忘记密码</a>
+              </div>
+
+              <button class="btn" type="submit">登录</button>
+
+              <div class="split"></div>
+
+              <div class="foot">
+                <span id="selected">当前模块：架构总览</span>
+                <span>© 2026 · In-Vehicle Network Test Platform</span>
+              </div>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for image preview -->
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-bar">
+        <div class="mt">平台架构图（放大预览）</div>
+        <div style="display:flex; gap:10px;">
+          <button type="button" onclick="downloadHint()">下载/替换提示</button>
+          <button type="button" onclick="hideModal()">关闭</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <img id="modalImg" src="arch.png" alt="平台架构图预览" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function forgot(){
+      alert('请联系平台管理员重置密码，或在企业身份系统中完成自助找回（如已接入）。');
+    }
+
+    function login(){
+      const u = document.getElementById('user').value.trim();
+      const t = document.getElementById('tenant').value.trim();
+      alert('登录请求已提交（演示）。\n账号：' + u + (t ? ('\n工作空间：' + t) : ''));
+      // 这里将来可以换成真实鉴权
+      window.location.href = "dashboard.html";
+      return false;
+    }
+
+    // ===== Image modal =====
+    function openModal(){
+      const modal = document.getElementById('modal');
+      const src = document.getElementById('archImg').getAttribute('src');
+      document.getElementById('modalImg').setAttribute('src', src);
+      modal.classList.add('show');
+    }
+    function hideModal(){
+      document.getElementById('modal').classList.remove('show');
+    }
+    function closeModal(e){
+      // 点击遮罩关闭
+      hideModal();
+    }
+    window.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape') hideModal();
+    });
+
+    // 切换图片显示方式：contain(完整显示) <-> cover(铺满裁切)
+    let fitMode = 'contain';
+    function fitToggle(){
+      const img = document.getElementById('archImg');
+      fitMode = (fitMode === 'contain') ? 'cover' : 'contain';
+      img.style.objectFit = fitMode;
+      img.style.cursor = (fitMode === 'contain') ? 'zoom-in' : 'zoom-out';
+      document.getElementById('selected').textContent = '当前模块：架构总览（' + fitMode + '）';
+    }
+
+    function downloadHint(){
+      alert('本页面为本地HTML示例。\n若图片不显示：\n1) 将架构图保存为 arch.png 并与 login.html 放在同一目录；\n2) 或将 <img src="arch.png"> 改为你的图片绝对/相对路径。');
+    }
+  </script>
+</body>
+</html>

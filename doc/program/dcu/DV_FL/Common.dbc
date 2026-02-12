@@ -1,0 +1,197 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ OutputCtrl 1 "On" 0 "Off" ;
+VAL_TABLE_ ConfigPeps_TCU_Item 6 "reserve" 5 "7DCT300" 4 "7DCT450" 3 "9AT" 2 "6DCT451" 1 "6AT" 0 "6MT" ;
+VAL_TABLE_ DTC_Item 46 "(983E00)PDU BCM Rqst Back Error " 45 "(983D00)PDU BCM Powerdown Error" 44 "(983C00)PDU FeedBack Not Meet" 43 "(983300)ESCL Motor protection" 42 "(983200)ESCL Control Error" 41 "(983100)ESCL Frame Error" 40 "(983000)ESCL Auth failure" 39 "(982F00)ESCL Critical failure" 38 "(982E00)ESCL Lost Comm" 37 "(982D00)ESCL LIN Resp Error" 36 "(982900)ESCL current overflow" 35 "(982800)EMS Auth Fail" 34 "(982700)IMMO Auth Fail" 33 "(982600)IMMO SK learning Failed" 32 "(982500)IMMO Coil Fault" 31 "(982400)IMMO Init Fault" 30 "(982300)Ext Trunk Ant Error" 29 "(982200)Ext Pas Ant Error" 28 "(982100)Ext Drv Ant Error" 27 "(982000)Inter Back Ant Error" 26 "(981F00)Inter Rear Ant Error" 25 "(981E00)Inter Front Ant Error" 24 "(981D00)LF Channel ShortBAT" 23 "(981C00)LF Channel ShortGND" 22 "(981B00)LF Channel Short" 21 "(981A00)LF Channel Open" 20 "(981900)LF Driver Over Temp " 19 "(980C00)Buzzer error" 18 "(980B00)Green LED Short" 17 "(980A00)Amber LED Short" 16 "(980800)Start Stop Button Error2" 15 "(980700)Start Stop Button Error1" 14 "(980600)PassengerDoorSWError" 13 "(980500)DriverDoorSWError" 12 "(980400)PasDoorCSError" 11 "(980300)DriverDoorCSError" 10 "(980100)TrunkSwitchError" 9 "(D11087)Limphome failure" 8 "(C01901)Single wire error LS-bus" 7 "(C01988)Bus-off LS-bus" 6 "(C16587)Missing RCP" 5 "(C16487)Missing AC/HCM" 4 "(C14687)Missing GW" 3 "(C18787)Missing CD" 2 "(C14087)Missing BCM" 1 "(D10116)Under Diagnostic voltage" 0 "(D10017)Over Diagnostic voltage" ;
+
+
+BO_ 1168 NmVirtual: 8 Vector__XXX
+
+BO_ 1982 UDS_RespFromTBOX: 8 Vector__XXX
+
+BO_ 1918 UDS_RqstToTBOX: 8 Vector__XXX
+
+BO_ 1961 UDS_RespFromESCL: 8 Vector__XXX
+
+BO_ 1897 UDS_RqstToESCL: 8 Vector__XXX
+
+BO_ 2024 UDS_RespFromEMS: 8 Vector__XXX
+
+BO_ 2016 UDS_RqstToEMS: 8 Vector__XXX
+
+BO_ 1960 UDS_RespFromPEPS: 8 Vector__XXX
+
+BO_ 1896 UDS_RqstToPEPS: 8 Vector__XXX
+
+
+
+EV_ EOLT_36_4: 0 [0|50] "" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_36_3: 0 [0|50] "" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_37_4: 0 [0|50] "" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_37_3: 0 [0|50] "" 0 4 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_35_4: 0 [0|0] "" 0 5 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_35_3: 0 [0|0] "" 0 6 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ Btn_DCUType: 0 [0|0] "" 0 7 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ KL15: 0 [0|0] "" 0 8 DUMMY_NODE_VECTOR1 Vector__XXX;
+
+EV_ Vbatt: 1 [0|0] "" 0 9 DUMMY_NODE_VECTOR1 Vector__XXX;
+
+EV_ EOLT_41: 0 [0|100] "" 0 10 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_40: 0 [0|100] "" 0 11 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_39_2: 0 [0|100] "" 0 12 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_39_1: 0 [0|100] "" 0 13 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_38_2: 0 [0|100] "" 0 14 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_38_1: 0 [0|100] "" 0 15 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_37_2: 0 [0|100] "" 0 16 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_37_1: 0 [0|100] "" 0 17 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_36_2: 0 [0|100] "" 0 18 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_36_1: 0 [0|100] "" 0 19 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_35_2: 0 [0|0] "" 0 20 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_35_1: 0 [0|0] "" 0 21 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_35_0: 0 [0|0] "" 0 22 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_34_7: 0 [0|0] "" 0 23 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_34_6: 0 [0|0] "" 0 24 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_34_5: 0 [0|0] "" 0 25 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_34_4: 0 [0|0] "" 0 26 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_34_3: 0 [0|0] "" 0 27 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_34_2: 0 [0|0] "" 0 28 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_34_1: 0 [0|0] "" 0 29 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_34_0: 0 [0|0] "" 0 30 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_33_0: 0 [0|0] "" 0 31 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_33_1: 0 [0|0] "" 0 32 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_33_2: 0 [0|0] "" 0 33 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_33_3: 0 [0|0] "" 0 34 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_33_4: 0 [0|0] "" 0 35 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_33_5: 0 [0|0] "" 0 36 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_33_7: 0 [0|0] "" 0 37 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EOLT_33_6: 0 [0|0] "" 0 38 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ AD_Value_10: 1 [0|0] "" 0 39 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ AD_Value_8: 1 [0|0] "" 0 40 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ AD_Value_9: 1 [0|0] "" 0 41 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ AD_Value_7: 1 [0|0] "" 0 42 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ AD_Value_6: 1 [0|0] "" 0 43 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ AD_Value_5: 1 [0|0] "" 0 44 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ AD_Value_4: 1 [0|0] "" 0 45 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ AD_Value_3: 1 [0|0] "" 0 46 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ AD_Value_2: 1 [0|0] "" 0 47 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ AD_Value_1: 1 [0|0] "" 0 48 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ ClearInfo: 0 [0|0] "" 0 49 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ InfoData: 0 [0|0] "" 0 50 DUMMY_NODE_VECTOR8000 Vector__XXX;
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+VAL_ EOLT_35_4 1 "On" 0 "Off" ;
+VAL_ EOLT_35_3 1 "On" 0 "Off" ;
+VAL_ EOLT_35_2 1 "On" 0 "Off" ;
+VAL_ EOLT_35_1 1 "On" 0 "Off" ;
+VAL_ EOLT_35_0 1 "On" 0 "Off" ;
+VAL_ EOLT_34_7 1 "On" 0 "Off" ;
+VAL_ EOLT_34_6 1 "On" 0 "Off" ;
+VAL_ EOLT_34_5 1 "On" 0 "Off" ;
+VAL_ EOLT_34_4 1 "On" 0 "Off" ;
+VAL_ EOLT_34_3 1 "On" 0 "Off" ;
+VAL_ EOLT_34_2 1 "On" 0 "Off" ;
+VAL_ EOLT_34_1 1 "On" 0 "Off" ;
+VAL_ EOLT_34_0 1 "On" 0 "Off" ;
+VAL_ EOLT_33_0 1 "On" 0 "Off" ;
+VAL_ EOLT_33_1 1 "On" 0 "Off" ;
+VAL_ EOLT_33_2 1 "On" 0 "Off" ;
+VAL_ EOLT_33_3 1 "On" 0 "Off" ;
+VAL_ EOLT_33_4 1 "On" 0 "Off" ;
+VAL_ EOLT_33_5 1 "On" 0 "Off" ;
+VAL_ EOLT_33_7 1 "On" 0 "Off" ;
+VAL_ EOLT_33_6 1 "On" 0 "Off" ;
+

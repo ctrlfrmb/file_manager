@@ -1,0 +1,1802 @@
+VERSION "FLDCU"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: FLDCU Vector_XXX
+
+
+BO_ 1609 FLDCU_DTC: 8 FLDCU
+ SG_ FLDCU_DTC1_Num : 7|10@0+ (1,0) [0|1023] ""  Vector_XXX
+ SG_ FLDCU_DTC1_State : 8|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_DTC2_Num : 23|10@0+ (1,0) [0|1023] ""  Vector_XXX
+ SG_ FLDCU_DTC2_State : 24|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_DTC3_Num : 39|10@0+ (1,0) [0|1023] ""  Vector_XXX
+ SG_ FLDCU_DTC3_State : 40|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_DTC4_Num : 55|10@0+ (1,0) [0|1023] ""  Vector_XXX
+ SG_ FLDCU_DTC4_State : 56|1@0+ (1,0) [0|1] ""  Vector_XXX
+
+BO_ 1370 FLDCU_Info1_100ms: 32 FLDCU
+ SG_ ChildLckCfgFdbk : 140|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ ChildProtnBtnSts : 150|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ DrvrCtrFRWndSwSts : 49|3@0+ (1,0) [0|7] ""  Vector_XXX
+ SG_ DrvrCtrFRWndSwStuckFlt : 69|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ DrvrCtrRLWndSwSts : 52|3@0+ (1,0) [0|7] ""  Vector_XXX
+ SG_ DrvrCtrRLWndSwStuckFlt : 70|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ DrvrCtrRRWndSwSts : 55|3@0+ (1,0) [0|7] ""  Vector_XXX
+ SG_ DrvrCtrRRWndSwStuckFlt : 71|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLCinchabusests : 148|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCUCrashSts : 151|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoor_BackLghtDrvSts : 95|7@0+ (1,0) [0|100] "%"  Vector_XXX
+ SG_ FLDoor_BackLghtFlrSts : 83|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ FLDoorCinchSts : 33|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ FLDoorHadlLghtDrvSts : 72|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorHadlLghtFlrSts : 85|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ FLDoorhadlMotorFlt : 67|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorLckUnlckDrvSts : 17|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ FLDoorligtsFlt : 146|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorligtsSts : 147|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorPawlSts : 35|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorPullCircuitFlt : 44|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorPullDrvFlt : 45|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorPullDrvSts : 47|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ FLDoorRatchetSts : 34|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorThrmlProtnSts : 13|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorUnlckCircuitFlt : 39|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorUnlckDrvFlt : 38|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorWinHallFlt : 145|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ FLWdwReqRes : 59|4@0+ (1,0) [0|15] ""  Vector_XXX
+ SG_ FLWndAnti_PnchSts : 23|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLWndInhSts : 24|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLWndInitnSts : 12|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLWndMotorFlt : 19|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLWndPcntPos : 31|7@0+ (1,0) [0|100] "%"  Vector_XXX
+ SG_ FLWndRunSts : 22|3@0+ (1,0) [0|7] ""  Vector_XXX
+ SG_ FLWndSts : 15|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ FLWndSwSts : 62|3@0+ (1,0) [0|7] ""  Vector_XXX
+ SG_ FLWndSwStuckFlt : 68|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLWndThrmlProtnSts : 18|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LChildProtnLckIndrDrvSts : 43|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LChildProtnLckIndrFlt : 41|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LFMirSwDrvSts : 125|3@0+ (1,0) [0|7] ""  Vector_XXX
+ SG_ LMirFoldMotFlt : 75|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LMirHeatFlt : 74|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LMirHghtPos : 111|8@0+ (1,0) [3|252] ""  Vector_XXX
+ SG_ LMirHorizontalMotFlt : 96|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LMirHorizontalPosRclFdbk : 129|3@0+ (1,0) [0|7] ""  Vector_XXX
+ SG_ LMirLvlPos : 119|8@0+ (1,0) [3|252] ""  Vector_XXX
+ SG_ LMirSelIndcLampCmd : 99|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LMirSelSw : 81|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LMirSelSwLEDIndrDrvSts : 121|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LMirSelSwLEDIndrFlt : 122|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LMirVerticalMotFlt : 97|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LMirVerticalPosRclFdbk : 132|3@0+ (1,0) [0|7] ""  Vector_XXX
+ SG_ LRrvwMirFolDrvSts : 78|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LRrvwMirFoldSts : 64|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LRrvwMirHeatSts : 79|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ LRrvwMirPosChng : 77|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ MecnclKeyLckReq : 37|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ MecnclKeyUnlckReq : 36|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ MirAdjSWFlt : 126|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ MirFldLclReq : 134|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ MirLTurnLghtDrvFlt : 87|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ MirLTurnLghtDrvSts : 73|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ MirSelSts : 66|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ MirSelSWFlt : 127|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ MirSwStsDown : 80|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ MirSwStsLeft : 88|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ MirSwStsRight : 103|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ MirSwStsUp : 102|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ MirUnfdLclReq : 133|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ RChildProtnLckIndrDrvSts : 42|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ RChildProtnLckIndrFlt : 40|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ RMirSelIndcLampCmd : 98|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ RMirSelSw : 101|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ RMirSelSwLEDIndrDrvSts : 135|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ RMirSelSwLEDIndrFlt : 120|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ RrvwMirFoldSw : 100|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ SigGroup_0x55A_ChkSm : 7|8@0+ (1,0) [0|255] ""  Vector_XXX
+ SG_ SigGroup_0x55A_RlngCtr : 11|4@0+ (1,0) [0|15] ""  Vector_XXX
+ SG_ WinLckIndrDrvSts : 141|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ WinLckIndrFlt : 142|1@0+ (1,0) [0|1] ""  Vector_XXX
+
+BO_ 714 FLDCU_Info2_20ms: 8 FLDCU
+ SG_ ChildProtnOptSw : 13|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ FLDoorhadlDrvSts : 31|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ FLDoorhadlHallFlt : 16|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorhadlPosSts : 23|7@0+ (1,0) [0|100] "%"  Vector_XXX
+ SG_ FLDoorHdlBlkdSts : 29|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorLCKRsetSts : 27|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorLckSts : 14|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDoorSts : 15|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ Flhandlemode : 26|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ LmirADASLghtDrvSts : 39|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ LmirADASLghtFlrSts : 37|2@0+ (1,0) [0|3] ""  Vector_XXX
+ SG_ RearWindowDisableSW : 28|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ SigGroup_0x2CA_ChkSm : 7|8@0+ (1,0) [0|255] ""  Vector_XXX
+ SG_ SigGroup_0x2CA_RlngCtr : 11|4@0+ (1,0) [0|15] ""  Vector_XXX
+
+BO_ 1129 FLDCU_NM: 8 FLDCU
+ SG_ FLDCU_ActiveWakeupStatus : 12|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_NMStatus : 22|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_PartialNetworkbit : 14|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_RepeatMessageReq : 8|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_SourceAddress : 7|8@0+ (1,0) [0|255] ""  Vector_XXX
+ SG_ FLDCU_StaywakeRsn_Diag : 25|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_StaywakeRsn_HwACCorON : 26|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_StaywakeRsn_PowerMode : 24|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_WakeUpRsn : 21|6@0+ (1,0) [0|63] ""  Vector_XXX
+
+BO_ 1721 FLDCU_VerNum: 8 FLDCU
+ SG_ FLDCU_BTVerNum : 7|16@0+ (1,0) [0|65535] ""  Vector_XXX
+ SG_ FLDCU_HWVerNum : 23|16@0+ (1,0) [0|65535] ""  Vector_XXX
+ SG_ FLDCU_SWID : 55|16@0+ (1,0) [0|65535] ""  Vector_XXX
+ SG_ FLDCU_SWVerNum : 39|16@0+ (1,0) [0|65535] ""  Vector_XXX
+
+BO_ 1897 UDS_DiagResp_FLDCU_FD: 64 FLDCU
+ SG_ Diag_FLDCU_Resp_Byte0 : 0|8@1- (1,0) [0|0] ""  Vector_XXX
+
+BO_ 1398 ACU_Info_200ms_GW: 8 Vector_XXX
+ SG_ CrashOtptSts : 23|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ SigGroup_232_ChkSm : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ SigGroup_232_RlngCtr : 11|4@0+ (1,0) [0|15] ""  FLDCU
+
+BO_ 521 FBCM_BCM_XCU_Info1_20ms_GW: 8 Vector_XXX
+ SG_ LowVolPwrMd : 14|2@0+ (1,0) [0|3] ""  FLDCU
+ SG_ LowVolPwrMdFlag : 15|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ SigGroup_0x209_ChkSm : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ SigGroup_0x209_RlngCtr : 11|4@0+ (1,0) [0|15] ""  FLDCU
+
+BO_ 905 FBCM_CMD1_100ms_GW: 8 Vector_XXX
+ SG_ LTurnLghtCmd : 49|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RTurnLghtCmd : 50|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ SigGroup_0x389_ChkSm : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ SigGroup_0x389_RlngCtr : 11|4@0+ (1,0) [0|15] ""  FLDCU
+
+BO_ 924 FBCM_DoorInfo_20ms: 8 Vector_XXX
+ SG_ FBCM_FLDoorhadlCmd : 39|2@0+ (1,0) [0|3] ""  FLDCU
+
+BO_ 524 FBCM_Info2_20ms: 8 Vector_XXX
+ SG_ FLDoorLckUnlckReq : 33|2@0+ (1,0) [0|3] ""  FLDCU
+
+BO_ 937 FBCM_Info_100ms: 8 Vector_XXX
+ SG_ LChildProtnLckSts : 17|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ PwrCtrlCmd : 23|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RChildProtnLckSts : 16|1@0+ (1,0) [0|1] ""  FLDCU
+
+BO_ 1035 FBCM_NM: 8 Vector_XXX
+ SG_ FBCM_ActiveWakeupStatus : 12|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_NMStatus : 22|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_PartialNetworkbit : 14|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_RepeatMessageReq : 8|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_SourceAddress : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_BackLghtDrv : 42|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_BraPedSwClos : 30|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_ChildLckDrv : 32|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_FLDoorPullDrv : 35|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_FourDoorLckDrv : 31|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_FRDoorPullDrv : 36|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_FrtFootLght : 45|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HandleDrive : 47|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HardwireACC : 27|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HardwireON : 26|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HazdLapTrig : 29|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HighBeamDrv : 41|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HndlLghtDrv : 46|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HornDrive : 33|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_LowBeamDrv : 40|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_MirFoldDrv : 34|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_PosLghtDrv : 39|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_PowSavMod : 24|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_ReservedRsn : 28|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_RoofLampDrv : 43|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_StrgWhlAdjt : 37|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_TurnLghtDrv : 44|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_UDSActive : 25|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_WindowDrv : 38|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_WakeUpRsn : 21|6@0+ (1,0) [0|63] ""  FLDCU
+
+BO_ 1130 FRDCU_NM: 8 Vector_XXX
+ SG_ FRDCU_ActiveWakeupStatus : 12|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_NMStatus : 22|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_PartialNetworkbit : 14|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_RepeatMessageReq : 8|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_SourceAddress : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ FRDCU_StaywakeRsn_Diag : 25|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_StaywakeRsn_HwACCorON : 26|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_StaywakeRsn_PowerMode : 24|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_WakeUpRsn : 21|6@0+ (1,0) [0|63] ""  FLDCU
+
+BO_ 925 HU_Info1_100ms_E: 8 Vector_XXX
+ SG_ TotalOdometer : 23|24@0+ (0.1,0) [0|999999.9] "km"  FLDCU
+
+BO_ 158 HU_Info1_10ms_E: 8 Vector_XXX
+ SG_ EastOrWestTimeZone : 1|2@0+ (1,0) [0|3] ""  FLDCU
+ SG_ TimeZoneNum : 7|4@0+ (1,0) [0|15] ""  FLDCU
+ SG_ UTCTime : 15|48@0+ (1,0) [0|281474976710655] "ms"  FLDCU
+ SG_ UTCTimeValidFlag : 3|2@0+ (1,0) [0|3] ""  FLDCU
+
+BO_ 150 IPB_Info_10ms_Rt_FD: 8 Vector_XXX
+ SG_ SigGroup_206_ChkSm : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ SigGroup_206_RlngCtr : 11|4@0+ (1,0) [0|15] ""  FLDCU
+ SG_ VehSpd : 55|13@0+ (0.05625,0) [0|460.6875] "km/h"  FLDCU
+ SG_ VehSpdValid : 58|1@0+ (1,0) [0|1] ""  FLDCU
+
+BO_ 1049 LHCM_NM: 8 Vector_XXX
+ SG_ LHCM_ActiveWakeupStatus : 12|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ LHCM_NMStatus : 22|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ LHCM_PartialNetworkbit : 14|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ LHCM_RepeatMessageReq : 8|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ LHCM_SourceAddress : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ LHCM_StaywakeRsn1_PowerMode : 24|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ LHCM_StaywakeRsn2_HardwireACC : 26|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ LHCM_StaywakeRsn3_Diagnosis : 25|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ LHCM_WakeUpRsn : 21|6@0+ (1,0) [0|63] ""  FLDCU
+
+BO_ 1036 RBCM_NM: 8 Vector_XXX
+ SG_ RBCM_ActiveWakeupStatus : 12|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_NMStatus : 22|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_PartialNetworkbit : 14|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_RepeatMessageReq : 8|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_SourceAddress : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_BklghtDrv : 34|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_BrkLghtDrv : 40|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_CasPortDrive : 30|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_ChrgPortDrive : 29|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_HardwireACC : 26|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_HndlLghtDrv : 35|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_PowerMode : 24|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_PowerSaveMode : 28|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_ReservedRsn : 27|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_RLDoorPllDrv : 36|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_RRDoorPllDrv : 37|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_RrFootLghtDrv : 39|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_SeatDrive : 31|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_TailDoorLckDrv : 32|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_TailSpndlDrv : 33|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StaywakeRsn_TrunkLghtDrv : 38|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_StayWakeRsn_UDSActive : 25|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RBCM_WakeUpRsn : 21|6@0+ (1,0) [0|63] ""  FLDCU
+
+BO_ 1050 RHCM_NM: 8 Vector_XXX
+ SG_ RHCM_ActiveWakeupStatus : 12|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RHCM_NMStatus : 22|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RHCM_PartialNetworkbit : 14|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RHCM_RepeatMessageReq : 8|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RHCM_SourceAddress : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ RHCM_StaywakeRsn1_PowerMode : 24|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RHCM_StaywakeRsn2_HardwireACC : 26|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RHCM_StaywakeRsn3_Diagnosis : 25|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RHCM_WakeUpRsn : 21|6@0+ (1,0) [0|63] ""  FLDCU
+
+BO_ 2015 UDS_FuncDiagReq_FD: 8 Vector_XXX
+ SG_ Diag_Func_Req_Byte0 : 0|8@1- (1,0) [0|0] ""  FLDCU
+
+BO_ 1889 UDS_PhyDiagReq_FLDCU_FD: 64 Vector_XXX
+ SG_ Diag_FLDCU_Req_Byte0 : 0|8@1- (1,0) [0|0] ""  FLDCU
+
+BO_ 1115 XCU_BD1_NM: 8 Vector_XXX
+ SG_ XCU_ActiveWakeupStatus_BD1 : 12|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ XCU_NMStatus_BD1 : 22|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ XCU_PartialNetworkbit_BD1 : 14|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ XCU_RepeatMessageReq_BD1 : 8|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ XCU_SourceAddress_BD1 : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ XCU_StaywakeRsn_BD1 : 31|16@0+ (1,0) [0|65535] ""  FLDCU
+ SG_ XCU_WakeUpRsn_BD1 : 21|6@0+ (1,0) [0|63] ""  FLDCU
+
+BO_ 906 XCU_BodyCMD1_100mixed_GW: 8 Vector_XXX
+ SG_ SwBkLghtCmd : 22|7@0+ (1,0) [0|100] "%"  FLDCU
+
+BO_ 907 XCU_BodyCMD2_100ms: 32 Vector_XXX
+ SG_ LADASLghtReq : 25|2@0+ (1,0) [0|3] ""  FLDCU
+
+BO_ 1369 XCU_DcuCMD1_100ms: 8 Vector_XXX
+ SG_ ChildLckCfgReq : 41|2@0+ (1,0) [0|3] ""  FLDCU
+ SG_ FLWndCtrlCmd : 7|2@0+ (1,0) [0|3] ""  FLDCU
+ SG_ FLWndPcntMvCmd : 14|7@0+ (1,0) [0|102] ""  FLDCU
+ SG_ HadlLghtCmd : 47|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ MirFldReq : 32|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ MirUnfldReq : 33|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RearWndSwInhCfg : 43|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ RrvwMirAutoHeatLevel : 55|3@0+ (1,0) [0|7] ""  FLDCU
+ SG_ RrvwMirHeatCmd : 34|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ SceneModeSts : 46|3@0+ (1,0) [0|7] ""  FLDCU
+ SG_ WndCtrlEnb : 15|1@0+ (1,0) [0|1] ""  FLDCU
+
+BO_ 1385 XCU_DcuCMD2_100ms: 8 Vector_XXX
+ SG_ LMirHorizontalPosReq : 7|8@0+ (1,0) [3|252] ""  FLDCU
+ SG_ LMirVerticalPosReq : 15|8@0+ (1,0) [3|252] ""  FLDCU
+ SG_ RMirHorizontalPosReq : 23|8@0+ (1,0) [3|252] ""  FLDCU
+ SG_ RMirVerticalPosReq : 31|8@0+ (1,0) [3|252] ""  FLDCU
+
+BO_ 713 XCU_DcuCMD3_20ms: 8 Vector_XXX
+ SG_ FLDoorhadlCmd : 7|2@0+ (1,0) [0|3] ""  FLDCU
+ SG_ FLDoorHadlLghtCmd : 11|1@0+ (1,0) [0|1] ""  FLDCU
+
+BO_ 919 XCU_Info_100ms_CH: 8 Vector_XXX
+ SG_ LVLdreductHadlMeas : 55|4@0+ (1,0) [0|15] ""  FLDCU
+ SG_ VehMdst : 15|4@0+ (1,0) [0|15] ""  FLDCU
+
+BO_ 194 XCU_Info_10ms_FD: 8 Vector_XXX
+ SG_ ActuGearShiftPos : 63|8@0+ (1,0) [0|255] ""  FLDCU
+
+
+
+CM_ SG_ 1609 FLDCU_DTC1_Num "DTC Number
+DTC序号";
+CM_ SG_ 1609 FLDCU_DTC1_State "DTC State
+故障状态";
+CM_ SG_ 1609 FLDCU_DTC2_Num "DTC Number
+DTC序号";
+CM_ SG_ 1609 FLDCU_DTC2_State "DTC State
+故障状态";
+CM_ SG_ 1609 FLDCU_DTC3_Num "DTC Number
+DTC序号";
+CM_ SG_ 1609 FLDCU_DTC3_State "DTC State
+故障状态";
+CM_ SG_ 1609 FLDCU_DTC4_Num "DTC Number
+DTC序号";
+CM_ SG_ 1609 FLDCU_DTC4_State "DTC State
+故障状态";
+CM_ SG_ 1370 ChildLckCfgFdbk "童锁配置反馈";
+CM_ SG_ 1370 ChildProtnBtnSts "儿童锁开关状态
+ChildProtnBtnSts";
+CM_ SG_ 1370 DrvrCtrFRWndSwSts "Driver Control Front Right Window Switch Status
+司机侧右前车窗开关状态";
+CM_ SG_ 1370 DrvrCtrFRWndSwStuckFlt "Driver Control Front Right Window Switch Stuck Fault
+司机侧右前车窗开关粘连故障";
+CM_ SG_ 1370 DrvrCtrRLWndSwSts "Driver Control Rear Left Window Switch Status
+司机侧左右车窗开关状态";
+CM_ SG_ 1370 DrvrCtrRLWndSwStuckFlt "Driver Control Rear Left Window Switch Stuck Fault
+司机侧左右车窗开关粘连故障";
+CM_ SG_ 1370 DrvrCtrRRWndSwSts "Driver Control Rear Right Window Switch Status
+司机侧右后车窗开关状态";
+CM_ SG_ 1370 DrvrCtrRRWndSwStuckFlt "Driver Control Rear Right Window Switch  Stuck Fault
+司机侧右后车窗开关粘连故障";
+CM_ SG_ 1370 FLCinchabusests "Cinchabusests
+自吸锁滥用状态";
+CM_ SG_ 1370 FLDCUCrashSts "碰撞状态
+FLDCU Crash  Sts";
+CM_ SG_ 1370 FLDoor_BackLghtDrvSts "Front  Left Door Back Light DrvSts
+左前门背光驱动状态";
+CM_ SG_ 1370 FLDoor_BackLghtFlrSts "Front  Left Door Back Light FlrSts
+左前门背光故障状态";
+CM_ SG_ 1370 FLDoorCinchSts "Front Left Door Cinch Status
+左前自吸锁状态";
+CM_ SG_ 1370 FLDoorHadlLghtDrvSts "Front Left Door Handle LightDriveStaus
+左前门把手灯驱动状态";
+CM_ SG_ 1370 FLDoorHadlLghtFlrSts "Front Left Door Handle LightFailureStaus
+左前门把手灯故障状态";
+CM_ SG_ 1370 FLDoorhadlMotorFlt "左前门把手电机故障
+Front  Left Door Handle Motor Fault";
+CM_ SG_ 1370 FLDoorLckUnlckDrvSts "Front Left Door Lock Unlock Drive Status
+左前门解闭锁驱动状态";
+CM_ SG_ 1370 FLDoorligtsFlt "FLDoorligtsFlt
+门灯故障状态";
+CM_ SG_ 1370 FLDoorligtsSts "FLDoorligtsSts
+门灯状态";
+CM_ SG_ 1370 FLDoorPawlSts "Front Left Door Pawl Status
+左前锁棘爪状态";
+CM_ SG_ 1370 FLDoorPullCircuitFlt "Front  Left Door Pull Circuit Fault
+左前自吸电路故障";
+CM_ SG_ 1370 FLDoorPullDrvFlt "Front  Left Door Pull Drive Fault
+左前锁自吸驱动故障";
+CM_ SG_ 1370 FLDoorPullDrvSts "Front Left Door Pull Drive Status
+左前门自吸驱动状态";
+CM_ SG_ 1370 FLDoorRatchetSts "Front Left Door Ratchet Status
+左前锁棘轮状态";
+CM_ SG_ 1370 FLDoorThrmlProtnSts "Front Left Door Thermal Protection State
+左前门锁热保护状态";
+CM_ SG_ 1370 FLDoorUnlckCircuitFlt "Front Left Door Unlock Circuit Fault
+左前门锁解锁电路故障";
+CM_ SG_ 1370 FLDoorUnlckDrvFlt "Front Left Door Unlock Drive Fault
+左前门解锁驱动故障";
+CM_ SG_ 1370 FLDoorWinHallFlt "左前车窗霍尔故障状态
+Front Left Door Windows Hall Fault status";
+CM_ SG_ 1370 FLWdwReqRes "Front Left Window Request Result
+左前车窗请求结果";
+CM_ SG_ 1370 FLWndAnti_PnchSts "Front Left windowAnti_Pinch Status
+左前车窗防夹触发";
+CM_ SG_ 1370 FLWndInhSts "Front Left Window Inhibit Status
+左前车窗防夹抑制状态";
+CM_ SG_ 1370 FLWndInitnSts "Front Left Window Initialization Status
+左前车窗初始化状态";
+CM_ SG_ 1370 FLWndMotorFlt "Front Left Window Motor Fault
+左前车窗电机故障状态";
+CM_ SG_ 1370 FLWndPcntPos "Front Left Window Percentage Position
+左前车窗开度";
+CM_ SG_ 1370 FLWndRunSts "Front Left Window Run Status
+左前车窗运行状态";
+CM_ SG_ 1370 FLWndSts "Front Left Window Status
+左前车窗状态";
+CM_ SG_ 1370 FLWndSwSts "Front Left Window Switch Status
+本地左前车窗开关状态";
+CM_ SG_ 1370 FLWndSwStuckFlt "Front Left Window Switch Stuck Fault
+本地左前车窗开关粘连故障";
+CM_ SG_ 1370 FLWndThrmlProtnSts "Front Left Window Thermal Protection State
+左前车窗热保护状态";
+CM_ SG_ 1370 LChildProtnLckIndrDrvSts "Left child Protection lock indicator drive status
+左儿童锁指示灯驱动状态";
+CM_ SG_ 1370 LChildProtnLckIndrFlt "Left child Protection lock indicator fault
+左儿童锁指示灯故障";
+CM_ SG_ 1370 LFMirSwDrvSts "Mirror Switch Drive Status 
+左侧后视镜调节驱动状态";
+CM_ SG_ 1370 LMirFoldMotFlt "Left Rearview Mirror fold motor fault
+左后视镜折叠电机故障状态";
+CM_ SG_ 1370 LMirHeatFlt "Left Rearview Mirror Heat fault
+左后视镜加热故障状态";
+CM_ SG_ 1370 LMirHghtPos "Left Mirror Height Position
+左后视镜高度位置";
+CM_ SG_ 1370 LMirHorizontalMotFlt "left Rearview Mirror Horizontal motor fault
+左后视镜左右调节电机故障状态";
+CM_ SG_ 1370 LMirHorizontalPosRclFdbk "Left Rearview Mirror Horizontal Position RecallFeedback
+左后视镜水平位置调出状态反馈";
+CM_ SG_ 1370 LMirLvlPos "Left Mirror Level Position
+左后视镜水平位置";
+CM_ SG_ 1370 LMirSelIndcLampCmd "LMirSelIndcLampCmd
+左侧后视镜工作指示灯";
+CM_ SG_ 1370 LMirSelSw "Left Mirror Select Switch
+左后视镜选择开关";
+CM_ SG_ 1370 LMirSelSwLEDIndrDrvSts "right Rearview Mirror Select Switch LED indicator drive status
+左后视镜选择LED驱动状态";
+CM_ SG_ 1370 LMirSelSwLEDIndrFlt "left Rearview Mirror Select Switch LED indicator drive status
+左后视镜选择LED故障";
+CM_ SG_ 1370 LMirVerticalMotFlt "left Rearview Mirror vertical motor fault
+左后视镜上下调节电机故障状态";
+CM_ SG_ 1370 LMirVerticalPosRclFdbk "Left Rearview Mirror  Vertical Position RecallFeedback
+左后视镜上下位置调出状态反馈";
+CM_ SG_ 1370 LRrvwMirFolDrvSts "Left Rear Mirror Fold Drive Status
+左后视镜折叠展开驱动状态";
+CM_ SG_ 1370 LRrvwMirFoldSts "Left Rearview Mirror Fold Status
+左后视镜折叠状态";
+CM_ SG_ 1370 LRrvwMirHeatSts "Left Rearview Mirror Heat Status
+左侧后视镜加热状态";
+CM_ SG_ 1370 LRrvwMirPosChng "Left Rearview Mirror Position Change
+左后视镜位置变更";
+CM_ SG_ 1370 MecnclKeyLckReq "Mechanical Key Lock Request 
+机械钥匙闭锁信号";
+CM_ SG_ 1370 MecnclKeyUnlckReq "Mechanical Key Unlock Request 
+机械钥匙解锁信号 ";
+CM_ SG_ 1370 MirAdjSWFlt "Rearview Mirror adjust Switch fault
+后视镜调节开关故障";
+CM_ SG_ 1370 MirFldLclReq "Mirror Fold Local Request
+后视镜本地开关折叠请求";
+CM_ SG_ 1370 MirLTurnLghtDrvFlt "Mirror Left Turn Light Drive Fault
+后视镜左侧转向灯驱动故障";
+CM_ SG_ 1370 MirLTurnLghtDrvSts "Mirror Left Turn Light Drive Status
+后视镜左侧转向灯驱动状态";
+CM_ SG_ 1370 MirSelSts "Mirror Select Status
+后视镜选择状态";
+CM_ SG_ 1370 MirSelSWFlt "Rearview Mirror Select Switch fault
+后视镜选择开关故障";
+CM_ SG_ 1370 MirSwStsDown "Mirror Switch Status Down
+后视镜向下调节开关状态";
+CM_ SG_ 1370 MirSwStsLeft "Mirror Switch Status Left
+后视镜向左调节开关状态";
+CM_ SG_ 1370 MirSwStsRight "Mirror Switch Status Right
+后视镜向右调节开关状态";
+CM_ SG_ 1370 MirSwStsUp "Mirror Switch Status Up
+后视镜向上调节开关状态";
+CM_ SG_ 1370 MirUnfdLclReq "Mirror UnFold Local Request
+后视镜本地开关展开请求";
+CM_ SG_ 1370 RChildProtnLckIndrDrvSts "Right child Protection lock indicator drive status
+右儿童锁指示灯驱动状态";
+CM_ SG_ 1370 RChildProtnLckIndrFlt "Right  child Protection  lock indicator fault
+右儿童锁指示灯故障";
+CM_ SG_ 1370 RMirSelIndcLampCmd "RMirSelIndcLampCmd
+右侧后视镜工作指示灯";
+CM_ SG_ 1370 RMirSelSw "Right Mirror Select Switch
+右后视镜选择开关";
+CM_ SG_ 1370 RMirSelSwLEDIndrDrvSts "right Rearview Mirror Select Switch LED indicator drive status
+右后视镜选择LED驱动状态";
+CM_ SG_ 1370 RMirSelSwLEDIndrFlt "left Rearview Mirror Select Switch LED indicator drive status
+右后视镜选择LED故障";
+CM_ SG_ 1370 RrvwMirFoldSw "Rearview Mirror Fold Switch
+后视镜折叠开关";
+CM_ SG_ 1370 SigGroup_0x55A_ChkSm "CheckSum
+CRC校验";
+CM_ SG_ 1370 SigGroup_0x55A_RlngCtr "RollingCounter
+滚动计数器";
+CM_ SG_ 1370 WinLckIndrDrvSts "Rear_Window_ lock indicator drive status
+后排车窗禁用指示灯驱动状态";
+CM_ SG_ 1370 WinLckIndrFlt "Rear_Window lock indicator fault
+后排车窗禁用指示灯故障";
+CM_ SG_ 714 ChildProtnOptSw "Child Protection Opt Switch 
+儿童锁选择开关";
+CM_ SG_ 714 FLDoorhadlDrvSts "左前门把手驱动状态
+Front  Left Door Handle Drive Status";
+CM_ SG_ 714 FLDoorhadlHallFlt "左前门把手霍尔故障状态
+Front Left Door Handle Hall Fault status";
+CM_ SG_ 714 FLDoorhadlPosSts "左前门把手位置状态
+Front Left Door Handle Pos status";
+CM_ SG_ 714 FLDoorHdlBlkdSts "Front Left  Door Handle Blocked Status 左前门把手受阻信号";
+CM_ SG_ 714 FLDoorLCKRsetSts "FLDoorLCKRsetSts
+左前自吸锁复位状态";
+CM_ SG_ 714 FLDoorLckSts "Front Left Door Lock Status
+司机门锁状态信号";
+CM_ SG_ 714 FLDoorSts "Front Left Door Status
+司机门状态信号";
+CM_ SG_ 714 Flhandlemode "FL把手模式
+handlemode";
+CM_ SG_ 714 LmirADASLghtDrvSts "Left Mirror ADAS Light Drive Staus
+左侧后视镜ADAS灯驱动状态";
+CM_ SG_ 714 LmirADASLghtFlrSts "Left  Mirror ADAS Light Failure Staus
+左侧ADAS灯故障状态";
+CM_ SG_ 714 RearWindowDisableSW "Rear_Window_Disable_SW
+后排车窗禁用开关";
+CM_ SG_ 714 SigGroup_0x2CA_ChkSm "CheckSum
+CRC校验";
+CM_ SG_ 714 SigGroup_0x2CA_RlngCtr "RollingCounter
+滚动计数器";
+CM_ SG_ 1129 FLDCU_ActiveWakeupStatus "Active Wakeup Bit
+主动唤醒标志位";
+CM_ SG_ 1129 FLDCU_NMStatus "Network Management State
+指示网络管理状态";
+CM_ SG_ 1129 FLDCU_PartialNetworkbit "Partial Network Bit
+PN标志位";
+CM_ SG_ 1129 FLDCU_RepeatMessageReq "Repeat Message Request
+重复报文发送请求";
+CM_ SG_ 1129 FLDCU_SourceAddress "Source ECU Address
+ECU源地址";
+CM_ SG_ 1129 FLDCU_StaywakeRsn_Diag "stay wake reason diagnosis
+保持唤醒原因诊断模式";
+CM_ SG_ 1129 FLDCU_StaywakeRsn_HwACCorON "stay wake reason hardwire ACC or ON
+保持唤醒原因硬线ACC或ON有效";
+CM_ SG_ 1129 FLDCU_StaywakeRsn_PowerMode "stay wake reason power mode ACC or ON
+保持唤醒原因总线信号PowerMode为ACC或ON";
+CM_ SG_ 1129 FLDCU_WakeUpRsn "FLDCU wake up reason
+FLDCU 唤醒原因";
+CM_ SG_ 1721 FLDCU_BTVerNum "BOOT Version Number
+BOOT版本号";
+CM_ SG_ 1721 FLDCU_HWVerNum "HardWare Version Number
+硬件版本号";
+CM_ SG_ 1721 FLDCU_SWID "Software ID
+软件ID";
+CM_ SG_ 1721 FLDCU_SWVerNum "SoftWare Version Number
+软件版本号";
+CM_ BO_ 1897 "当前定义的64个字节为最大诊断报文收发长度，不是固定长度，CANFD控制器应根据理想企标定义收发诊断报文";
+CM_ SG_ 1398 CrashOtptSts "Crash Output Status
+碰撞输出状态
+注：碰撞发生后，此信号持续发送400ms（20ms间隔发送20次），之后恢复原周期（200ms）；
+bit0表示前碰，bit1表示左侧碰撞，bit2表示右侧碰撞，bit3表示后碰，bit4表示翻转
+则
+0(00000000)表示没有碰撞，
+1(00000001)表示只有前碰
+2(00000010)表示只有左侧碰撞
+4(00000100)表示只有右侧碰撞
+8(00001000)表示只有后碰
+0X10(00010000)表示翻转";
+CM_ SG_ 521 LowVolPwrMd "Low voltage Power mode
+低压电源模式";
+CM_ SG_ 521 LowVolPwrMdFlag "Low voltage PowerModeFlag
+远程电源和本地电源标志位";
+CM_ SG_ 905 LTurnLghtCmd "LeftTurnLightCommand
+左侧转向灯控制信号";
+CM_ SG_ 905 RTurnLghtCmd "RightTurnLightCommand
+右侧转向灯控制信号";
+CM_ SG_ 924 FBCM_FLDoorhadlCmd "Front  Left Door Handle  command左前门把手控制命令";
+CM_ SG_ 524 FLDoorLckUnlckReq "Front Left Door Lock Unlock Request
+左前门解闭锁请求";
+CM_ SG_ 937 LChildProtnLckSts "Left Child Protection Lock Status
+左侧儿童锁状态";
+CM_ SG_ 937 PwrCtrlCmd "PowerControlCommand
+节电控制命令";
+CM_ SG_ 937 RChildProtnLckSts "Right Child Protection Lock Status
+右侧儿童锁状态";
+CM_ SG_ 1035 FBCM_ActiveWakeupStatus "Active Wakeup Bit
+主动唤醒标志位";
+CM_ SG_ 1035 FBCM_NMStatus "Network Management State
+指示网络管理状态";
+CM_ SG_ 1035 FBCM_PartialNetworkbit "Partial Network Bit
+PN标志位";
+CM_ SG_ 1035 FBCM_RepeatMessageReq "Repeat Message Request
+重复报文发送请求";
+CM_ SG_ 1035 FBCM_SourceAddress "Source ECU Address
+ECU源地址";
+CM_ SG_ 1035 FBCM_StaywakeRsn_BackLghtDrv "FBCM Stay wake reason back light drive
+FBCM保持唤醒原因背光灯驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_BraPedSwClos "FBCM_StaywakeReasons2_ Brake Pedal Switch Closed";
+CM_ SG_ 1035 FBCM_StaywakeRsn_ChildLckDrv "FBCM Stay wake reason child lock drive
+FBCM保持唤醒原因儿童锁驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_FLDoorPullDrv "FBCM Stay wake reason front left door pull drive
+FBCM保持唤醒原因左前门电吸驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_FourDoorLckDrv "FBCM Stay wake reason four door lock drive
+FBCM保持唤醒原因四门锁驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_FRDoorPullDrv "FBCM Stay wake reason front right door pull drive
+FBCM保持唤醒原因右前门电吸驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_FrtFootLght "FBCM Stay wake reason front foot light drive
+FBCM保持唤醒原因前排照脚灯驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_HandleDrive "FBCM Stay wake reason handle drive
+FBCM保持唤醒原因隐藏门把手驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_HardwireACC "FBCM Stay wake reason hardwire ACC
+FBCM保持唤醒原因硬线ACC有效";
+CM_ SG_ 1035 FBCM_StaywakeRsn_HardwireON "FBCM Stay wake reason hardwire ON
+FBCM保持唤醒原因硬线ON有效";
+CM_ SG_ 1035 FBCM_StaywakeRsn_HazdLapTrig "FBCM_StaywakeReasons3_ Hazard Lamp Triggered";
+CM_ SG_ 1035 FBCM_StaywakeRsn_HighBeamDrv "FBCM Stay wake reason high beam drive
+FBCM保持唤醒原因远光灯驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_HndlLghtDrv "FBCM Stay wake reason handle light drive
+FBCM保持唤醒原因门把手灯驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_HornDrive "FBCM Stay wake reason horn drive
+FBCM保持唤醒原因喇叭驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_LowBeamDrv "FBCM Stay wake reason low beam drive
+FBCM保持唤醒原因近光灯驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_MirFoldDrv "FBCM Stay wake reason mirror fold drive
+FBCM保持唤醒原因后视镜折叠驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_PosLghtDrv "FBCM Stay wake reason position light drive
+FBCM保持唤醒原因位置灯驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_PowSavMod "FBCM_StaywakeReasons3_Power Save Mode";
+CM_ SG_ 1035 FBCM_StaywakeRsn_ReservedRsn "FBCM Stay wake reserved reason";
+CM_ SG_ 1035 FBCM_StaywakeRsn_RoofLampDrv "FBCM Stay wake reason roof lamp drive
+FBCM保持唤醒原因顶灯驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_StrgWhlAdjt "FBCM Stay wake reason steering wheel adjust drive
+FBCM保持唤醒原因方向盘调节驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_TurnLghtDrv "FBCM Stay wake reason turn light drive
+FBCM保持唤醒原因转向灯驱动";
+CM_ SG_ 1035 FBCM_StaywakeRsn_UDSActive "FBCM_Stay Wake Reasons4_UDS Active";
+CM_ SG_ 1035 FBCM_StaywakeRsn_WindowDrv "FBCM Stay wake reason window drive
+FBCM保持唤醒原因门窗驱动";
+CM_ SG_ 1035 FBCM_WakeUpRsn "wake up reason
+唤醒原因";
+CM_ SG_ 1130 FRDCU_ActiveWakeupStatus "Active Wakeup Bit
+主动唤醒标志位";
+CM_ SG_ 1130 FRDCU_NMStatus "Network Management State
+指示网络管理状态";
+CM_ SG_ 1130 FRDCU_PartialNetworkbit "Partial Network Bit
+PN标志位";
+CM_ SG_ 1130 FRDCU_RepeatMessageReq "Repeat Message Request
+重复报文发送请求";
+CM_ SG_ 1130 FRDCU_SourceAddress "Source ECU Address
+ECU源地址";
+CM_ SG_ 1130 FRDCU_StaywakeRsn_Diag "stay wake reason diagnosis
+保持唤醒原因诊断模式";
+CM_ SG_ 1130 FRDCU_StaywakeRsn_HwACCorON "stay wake reason hardwire ACC or ON
+保持唤醒原因硬线ACC或ON有效";
+CM_ SG_ 1130 FRDCU_StaywakeRsn_PowerMode "stay wake reason power mode ACC or ON
+保持唤醒原因总线信号PowerMode为ACC或ON";
+CM_ SG_ 1130 FRDCU_WakeUpRsn "FRDCU wake up reason
+FRDCU 唤醒原因";
+CM_ SG_ 925 TotalOdometer "Total Odometer
+总里程";
+CM_ SG_ 158 EastOrWestTimeZone "EastOrWestTimeZone
+东/西时区";
+CM_ SG_ 158 TimeZoneNum "TimeZoneNum
+时区编号";
+CM_ SG_ 158 UTCTime "UTCTime
+UTC时间";
+CM_ SG_ 158 UTCTimeValidFlag "TimeValidFlg
+时间有效性标志";
+CM_ SG_ 150 VehSpd "Vehicle speed out
+当前车速";
+CM_ SG_ 150 VehSpdValid "vehicle speed Vaild 
+当前车速有效性";
+CM_ SG_ 1049 LHCM_ActiveWakeupStatus "Active Wakeup Bit
+主动唤醒标志位";
+CM_ SG_ 1049 LHCM_NMStatus "Network Management State
+指示网络管理状态";
+CM_ SG_ 1049 LHCM_PartialNetworkbit "Partial Network Bit
+PN标志位";
+CM_ SG_ 1049 LHCM_RepeatMessageReq "Repeat Message Request
+重复报文发送请求";
+CM_ SG_ 1049 LHCM_SourceAddress "Source ECU Address
+ECU源地址";
+CM_ SG_ 1049 LHCM_StaywakeRsn1_PowerMode "LHCM stay wake reason PowerMode ACC or ON
+LHCM保持唤醒原因总线信号PowerMode为ACC或ON";
+CM_ SG_ 1049 LHCM_StaywakeRsn2_HardwireACC "LHCM stay wake reason hardwire ACC active
+LHCM保持唤醒原因硬线ACC有效";
+CM_ SG_ 1049 LHCM_StaywakeRsn3_Diagnosis "LHCM stay wake reason diagnosis
+LHCM保持唤醒原因诊断模式";
+CM_ SG_ 1049 LHCM_WakeUpRsn "Wakeup Reasons
+唤醒原因";
+CM_ SG_ 1036 RBCM_ActiveWakeupStatus "Active Wakeup Bit
+主动唤醒标志位";
+CM_ SG_ 1036 RBCM_NMStatus "Network Management State
+指示网络管理状态";
+CM_ SG_ 1036 RBCM_PartialNetworkbit "Partial Network Bit
+PN标志位";
+CM_ SG_ 1036 RBCM_RepeatMessageReq "Repeat Message Request
+重复报文发送请求";
+CM_ SG_ 1036 RBCM_SourceAddress "Source ECU Address
+ECU源地址";
+CM_ SG_ 1036 RBCM_StaywakeRsn_BklghtDrv "RBCM Stay wake reason back light drive
+RBCM保持唤醒原因背光灯驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_BrkLghtDrv "RBCM Stay wake reason brake light drive
+RBCM保持唤醒原因制动灯驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_CasPortDrive "RBCM Stay wake reason gas port drive
+RBCM保持唤醒原因加油口盖驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_ChrgPortDrive "RBCM Stay wake reason charge port drive
+RBCM保持唤醒原因充电口盖驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_HardwireACC "RBCM stay wake reason hardwire ACC active
+RBCM保持唤醒原因硬线ACC有效";
+CM_ SG_ 1036 RBCM_StaywakeRsn_HndlLghtDrv "RBCM Stay wake reason handle light drive
+RBCM保持唤醒原因门把手灯驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_PowerMode "RBCM stay wake reason PowerMode ACC or ON
+RBCM保持唤醒原因总线信号PowerMode为ACC或ON";
+CM_ SG_ 1036 RBCM_StaywakeRsn_PowerSaveMode "RBCM Stay wake reason power save mode
+RBCM保持唤醒原因节电模式";
+CM_ SG_ 1036 RBCM_StaywakeRsn_ReservedRsn "RBCM Stay wake reserved reason";
+CM_ SG_ 1036 RBCM_StaywakeRsn_RLDoorPllDrv "RBCM Stay wake reason rear left door pull drive
+RBCM保持唤醒原因左后门自吸驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_RRDoorPllDrv "RBCM Stay wake reason rear right door pull drive
+RBCM保持唤醒原因右后门自吸驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_RrFootLghtDrv "RBCM Stay wake reason rear foot light drive
+RBCM保持唤醒原因后部照脚灯驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_SeatDrive "RBCM Stay wake reason seat drive
+RBCM保持唤醒原因座椅驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_TailDoorLckDrv "RBCM Stay wake reason tail door lock drive
+RBCM保持唤醒原因尾门锁驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_TailSpndlDrv "RBCM Stay wake reason tail door spindle drive
+RBCM保持唤醒原因尾门撑杆驱动";
+CM_ SG_ 1036 RBCM_StaywakeRsn_TrunkLghtDrv "RBCM Stay wake reason rear trunk light drive
+RBCM保持唤醒原因行李箱灯驱动";
+CM_ SG_ 1036 RBCM_StayWakeRsn_UDSActive "FBCM_Stay Wake Reasons1
+UDS Active";
+CM_ SG_ 1036 RBCM_WakeUpRsn "wake up reason
+唤醒原因";
+CM_ SG_ 1050 RHCM_ActiveWakeupStatus "Active Wakeup Bit
+主动唤醒标志位";
+CM_ SG_ 1050 RHCM_NMStatus "Network Management State
+指示网络管理状态";
+CM_ SG_ 1050 RHCM_PartialNetworkbit "Partial Network Bit
+PN标志位";
+CM_ SG_ 1050 RHCM_RepeatMessageReq "Repeat Message Request
+重复报文发送请求";
+CM_ SG_ 1050 RHCM_SourceAddress "Source ECU Address
+ECU源地址";
+CM_ SG_ 1050 RHCM_StaywakeRsn1_PowerMode "RHCM stay wake reason PowerMode ACC or ON
+RHCM保持唤醒原因总线信号PowerMode为ACC或ON";
+CM_ SG_ 1050 RHCM_StaywakeRsn2_HardwireACC "RHCM stay wake reason hardwire ACC active
+RHCM保持唤醒原因硬线ACC有效";
+CM_ SG_ 1050 RHCM_StaywakeRsn3_Diagnosis "RHCM stay wake reason diagnosis
+RHCM保持唤醒原因诊断模式";
+CM_ SG_ 1050 RHCM_WakeUpRsn "Wakeup Reasons
+唤醒原因";
+CM_ BO_ 1889 "当前定义的64个字节为最大诊断报文收发长度，不是固定长度，CANFD控制器应根据理想企标定义收发诊断报文";
+CM_ SG_ 1115 XCU_ActiveWakeupStatus_BD1 "Active Wakeup Bit
+主动唤醒标志位";
+CM_ SG_ 1115 XCU_NMStatus_BD1 "Network Management State
+指示网络管理状态";
+CM_ SG_ 1115 XCU_PartialNetworkbit_BD1 "Partial Network Bit
+PN标志位";
+CM_ SG_ 1115 XCU_RepeatMessageReq_BD1 "Repeat Message Request
+重复报文发送请求";
+CM_ SG_ 1115 XCU_SourceAddress_BD1 "Source ECU Address
+ECU源地址";
+CM_ SG_ 1115 XCU_StaywakeRsn_BD1 "XCU保持唤醒原因_BD1
+high_byte:
+bit0  低压电源模式保持
+bit1  诊断功能需求保持
+bit2  ECAN唤醒需求保持
+bit3  ECAN应用报文异常需求保持
+bit4  低功耗模式需求保持
+bit5  蓝牙模块需求保持
+bit6  智能电检保持
+bit7  充电口盖保持
+low_btye:
+bit0  BMS环温采集需求保持
+bit1  远程空调保持
+bit2  空调自干燥保持
+bit3  空气悬架保持
+bit4  热管理保持";
+CM_ SG_ 1115 XCU_WakeUpRsn_BD1 "Wake up reason
+唤醒原因";
+CM_ SG_ 906 SwBkLghtCmd "Switch BackLight Commend
+按键背光亮度命令";
+CM_ SG_ 907 LADASLghtReq "Left ADAS Light Request
+左侧ADAS灯请求";
+CM_ SG_ 1369 ChildLckCfgReq "儿童锁配置请求";
+CM_ SG_ 1369 FLWndCtrlCmd "Front Left Window Control Command
+左前门车窗控制指令";
+CM_ SG_ 1369 FLWndPcntMvCmd "Front Left Window Percentage Move Command
+左前门车窗运动百分比";
+CM_ SG_ 1369 HadlLghtCmd "HandleLightCommand
+门把手灯控制信号";
+CM_ SG_ 1369 MirFldReq "Rearview Mirror Fold request
+后视镜折叠请求";
+CM_ SG_ 1369 MirUnfldReq "Rearview Mirror unFold request
+后视镜展开请求";
+CM_ SG_ 1369 RearWndSwInhCfg "RearWindowSwitchInhibit Config
+后排车窗开关按钮禁用配置";
+CM_ SG_ 1369 RrvwMirAutoHeatLevel "Rearview Mirror Auto Heat Level
+后视镜自动加热等级";
+CM_ SG_ 1369 RrvwMirHeatCmd "Rearview Mirror Heat Switch Command
+后视镜加热命令";
+CM_ SG_ 1369 SceneModeSts "情景模式状态
+SceneModeStatus";
+CM_ SG_ 1369 WndCtrlEnb "Window Control Enable
+车窗使能指令";
+CM_ SG_ 1385 LMirHorizontalPosReq "Left Mirror Horizontal Position Request
+左后视镜左右调节请求";
+CM_ SG_ 1385 LMirVerticalPosReq "Left Mirror Vertical Position Request
+左后视镜上下调节请求";
+CM_ SG_ 1385 RMirHorizontalPosReq "Right Mirror Horizontal Position Request
+右后视镜左右调节请求";
+CM_ SG_ 1385 RMirVerticalPosReq "Right Mirror Vertical Position Request
+右后视镜上下调节请求";
+CM_ SG_ 713 FLDoorhadlCmd "Front  Left Door Handle  command左前门把手控制命令";
+CM_ SG_ 713 FLDoorHadlLghtCmd "Front Left Door Handle Light Command
+左前门把手灯控制信号";
+CM_ SG_ 919 LVLdreductHadlMeas "Low voltage load reduction Handle Measurement
+低压降负载处理接口";
+CM_ SG_ 919 VehMdst "Vehicle Mode State
+整车模式状态";
+CM_ SG_ 194 ActuGearShiftPos "Actual logic gear shift
+逻辑档位信号";
+BA_DEF_  "BaudRateCANFD" INT 1000 10000000;
+BA_DEF_  "Baudrate" INT 1000 1000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "IlTxTimeout" INT 0 65535;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "NmAsrBaseAddress" HEX 0 65535;
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 0 65535;
+BA_DEF_  "NmAsrMessageCount" INT 0 255;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 0 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 0 65535;
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 0 65535;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_ BU_  "NmAsrCanMsgReducedTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmAsrNodeIdentifier" INT 0 255;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "DiagConnection" INT 0 65535;
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagUUDTResponse" ENUM  "No","Yse";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 300000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 300000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 300000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 100000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","spontaneous","cyclicIfActive","spontaneousWithDelay","cyclicAndSpontaneous","cyclicAndSpontaneousWithDelay","IfActive","NoMsgSendType";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 300000;
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ SG_  "GenSigCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTimeActive" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigRrmark" STRING ;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigTimeoutTime" INT 0 65535;
+BA_DEF_DEF_  "BaudRateCANFD" 2000000;
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "IlTxTimeout" 0;
+BA_DEF_DEF_  "Manufacturer" "Vector";
+BA_DEF_DEF_  "NmAsrBaseAddress" 1024;
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 500;
+BA_DEF_DEF_  "NmAsrMessageCount" 255;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 1500;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 2000;
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 5000;
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrCanMsgReducedTime" 50;
+BA_DEF_DEF_  "NmAsrNode" "Yes";
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 0;
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "DiagConnection" 57346;
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagUUDTResponse" "No";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NmAsrMessage" "No";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "GenSigCycleTime" 0;
+BA_DEF_DEF_  "GenSigCycleTimeActive" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigRrmark" "";
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigTimeoutTime" 0;
+BA_ "ProtocolType" "CAN";
+BA_ "BusType" "CAN FD";
+BA_ "Baudrate" 500000;
+BA_ "BaudRateCANFD" 2000000;
+BA_ "DBName" "FLDCU_BDCAN1_Ctrl";
+BA_ "GenMsgStartDelayTime" BO_ 1609 0;
+BA_ "GenMsgSendType" BO_ 1609 0;
+BA_ "GenMsgCycleTime" BO_ 1609 1000;
+BA_ "VFrameFormat" BO_ 1609 14;
+BA_ "GenMsgStartDelayTime" BO_ 1370 0;
+BA_ "GenMsgSendType" BO_ 1370 0;
+BA_ "GenMsgCycleTime" BO_ 1370 100;
+BA_ "VFrameFormat" BO_ 1370 14;
+BA_ "GenMsgStartDelayTime" BO_ 714 0;
+BA_ "GenMsgSendType" BO_ 714 0;
+BA_ "GenMsgCycleTime" BO_ 714 20;
+BA_ "VFrameFormat" BO_ 714 14;
+BA_ "VFrameFormat" BO_ 1129 0;
+BA_ "NmAsrMessage" BO_ 1129 1;
+BA_ "GenMsgSendType" BO_ 1129 1;
+BA_ "GenMsgDelayTime" BO_ 1129 500;
+BA_ "GenMsgStartDelayTime" BO_ 1721 0;
+BA_ "GenMsgSendType" BO_ 1721 0;
+BA_ "GenMsgCycleTime" BO_ 1721 5000;
+BA_ "VFrameFormat" BO_ 1721 14;
+BA_ "GenMsgSendType" BO_ 1897 1;
+BA_ "GenMsgDelayTime" BO_ 1897 20;
+BA_ "DiagState" BO_ 1897 0;
+BA_ "DiagResponse" BO_ 1897 1;
+BA_ "DiagRequest" BO_ 1897 0;
+BA_ "DiagConnection" BO_ 1897 15;
+BA_ "VFrameFormat" BO_ 1897 14;
+BA_ "GenMsgStartDelayTime" BO_ 1398 10;
+BA_ "GenMsgSendType" BO_ 1398 5;
+BA_ "GenMsgNrOfRepetition" BO_ 1398 3;
+BA_ "GenMsgDelayTime" BO_ 1398 30;
+BA_ "GenMsgCycleTimeFast" BO_ 1398 20;
+BA_ "GenMsgCycleTime" BO_ 1398 200;
+BA_ "VFrameFormat" BO_ 1398 14;
+BA_ "GenMsgStartDelayTime" BO_ 521 0;
+BA_ "GenMsgSendType" BO_ 521 0;
+BA_ "GenMsgCycleTime" BO_ 521 20;
+BA_ "VFrameFormat" BO_ 521 14;
+BA_ "GenMsgStartDelayTime" BO_ 905 0;
+BA_ "GenMsgSendType" BO_ 905 4;
+BA_ "GenMsgNrOfRepetition" BO_ 905 2;
+BA_ "GenMsgDelayTime" BO_ 905 10;
+BA_ "GenMsgCycleTimeFast" BO_ 905 20;
+BA_ "GenMsgCycleTime" BO_ 905 100;
+BA_ "VFrameFormat" BO_ 905 14;
+BA_ "GenMsgStartDelayTime" BO_ 924 0;
+BA_ "GenMsgSendType" BO_ 924 0;
+BA_ "GenMsgCycleTime" BO_ 924 20;
+BA_ "VFrameFormat" BO_ 924 14;
+BA_ "GenMsgStartDelayTime" BO_ 524 0;
+BA_ "GenMsgSendType" BO_ 524 0;
+BA_ "GenMsgCycleTime" BO_ 524 20;
+BA_ "VFrameFormat" BO_ 524 14;
+BA_ "GenMsgStartDelayTime" BO_ 937 0;
+BA_ "GenMsgSendType" BO_ 937 0;
+BA_ "GenMsgCycleTime" BO_ 937 100;
+BA_ "VFrameFormat" BO_ 937 14;
+BA_ "VFrameFormat" BO_ 1035 0;
+BA_ "NmAsrMessage" BO_ 1035 1;
+BA_ "GenMsgSendType" BO_ 1035 1;
+BA_ "GenMsgDelayTime" BO_ 1035 500;
+BA_ "VFrameFormat" BO_ 1130 0;
+BA_ "NmAsrMessage" BO_ 1130 1;
+BA_ "GenMsgSendType" BO_ 1130 1;
+BA_ "GenMsgDelayTime" BO_ 1130 500;
+BA_ "GenMsgStartDelayTime" BO_ 925 0;
+BA_ "GenMsgSendType" BO_ 925 0;
+BA_ "GenMsgCycleTime" BO_ 925 100;
+BA_ "VFrameFormat" BO_ 925 14;
+BA_ "GenMsgStartDelayTime" BO_ 158 0;
+BA_ "GenMsgSendType" BO_ 158 0;
+BA_ "GenMsgCycleTime" BO_ 158 10;
+BA_ "VFrameFormat" BO_ 158 14;
+BA_ "GenMsgStartDelayTime" BO_ 150 5;
+BA_ "GenMsgSendType" BO_ 150 0;
+BA_ "GenMsgCycleTime" BO_ 150 10;
+BA_ "VFrameFormat" BO_ 150 14;
+BA_ "VFrameFormat" BO_ 1049 0;
+BA_ "NmAsrMessage" BO_ 1049 1;
+BA_ "GenMsgSendType" BO_ 1049 1;
+BA_ "GenMsgDelayTime" BO_ 1049 500;
+BA_ "VFrameFormat" BO_ 1036 0;
+BA_ "NmAsrMessage" BO_ 1036 1;
+BA_ "GenMsgSendType" BO_ 1036 1;
+BA_ "GenMsgDelayTime" BO_ 1036 500;
+BA_ "VFrameFormat" BO_ 1050 0;
+BA_ "NmAsrMessage" BO_ 1050 1;
+BA_ "GenMsgSendType" BO_ 1050 1;
+BA_ "GenMsgDelayTime" BO_ 1050 500;
+BA_ "GenMsgSendType" BO_ 2015 1;
+BA_ "GenMsgDelayTime" BO_ 2015 20;
+BA_ "DiagState" BO_ 2015 1;
+BA_ "DiagResponse" BO_ 2015 0;
+BA_ "DiagRequest" BO_ 2015 0;
+BA_ "DiagConnection" BO_ 2015 49;
+BA_ "VFrameFormat" BO_ 2015 14;
+BA_ "GenMsgSendType" BO_ 1889 1;
+BA_ "GenMsgDelayTime" BO_ 1889 20;
+BA_ "DiagState" BO_ 1889 0;
+BA_ "DiagResponse" BO_ 1889 0;
+BA_ "DiagRequest" BO_ 1889 1;
+BA_ "DiagConnection" BO_ 1889 15;
+BA_ "VFrameFormat" BO_ 1889 14;
+BA_ "VFrameFormat" BO_ 1115 0;
+BA_ "NmAsrMessage" BO_ 1115 1;
+BA_ "GenMsgSendType" BO_ 1115 1;
+BA_ "GenMsgDelayTime" BO_ 1115 500;
+BA_ "GenMsgStartDelayTime" BO_ 906 0;
+BA_ "GenMsgSendType" BO_ 906 4;
+BA_ "GenMsgNrOfRepetition" BO_ 906 3;
+BA_ "GenMsgDelayTime" BO_ 906 10;
+BA_ "GenMsgCycleTimeFast" BO_ 906 20;
+BA_ "GenMsgCycleTime" BO_ 906 100;
+BA_ "VFrameFormat" BO_ 906 14;
+BA_ "GenMsgStartDelayTime" BO_ 907 0;
+BA_ "GenMsgSendType" BO_ 907 0;
+BA_ "GenMsgCycleTime" BO_ 907 100;
+BA_ "VFrameFormat" BO_ 907 14;
+BA_ "GenMsgStartDelayTime" BO_ 1369 0;
+BA_ "GenMsgSendType" BO_ 1369 0;
+BA_ "GenMsgCycleTime" BO_ 1369 100;
+BA_ "VFrameFormat" BO_ 1369 14;
+BA_ "GenMsgStartDelayTime" BO_ 1385 0;
+BA_ "GenMsgSendType" BO_ 1385 0;
+BA_ "GenMsgCycleTime" BO_ 1385 100;
+BA_ "VFrameFormat" BO_ 1385 14;
+BA_ "GenMsgStartDelayTime" BO_ 713 0;
+BA_ "GenMsgSendType" BO_ 713 0;
+BA_ "GenMsgCycleTime" BO_ 713 20;
+BA_ "VFrameFormat" BO_ 713 14;
+BA_ "GenMsgStartDelayTime" BO_ 919 0;
+BA_ "GenMsgSendType" BO_ 919 0;
+BA_ "GenMsgCycleTime" BO_ 919 100;
+BA_ "VFrameFormat" BO_ 919 14;
+BA_ "GenMsgStartDelayTime" BO_ 194 0;
+BA_ "GenMsgSendType" BO_ 194 0;
+BA_ "GenMsgCycleTime" BO_ 194 10;
+BA_ "VFrameFormat" BO_ 194 14;
+BA_ "GenSigStartValue" SG_ 1609 FLDCU_DTC1_Num 0;
+BA_ "GenSigSendType" SG_ 1609 FLDCU_DTC1_Num 0;
+BA_ "GenSigStartValue" SG_ 1609 FLDCU_DTC1_State 0;
+BA_ "GenSigSendType" SG_ 1609 FLDCU_DTC1_State 0;
+BA_ "GenSigStartValue" SG_ 1609 FLDCU_DTC2_Num 0;
+BA_ "GenSigSendType" SG_ 1609 FLDCU_DTC2_Num 0;
+BA_ "GenSigStartValue" SG_ 1609 FLDCU_DTC2_State 0;
+BA_ "GenSigSendType" SG_ 1609 FLDCU_DTC2_State 0;
+BA_ "GenSigStartValue" SG_ 1609 FLDCU_DTC3_Num 0;
+BA_ "GenSigSendType" SG_ 1609 FLDCU_DTC3_Num 0;
+BA_ "GenSigStartValue" SG_ 1609 FLDCU_DTC3_State 0;
+BA_ "GenSigSendType" SG_ 1609 FLDCU_DTC3_State 0;
+BA_ "GenSigStartValue" SG_ 1609 FLDCU_DTC4_Num 0;
+BA_ "GenSigSendType" SG_ 1609 FLDCU_DTC4_Num 0;
+BA_ "GenSigStartValue" SG_ 1609 FLDCU_DTC4_State 0;
+BA_ "GenSigSendType" SG_ 1609 FLDCU_DTC4_State 0;
+BA_ "GenSigStartValue" SG_ 1370 ChildLckCfgFdbk 0;
+BA_ "GenSigSendType" SG_ 1370 ChildLckCfgFdbk 0;
+BA_ "GenSigStartValue" SG_ 1370 ChildProtnBtnSts 0;
+BA_ "GenSigSendType" SG_ 1370 ChildProtnBtnSts 0;
+BA_ "GenSigStartValue" SG_ 1370 DrvrCtrFRWndSwSts 0;
+BA_ "GenSigSendType" SG_ 1370 DrvrCtrFRWndSwSts 0;
+BA_ "GenSigStartValue" SG_ 1370 DrvrCtrFRWndSwStuckFlt 0;
+BA_ "GenSigSendType" SG_ 1370 DrvrCtrFRWndSwStuckFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 DrvrCtrRLWndSwSts 0;
+BA_ "GenSigSendType" SG_ 1370 DrvrCtrRLWndSwSts 0;
+BA_ "GenSigStartValue" SG_ 1370 DrvrCtrRLWndSwStuckFlt 0;
+BA_ "GenSigSendType" SG_ 1370 DrvrCtrRLWndSwStuckFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 DrvrCtrRRWndSwSts 0;
+BA_ "GenSigSendType" SG_ 1370 DrvrCtrRRWndSwSts 0;
+BA_ "GenSigStartValue" SG_ 1370 DrvrCtrRRWndSwStuckFlt 0;
+BA_ "GenSigSendType" SG_ 1370 DrvrCtrRRWndSwStuckFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 FLCinchabusests 0;
+BA_ "GenSigSendType" SG_ 1370 FLCinchabusests 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDCUCrashSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDCUCrashSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoor_BackLghtDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoor_BackLghtDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoor_BackLghtFlrSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoor_BackLghtFlrSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorCinchSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorCinchSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorHadlLghtDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorHadlLghtDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorHadlLghtFlrSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorHadlLghtFlrSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorhadlMotorFlt 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorhadlMotorFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorLckUnlckDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorLckUnlckDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorligtsFlt 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorligtsFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorligtsSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorligtsSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorPawlSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorPawlSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorPullCircuitFlt 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorPullCircuitFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorPullDrvFlt 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorPullDrvFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorPullDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorPullDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorRatchetSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorRatchetSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorThrmlProtnSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorThrmlProtnSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorUnlckCircuitFlt 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorUnlckCircuitFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorUnlckDrvFlt 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorUnlckDrvFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 FLDoorWinHallFlt 0;
+BA_ "GenSigSendType" SG_ 1370 FLDoorWinHallFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWdwReqRes 0;
+BA_ "GenSigSendType" SG_ 1370 FLWdwReqRes 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWndAnti_PnchSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLWndAnti_PnchSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWndInhSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLWndInhSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWndInitnSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLWndInitnSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWndMotorFlt 0;
+BA_ "GenSigSendType" SG_ 1370 FLWndMotorFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWndPcntPos 127;
+BA_ "GenSigSendType" SG_ 1370 FLWndPcntPos 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWndRunSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLWndRunSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWndSts 3;
+BA_ "GenSigSendType" SG_ 1370 FLWndSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWndSwSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLWndSwSts 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWndSwStuckFlt 0;
+BA_ "GenSigSendType" SG_ 1370 FLWndSwStuckFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 FLWndThrmlProtnSts 0;
+BA_ "GenSigSendType" SG_ 1370 FLWndThrmlProtnSts 0;
+BA_ "GenSigStartValue" SG_ 1370 LChildProtnLckIndrDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 LChildProtnLckIndrDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 LChildProtnLckIndrFlt 0;
+BA_ "GenSigSendType" SG_ 1370 LChildProtnLckIndrFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 LFMirSwDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 LFMirSwDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 LMirFoldMotFlt 0;
+BA_ "GenSigSendType" SG_ 1370 LMirFoldMotFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 LMirHeatFlt 0;
+BA_ "GenSigSendType" SG_ 1370 LMirHeatFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 LMirHghtPos 0;
+BA_ "GenSigSendType" SG_ 1370 LMirHghtPos 0;
+BA_ "GenSigStartValue" SG_ 1370 LMirHorizontalMotFlt 0;
+BA_ "GenSigSendType" SG_ 1370 LMirHorizontalMotFlt 0;
+BA_ "GenSigSendType" SG_ 1370 LMirHorizontalPosRclFdbk 0;
+BA_ "GenSigStartValue" SG_ 1370 LMirLvlPos 0;
+BA_ "GenSigSendType" SG_ 1370 LMirLvlPos 0;
+BA_ "GenSigStartValue" SG_ 1370 LMirSelIndcLampCmd 0;
+BA_ "GenSigSendType" SG_ 1370 LMirSelIndcLampCmd 0;
+BA_ "GenSigStartValue" SG_ 1370 LMirSelSw 0;
+BA_ "GenSigSendType" SG_ 1370 LMirSelSw 0;
+BA_ "GenSigStartValue" SG_ 1370 LMirSelSwLEDIndrDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 LMirSelSwLEDIndrDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 LMirSelSwLEDIndrFlt 0;
+BA_ "GenSigSendType" SG_ 1370 LMirSelSwLEDIndrFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 LMirVerticalMotFlt 0;
+BA_ "GenSigSendType" SG_ 1370 LMirVerticalMotFlt 0;
+BA_ "GenSigSendType" SG_ 1370 LMirVerticalPosRclFdbk 0;
+BA_ "GenSigStartValue" SG_ 1370 LRrvwMirFolDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 LRrvwMirFolDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 LRrvwMirFoldSts 0;
+BA_ "GenSigSendType" SG_ 1370 LRrvwMirFoldSts 0;
+BA_ "GenSigStartValue" SG_ 1370 LRrvwMirHeatSts 0;
+BA_ "GenSigSendType" SG_ 1370 LRrvwMirHeatSts 0;
+BA_ "GenSigStartValue" SG_ 1370 LRrvwMirPosChng 0;
+BA_ "GenSigSendType" SG_ 1370 LRrvwMirPosChng 0;
+BA_ "GenSigStartValue" SG_ 1370 MecnclKeyLckReq 0;
+BA_ "GenSigSendType" SG_ 1370 MecnclKeyLckReq 0;
+BA_ "GenSigStartValue" SG_ 1370 MecnclKeyUnlckReq 0;
+BA_ "GenSigSendType" SG_ 1370 MecnclKeyUnlckReq 0;
+BA_ "GenSigStartValue" SG_ 1370 MirAdjSWFlt 0;
+BA_ "GenSigSendType" SG_ 1370 MirAdjSWFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 MirFldLclReq 0;
+BA_ "GenSigSendType" SG_ 1370 MirFldLclReq 0;
+BA_ "GenSigStartValue" SG_ 1370 MirLTurnLghtDrvFlt 0;
+BA_ "GenSigSendType" SG_ 1370 MirLTurnLghtDrvFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 MirLTurnLghtDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 MirLTurnLghtDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 MirSelSts 0;
+BA_ "GenSigSendType" SG_ 1370 MirSelSts 0;
+BA_ "GenSigStartValue" SG_ 1370 MirSelSWFlt 0;
+BA_ "GenSigSendType" SG_ 1370 MirSelSWFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 MirSwStsDown 0;
+BA_ "GenSigSendType" SG_ 1370 MirSwStsDown 0;
+BA_ "GenSigStartValue" SG_ 1370 MirSwStsLeft 0;
+BA_ "GenSigSendType" SG_ 1370 MirSwStsLeft 0;
+BA_ "GenSigStartValue" SG_ 1370 MirSwStsRight 0;
+BA_ "GenSigSendType" SG_ 1370 MirSwStsRight 0;
+BA_ "GenSigStartValue" SG_ 1370 MirSwStsUp 0;
+BA_ "GenSigSendType" SG_ 1370 MirSwStsUp 0;
+BA_ "GenSigStartValue" SG_ 1370 MirUnfdLclReq 0;
+BA_ "GenSigSendType" SG_ 1370 MirUnfdLclReq 0;
+BA_ "GenSigStartValue" SG_ 1370 RChildProtnLckIndrDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 RChildProtnLckIndrDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 RChildProtnLckIndrFlt 0;
+BA_ "GenSigSendType" SG_ 1370 RChildProtnLckIndrFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 RMirSelIndcLampCmd 0;
+BA_ "GenSigSendType" SG_ 1370 RMirSelIndcLampCmd 0;
+BA_ "GenSigStartValue" SG_ 1370 RMirSelSw 0;
+BA_ "GenSigSendType" SG_ 1370 RMirSelSw 0;
+BA_ "GenSigStartValue" SG_ 1370 RMirSelSwLEDIndrDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 RMirSelSwLEDIndrDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 RMirSelSwLEDIndrFlt 0;
+BA_ "GenSigSendType" SG_ 1370 RMirSelSwLEDIndrFlt 0;
+BA_ "GenSigStartValue" SG_ 1370 RrvwMirFoldSw 0;
+BA_ "GenSigSendType" SG_ 1370 RrvwMirFoldSw 0;
+BA_ "GenSigStartValue" SG_ 1370 SigGroup_0x55A_ChkSm 0;
+BA_ "GenSigSendType" SG_ 1370 SigGroup_0x55A_ChkSm 0;
+BA_ "GenSigStartValue" SG_ 1370 SigGroup_0x55A_RlngCtr 0;
+BA_ "GenSigSendType" SG_ 1370 SigGroup_0x55A_RlngCtr 0;
+BA_ "GenSigStartValue" SG_ 1370 WinLckIndrDrvSts 0;
+BA_ "GenSigSendType" SG_ 1370 WinLckIndrDrvSts 0;
+BA_ "GenSigStartValue" SG_ 1370 WinLckIndrFlt 0;
+BA_ "GenSigSendType" SG_ 1370 WinLckIndrFlt 0;
+BA_ "GenSigStartValue" SG_ 714 ChildProtnOptSw 0;
+BA_ "GenSigSendType" SG_ 714 ChildProtnOptSw 0;
+BA_ "GenSigStartValue" SG_ 714 FLDoorhadlDrvSts 0;
+BA_ "GenSigSendType" SG_ 714 FLDoorhadlDrvSts 0;
+BA_ "GenSigStartValue" SG_ 714 FLDoorhadlHallFlt 0;
+BA_ "GenSigSendType" SG_ 714 FLDoorhadlHallFlt 0;
+BA_ "GenSigStartValue" SG_ 714 FLDoorhadlPosSts 0;
+BA_ "GenSigSendType" SG_ 714 FLDoorhadlPosSts 0;
+BA_ "GenSigStartValue" SG_ 714 FLDoorHdlBlkdSts 0;
+BA_ "GenSigSendType" SG_ 714 FLDoorHdlBlkdSts 0;
+BA_ "GenSigStartValue" SG_ 714 FLDoorLCKRsetSts 0;
+BA_ "GenSigSendType" SG_ 714 FLDoorLCKRsetSts 0;
+BA_ "GenSigStartValue" SG_ 714 FLDoorLckSts 0;
+BA_ "GenSigSendType" SG_ 714 FLDoorLckSts 0;
+BA_ "GenSigStartValue" SG_ 714 FLDoorSts 0;
+BA_ "GenSigSendType" SG_ 714 FLDoorSts 0;
+BA_ "GenSigStartValue" SG_ 714 Flhandlemode 0;
+BA_ "GenSigSendType" SG_ 714 Flhandlemode 0;
+BA_ "GenSigStartValue" SG_ 714 LmirADASLghtDrvSts 0;
+BA_ "GenSigSendType" SG_ 714 LmirADASLghtDrvSts 0;
+BA_ "GenSigStartValue" SG_ 714 LmirADASLghtFlrSts 0;
+BA_ "GenSigSendType" SG_ 714 LmirADASLghtFlrSts 0;
+BA_ "GenSigStartValue" SG_ 714 RearWindowDisableSW 0;
+BA_ "GenSigSendType" SG_ 714 RearWindowDisableSW 0;
+BA_ "GenSigStartValue" SG_ 714 SigGroup_0x2CA_ChkSm 0;
+BA_ "GenSigSendType" SG_ 714 SigGroup_0x2CA_ChkSm 0;
+BA_ "GenSigStartValue" SG_ 714 SigGroup_0x2CA_RlngCtr 0;
+BA_ "GenSigSendType" SG_ 714 SigGroup_0x2CA_RlngCtr 0;
+BA_ "GenSigStartValue" SG_ 1129 FLDCU_ActiveWakeupStatus 0;
+BA_ "GenSigSendType" SG_ 1129 FLDCU_ActiveWakeupStatus 1;
+BA_ "GenSigStartValue" SG_ 1129 FLDCU_NMStatus 0;
+BA_ "GenSigSendType" SG_ 1129 FLDCU_NMStatus 1;
+BA_ "GenSigStartValue" SG_ 1129 FLDCU_PartialNetworkbit 0;
+BA_ "GenSigSendType" SG_ 1129 FLDCU_PartialNetworkbit 1;
+BA_ "GenSigStartValue" SG_ 1129 FLDCU_RepeatMessageReq 0;
+BA_ "GenSigSendType" SG_ 1129 FLDCU_RepeatMessageReq 1;
+BA_ "GenSigStartValue" SG_ 1129 FLDCU_SourceAddress 0;
+BA_ "GenSigSendType" SG_ 1129 FLDCU_SourceAddress 1;
+BA_ "GenSigStartValue" SG_ 1129 FLDCU_StaywakeRsn_Diag 0;
+BA_ "GenSigSendType" SG_ 1129 FLDCU_StaywakeRsn_Diag 1;
+BA_ "GenSigStartValue" SG_ 1129 FLDCU_StaywakeRsn_HwACCorON 0;
+BA_ "GenSigSendType" SG_ 1129 FLDCU_StaywakeRsn_HwACCorON 1;
+BA_ "GenSigStartValue" SG_ 1129 FLDCU_StaywakeRsn_PowerMode 0;
+BA_ "GenSigSendType" SG_ 1129 FLDCU_StaywakeRsn_PowerMode 1;
+BA_ "GenSigStartValue" SG_ 1129 FLDCU_WakeUpRsn 0;
+BA_ "GenSigSendType" SG_ 1129 FLDCU_WakeUpRsn 1;
+BA_ "GenSigStartValue" SG_ 1721 FLDCU_BTVerNum 0;
+BA_ "GenSigSendType" SG_ 1721 FLDCU_BTVerNum 0;
+BA_ "GenSigStartValue" SG_ 1721 FLDCU_HWVerNum 0;
+BA_ "GenSigSendType" SG_ 1721 FLDCU_HWVerNum 0;
+BA_ "GenSigStartValue" SG_ 1721 FLDCU_SWID 65535;
+BA_ "GenSigSendType" SG_ 1721 FLDCU_SWID 0;
+BA_ "GenSigStartValue" SG_ 1721 FLDCU_SWVerNum 0;
+BA_ "GenSigSendType" SG_ 1721 FLDCU_SWVerNum 0;
+BA_ "GenSigStartValue" SG_ 1398 CrashOtptSts 0;
+BA_ "GenSigSendType" SG_ 1398 CrashOtptSts 2;
+BA_ "GenSigStartValue" SG_ 1398 SigGroup_232_ChkSm 0;
+BA_ "GenSigSendType" SG_ 1398 SigGroup_232_ChkSm 0;
+BA_ "GenSigStartValue" SG_ 1398 SigGroup_232_RlngCtr 0;
+BA_ "GenSigSendType" SG_ 1398 SigGroup_232_RlngCtr 0;
+BA_ "GenSigStartValue" SG_ 521 LowVolPwrMd 0;
+BA_ "GenSigSendType" SG_ 521 LowVolPwrMd 0;
+BA_ "GenSigStartValue" SG_ 521 LowVolPwrMdFlag 0;
+BA_ "GenSigSendType" SG_ 521 LowVolPwrMdFlag 0;
+BA_ "GenSigStartValue" SG_ 521 SigGroup_0x209_ChkSm 0;
+BA_ "GenSigSendType" SG_ 521 SigGroup_0x209_ChkSm 0;
+BA_ "GenSigStartValue" SG_ 521 SigGroup_0x209_RlngCtr 0;
+BA_ "GenSigSendType" SG_ 521 SigGroup_0x209_RlngCtr 0;
+BA_ "GenSigStartValue" SG_ 905 LTurnLghtCmd 0;
+BA_ "GenSigSendType" SG_ 905 LTurnLghtCmd 2;
+BA_ "GenSigStartValue" SG_ 905 RTurnLghtCmd 0;
+BA_ "GenSigSendType" SG_ 905 RTurnLghtCmd 2;
+BA_ "GenSigStartValue" SG_ 905 SigGroup_0x389_ChkSm 0;
+BA_ "GenSigSendType" SG_ 905 SigGroup_0x389_ChkSm 0;
+BA_ "GenSigStartValue" SG_ 905 SigGroup_0x389_RlngCtr 0;
+BA_ "GenSigSendType" SG_ 905 SigGroup_0x389_RlngCtr 0;
+BA_ "GenSigStartValue" SG_ 924 FBCM_FLDoorhadlCmd 0;
+BA_ "GenSigSendType" SG_ 924 FBCM_FLDoorhadlCmd 0;
+BA_ "GenSigStartValue" SG_ 524 FLDoorLckUnlckReq 0;
+BA_ "GenSigSendType" SG_ 524 FLDoorLckUnlckReq 0;
+BA_ "GenSigStartValue" SG_ 937 LChildProtnLckSts 0;
+BA_ "GenSigSendType" SG_ 937 LChildProtnLckSts 0;
+BA_ "GenSigStartValue" SG_ 937 PwrCtrlCmd 0;
+BA_ "GenSigSendType" SG_ 937 PwrCtrlCmd 0;
+BA_ "GenSigStartValue" SG_ 937 RChildProtnLckSts 0;
+BA_ "GenSigSendType" SG_ 937 RChildProtnLckSts 0;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_ActiveWakeupStatus 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_ActiveWakeupStatus 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_NMStatus 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_NMStatus 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_PartialNetworkbit 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_PartialNetworkbit 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_RepeatMessageReq 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_RepeatMessageReq 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_SourceAddress 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_SourceAddress 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_BackLghtDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_BackLghtDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_BraPedSwClos 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_BraPedSwClos 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_ChildLckDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_ChildLckDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_FLDoorPullDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_FLDoorPullDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_FourDoorLckDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_FourDoorLckDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_FRDoorPullDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_FRDoorPullDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_FrtFootLght 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_FrtFootLght 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_HandleDrive 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_HandleDrive 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_HardwireACC 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_HardwireACC 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_HardwireON 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_HardwireON 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_HazdLapTrig 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_HazdLapTrig 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_HighBeamDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_HighBeamDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_HndlLghtDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_HndlLghtDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_HornDrive 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_HornDrive 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_LowBeamDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_LowBeamDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_MirFoldDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_MirFoldDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_PosLghtDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_PosLghtDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_PowSavMod 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_PowSavMod 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_ReservedRsn 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_ReservedRsn 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_RoofLampDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_RoofLampDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_StrgWhlAdjt 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_StrgWhlAdjt 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_TurnLghtDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_TurnLghtDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_UDSActive 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_UDSActive 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_StaywakeRsn_WindowDrv 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_StaywakeRsn_WindowDrv 1;
+BA_ "GenSigStartValue" SG_ 1035 FBCM_WakeUpRsn 0;
+BA_ "GenSigSendType" SG_ 1035 FBCM_WakeUpRsn 1;
+BA_ "GenSigStartValue" SG_ 1130 FRDCU_ActiveWakeupStatus 0;
+BA_ "GenSigSendType" SG_ 1130 FRDCU_ActiveWakeupStatus 1;
+BA_ "GenSigStartValue" SG_ 1130 FRDCU_NMStatus 0;
+BA_ "GenSigSendType" SG_ 1130 FRDCU_NMStatus 1;
+BA_ "GenSigStartValue" SG_ 1130 FRDCU_PartialNetworkbit 0;
+BA_ "GenSigSendType" SG_ 1130 FRDCU_PartialNetworkbit 1;
+BA_ "GenSigStartValue" SG_ 1130 FRDCU_RepeatMessageReq 0;
+BA_ "GenSigSendType" SG_ 1130 FRDCU_RepeatMessageReq 1;
+BA_ "GenSigStartValue" SG_ 1130 FRDCU_SourceAddress 0;
+BA_ "GenSigSendType" SG_ 1130 FRDCU_SourceAddress 1;
+BA_ "GenSigStartValue" SG_ 1130 FRDCU_StaywakeRsn_Diag 0;
+BA_ "GenSigSendType" SG_ 1130 FRDCU_StaywakeRsn_Diag 1;
+BA_ "GenSigStartValue" SG_ 1130 FRDCU_StaywakeRsn_HwACCorON 0;
+BA_ "GenSigSendType" SG_ 1130 FRDCU_StaywakeRsn_HwACCorON 1;
+BA_ "GenSigStartValue" SG_ 1130 FRDCU_StaywakeRsn_PowerMode 0;
+BA_ "GenSigSendType" SG_ 1130 FRDCU_StaywakeRsn_PowerMode 1;
+BA_ "GenSigStartValue" SG_ 1130 FRDCU_WakeUpRsn 0;
+BA_ "GenSigSendType" SG_ 1130 FRDCU_WakeUpRsn 1;
+BA_ "GenSigStartValue" SG_ 925 TotalOdometer 0;
+BA_ "GenSigSendType" SG_ 925 TotalOdometer 0;
+BA_ "GenSigStartValue" SG_ 158 EastOrWestTimeZone 0;
+BA_ "GenSigSendType" SG_ 158 EastOrWestTimeZone 0;
+BA_ "GenSigStartValue" SG_ 158 TimeZoneNum 0;
+BA_ "GenSigSendType" SG_ 158 TimeZoneNum 0;
+BA_ "GenSigStartValue" SG_ 158 UTCTime 0;
+BA_ "GenSigSendType" SG_ 158 UTCTime 0;
+BA_ "GenSigStartValue" SG_ 158 UTCTimeValidFlag 0;
+BA_ "GenSigSendType" SG_ 158 UTCTimeValidFlag 0;
+BA_ "GenSigStartValue" SG_ 150 SigGroup_206_ChkSm 0;
+BA_ "GenSigSendType" SG_ 150 SigGroup_206_ChkSm 0;
+BA_ "GenSigStartValue" SG_ 150 SigGroup_206_RlngCtr 0;
+BA_ "GenSigSendType" SG_ 150 SigGroup_206_RlngCtr 0;
+BA_ "GenSigStartValue" SG_ 150 VehSpd 0;
+BA_ "GenSigSendType" SG_ 150 VehSpd 0;
+BA_ "GenSigStartValue" SG_ 150 VehSpdValid 0;
+BA_ "GenSigSendType" SG_ 150 VehSpdValid 0;
+BA_ "GenSigStartValue" SG_ 1049 LHCM_ActiveWakeupStatus 0;
+BA_ "GenSigSendType" SG_ 1049 LHCM_ActiveWakeupStatus 1;
+BA_ "GenSigStartValue" SG_ 1049 LHCM_NMStatus 0;
+BA_ "GenSigSendType" SG_ 1049 LHCM_NMStatus 1;
+BA_ "GenSigStartValue" SG_ 1049 LHCM_PartialNetworkbit 0;
+BA_ "GenSigSendType" SG_ 1049 LHCM_PartialNetworkbit 1;
+BA_ "GenSigStartValue" SG_ 1049 LHCM_RepeatMessageReq 0;
+BA_ "GenSigSendType" SG_ 1049 LHCM_RepeatMessageReq 1;
+BA_ "GenSigStartValue" SG_ 1049 LHCM_SourceAddress 0;
+BA_ "GenSigSendType" SG_ 1049 LHCM_SourceAddress 1;
+BA_ "GenSigStartValue" SG_ 1049 LHCM_StaywakeRsn1_PowerMode 0;
+BA_ "GenSigSendType" SG_ 1049 LHCM_StaywakeRsn1_PowerMode 1;
+BA_ "GenSigStartValue" SG_ 1049 LHCM_StaywakeRsn2_HardwireACC 0;
+BA_ "GenSigSendType" SG_ 1049 LHCM_StaywakeRsn2_HardwireACC 1;
+BA_ "GenSigStartValue" SG_ 1049 LHCM_StaywakeRsn3_Diagnosis 0;
+BA_ "GenSigSendType" SG_ 1049 LHCM_StaywakeRsn3_Diagnosis 1;
+BA_ "GenSigStartValue" SG_ 1049 LHCM_WakeUpRsn 0;
+BA_ "GenSigSendType" SG_ 1049 LHCM_WakeUpRsn 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_ActiveWakeupStatus 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_ActiveWakeupStatus 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_NMStatus 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_NMStatus 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_PartialNetworkbit 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_PartialNetworkbit 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_RepeatMessageReq 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_RepeatMessageReq 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_SourceAddress 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_SourceAddress 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_BklghtDrv 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_BklghtDrv 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_BrkLghtDrv 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_BrkLghtDrv 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_CasPortDrive 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_CasPortDrive 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_ChrgPortDrive 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_ChrgPortDrive 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_HardwireACC 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_HardwireACC 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_HndlLghtDrv 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_HndlLghtDrv 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_PowerMode 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_PowerMode 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_PowerSaveMode 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_PowerSaveMode 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_ReservedRsn 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_ReservedRsn 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_RLDoorPllDrv 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_RLDoorPllDrv 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_RRDoorPllDrv 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_RRDoorPllDrv 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_RrFootLghtDrv 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_RrFootLghtDrv 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_SeatDrive 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_SeatDrive 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_TailDoorLckDrv 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_TailDoorLckDrv 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_TailSpndlDrv 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_TailSpndlDrv 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StaywakeRsn_TrunkLghtDrv 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StaywakeRsn_TrunkLghtDrv 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_StayWakeRsn_UDSActive 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_StayWakeRsn_UDSActive 1;
+BA_ "GenSigStartValue" SG_ 1036 RBCM_WakeUpRsn 0;
+BA_ "GenSigSendType" SG_ 1036 RBCM_WakeUpRsn 1;
+BA_ "GenSigStartValue" SG_ 1050 RHCM_ActiveWakeupStatus 0;
+BA_ "GenSigSendType" SG_ 1050 RHCM_ActiveWakeupStatus 1;
+BA_ "GenSigStartValue" SG_ 1050 RHCM_NMStatus 0;
+BA_ "GenSigSendType" SG_ 1050 RHCM_NMStatus 1;
+BA_ "GenSigStartValue" SG_ 1050 RHCM_PartialNetworkbit 0;
+BA_ "GenSigSendType" SG_ 1050 RHCM_PartialNetworkbit 1;
+BA_ "GenSigStartValue" SG_ 1050 RHCM_RepeatMessageReq 0;
+BA_ "GenSigSendType" SG_ 1050 RHCM_RepeatMessageReq 1;
+BA_ "GenSigStartValue" SG_ 1050 RHCM_SourceAddress 0;
+BA_ "GenSigSendType" SG_ 1050 RHCM_SourceAddress 1;
+BA_ "GenSigStartValue" SG_ 1050 RHCM_StaywakeRsn1_PowerMode 0;
+BA_ "GenSigSendType" SG_ 1050 RHCM_StaywakeRsn1_PowerMode 1;
+BA_ "GenSigStartValue" SG_ 1050 RHCM_StaywakeRsn2_HardwireACC 0;
+BA_ "GenSigSendType" SG_ 1050 RHCM_StaywakeRsn2_HardwireACC 1;
+BA_ "GenSigStartValue" SG_ 1050 RHCM_StaywakeRsn3_Diagnosis 0;
+BA_ "GenSigSendType" SG_ 1050 RHCM_StaywakeRsn3_Diagnosis 1;
+BA_ "GenSigStartValue" SG_ 1050 RHCM_WakeUpRsn 0;
+BA_ "GenSigSendType" SG_ 1050 RHCM_WakeUpRsn 1;
+BA_ "GenSigStartValue" SG_ 1115 XCU_ActiveWakeupStatus_BD1 0;
+BA_ "GenSigSendType" SG_ 1115 XCU_ActiveWakeupStatus_BD1 1;
+BA_ "GenSigStartValue" SG_ 1115 XCU_NMStatus_BD1 0;
+BA_ "GenSigSendType" SG_ 1115 XCU_NMStatus_BD1 1;
+BA_ "GenSigStartValue" SG_ 1115 XCU_PartialNetworkbit_BD1 0;
+BA_ "GenSigSendType" SG_ 1115 XCU_PartialNetworkbit_BD1 1;
+BA_ "GenSigStartValue" SG_ 1115 XCU_RepeatMessageReq_BD1 0;
+BA_ "GenSigSendType" SG_ 1115 XCU_RepeatMessageReq_BD1 1;
+BA_ "GenSigStartValue" SG_ 1115 XCU_SourceAddress_BD1 0;
+BA_ "GenSigSendType" SG_ 1115 XCU_SourceAddress_BD1 1;
+BA_ "GenSigStartValue" SG_ 1115 XCU_StaywakeRsn_BD1 0;
+BA_ "GenSigSendType" SG_ 1115 XCU_StaywakeRsn_BD1 1;
+BA_ "GenSigStartValue" SG_ 1115 XCU_WakeUpRsn_BD1 0;
+BA_ "GenSigSendType" SG_ 1115 XCU_WakeUpRsn_BD1 1;
+BA_ "GenSigStartValue" SG_ 906 SwBkLghtCmd 0;
+BA_ "GenSigSendType" SG_ 906 SwBkLghtCmd 0;
+BA_ "GenSigStartValue" SG_ 907 LADASLghtReq 0;
+BA_ "GenSigSendType" SG_ 907 LADASLghtReq 0;
+BA_ "GenSigStartValue" SG_ 1369 ChildLckCfgReq 0;
+BA_ "GenSigSendType" SG_ 1369 ChildLckCfgReq 0;
+BA_ "GenSigStartValue" SG_ 1369 FLWndCtrlCmd 0;
+BA_ "GenSigSendType" SG_ 1369 FLWndCtrlCmd 0;
+BA_ "GenSigStartValue" SG_ 1369 FLWndPcntMvCmd 0;
+BA_ "GenSigSendType" SG_ 1369 FLWndPcntMvCmd 0;
+BA_ "GenSigStartValue" SG_ 1369 HadlLghtCmd 0;
+BA_ "GenSigSendType" SG_ 1369 HadlLghtCmd 0;
+BA_ "GenSigStartValue" SG_ 1369 MirFldReq 0;
+BA_ "GenSigSendType" SG_ 1369 MirFldReq 0;
+BA_ "GenSigStartValue" SG_ 1369 MirUnfldReq 0;
+BA_ "GenSigSendType" SG_ 1369 MirUnfldReq 0;
+BA_ "GenSigStartValue" SG_ 1369 RearWndSwInhCfg 0;
+BA_ "GenSigSendType" SG_ 1369 RearWndSwInhCfg 0;
+BA_ "GenSigStartValue" SG_ 1369 RrvwMirAutoHeatLevel 0;
+BA_ "GenSigSendType" SG_ 1369 RrvwMirAutoHeatLevel 0;
+BA_ "GenSigStartValue" SG_ 1369 RrvwMirHeatCmd 0;
+BA_ "GenSigSendType" SG_ 1369 RrvwMirHeatCmd 0;
+BA_ "GenSigStartValue" SG_ 1369 SceneModeSts 0;
+BA_ "GenSigSendType" SG_ 1369 SceneModeSts 0;
+BA_ "GenSigStartValue" SG_ 1369 WndCtrlEnb 1;
+BA_ "GenSigSendType" SG_ 1369 WndCtrlEnb 0;
+BA_ "GenSigStartValue" SG_ 1385 LMirHorizontalPosReq 0;
+BA_ "GenSigSendType" SG_ 1385 LMirHorizontalPosReq 0;
+BA_ "GenSigStartValue" SG_ 1385 LMirVerticalPosReq 0;
+BA_ "GenSigSendType" SG_ 1385 LMirVerticalPosReq 0;
+BA_ "GenSigStartValue" SG_ 1385 RMirHorizontalPosReq 0;
+BA_ "GenSigSendType" SG_ 1385 RMirHorizontalPosReq 0;
+BA_ "GenSigStartValue" SG_ 1385 RMirVerticalPosReq 0;
+BA_ "GenSigSendType" SG_ 1385 RMirVerticalPosReq 0;
+BA_ "GenSigStartValue" SG_ 713 FLDoorhadlCmd 0;
+BA_ "GenSigSendType" SG_ 713 FLDoorhadlCmd 0;
+BA_ "GenSigStartValue" SG_ 713 FLDoorHadlLghtCmd 0;
+BA_ "GenSigSendType" SG_ 713 FLDoorHadlLghtCmd 0;
+BA_ "GenSigSendType" SG_ 919 LVLdreductHadlMeas 0;
+BA_ "GenSigStartValue" SG_ 919 VehMdst 0;
+BA_ "GenSigSendType" SG_ 919 VehMdst 0;
+BA_ "GenSigStartValue" SG_ 194 ActuGearShiftPos 0;
+BA_ "GenSigSendType" SG_ 194 ActuGearShiftPos 0;
+VAL_ 1609 FLDCU_DTC1_State 0 "Normal" 1 "Fault" ;
+VAL_ 1609 FLDCU_DTC2_State 0 "Normal" 1 "Fault" ;
+VAL_ 1609 FLDCU_DTC3_State 0 "Normal" 1 "Fault" ;
+VAL_ 1609 FLDCU_DTC4_State 0 "Normal" 1 "Fault" ;
+VAL_ 1370 ChildLckCfgFdbk 0 "Both Side" 1 "Only Left" 2 "Only Right" ;
+VAL_ 1370 ChildProtnBtnSts 0 "NO Press" 1 "Press" ;
+VAL_ 1370 DrvrCtrFRWndSwSts 0 "No Requst" 1 "Manual Up" 2 "Auto Up" 3 "Manual Down" 4 "Auto Down" 5 "Reserved" 6 "Reserved" 7 "Reserved" ;
+VAL_ 1370 DrvrCtrFRWndSwStuckFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 DrvrCtrRLWndSwSts 0 "No Requst" 1 "Manual Up" 2 "Auto Up" 3 "Manual Down" 4 "Auto Down" 5 "Reserved" 6 "Reserved" 7 "Reserved" ;
+VAL_ 1370 DrvrCtrRLWndSwStuckFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 DrvrCtrRRWndSwSts 0 "No Requst" 1 "Manual Up" 2 "Auto Up" 3 "Manual Down" 4 "Auto Down" 5 "Reserved" 6 "Reserved" 7 "Reserved" ;
+VAL_ 1370 DrvrCtrRRWndSwStuckFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 FLCinchabusests 0 "normal" 1 "active" ;
+VAL_ 1370 FLDCUCrashSts 0 "NO crash" 1 "crash" ;
+VAL_ 1370 FLDoor_BackLghtDrvSts 127 "Invalid" ;
+VAL_ 1370 FLDoor_BackLghtFlrSts 0 "No Failure" 1 "Open Circuit" 2 "Short Circuit" 3 "Reserved" ;
+VAL_ 1370 FLDoorCinchSts 0 "Locked" 1 "Cinching" 2 "Semi-lock" 3 "Unlocked" ;
+VAL_ 1370 FLDoorHadlLghtDrvSts 0 "Inactive" 1 "Active" ;
+VAL_ 1370 FLDoorHadlLghtFlrSts 0 "No Failure" 1 "Open Circuit" 2 "Short Circuit" 3 "Reserved" ;
+VAL_ 1370 FLDoorhadlMotorFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 FLDoorLckUnlckDrvSts 0 "Inactive" 1 "lock" 2 "unlock" 3 "reserve" ;
+VAL_ 1370 FLDoorligtsFlt 0 "Normal" 1 "Fault" ;
+VAL_ 1370 FLDoorligtsSts 0 "OFF" 1 "ON" ;
+VAL_ 1370 FLDoorPawlSts 0 "Closed" 1 "Ajar" ;
+VAL_ 1370 FLDoorPullCircuitFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 FLDoorPullDrvFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 FLDoorPullDrvSts 0 "Stop" 1 "Forward Driving" 2 "Reverse Driving" 3 "Reserved" ;
+VAL_ 1370 FLDoorRatchetSts 0 "Closed" 1 "Ajar" ;
+VAL_ 1370 FLDoorThrmlProtnSts 0 "No Error" 1 "Error" ;
+VAL_ 1370 FLDoorUnlckCircuitFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 FLDoorUnlckDrvFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 FLDoorWinHallFlt 0 "Normal" 1 "1 hall Fault" 2 "2 hall Fault" 3 "all hall Fault" ;
+VAL_ 1370 FLWdwReqRes 0 "No Demand" 1 "Success" 2 "Fail" 3 "In Responding" 4 "Stop By Local SW" 5 "Stop By Anti-Reverse" 6 "Stop By System Fault" ;
+VAL_ 1370 FLWndAnti_PnchSts 0 "Non anti_pinch status" 1 "In Anti_pinch status" ;
+VAL_ 1370 FLWndInhSts 0 "Not Obs Inhibit status" 1 "Obs Inhibit status" ;
+VAL_ 1370 FLWndInitnSts 0 "No Init" 1 "Init" ;
+VAL_ 1370 FLWndMotorFlt 0 "No Error" 1 "Error" ;
+VAL_ 1370 FLWndPcntPos 0 "0%（All Closed）" 100 "100%（All Open）" 127 "Invalid" ;
+VAL_ 1370 FLWndRunSts 0 "Window stop" 1 "Manual Up" 2 "Manual Down" 3 "Auto Up" 4 "Auto Down" ;
+VAL_ 1370 FLWndSts 0 "Middle position" 1 "Complete Open" 2 "Complete Close" 3 "Invalid" ;
+VAL_ 1370 FLWndSwSts 0 "No Requst" 1 "Manual Up" 2 "Auto Up" 3 "Manual Down" 4 "Auto Down" 5 "Reserved" 6 "Reserved" 7 "Reserved" ;
+VAL_ 1370 FLWndSwStuckFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 FLWndThrmlProtnSts 0 "No Error" 1 "Error" ;
+VAL_ 1370 LChildProtnLckIndrDrvSts 0 "Inactive" 1 "Active" ;
+VAL_ 1370 LChildProtnLckIndrFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 LFMirSwDrvSts 0 "No Command" 1 "up" 2 "down" 3 "left" 4 "right" 5 "Reserved" ;
+VAL_ 1370 LMirFoldMotFlt 0 "Normal" 1 "Fault" ;
+VAL_ 1370 LMirHeatFlt 0 "Normal" 1 "Fault" ;
+VAL_ 1370 LMirHghtPos 0 "No commend" 1 "目标AD采样值1" 2 "目标AD采样值2" 253 "目标AD采样值253" 254 "目标AD采样值254" 255 "invalid" ;
+VAL_ 1370 LMirHorizontalMotFlt 0 "Normal" 1 "Fault" ;
+VAL_ 1370 LMirHorizontalPosRclFdbk 0 "NoDemand" 1 "Successed" 2 "Fail" 3 "InResponding" 4 "StopbyLoccalSW" 5 "StopbySystemFault" 6 "Resvered" 7 "Resvered" ;
+VAL_ 1370 LMirLvlPos 0 "No commend" 1 "目标AD采样值1" 2 "目标AD采样值2" 253 "目标AD采样值253" 254 "目标AD采样值254" 255 "invalid" ;
+VAL_ 1370 LMirSelIndcLampCmd 0 "Not Work" 1 "Working" ;
+VAL_ 1370 LMirSelSw 0 "No Pressed" 1 "Pressed" ;
+VAL_ 1370 LMirSelSwLEDIndrDrvSts 0 "Inactive" 1 "Active" ;
+VAL_ 1370 LMirSelSwLEDIndrFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 LMirVerticalMotFlt 0 "Normal" 1 "Fault" ;
+VAL_ 1370 LMirVerticalPosRclFdbk 0 "NoDemand" 1 "Successed" 2 "Fail" 3 "InResponding" 4 "StopbyLoccalSW" 5 "StopbySystemFault" 6 "Resvered" 7 "Resvered" ;
+VAL_ 1370 LRrvwMirFolDrvSts 0 "Not Work" 1 "Working" ;
+VAL_ 1370 LRrvwMirFoldSts 0 "Open" 1 "Fold" ;
+VAL_ 1370 LRrvwMirHeatSts 0 "NoHeat" 1 "Heating" ;
+VAL_ 1370 LRrvwMirPosChng 0 "No Command" 1 "No change" 2 "Changed" 3 "Invalid" ;
+VAL_ 1370 MecnclKeyLckReq 0 "No request" 1 "Request" ;
+VAL_ 1370 MecnclKeyUnlckReq 0 "No request" 1 "Request" ;
+VAL_ 1370 MirAdjSWFlt 0 "Normal" 1 "Fault" ;
+VAL_ 1370 MirFldLclReq 0 "No Request" 1 "Request" ;
+VAL_ 1370 MirLTurnLghtDrvFlt 0 "No Failure" 1 "Open Circuit" 2 "Short Circuit" 3 "Reserved" ;
+VAL_ 1370 MirLTurnLghtDrvSts 0 "Inactive" 1 "Active" ;
+VAL_ 1370 MirSelSts 0 "Inactive" 1 "Left" 2 "Right" 3 "Reserved" ;
+VAL_ 1370 MirSelSWFlt 0 "Normal" 1 "Fault" ;
+VAL_ 1370 MirSwStsDown 0 "No Pressed" 1 "Pressed" ;
+VAL_ 1370 MirSwStsLeft 0 "No Pressed" 1 "Pressed" ;
+VAL_ 1370 MirSwStsRight 0 "No Pressed" 1 "Pressed" ;
+VAL_ 1370 MirSwStsUp 0 "No Pressed" 1 "Pressed" ;
+VAL_ 1370 MirUnfdLclReq 0 "No Request" 1 "Request" ;
+VAL_ 1370 RChildProtnLckIndrDrvSts 0 "Inactive" 1 "Active" ;
+VAL_ 1370 RChildProtnLckIndrFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 RMirSelIndcLampCmd 0 "Not Work" 1 "Working" ;
+VAL_ 1370 RMirSelSw 0 "No Pressed" 1 "Pressed" ;
+VAL_ 1370 RMirSelSwLEDIndrDrvSts 0 "Inactive" 1 "Active" ;
+VAL_ 1370 RMirSelSwLEDIndrFlt 0 "Normal" 1 "Failure" ;
+VAL_ 1370 RrvwMirFoldSw 0 "No Pressed" 1 "Pressed" ;
+VAL_ 1370 WinLckIndrDrvSts 0 "Normal" 1 "Failure" ;
+VAL_ 1370 WinLckIndrFlt 0 "Normal" 1 "Failure" ;
+VAL_ 714 ChildProtnOptSw 0 "NoPress" 1 "LeftPress" 2 "RightPress" 3 "BothPress" ;
+VAL_ 714 FLDoorhadlDrvSts 0 "Inactive" 1 "Extend" 2 "retract" 3 "reserve" ;
+VAL_ 714 FLDoorhadlHallFlt 0 "Normal" 1 "Fault" ;
+VAL_ 714 FLDoorhadlPosSts 0 "0%（All Closed）" 100 "100%（All Open）" 127 "invalid" ;
+VAL_ 714 FLDoorHdlBlkdSts 0 "Normal" 1 "Blocked" ;
+VAL_ 714 FLDoorLCKRsetSts 0 "Inactive" 1 "Active" ;
+VAL_ 714 FLDoorLckSts 0 "Locked" 1 "Unlocked" ;
+VAL_ 714 FLDoorSts 0 "Closed" 1 "Ajar" ;
+VAL_ 714 Flhandlemode 0 "normal" 1 "Ice_bra mode" 2 "Uninitialized" ;
+VAL_ 714 LmirADASLghtDrvSts 0 "OFF" 1 "Low On" 2 "High On" 3 "Breath" ;
+VAL_ 714 LmirADASLghtFlrSts 0 "No Failure" 1 "Open Circuit" 2 "Short Circuit" 3 "Reserved" ;
+VAL_ 714 RearWindowDisableSW 0 "Normal" 1 "Local Switch Inhibit(Except Driver Side)" ;
+VAL_ 1129 FLDCU_ActiveWakeupStatus 0 "No active wakeup" 1 "Active Wake up" ;
+VAL_ 1129 FLDCU_NMStatus 0 "RepeatMessageState" 1 "OtherOperationState" ;
+VAL_ 1129 FLDCU_PartialNetworkbit 0 "Not PN" 1 "PN" ;
+VAL_ 1129 FLDCU_RepeatMessageReq 0 "Not Requested" 1 "Requested" ;
+VAL_ 1129 FLDCU_StaywakeRsn_Diag 0 "Inactive" 1 "Active" ;
+VAL_ 1129 FLDCU_StaywakeRsn_HwACCorON 0 "Inactive" 1 "Active" ;
+VAL_ 1129 FLDCU_StaywakeRsn_PowerMode 0 "Inactive" 1 "Active" ;
+VAL_ 1129 FLDCU_WakeUpRsn 0 "Init" 1 "NMPDUReceived" 2 "Hardwire active" 3 "The door lock status has changed" 4 "The door status has changed" 5 "The state of the pullin lock pawl has changed" 6 "The state of the pullin lock ratchet has changed" ;
+VAL_ 1398 CrashOtptSts 0 "NoDplCrsh" 1 "FrtDplCrsh" 2 "DrvrDplCrsh" 3 "Drvr_FrtDplCrsh" 4 "PsngDplCrsh" 5 "PsngFrtDplCrsh" 6 "Drvr_PsngDplCrsh" 7 "Drvr_Psng_FrtDplCrsh" 8 "Rr_DplCrsh" 9 "Rr_FrtDplCrsh" 10 "Rr_DrvrDplCrsh" 11 "Rr_Drvr_FrtDplCrsh" 12 "Rr_PsngDplCrsh" 13 "Rr_Psng_FrtDplCrsh" 14 "Rr_Psng_DrvrDplCrsh" 15 "Rr_Psng_Drv_FrtDplCrsh" 16 "Rlov_DplCrsh" 17 "Rlov_FrtDplCrsh" 18 "Rlov_DrvrSideDplCrsh" 19 "Rlov_Drvr_FrtDplCrsh" 20 "Rlov_PsngDpl Crsh" 21 "Rlov_Psng_FrtDplCrsh" 22 "Rlov_Psng_DrvrDplCrsh" 23 "Rlov_Psng_Drvr_FrtDplCrsh" 24 "Rlov_RrSideDplCrsh" 25 "Rlov_Rr_FrtDplCrsh" 26 "Rlov_Rr_DrvrDplCrsh" 27 "Rlov_Rr_Drvr_FrtDplCrsh" 28 "Rlov_Rr_PsngDplCrsh" 29 "Rlov_Rr_Psng_FrtDplCrsh" 30 "Rlov_Rr_Psng_DrvrDplCrsh" 31 "Rlov_Rr_Psng_Drvr_FrtDplCrsh" 255 "Invalid" ;
+VAL_ 521 LowVolPwrMd 0 "OFF" 1 "ACC" 2 "ON" 3 "Reserved" ;
+VAL_ 521 LowVolPwrMdFlag 0 "Local mode" 1 "Remote mode" ;
+VAL_ 905 LTurnLghtCmd 0 "OFF" 1 "ON" ;
+VAL_ 905 RTurnLghtCmd 0 "OFF" 1 "ON" ;
+VAL_ 924 FBCM_FLDoorhadlCmd 0 "Inactive" 1 "CLOSE" 2 "OPEN" 3 "Reserved" ;
+VAL_ 524 FLDoorLckUnlckReq 0 "No request" 1 "Lock" 2 "Unlock" ;
+VAL_ 937 LChildProtnLckSts 0 "Unlocked" 1 "Locked" ;
+VAL_ 937 PwrCtrlCmd 0 "OFF" 1 "ON" ;
+VAL_ 937 RChildProtnLckSts 0 "Unlocked" 1 "Locked" ;
+VAL_ 1035 FBCM_ActiveWakeupStatus 0 "No active wakeup" 1 "Active Wake up" ;
+VAL_ 1035 FBCM_NMStatus 0 "RepeatMessageState" 1 "OtherOperationState" ;
+VAL_ 1035 FBCM_PartialNetworkbit 0 "Not PN" 1 "PN" ;
+VAL_ 1035 FBCM_RepeatMessageReq 0 "Not Requested" 1 "Requested" ;
+VAL_ 1035 FBCM_StaywakeRsn_BackLghtDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_BraPedSwClos 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_ChildLckDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_FLDoorPullDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_FourDoorLckDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_FRDoorPullDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_FrtFootLght 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_HandleDrive 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_HardwireACC 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_HardwireON 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_HazdLapTrig 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_HighBeamDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_HndlLghtDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_HornDrive 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_LowBeamDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_MirFoldDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_PosLghtDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_PowSavMod 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_ReservedRsn 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_RoofLampDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_StrgWhlAdjt 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_TurnLghtDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_UDSActive 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_StaywakeRsn_WindowDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1035 FBCM_WakeUpRsn 0 "Init" 1 "NMPDUReceived" 2 "Hardwire ACC or ON active" 3 "Brake Pedal Triggered" 4 "Charge port Swtich Triggered" 5 "Mechanical Key Lock Input" 6 "Mechanical Key UnLock Input" 7 "Driver Lock Status Change" 8 "Driver Door Ajar Status Change" 9 "Driver pawl Status Change" 10 "Driver catch Status Change" 11 "Passanger Lock Status Change" 12 "Passanger Door Ajar Status Change" 13 "Passanger pawl Status Change" 14 "Passanger catch Status Change" 15 "Steering wheel front rear adjust switch trigger" 16 "Steering wheel high low adjust switch trigger" 17 "RL Lock Status Change" 18 "RR Lock Status Change" 19 "RL child Lock Status Change" 20 "RR child Lock Status Change" 21 "Tail Door unlock switch trigger" 22 "Tail Door close and lock switch trigger" 23 "Hazard Switch Triggered" 24 "Hood Status Change" 25 "Driver SBR change" 26 "Passanger SBR change" 27 "Valid RKE Switch Triggered" 28 "Valid PKE Switch Triggered" 29 "Find vehicle search the valid key" 30 "Capacity switch wakeup search the valid key" 31 "KS Wake up" ;
+VAL_ 1130 FRDCU_ActiveWakeupStatus 0 "No active wakeup" 1 "Active Wake up" ;
+VAL_ 1130 FRDCU_NMStatus 0 "RepeatMessageState" 1 "OtherOperationState" ;
+VAL_ 1130 FRDCU_PartialNetworkbit 0 "Not PN" 1 "PN" ;
+VAL_ 1130 FRDCU_RepeatMessageReq 0 "Not Requested" 1 "Requested" ;
+VAL_ 1130 FRDCU_StaywakeRsn_Diag 0 "Inactive" 1 "Active" ;
+VAL_ 1130 FRDCU_StaywakeRsn_HwACCorON 0 "Inactive" 1 "Active" ;
+VAL_ 1130 FRDCU_StaywakeRsn_PowerMode 0 "Inactive" 1 "Active" ;
+VAL_ 1130 FRDCU_WakeUpRsn 0 "Init" 1 "NMPDUReceived" 2 "Hardwire active" 3 "The door lock status has changed" 4 "The door status has changed" 5 "The state of the pullin lock pawl has changed" 6 "The state of the pullin lock ratchet has changed" ;
+VAL_ 925 TotalOdometer 16777215 " Invalid" ;
+VAL_ 158 EastOrWestTimeZone 0 "Initializaiton" 1 "East" 2 "West" 3 "Reserved" ;
+VAL_ 158 TimeZoneNum 0 "Initializaiton" 1 "TimeZone 1" 2 "TimeZone 2" 3 "TimeZone 3" 4 "TimeZone 4" 5 "TimeZone 5" 6 "TimeZone 6" 7 "TimeZone 7" 8 "TimeZone 8" 9 "TimeZone 9" 10 "TimeZone 10" 11 "TimeZone 11" 12 "TimeZone 12" 13 "Reserved" 14 "Reserved" 15 "Reserved" ;
+VAL_ 158 UTCTimeValidFlag 0 "Valid" 1 "Invalid" 2 "with offset" 3 "reserved" ;
+VAL_ 150 VehSpd 8191 " Invalid" ;
+VAL_ 150 VehSpdValid 0 " Valid" 1 " Invalid" ;
+VAL_ 1049 LHCM_ActiveWakeupStatus 0 "No active wakeup" 1 "Active Wake up" ;
+VAL_ 1049 LHCM_NMStatus 0 "RepeatMessageState" 1 "OtherOperationState" ;
+VAL_ 1049 LHCM_PartialNetworkbit 0 "Not PN" 1 "PN" ;
+VAL_ 1049 LHCM_RepeatMessageReq 0 "Not Requested" 1 "Requested" ;
+VAL_ 1049 LHCM_StaywakeRsn1_PowerMode 0 "Inactive" 1 "Active" ;
+VAL_ 1049 LHCM_StaywakeRsn2_HardwireACC 0 "Inactive" 1 "Active" ;
+VAL_ 1049 LHCM_StaywakeRsn3_Diagnosis 0 "Inactive" 1 "Active" ;
+VAL_ 1049 LHCM_WakeUpRsn 0 "Init" 1 "NMPDUReceived" 2 "Hardwire ACC active" ;
+VAL_ 1036 RBCM_ActiveWakeupStatus 0 "No active wakeup" 1 "Active Wake up" ;
+VAL_ 1036 RBCM_NMStatus 0 "RepeatMessageState" 1 "OtherOperationState" ;
+VAL_ 1036 RBCM_PartialNetworkbit 0 "Not PN" 1 "PN" ;
+VAL_ 1036 RBCM_RepeatMessageReq 0 "Not Requested" 1 "Requested" ;
+VAL_ 1036 RBCM_StaywakeRsn_BklghtDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_BrkLghtDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_CasPortDrive 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_ChrgPortDrive 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_HardwireACC 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_HndlLghtDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_PowerMode 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_PowerSaveMode 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_ReservedRsn 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_RLDoorPllDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_RRDoorPllDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_RrFootLghtDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_SeatDrive 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_TailDoorLckDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_TailSpndlDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StaywakeRsn_TrunkLghtDrv 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_StayWakeRsn_UDSActive 0 "Inactive" 1 "Active" ;
+VAL_ 1036 RBCM_WakeUpRsn 0 "Init" 1 "NMPDUReceived" 2 "Hardwire ACC or ON active" 3 "Tail Door close Switch Trigger" 4 "Tail Door Ajar Status Triggered" 5 "RL Door Ajar Status Change" 6 "RL Door pawl Status Change" 7 "RL Door catch Status Change" 8 "RR Door Ajar Status Change" 9 "RR Door pawl Status Change" 10 "RR Door catch Status Change" 11 "Gas Door Ajar Status Change" 12 "RL SBR change" 13 "RR SBR change" 14 "Seat adjust Switch Trigger" ;
+VAL_ 1050 RHCM_ActiveWakeupStatus 0 "No active wakeup" 1 "Active Wake up" ;
+VAL_ 1050 RHCM_NMStatus 0 "RepeatMessageState" 1 "OtherOperationState" ;
+VAL_ 1050 RHCM_PartialNetworkbit 0 "Not PN" 1 "PN" ;
+VAL_ 1050 RHCM_RepeatMessageReq 0 "Not Requested" 1 "Requested" ;
+VAL_ 1050 RHCM_StaywakeRsn1_PowerMode 0 "Inactive" 1 "Active" ;
+VAL_ 1050 RHCM_StaywakeRsn2_HardwireACC 0 "Inactive" 1 "Active" ;
+VAL_ 1050 RHCM_StaywakeRsn3_Diagnosis 0 "Inactive" 1 "Active" ;
+VAL_ 1050 RHCM_WakeUpRsn 0 "Init" 1 "NMPDUReceived" 2 "Hardwire ACC active" ;
+VAL_ 1115 XCU_ActiveWakeupStatus_BD1 0 "No active wakeup" 1 "Active Wake up" ;
+VAL_ 1115 XCU_NMStatus_BD1 0 "RepeatMessageState" 1 "OtherOperationState" ;
+VAL_ 1115 XCU_PartialNetworkbit_BD1 0 "Not PN" 1 "PN" ;
+VAL_ 1115 XCU_RepeatMessageReq_BD1 0 "Not Requested" 1 "Requested" ;
+VAL_ 1115 XCU_StaywakeRsn_BD1 1 "低压电源模式保持" 2 "诊断功能需求保持" 4 "ECAN唤醒需求保持" 8 "ECAN应用报文异常需求保持" 16 "低功耗模式需求保持" 32 "蓝牙模块需求保持" 64 "智能电检保持" 128 "充电口盖保持" 256 "BMS环温采集需求保持" 512 "远程空调保持" 1024 "空调自干燥保持" 2048 "空气悬架保持" 4096 "热管理保持" ;
+VAL_ 1115 XCU_WakeUpRsn_BD1 0 "Init" 1 "网络管理报文唤醒" 2 " 低压电源模式唤醒" 3 "ECAN需求唤醒" 4 "ECAN应用报文异常唤醒" 5 "低功耗模式唤醒" 6 "蓝牙模块唤醒" 7 "充电口盖需求网络唤醒" 8 "智能电检需求唤醒" 9 "BMS环温检测需求唤醒" 10 "远程空调唤醒" 11 "空调自干燥唤醒" 12 "悬架调节需求唤醒" 13 "热管理唤醒" ;
+VAL_ 906 SwBkLghtCmd 127 "Invalid" ;
+VAL_ 907 LADASLghtReq 0 "OFF Request" 1 "Low On Request" 2 "High On Request" 3 "Breath Request" ;
+VAL_ 1369 ChildLckCfgReq 0 "Both Side Request" 1 "Only Left Request" 2 "Only Right Request" ;
+VAL_ 1369 FLWndCtrlCmd 0 "No command" 1 "window up" 2 "window down" 3 "Reserved" ;
+VAL_ 1369 FLWndPcntMvCmd 0 "No command" 1 "Move to 0%（全关）" 6 "Move to 5%（精度5%）" 11 "Move to 10%（精度10%）" 101 "Move to 100%（全开）" 102 "Stop" ;
+VAL_ 1369 HadlLghtCmd 0 "OFF" 1 "ON" ;
+VAL_ 1369 MirFldReq 0 "Norequest" 1 "Reques" ;
+VAL_ 1369 MirUnfldReq 0 "Norequest" 1 "Reques" ;
+VAL_ 1369 RearWndSwInhCfg 0 "enable Rear all window switch" 1 "only disable Rear left window switch" 2 "only disable Rear right window switch" 3 "disable Rear all window switch" ;
+VAL_ 1369 RrvwMirAutoHeatLevel 0 "No Request" 1 "Level 1 Request" 2 "Level 2 Request" 3 "Level 3 Request" 4 "Level 4 Request" 5 "Reversed" 6 "Reversed" 7 "Reversed" ;
+VAL_ 1369 RrvwMirHeatCmd 0 "No Request" 1 "Request" ;
+VAL_ 1369 SceneModeSts 0 "Reserved" 1 "Normal 正常模式" 2 "Nap Mode 小憩模式" 3 "Camping Mode 露营模式" 4 "Cleaning Mode 擦车模式" 5 "No Disturb Mode 勿扰模式" ;
+VAL_ 1369 WndCtrlEnb 0 "Disable" 1 "Enable" ;
+VAL_ 1385 LMirHorizontalPosReq 0 "No commend" 1 "目标AD采样值1" 2 "目标AD采样值2" 253 "目标AD采样值253" 254 "目标AD采样值254" 255 "invalid" ;
+VAL_ 1385 LMirVerticalPosReq 0 "No commend" 1 "目标AD采样值1" 2 "目标AD采样值2" 253 "目标AD采样值253" 254 "目标AD采样值254" 255 "invalid" ;
+VAL_ 1385 RMirHorizontalPosReq 0 "No commend" 1 "目标AD采样值1" 2 "目标AD采样值2" 253 "目标AD采样值253" 254 "目标AD采样值254" 255 "invalid" ;
+VAL_ 1385 RMirVerticalPosReq 0 "No commend" 1 "目标AD采样值1" 2 "目标AD采样值2" 253 "目标AD采样值253" 254 "目标AD采样值254" 255 "invalid" ;
+VAL_ 713 FLDoorhadlCmd 0 "Inactive" 1 "CLOSE" 2 "OPEN" 3 "Reserved" ;
+VAL_ 713 FLDoorHadlLghtCmd 0 "OFF" 1 "ON" ;
+VAL_ 919 LVLdreductHadlMeas 0 "Reduction no request" 1 "Reduction active Shut down the load" 2 "Reduction active Shut down and limit power" 3 "Reduction active Shut down and limit  and emergency prompt" ;
+VAL_ 919 VehMdst 0 "Reserved" 1 "Normal Mode 正常模式" 2 "Factory Mode 工厂模式" 3 "Logistic Mode 物流模式" 4 "Exhibition Mode 展车模式" 5 "OTA Mode 1 OTA模式1" 6 "OTA Mode 2 OTA模式2" 7 "Repair Mode 维修模式" 15 "Error Mode 异常模式" ;
+VAL_ 194 ActuGearShiftPos 0 " InitialState" 1 " R" 2 " N" 3 " D" 4 " P" 5 " P Blink" 6 " Reserved" 7 " Invalid" ;
+

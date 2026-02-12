@@ -1,0 +1,195 @@
+/*---------GLOBAL DEFINITIONS-----------*/
+LIN_description_file;
+LIN_protocol_version             = "2.0";
+LIN_language_version             = "2.0";
+LIN_speed                        = 19.2 kbps;
+/* ----------NODE DEFINITIONS---------- */
+Nodes {
+   Master:
+      S12ZVR,                                                /* Master node name */
+      5.0 ms,                                                /* Time base */
+      0.1 ms;                                                /* Jitter */
+   Slaves:
+      S12ZVM;
+}
+/* ----------SIGNAL DEFINITIONS---------- */
+Signals {
+   /* Signal_name                : Size,       Init,            Publisher, Subscriber(s) */
+   Setspeed                      :  8,        0x0,               S12ZVM, S12ZVR;
+   Actualspeed                   :  8,        0x0,               S12ZVM, S12ZVR;
+   Voltage                       :  8,        0x0,               S12ZVM, S12ZVR;
+   Temperature                   :  8,        0x0,               S12ZVM, S12ZVR;
+   Current                       :  8,        0x0,               S12ZVM, S12ZVR;
+   ST_PRM_END                    :  2,        0x0,               S12ZVM, S12ZVR;
+   ST_RPM_MONI                   :  2,        0x0,               S12ZVM, S12ZVR;
+   ST_EMMOD_IN                   :  2,        0x0,               S12ZVM, S12ZVR;
+   Err_St_Otmp                   :  2,        0x0,               S12ZVM, S12ZVR;
+   Err_St_Ocu                    :  2,        0x0,               S12ZVM, S12ZVR;
+   Err_St_Dryr                   :  2,        0x0,               S12ZVM, S12ZVR;
+   Err_St_U                      :  2,        0x0,               S12ZVM, S12ZVR;
+   Err_St_Block                  :  2,        0x0,               S12ZVM, S12ZVR;
+   Reserved                      :  2,        0x0,               S12ZVM, S12ZVR;
+   NOD_ERR                       :  2,        0x0,               S12ZVM, S12ZVR;
+   Post_RuningSet                :  3,        0x0,               S12ZVM, S12ZVR;
+   COM_ERR			    :  1,        0x0,               S12ZVM, S12ZVR;
+   Variant_version               :  8,        0x0,               S12ZVM, S12ZVR;
+   Variant_reserved              :  7,        0x0,               S12ZVM, S12ZVR;
+   Control_setspeed              :  8,        0x0,               S12ZVR, S12ZVM;
+   Control_byte1                 :  8,        0x0,               S12ZVR, S12ZVM;
+   error                         :  1,        0x0,               S12ZVM, S12ZVR;
+}
+/* ----------DIAGNOSTIC SIGNAL DEFINITIONS---------- */
+Frames {
+   ControlLin          : 0x26, S12ZVR              ,    2 {
+      Control_setspeed    , 0;
+      Control_byte1       , 8;
+   }
+   
+   StatusLin           : 0x25, S12ZVM              ,    8 {
+      Setspeed            , 0;
+      Actualspeed         , 8;
+      Voltage             , 16;
+      Temperature         , 24;
+      Current             , 32;
+      ST_PRM_END          , 40;       
+      ST_RPM_MONI         , 42;
+      ST_EMMOD_IN         , 44;
+      Err_St_Otmp         , 46;
+      Err_St_Ocu          , 48;          
+      Err_St_Dryr         , 50;        
+      Err_St_U            , 52;         
+      Err_St_Block        , 54;        
+      Reserved            , 56;          
+      NOD_ERR             , 58;         
+      Post_RuningSet      , 60;          
+      COM_ERR		  , 63;   
+   }
+}
+/* ----------NODE ATTRIBUTE DEFINITIONS---------- */
+Node_attributes {
+   S12ZVM {
+      LIN_protocol               = 2.0;                      /* Node protocol version */
+      configured_NAD             = 0xa;                      /* configured NAD of node (1-125) */
+      initial_NAD                = 0x9;                      /* initial NAD of node (1-125) */
+      product_id                 =   0x48, 0x1900,    0x1;   /* Product id */
+      response_error             = error;                    /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 0 ms;                     /* ST_min */
+      configurable_frames {
+         StatusLin               = 0x25;
+         ControlLin              = 0x26;
+      }
+   }
+}
+/* ----------SCHEDULE TABLE DEFINITIONS---------- */
+Schedule_tables {
+   motor {
+      ControlLin                          delay 10.0 ms;
+      StatusLin                           delay 10.0 ms;
+   }
+}
+Signal_encoding_types {
+  EOP_Current_Encoding {
+    physical_value, 0, 250, 0.2, 0, "A" ;
+  }
+  EOP_MCU_Temp_Encoding {
+    physical_value, 0, 250, 1, -50, "C" ;
+  }
+  EOP_Actual_Speed_Encoding {
+    physical_value, 0, 250, 21.6, 0, "rpm" ;
+  }
+  EOP_Target_Speed_Encoding {
+    physical_value, 0, 250, 21.6, 0, "rpm" ;
+  }
+  EOP_Voltage_Encoding {
+    physical_value, 0, 250, 0.1, 0, "V" ;
+  }
+  EOP_Set_Speed_Encoding {
+    physical_value, 0, 250, 21.6, 0, "rpm" ;
+  }
+  ST_PRM_END_reason_Encoding {
+    logical_value, 0, "completed" ;
+    logical_value, 1, "cancelled" ;
+  }
+  ST_RPM_MONI_Resp_Encoding {
+    logical_value, 0, "active" ;
+    logical_value, 1, "no_active" ;
+  }
+  ST_EMMOD_IN_Resp_Encoding {
+    logical_value, 0, "LOW " ;
+    logical_value, 1, "High" ;
+  }
+  EOP_Err_St_Otmp_Encoding {
+    logical_value, 0, "No_Error			" ;
+    logical_value, 1, "Error_Occured" ;
+  }
+  EOP_Err_St_Ocu_Encoding {
+    logical_value, 0, "No_Error			" ;
+    logical_value, 1, "Error_Occured" ;
+  }
+  EOP_Err_St_Dryr_Encoding {
+    logical_value, 0, "No_Error		" ;
+    logical_value, 1, "Error_Occured" ;
+  }
+  EOP_Err_St_U_Encoding {
+    logical_value, 0, "No_Error" ;
+    logical_value, 1, "Error_Occured" ;
+  }
+  EOP_Err_St_Block_Encoding {
+    logical_value, 0, "No_Error" ;
+    logical_value, 1, "Error_Occured" ;
+  }
+  Reserved_Encoding {
+    logical_value, 0, "No_Error" ;
+    logical_value, 1, "Error_Occured" ;
+  }
+  
+  NOD_ERR_Encoding {
+    logical_value, 0, "No_Error" ;
+    logical_value, 1, "Error_Occured" ;
+  }
+  COM_ERR_Encoding {
+    logical_value, 0, "No_Error" ;
+    logical_value, 1, "Error_Occured" ;
+  }
+  EOP_Post_Runingback_Encoding {
+    logical_value, 0, "default" ;
+    logical_value, 1, "stage_1" ;
+	logical_value, 2, "stage_2" ;
+	logical_value, 3, "stage_3" ;
+	logical_value, 4, "stage_4" ;
+	logical_value, 5, "stage_5" ;
+	logical_value, 6, "stage_6" ;
+  }
+   EOP_Post_RuningSet_Encoding {
+    logical_value, 0, "default" ;
+    logical_value, 1, "stage_1" ;
+	logical_value, 2, "stage_2" ;
+	logical_value, 3, "stage_3" ;
+	logical_value, 4, "stage_4" ;
+	logical_value, 5, "stage_5" ;
+	logical_value, 6, "stage_6" ;
+  }
+}
+
+Signal_representation {
+  EOP_Current_Encoding: Current ;
+  EOP_MCU_Temp_Encoding: Temperature ;
+  EOP_Actual_Speed_Encoding: Actualspeed ;
+  EOP_Target_Speed_Encoding: Setspeed ;
+  EOP_Voltage_Encoding: Voltage ;
+  EOP_Set_Speed_Encoding: Control_setspeed ;
+  ST_PRM_END_reason_Encoding: ST_PRM_END ;
+  ST_RPM_MONI_Resp_Encoding : ST_RPM_MONI ;
+  ST_EMMOD_IN_Resp_Encoding: ST_EMMOD_IN ;
+  EOP_Err_St_Ocu_Encoding: Err_St_Ocu ;
+  EOP_Err_St_Otmp_Encoding: Err_St_Otmp ;
+  EOP_Err_St_Dryr_Encoding: Err_St_Dryr ;
+  EOP_Err_St_U_Encoding: Err_St_U ;
+  EOP_Err_St_Block_Encoding: Err_St_Block ;
+  Reserved_Encoding: Reserved ;
+  NOD_ERR_Encoding: NOD_ERR ;
+  COM_ERR_Encoding: COM_ERR ;
+  EOP_Post_RuningSet_Encoding: Post_RuningSet_A ;
+  EOP_Post_Runingback_Encoding: Post_RuningSet ;
+}

@@ -1,0 +1,487 @@
+VERSION "2025/4/16_171625"
+
+
+NS_ : 
+ NS_DESC_
+ CM_
+ BA_DEF_
+ BA_
+ VAL_
+ CAT_DEF_
+ CAT_
+ FILTER
+ BA_DEF_DEF_
+ EV_DATA_
+ ENVVAR_DATA_
+ SGTYPE_
+ SGTYPE_VAL_
+ BA_DEF_SGTYPE_
+ BA_SGTYPE_
+ SIG_TYPE_REF_
+ VAL_TABLE_
+ SIG_GROUP_
+ SIG_VALTYPE_
+ SIGTYPE_VALTYPE_
+ BO_TX_BU_
+ BA_DEF_REL_
+ BA_REL_
+ BA_DEF_DEF_REL_
+ BU_SG_REL_
+ BU_EV_REL_
+ BU_BO_REL_
+ SG_MUL_VAL_
+
+
+
+
+BS_:
+
+
+BU_: CDCU XPU FPU RDCU LDCU MSMRL MSMRR IMS TDCU HUD PDCUFL PDCUFR PDCURL PDCURR VLMU Tester 
+
+
+BO_ 548 I_LDCU_BodySysSt1: 8 LDCU
+ SG_ I_FLDoorAjarSt : 2|1@0+ (1,0) [0|1] "" PDCUFL
+BO_ 550 I_LDCU_BodySysSt2: 64 LDCU
+ SG_ I_FLDoorOpenSt : 9|1@0+ (1,0) [0|1] "" PDCUFL
+BO_ 549 I_RDCU_BodySysSt1: 8 RDCU
+ SG_ I_FRDoorAjarSt : 7|1@0+ (1,0) [0|1] "" PDCUFL
+ SG_ I_FRDoorOpenSt : 9|1@0+ (1,0) [0|1] "" PDCUFL
+BO_ 794 I_RDCU_ACThermalInfo: 64 RDCU
+ SG_ I_RDCU_AirIntakeSt : 55|2@0+ (1,0) [0|3] "" PDCUFL
+ SG_ I_FRWinPosStFB : 7|8@0+ (0.5,0) [0|100] "percent" PDCUFL
+ SG_ I_RDCU_RRWinPosStFB : 60|8@0+ (0.5,0) [0|100] "percent" PDCUFL
+ SG_ I_RDCU_WindExitSpd : 39|4@0+ (1,0) [0|15] "" PDCUFL
+BO_ 717 I_LDCU_PowerSt: 24 LDCU
+ SG_ I_FLWinPosStFB : 142|8@0+ (0.5,0) [0|100] "percent" PDCUFL
+ SG_ I_LDCU_RLWinPosStFB : 150|8@0+ (0.5,0) [0|100] "percent" PDCUFL
+BO_ 632 I_TDCU_BodySysSt: 16 TDCU
+ SG_ I_RLDoorAjarSt : 20|1@0+ (1,0) [0|1] "" PDCUFL
+ SG_ I_RRDoorAjarSt : 19|1@0+ (1,0) [0|1] "" PDCUFL
+ SG_ I_RLDoorOpenSt : 18|1@0+ (1,0) [0|1] "" PDCUFL
+ SG_ I_RRDoorOpenSt : 17|1@0+ (1,0) [0|1] "" PDCUFL
+BO_ 773 I_TDCU_BodySysInfo: 32 TDCU
+ SG_ I_TgatePosSts : 13|3@0+ (1,0) [0|4] "" PDCUFL
+BO_ 538 I_PDCUFL_SysInfo: 12 PDCUFL
+ SG_ I_FLPwrDoorOpenTrigger : 7|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ I_FLPwrDoorCloseTrigger : 3|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ I_FLPwrDoorFollowUpFlag : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ I_FLPwrDoorInitSts : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ I_FL_PwrDoorDriveCurrent : 11|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ I_FLPwrDoorStopReason : 19|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ I_FLPwrDoorSysErrFlag : 27|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ I_FLPwrDoorRampFlag : 26|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ I_FLPwrMotorFault : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ I_FLPwrDoorHallFault : 39|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ I_FLPwrDoorAntiPinchSts : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ I_FLPwrDoorAntiCollisionSts : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ I_FLPwrDoorOpenPercent : 35|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ I_FLPwrDoorHallCount : 43|12@0+ (1,0) [0|4095] "" Vector__XXX
+ SG_ I_FLPwrDoorRunningSts : 63|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ I_FLPwrDoorGsensorSts : 59|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ I_FLPwrDoorAntiplaySts : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ I_FLTimeoutRemind : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ I_FLDoorAngleX : 71|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ I_FLDoorAngleY : 65|6@0+ (1,0) [0|63] "" Vector__XXX
+BO_ 385 I_PwrDoorSysInfo1: 8 LDCU
+ SG_ I_FL_PowerDoorMoveCmd : 7|8@0+ (1,0) [0|255] "" PDCUFL
+ SG_ I_RL_PowerDoorMoveCmd : 15|8@0+ (1,0) [0|255] "" PDCUFL
+ SG_ I_FR_PowerDoorMoveCmd : 23|8@0+ (1,0) [0|255] "" PDCUFL
+ SG_ I_RR_PowerDoorMoveCmd : 31|8@0+ (1,0) [0|255] "" PDCUFL
+ SG_ I_FL_PwrDoorTargetPos : 39|8@0+ (1,0) [0|255] "" PDCUFL
+ SG_ I_RL_PwrDoorTargetPos : 47|8@0+ (1,0) [0|255] "" PDCUFL
+ SG_ I_FR_PwrDoorTargetPos : 55|8@0+ (1,0) [0|255] "" PDCUFL
+ SG_ I_RR_PwrDoorTargetPos : 63|8@0+ (1,0) [0|255] "" PDCUFL
+BO_ 295 I_IPB_SpdInfoF: 8 CDCU
+ SG_ I_ESP_VehSpd : 39|15@0+ (0.01,0) [0|239.99] "kmph" PDCUFL
+ SG_ I_ESP_VehSpdVD : 53|2@0+ (1,0) [0|3] "" PDCUFL
+BO_ 279 I_LDCU_SysSt: 8 CDCU
+ SG_ I_LDCU_ExterTemp : 15|8@0+ (0.5,-40) [-40|87.5] "degC" PDCUFL
+ SG_ I_LDCU_ExterTempVD : 23|1@0+ (1,0) [0|1] "" PDCUFL
+BO_ 933 I_TBOX_TimeInfo: 8 LDCU
+ SG_ I_TBOX_CDCU_RTCDate_Second : 45|6@0+ (1,0) [0|60] "" PDCUFL
+ SG_ I_TBOX_CDCU_RTCDate_Minute : 37|6@0+ (1,0) [0|60] "" PDCUFL
+ SG_ I_TBOX_CDCU_RTCDate_Hour : 28|5@0+ (1,0) [0|24] "" PDCUFL
+ SG_ I_TBOX_CDCU_RTCDate_Day : 20|5@0+ (1,0) [0|31] "" PDCUFL
+ SG_ I_TBOX_CDCU_RTCDate_Month : 11|4@0+ (1,0) [0|12] "" PDCUFL
+ SG_ I_TBOX_CDCU_RTCDate_Year : 4|5@0+ (1,2015) [2015|2046] "" PDCUFL
+BO_ 1708 I_TESTER_PDCUFL_DiagReq: 64 Tester
+ SG_ I_TETSER_PDCUFL_DiagReq_Sig : 7|64@0+ (1,0) [0|65535] "" PDCUFL
+BO_ 1740 I_PDCUFL_TESTER_DiagReq: 64 PDCUFL
+ SG_ I_PDCUFL_TETSER_DiagReq_Sig : 7|64@0+ (1,0) [0|65535] "" Vector__XXX
+BO_ 1741 I_PDCUFR_TESTER_DiagReq: 64 PDCUFL
+ SG_ I_PDCUFR_TETSER_DiagReq_Sig : 7|64@0+ (1,0) [0|65535] "" Vector__XXX
+
+ BO_ 1129 FLDCU_NM: 8 FLDCU
+ SG_ FLDCU_ActiveWakeupStatus : 12|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_NMStatus : 22|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_PartialNetworkbit : 14|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_RepeatMessageReq : 8|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_SourceAddress : 7|8@0+ (1,0) [0|255] ""  Vector_XXX
+ SG_ FLDCU_StaywakeRsn_Diag : 25|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_StaywakeRsn_HwACCorON : 26|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_StaywakeRsn_PowerMode : 24|1@0+ (1,0) [0|1] ""  Vector_XXX
+ SG_ FLDCU_WakeUpRsn : 21|6@0+ (1,0) [0|63] ""  Vector_XXX
+
+ BO_ 1035 FBCM_NM: 8 Vector_XXX
+ SG_ FBCM_ActiveWakeupStatus : 12|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_NMStatus : 22|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_PartialNetworkbit : 14|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_RepeatMessageReq : 8|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_SourceAddress : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_BackLghtDrv : 42|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_BraPedSwClos : 30|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_ChildLckDrv : 32|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_FLDoorPullDrv : 35|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_FourDoorLckDrv : 31|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_FRDoorPullDrv : 36|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_FrtFootLght : 45|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HandleDrive : 47|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HardwireACC : 27|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HardwireON : 26|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HazdLapTrig : 29|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HighBeamDrv : 41|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HndlLghtDrv : 46|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_HornDrive : 33|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_LowBeamDrv : 40|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_MirFoldDrv : 34|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_PosLghtDrv : 39|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_PowSavMod : 24|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_ReservedRsn : 28|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_RoofLampDrv : 43|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_StrgWhlAdjt : 37|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_TurnLghtDrv : 44|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_UDSActive : 25|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_StaywakeRsn_WindowDrv : 38|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FBCM_WakeUpRsn : 21|6@0+ (1,0) [0|63] ""  FLDCU
+
+BO_ 1130 FRDCU_NM: 8 Vector_XXX
+ SG_ FRDCU_ActiveWakeupStatus : 12|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_NMStatus : 22|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_PartialNetworkbit : 14|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_RepeatMessageReq : 8|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_SourceAddress : 7|8@0+ (1,0) [0|255] ""  FLDCU
+ SG_ FRDCU_StaywakeRsn_Diag : 25|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_StaywakeRsn_HwACCorON : 26|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_StaywakeRsn_PowerMode : 24|1@0+ (1,0) [0|1] ""  FLDCU
+ SG_ FRDCU_WakeUpRsn : 21|6@0+ (1,0) [0|63] ""  FLDCU
+
+
+CM_ BO_ 548 "IDS";
+CM_ BO_ 550 "IDS，合并了248、629";
+CM_ BO_ 549 "IDS";
+CM_ BO_ 794 "合并了2FD、2FE、302、303、309、320、571、2FB、218";
+CM_ SG_ 794 I_FRWinPosStFB "Windowpositionstatus";
+CM_ SG_ 794 I_RDCU_RRWinPosStFB "Windowpositionstatus";
+CM_ SG_ 794 I_RDCU_WindExitSpd "FrontCockpit";
+CM_ BO_ 717 "IDS，合并了ICAN_0x319/0x289/0x318";
+CM_ SG_ 717 I_FLWinPosStFB "Windowpositionstatus";
+CM_ SG_ 717 I_LDCU_RLWinPosStFB "Windowpositionstatus";
+CM_ BO_ 773 "合并了0x2C4";
+CM_ BO_ 295 "IDS";
+CM_ SG_ 295 I_ESP_VehSpd "valid:0x0~0x5DBF
+invalidvalve/Defaultvalue:7FFF";
+CM_ SG_ 279 I_LDCU_ExterTemp "Externaltemperature";
+
+
+BA_DEF_ BO_  "AliveTimeout" INT 0 100000; 
+BA_DEF_ BO_  "XcpResp" ENUM  "Yes","No";
+BA_DEF_ BO_  "XcpReq" ENUM  "Yes","No";
+BA_DEF_ BO_  "DiagDCM" ENUM  "Yes","No";
+BA_DEF_ SG_  "InvalidHex" STRING ;
+BA_DEF_ SG_  "NWM_WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "int","float","undef";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 100000000000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "NetworkInitializationCommand" ENUM  "No","Yes";
+BA_DEF_ BO_  "NetworkWakeUp" ENUM  "No","Yes";
+BA_DEF_ BO_  "NetworkInitialization" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 100000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 100;
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 15000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "FixedPeriodic","Event","EnabledPeriodic","Enable","NotUsed","EventPeriodic","NotUsed","NotUsed","NoMsgSendType";
+BA_DEF_ BO_  "TpTxIndex" INT 0 10000;
+BA_DEF_ BU_  "GenNodSleepTime" INT 0 1000000;
+BA_DEF_ BU_  "NmCAN" INT 1 2;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NetworkInitializationUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 255;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "Project" STRING ;
+BA_DEF_  "Version" STRING ;
+BA_DEF_  "Date" STRING ;
+BA_DEF_  "Author" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "NmBaseAddress" HEX 0 2047;
+BA_DEF_  "NmMessageCount" INT 0 256;
+BA_DEF_  "SamplePointMax" FLOAT 0 100; 
+BA_DEF_DEF_  "AliveTimeout" 0;
+BA_DEF_DEF_  "XcpResp" "No";
+BA_DEF_DEF_  "XcpReq" "No";
+BA_DEF_DEF_  "DiagDCM" "No";
+BA_DEF_DEF_  "InvalidHex" "";
+BA_DEF_DEF_  "NWM_WakeupAllowed" "No";
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "GenSigEVName" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "NetworkInitializationCommand" "No";
+BA_DEF_DEF_  "NetworkWakeUp" "No";
+BA_DEF_DEF_  "NetworkInitialization" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 3;
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "TpTxIndex" 0;
+BA_DEF_DEF_  "GenNodSleepTime" 0;
+BA_DEF_DEF_  "NmCAN" 1;
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NetworkInitializationUsed" "No";
+BA_DEF_DEF_  "NmNode" "No";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "ILUsed" "";
+BA_DEF_DEF_  "Manufacturer" "XPeng";
+BA_DEF_DEF_  "Project" "H93_F30";
+BA_DEF_DEF_  "Version" "N";
+BA_DEF_DEF_  "Date" "N";
+BA_DEF_DEF_  "Author" "LiJiaqi";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "NmMessageCount" 256;
+BA_DEF_DEF_  "SamplePointMax" 81.25;
+
+
+
+
+BA_ "NmStationAddress" BU_ CDCU 33;
+BA_ "NmStationAddress" BU_ XPU 18;
+BA_ "NmStationAddress" BU_ FPU 42;
+BA_ "NmStationAddress" BU_ RDCU 226;
+BA_ "NmStationAddress" BU_ LDCU 225;
+BA_ "NmStationAddress" BU_ MSMRL 76;
+BA_ "NmStationAddress" BU_ MSMRR 26;
+BA_ "NmStationAddress" BU_ IMS 115;
+BA_ "NmStationAddress" BU_ TDCU 114;
+BA_ "NmStationAddress" BU_ HUD 62;
+BA_ "NmStationAddress" BU_ PDCUFL 172;
+BA_ "NmStationAddress" BU_ PDCUFR 173;
+BA_ "NmStationAddress" BU_ PDCURL 174;
+BA_ "NmStationAddress" BU_ PDCURR 175;
+BA_ "NmStationAddress" BU_ VLMU 56;
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "ICAN";
+BA_ "SamplePointMax" 81.25;
+BA_ "Version" "V10";
+BA_ "Date" "2025-04-16";
+BA_ "VFrameFormat" BO_ 548 14;
+BA_ "GenMsgSendType" BO_ 548 0;
+BA_ "GenMsgCycleTime" BO_ 548 40;
+BA_ "NmMessage" BO_ 548 0;
+BA_ "AliveTimeout" BO_ 548 400;
+BA_ "GenSigStartValue" SG_ 548 I_FLDoorAjarSt 0;
+BA_ "VFrameFormat" BO_ 550 14;
+BA_ "GenMsgSendType" BO_ 550 0;
+BA_ "GenMsgCycleTime" BO_ 550 40;
+BA_ "NmMessage" BO_ 550 0;
+BA_ "AliveTimeout" BO_ 550 400;
+BA_ "GenSigStartValue" SG_ 550 I_FLDoorOpenSt 0;
+BA_ "VFrameFormat" BO_ 549 14;
+BA_ "GenMsgSendType" BO_ 549 0;
+BA_ "GenMsgCycleTime" BO_ 549 40;
+BA_ "NmMessage" BO_ 549 0;
+BA_ "AliveTimeout" BO_ 549 400;
+BA_ "GenSigStartValue" SG_ 549 I_FRDoorAjarSt 0;
+BA_ "GenSigStartValue" SG_ 549 I_FRDoorOpenSt 0;
+BA_ "VFrameFormat" BO_ 794 14;
+BA_ "GenMsgSendType" BO_ 794 0;
+BA_ "GenMsgCycleTime" BO_ 794 100;
+BA_ "NmMessage" BO_ 794 0;
+BA_ "AliveTimeout" BO_ 794 1000;
+BA_ "GenSigStartValue" SG_ 794 I_RDCU_AirIntakeSt 0;
+BA_ "GenSigStartValue" SG_ 794 I_FRWinPosStFB 0;
+BA_ "InvalidHex" SG_ 794 I_FRWinPosStFB "0xFF";
+BA_ "GenSigStartValue" SG_ 794 I_RDCU_RRWinPosStFB 0;
+BA_ "InvalidHex" SG_ 794 I_RDCU_RRWinPosStFB "0xFF";
+BA_ "GenSigStartValue" SG_ 794 I_RDCU_WindExitSpd 0;
+BA_ "VFrameFormat" BO_ 717 14;
+BA_ "GenMsgSendType" BO_ 717 0;
+BA_ "GenMsgCycleTime" BO_ 717 100;
+BA_ "NmMessage" BO_ 717 0;
+BA_ "AliveTimeout" BO_ 717 1000;
+BA_ "GenSigStartValue" SG_ 717 I_FLWinPosStFB 0;
+BA_ "InvalidHex" SG_ 717 I_FLWinPosStFB "0xFF";
+BA_ "GenSigStartValue" SG_ 717 I_LDCU_RLWinPosStFB 0;
+BA_ "InvalidHex" SG_ 717 I_LDCU_RLWinPosStFB "0xFF";
+BA_ "VFrameFormat" BO_ 632 14;
+BA_ "GenMsgSendType" BO_ 632 0;
+BA_ "GenMsgCycleTime" BO_ 632 40;
+BA_ "NmMessage" BO_ 632 0;
+BA_ "AliveTimeout" BO_ 632 400;
+BA_ "GenSigStartValue" SG_ 632 I_RLDoorAjarSt 0;
+BA_ "GenSigStartValue" SG_ 632 I_RRDoorAjarSt 0;
+BA_ "GenSigStartValue" SG_ 632 I_RLDoorOpenSt 0;
+BA_ "GenSigStartValue" SG_ 632 I_RRDoorOpenSt 0;
+BA_ "VFrameFormat" BO_ 773 14;
+BA_ "GenMsgSendType" BO_ 773 0;
+BA_ "GenMsgCycleTime" BO_ 773 100;
+BA_ "NmMessage" BO_ 773 0;
+BA_ "AliveTimeout" BO_ 773 1000;
+BA_ "GenSigStartValue" SG_ 773 I_TgatePosSts 0;
+BA_ "VFrameFormat" BO_ 538 14;
+BA_ "GenMsgSendType" BO_ 538 0;
+BA_ "GenMsgCycleTime" BO_ 538 40;
+BA_ "NmMessage" BO_ 538 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorOpenTrigger 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorCloseTrigger 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorFollowUpFlag 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorInitSts 0;
+BA_ "GenSigStartValue" SG_ 538 I_FL_PwrDoorDriveCurrent 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorStopReason 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorSysErrFlag 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorRampFlag 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrMotorFault 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorHallFault 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorAntiPinchSts 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorAntiCollisionSts 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorOpenPercent 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorHallCount 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorRunningSts 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorGsensorSts 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLPwrDoorAntiplaySts 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLTimeoutRemind 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLDoorAngleX 0;
+BA_ "GenSigStartValue" SG_ 538 I_FLDoorAngleY 0;
+BA_ "VFrameFormat" BO_ 385 14;
+BA_ "GenMsgSendType" BO_ 385 0;
+BA_ "GenMsgCycleTime" BO_ 385 20;
+BA_ "NmMessage" BO_ 385 0;
+BA_ "AliveTimeout" BO_ 385 200;
+BA_ "GenSigStartValue" SG_ 385 I_FL_PowerDoorMoveCmd 0;
+BA_ "GenSigStartValue" SG_ 385 I_RL_PowerDoorMoveCmd 0;
+BA_ "GenSigStartValue" SG_ 385 I_FR_PowerDoorMoveCmd 0;
+BA_ "GenSigStartValue" SG_ 385 I_RR_PowerDoorMoveCmd 0;
+BA_ "GenSigStartValue" SG_ 385 I_FL_PwrDoorTargetPos 255;
+BA_ "GenSigStartValue" SG_ 385 I_RL_PwrDoorTargetPos 255;
+BA_ "GenSigStartValue" SG_ 385 I_FR_PwrDoorTargetPos 255;
+BA_ "GenSigStartValue" SG_ 385 I_RR_PwrDoorTargetPos 255;
+BA_ "VFrameFormat" BO_ 295 14;
+BA_ "GenMsgSendType" BO_ 295 0;
+BA_ "GenMsgCycleTime" BO_ 295 100;
+BA_ "NmMessage" BO_ 295 0;
+BA_ "AliveTimeout" BO_ 295 1000;
+BA_ "GenSigStartValue" SG_ 295 I_ESP_VehSpd 0;
+BA_ "InvalidHex" SG_ 295 I_ESP_VehSpd "0x7FFF";
+BA_ "GenSigStartValue" SG_ 295 I_ESP_VehSpdVD 0;
+BA_ "VFrameFormat" BO_ 279 14;
+BA_ "GenMsgSendType" BO_ 279 0;
+BA_ "GenMsgCycleTime" BO_ 279 10;
+BA_ "NmMessage" BO_ 279 0;
+BA_ "AliveTimeout" BO_ 279 100;
+BA_ "GenSigStartValue" SG_ 279 I_LDCU_ExterTemp 120;
+BA_ "GenSigStartValue" SG_ 279 I_LDCU_ExterTempVD 0;
+BA_ "VFrameFormat" BO_ 933 14;
+BA_ "GenMsgSendType" BO_ 933 0;
+BA_ "GenMsgCycleTime" BO_ 933 1000;
+BA_ "NmMessage" BO_ 933 0;
+BA_ "AliveTimeout" BO_ 933 10000;
+BA_ "GenSigStartValue" SG_ 933 I_TBOX_CDCU_RTCDate_Second 0;
+BA_ "GenSigStartValue" SG_ 933 I_TBOX_CDCU_RTCDate_Minute 0;
+BA_ "GenSigStartValue" SG_ 933 I_TBOX_CDCU_RTCDate_Hour 0;
+BA_ "GenSigStartValue" SG_ 933 I_TBOX_CDCU_RTCDate_Day 0;
+BA_ "GenSigStartValue" SG_ 933 I_TBOX_CDCU_RTCDate_Month 0;
+BA_ "GenSigStartValue" SG_ 933 I_TBOX_CDCU_RTCDate_Year 0;
+BA_ "VFrameFormat" BO_ 1708 14;
+BA_ "GenMsgSendType" BO_ 1708 1;
+BA_ "GenMsgNrOfRepetition" BO_ 1708 3;
+BA_ "GenMsgCycleTimeFast" BO_ 1708 10;
+BA_ "NmMessage" BO_ 1708 0;
+BA_ "GenSigStartValue" SG_ 1708 I_TETSER_PDCUFL_DiagReq_Sig 0;
+BA_ "GenSigSendType" SG_ 1708 I_TETSER_PDCUFL_DiagReq_Sig 3;
+BA_ "VFrameFormat" BO_ 1740 14;
+BA_ "GenMsgSendType" BO_ 1740 1;
+BA_ "GenMsgNrOfRepetition" BO_ 1740 3;
+BA_ "GenMsgCycleTimeFast" BO_ 1740 10;
+BA_ "NmMessage" BO_ 1740 0;
+BA_ "GenSigStartValue" SG_ 1740 I_PDCUFL_TETSER_DiagReq_Sig 0;
+BA_ "GenSigSendType" SG_ 1740 I_PDCUFL_TETSER_DiagReq_Sig 3;
+BA_ "VFrameFormat" BO_ 1741 14;
+BA_ "GenMsgSendType" BO_ 1741 1;
+BA_ "GenMsgNrOfRepetition" BO_ 1741 3;
+BA_ "GenMsgCycleTimeFast" BO_ 1741 10;
+BA_ "NmMessage" BO_ 1741 0;
+BA_ "GenSigStartValue" SG_ 1741 I_PDCUFR_TETSER_DiagReq_Sig 0;
+BA_ "GenSigSendType" SG_ 1741 I_PDCUFR_TETSER_DiagReq_Sig 3;
+
+
+VAL_ 548 I_FLDoorAjarSt 0 "Closed" 1 "Open" ;
+VAL_ 550 I_FLDoorOpenSt 0 "Closed" 1 "Open" ;
+VAL_ 549 I_FRDoorAjarSt 0 "Closed" 1 "Open" ;
+VAL_ 549 I_FRDoorOpenSt 0 "Closed" 1 "Open" ;
+VAL_ 794 I_RDCU_AirIntakeSt 0 "Invalid" 1 "Inneraircirculation" 2 "outsideaircirculation" 3 "Error" ;
+VAL_ 794 I_RDCU_WindExitSpd 0 "off" 1 "Level1" 2 "Level2" 3 "Level3" 4 "Level4" 5 "Level5" 6 "Level6" 7 "Level7" 8 "Level8" 9 "Level9" 10 "Level10" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Reserved" 15 "Error" ;
+VAL_ 632 I_RLDoorAjarSt 0 "Closed" 1 "Open" ;
+VAL_ 632 I_RRDoorAjarSt 0 "Closed" 1 "Open" ;
+VAL_ 632 I_RLDoorOpenSt 0 "Closed" 1 "Open" ;
+VAL_ 632 I_RRDoorOpenSt 0 "Closed" 1 "Open" ;
+VAL_ 773 I_TgatePosSts 0 "Unknown" 1 "Full Closed" 2 "Half Closed" 3 "Opened" 4 "Full Opened" ;
+VAL_ 538 I_FLPwrDoorOpenTrigger 0 " Init" 1 " LDCU Control              " 2 " AntiPinch Trigger            " 3 " Power Assist Trigger       " 4 " Reserved" 5 " Reserved" 6 " Reserved" 7 " Reserved" 8 " Reserved" ;
+VAL_ 538 I_FLPwrDoorCloseTrigger 0 " Init" 1 " LDCU Control                  " 2 " AntiCollision Trigger             " 3 " Power Assist Trigger             " 4 " Steep Trigger                   " 5 " Hovering Timeout Trigger     " 6 " Reserved" 7 " Reserved" 8 " Reserved" ;
+VAL_ 538 I_FLPwrDoorFollowUpFlag 0 " Init" 1 " Follow Up Open    " 2 " Follow Up Close" ;
+VAL_ 538 I_FLPwrDoorInitSts 0 " not Init" 1 " Initialing" 2 " Initialed" ;
+VAL_ 538 I_FLPwrDoorStopReason 0 " Normal" 1 " LDCU Control          " 2 " Voltage Abnormal   " 3 " Motor Error             " 4 " AntiPlay                 " 5 " Ramp Steep           " 6 " Motor Overtime       " 7 " Hall Error              " 8 " AntiPinch               " 9 " AntiCollision          " 10 " Angle Exceed         " 11 " Reserved" 12 " Reserved" 13 " Reserved" 14 " Reserved" ;
+VAL_ 538 I_FLPwrDoorSysErrFlag 0 " Inactive" 1 " active" ;
+VAL_ 538 I_FLPwrDoorRampFlag 0 " Inactive" 1 " active" ;
+VAL_ 538 I_FLPwrMotorFault 0 " Normal" 1 " short" 2 " Open" 3 " Over Current" ;
+VAL_ 538 I_FLPwrDoorHallFault 0 " Normal" 1 " 1 hall Fault" 2 " 2 hall Fault" 3 " all hall Fault" ;
+VAL_ 538 I_FLPwrDoorAntiPinchSts 0 " Inactive" 1 " active" ;
+VAL_ 538 I_FLPwrDoorAntiCollisionSts 0 " Inactive" 1 " active" ;
+VAL_ 538 I_FLPwrDoorOpenPercent 0 " Door opening setting percentage" 1 " Door opening setting percentage" 2 " Door opening setting percentage" 3 " Door opening setting percentage" 4 " Door opening setting percentage" 5 " Door opening setting percentage" 6 " Door opening setting percentage" 7 " Door opening setting percentage" 8 " Door opening setting percentage" 9 " Door opening setting percentage" 10 " Door opening setting percentage" 11 " Door opening setting percentage" 12 " Door opening setting percentage" 13 " Door opening setting percentage" 14 " Door opening setting percentage" 15 " Door opening setting percentage" 16 " Door opening setting percentage" 17 " Door opening setting percentage" 18 " Door opening setting percentage" 19 " Door opening setting percentage" 20 " Door opening setting percentage" 21 " Door opening setting percentage" 22 " Door opening setting percentage" 23 " Door opening setting percentage" 24 " Door opening setting percentage" 25 " Door opening setting percentage" 26 " Door opening setting percentage" 27 " Door opening setting percentage" 28 " Door opening setting percentage" 29 " Door opening setting percentage" 30 " Door opening setting percentage" 31 " Door opening setting percentage" 32 " Door opening setting percentage" 33 " Door opening setting percentage" 34 " Door opening setting percentage" 35 " Door opening setting percentage" 36 " Door opening setting percentage" 37 " Door opening setting percentage" 38 " Door opening setting percentage" 39 " Door opening setting percentage" 40 " Door opening setting percentage" 41 " Door opening setting percentage" 42 " Door opening setting percentage" 43 " Door opening setting percentage" 44 " Door opening setting percentage" 45 " Door opening setting percentage" 46 " Door opening setting percentage" 47 " Door opening setting percentage" 48 " Door opening setting percentage" 49 " Door opening setting percentage" 50 " Door opening setting percentage" 51 " Door opening setting percentage" 52 " Door opening setting percentage" 53 " Door opening setting percentage" 54 " Door opening setting percentage" 55 " Door opening setting percentage" 56 " Door opening setting percentage" 57 " Door opening setting percentage" 58 " Door opening setting percentage" 59 " Door opening setting percentage" 60 " Door opening setting percentage" 61 " Door opening setting percentage" 62 " Door opening setting percentage" 63 " Door opening setting percentage" 64 " Door opening setting percentage" 65 " Door opening setting percentage" 66 " Door opening setting percentage" 67 " Door opening setting percentage" 68 " Door opening setting percentage" 69 " Door opening setting percentage" 70 " Door opening setting percentage" 71 " Door opening setting percentage" 72 " Door opening setting percentage" 73 " Door opening setting percentage" 74 " Door opening setting percentage" 75 " Door opening setting percentage" 76 " Door opening setting percentage" 77 " Door opening setting percentage" 78 " Door opening setting percentage" 79 " Door opening setting percentage" 80 " Door opening setting percentage" 81 " Door opening setting percentage" 82 " Door opening setting percentage" 83 " Door opening setting percentage" 84 " Door opening setting percentage" 85 " Door opening setting percentage" 86 " Door opening setting percentage" 87 " Door opening setting percentage" 88 " Door opening setting percentage" 89 " Door opening setting percentage" 90 " Door opening setting percentage" 91 " Door opening setting percentage" 92 " Door opening setting percentage" 93 " Door opening setting percentage" 94 " Door opening setting percentage" 95 " Door opening setting percentage" 96 " Door opening setting percentage" 97 " Door opening setting percentage" 98 " Door opening setting percentage" 99 " Door opening setting percentage" 100 " Door opening setting percentage" 127 " invalid" ;
+VAL_ 538 I_FLPwrDoorRunningSts 0 "Initial " 1 "Closed " 2 "Opening " 3 "Closing " 4 "Pause " 5 "Open Finished" ;
+VAL_ 538 I_FLPwrDoorGsensorSts 0 "initialized" 1 "initialized with deviation" 2 "initialized error" 3 "not initialized" ;
+VAL_ 538 I_FLPwrDoorAntiplaySts 0 " Inactive" 1 " Active" ;
+VAL_ 538 I_FLTimeoutRemind 0 " Inactive" 1 " Active" ;
+VAL_ 538 I_FLDoorAngleX 0 "Inclination value" 1 "Inclination value" 2 "Inclination value" 3 "Inclination value" 4 "Inclination value" 5 "Inclination value" 6 "Inclination value" 7 "Inclination value" 8 "Inclination value" 9 "Inclination value" 10 "Inclination value" 11 "Inclination value" 12 "Inclination value" 13 "Inclination value" 14 "Inclination value" 15 "Inclination value" 16 "Inclination value" 17 "Inclination value" 18 "Inclination value" 19 "Inclination value" 20 "Inclination value" 21 "Inclination value" 22 "Inclination value" 23 "Inclination value" 24 "Inclination value" 25 "Inclination value" 26 "Inclination value" 27 "Inclination value" 28 "Inclination value" 29 "Inclination value" 30 "Inclination value" 31 "Inclination value" 32 "Inclination value" 33 "Inclination value" 34 "Inclination value" 35 "Inclination value" 36 "Inclination value" 37 "Inclination value" 38 "Inclination value" 39 "Inclination value" 40 "Inclination value" 41 "Inclination value" 42 "Inclination value" 43 "Inclination value" 44 "Inclination value" 45 "Inclination value" 46 "Inclination value" 47 "Inclination value" 48 "Inclination value" 49 "Inclination value" 50 "Inclination value" 51 "Inclination value" 52 "Inclination value" 53 "Inclination value" 54 "Inclination value" 55 "Inclination value" 56 "Inclination value" 57 "Inclination value" 58 "Inclination value" 59 "Inclination value" 60 "Inclination value" 61 "Inclination value" 62 "Inclination value" 63 "Invalid" ;
+VAL_ 538 I_FLDoorAngleY 0 "Inclination value" 1 "Inclination value" 2 "Inclination value" 3 "Inclination value" 4 "Inclination value" 5 "Inclination value" 6 "Inclination value" 7 "Inclination value" 8 "Inclination value" 9 "Inclination value" 10 "Inclination value" 11 "Inclination value" 12 "Inclination value" 13 "Inclination value" 14 "Inclination value" 15 "Inclination value" 16 "Inclination value" 17 "Inclination value" 18 "Inclination value" 19 "Inclination value" 20 "Inclination value" 21 "Inclination value" 22 "Inclination value" 23 "Inclination value" 24 "Inclination value" 25 "Inclination value" 26 "Inclination value" 27 "Inclination value" 28 "Inclination value" 29 "Inclination value" 30 "Inclination value" 31 "Inclination value" 32 "Inclination value" 33 "Inclination value" 34 "Inclination value" 35 "Inclination value" 36 "Inclination value" 37 "Inclination value" 38 "Inclination value" 39 "Inclination value" 40 "Inclination value" 41 "Inclination value" 42 "Inclination value" 43 "Inclination value" 44 "Inclination value" 45 "Inclination value" 46 "Inclination value" 47 "Inclination value" 48 "Inclination value" 49 "Inclination value" 50 "Inclination value" 51 "Inclination value" 52 "Inclination value" 53 "Inclination value" 54 "Inclination value" 55 "Inclination value" 56 "Inclination value" 57 "Inclination value" 58 "Inclination value" 59 "Inclination value" 60 "Inclination value" 61 "Inclination value" 62 "Inclination value" 63 "Invalid" ;
+VAL_ 385 I_FL_PowerDoorMoveCmd 0 "No Command " 1 "Auto Close " 2 "Auto Open " 3 "Stop " 4 "Step Close " 5 "Step Open " 6 "Reserved " 7 "Reserved" ;
+VAL_ 385 I_RL_PowerDoorMoveCmd 0 "No Command " 1 "Auto Close " 2 "Auto Open " 3 "Stop " 4 "Step Close " 5 "Step Open " 6 "Reserved " 7 "Reserved" ;
+VAL_ 385 I_FR_PowerDoorMoveCmd 0 "No Command " 1 "Auto Close " 2 "Auto Open " 3 "Stop " 4 "Step Close " 5 "Step Open " 6 "Reserved " 7 "Reserved" ;
+VAL_ 385 I_RR_PowerDoorMoveCmd 0 "No Command " 1 "Auto Close " 2 "Auto Open " 3 "Stop " 4 "Step Close " 5 "Step Open " 6 "Reserved " 7 "Reserved" ;
+VAL_ 385 I_FL_PwrDoorTargetPos 0 " 0-100" 1 " 0-100" 2 " 0-100" 3 " 0-100" 4 " 0-100" 5 " 0-100" 6 " 0-100" 7 " 0-100" 8 " 0-100" 9 " 0-100" 10 " 0-100" 11 " 0-100" 12 " 0-100" 13 " 0-100" 14 " 0-100" 15 " 0-100" 16 " 0-100" 17 " 0-100" 18 " 0-100" 19 " 0-100" 20 " 0-100" 21 " 0-100" 22 " 0-100" 23 " 0-100" 24 " 0-100" 25 " 0-100" 26 " 0-100" 27 " 0-100" 28 " 0-100" 29 " 0-100" 30 " 0-100" 31 " 0-100" 32 " 0-100" 33 " 0-100" 34 " 0-100" 35 " 0-100" 36 " 0-100" 37 " 0-100" 38 " 0-100" 39 " 0-100" 40 " 0-100" 41 " 0-100" 42 " 0-100" 43 " 0-100" 44 " 0-100" 45 " 0-100" 46 " 0-100" 47 " 0-100" 48 " 0-100" 49 " 0-100" 50 " 0-100" 51 " 0-100" 52 " 0-100" 53 " 0-100" 54 " 0-100" 55 " 0-100" 56 " 0-100" 57 " 0-100" 58 " 0-100" 59 " 0-100" 60 " 0-100" 61 " 0-100" 62 " 0-100" 63 " 0-100" 64 " 0-100" 65 " 0-100" 66 " 0-100" 67 " 0-100" 68 " 0-100" 69 " 0-100" 70 " 0-100" 71 " 0-100" 72 " 0-100" 73 " 0-100" 74 " 0-100" 75 " 0-100" 76 " 0-100" 77 " 0-100" 78 " 0-100" 79 " 0-100" 80 " 0-100" 81 " 0-100" 82 " 0-100" 83 " 0-100" 84 " 0-100" 85 " 0-100" 86 " 0-100" 87 " 0-100" 88 " 0-100" 89 " 0-100" 90 " 0-100" 91 " 0-100" 92 " 0-100" 93 " 0-100" 94 " 0-100" 95 " 0-100" 96 " 0-100" 97 " 0-100" 98 " 0-100" 99 " 0-100" 100 " 0-100" 101 "reserved" 102 "reserved" 103 "reserved" 104 "reserved" 105 "reserved" 106 "reserved" 107 "reserved" 108 "reserved" 109 "reserved" 110 "reserved" 111 "reserved" 112 "reserved" 113 "reserved" 114 "reserved" 115 "reserved" 116 "reserved" 117 "reserved" 118 "reserved" 119 "reserved" 120 "reserved" 121 "reserved" 122 "reserved" 123 "reserved" 124 "reserved" 125 "reserved" 126 "reserved" 127 "reserved" 128 "reserved" 129 "reserved" 130 "reserved" 131 "reserved" 132 "reserved" 133 "reserved" 134 "reserved" 135 "reserved" 136 "reserved" 137 "reserved" 138 "reserved" 139 "reserved" 140 "reserved" 141 "reserved" 142 "reserved" 143 "reserved" 144 "reserved" 145 "reserved" 146 "reserved" 147 "reserved" 148 "reserved" 149 "reserved" 150 "reserved" 151 "reserved" 152 "reserved" 153 "reserved" 154 "reserved" 155 "reserved" 156 "reserved" 157 "reserved" 158 "reserved" 159 "reserved" 160 "reserved" 161 "reserved" 162 "reserved" 163 "reserved" 164 "reserved" 165 "reserved" 166 "reserved" 167 "reserved" 168 "reserved" 169 "reserved" 170 "reserved" 171 "reserved" 172 "reserved" 173 "reserved" 174 "reserved" 175 "reserved" 176 "reserved" 177 "reserved" 178 "reserved" 179 "reserved" 180 "reserved" 181 "reserved" 182 "reserved" 183 "reserved" 184 "reserved" 185 "reserved" 186 "reserved" 187 "reserved" 188 "reserved" 189 "reserved" 190 "reserved" 191 "reserved" 192 "reserved" 193 "reserved" 194 "reserved" 195 "reserved" 196 "reserved" 197 "reserved" 198 "reserved" 199 "reserved" 200 "reserved" 201 "reserved" 202 "reserved" 203 "reserved" 204 "reserved" 205 "reserved" 206 "reserved" 207 "reserved" 208 "reserved" 209 "reserved" 210 "reserved" 211 "reserved" 212 "reserved" 213 "reserved" 214 "reserved" 215 "reserved" 216 "reserved" 217 "reserved" 218 "reserved" 219 "reserved" 220 "reserved" 221 "reserved" 222 "reserved" 223 "reserved" 224 "reserved" 225 "reserved" 226 "reserved" 227 "reserved" 228 "reserved" 229 "reserved" 230 "reserved" 231 "reserved" 232 "reserved" 233 "reserved" 234 "reserved" 235 "reserved" 236 "reserved" 237 "reserved" 238 "reserved" 239 "reserved" 240 "reserved" 241 "reserved" 242 "reserved" 243 "reserved" 244 "reserved" 245 "reserved" 246 "reserved" 247 "reserved" 248 "reserved" 249 "reserved" 250 "reserved" 251 "reserved" 252 "reserved" 253 "reserved" 254 "reserved" 255 "no command" ;
+VAL_ 385 I_RL_PwrDoorTargetPos 0 " 0-100" 1 " 0-100" 2 " 0-100" 3 " 0-100" 4 " 0-100" 5 " 0-100" 6 " 0-100" 7 " 0-100" 8 " 0-100" 9 " 0-100" 10 " 0-100" 11 " 0-100" 12 " 0-100" 13 " 0-100" 14 " 0-100" 15 " 0-100" 16 " 0-100" 17 " 0-100" 18 " 0-100" 19 " 0-100" 20 " 0-100" 21 " 0-100" 22 " 0-100" 23 " 0-100" 24 " 0-100" 25 " 0-100" 26 " 0-100" 27 " 0-100" 28 " 0-100" 29 " 0-100" 30 " 0-100" 31 " 0-100" 32 " 0-100" 33 " 0-100" 34 " 0-100" 35 " 0-100" 36 " 0-100" 37 " 0-100" 38 " 0-100" 39 " 0-100" 40 " 0-100" 41 " 0-100" 42 " 0-100" 43 " 0-100" 44 " 0-100" 45 " 0-100" 46 " 0-100" 47 " 0-100" 48 " 0-100" 49 " 0-100" 50 " 0-100" 51 " 0-100" 52 " 0-100" 53 " 0-100" 54 " 0-100" 55 " 0-100" 56 " 0-100" 57 " 0-100" 58 " 0-100" 59 " 0-100" 60 " 0-100" 61 " 0-100" 62 " 0-100" 63 " 0-100" 64 " 0-100" 65 " 0-100" 66 " 0-100" 67 " 0-100" 68 " 0-100" 69 " 0-100" 70 " 0-100" 71 " 0-100" 72 " 0-100" 73 " 0-100" 74 " 0-100" 75 " 0-100" 76 " 0-100" 77 " 0-100" 78 " 0-100" 79 " 0-100" 80 " 0-100" 81 " 0-100" 82 " 0-100" 83 " 0-100" 84 " 0-100" 85 " 0-100" 86 " 0-100" 87 " 0-100" 88 " 0-100" 89 " 0-100" 90 " 0-100" 91 " 0-100" 92 " 0-100" 93 " 0-100" 94 " 0-100" 95 " 0-100" 96 " 0-100" 97 " 0-100" 98 " 0-100" 99 " 0-100" 100 " 0-100" 101 "reserved" 102 "reserved" 103 "reserved" 104 "reserved" 105 "reserved" 106 "reserved" 107 "reserved" 108 "reserved" 109 "reserved" 110 "reserved" 111 "reserved" 112 "reserved" 113 "reserved" 114 "reserved" 115 "reserved" 116 "reserved" 117 "reserved" 118 "reserved" 119 "reserved" 120 "reserved" 121 "reserved" 122 "reserved" 123 "reserved" 124 "reserved" 125 "reserved" 126 "reserved" 127 "reserved" 128 "reserved" 129 "reserved" 130 "reserved" 131 "reserved" 132 "reserved" 133 "reserved" 134 "reserved" 135 "reserved" 136 "reserved" 137 "reserved" 138 "reserved" 139 "reserved" 140 "reserved" 141 "reserved" 142 "reserved" 143 "reserved" 144 "reserved" 145 "reserved" 146 "reserved" 147 "reserved" 148 "reserved" 149 "reserved" 150 "reserved" 151 "reserved" 152 "reserved" 153 "reserved" 154 "reserved" 155 "reserved" 156 "reserved" 157 "reserved" 158 "reserved" 159 "reserved" 160 "reserved" 161 "reserved" 162 "reserved" 163 "reserved" 164 "reserved" 165 "reserved" 166 "reserved" 167 "reserved" 168 "reserved" 169 "reserved" 170 "reserved" 171 "reserved" 172 "reserved" 173 "reserved" 174 "reserved" 175 "reserved" 176 "reserved" 177 "reserved" 178 "reserved" 179 "reserved" 180 "reserved" 181 "reserved" 182 "reserved" 183 "reserved" 184 "reserved" 185 "reserved" 186 "reserved" 187 "reserved" 188 "reserved" 189 "reserved" 190 "reserved" 191 "reserved" 192 "reserved" 193 "reserved" 194 "reserved" 195 "reserved" 196 "reserved" 197 "reserved" 198 "reserved" 199 "reserved" 200 "reserved" 201 "reserved" 202 "reserved" 203 "reserved" 204 "reserved" 205 "reserved" 206 "reserved" 207 "reserved" 208 "reserved" 209 "reserved" 210 "reserved" 211 "reserved" 212 "reserved" 213 "reserved" 214 "reserved" 215 "reserved" 216 "reserved" 217 "reserved" 218 "reserved" 219 "reserved" 220 "reserved" 221 "reserved" 222 "reserved" 223 "reserved" 224 "reserved" 225 "reserved" 226 "reserved" 227 "reserved" 228 "reserved" 229 "reserved" 230 "reserved" 231 "reserved" 232 "reserved" 233 "reserved" 234 "reserved" 235 "reserved" 236 "reserved" 237 "reserved" 238 "reserved" 239 "reserved" 240 "reserved" 241 "reserved" 242 "reserved" 243 "reserved" 244 "reserved" 245 "reserved" 246 "reserved" 247 "reserved" 248 "reserved" 249 "reserved" 250 "reserved" 251 "reserved" 252 "reserved" 253 "reserved" 254 "reserved" 255 "no command" ;
+VAL_ 385 I_FR_PwrDoorTargetPos 0 " 0-100" 1 " 0-100" 2 " 0-100" 3 " 0-100" 4 " 0-100" 5 " 0-100" 6 " 0-100" 7 " 0-100" 8 " 0-100" 9 " 0-100" 10 " 0-100" 11 " 0-100" 12 " 0-100" 13 " 0-100" 14 " 0-100" 15 " 0-100" 16 " 0-100" 17 " 0-100" 18 " 0-100" 19 " 0-100" 20 " 0-100" 21 " 0-100" 22 " 0-100" 23 " 0-100" 24 " 0-100" 25 " 0-100" 26 " 0-100" 27 " 0-100" 28 " 0-100" 29 " 0-100" 30 " 0-100" 31 " 0-100" 32 " 0-100" 33 " 0-100" 34 " 0-100" 35 " 0-100" 36 " 0-100" 37 " 0-100" 38 " 0-100" 39 " 0-100" 40 " 0-100" 41 " 0-100" 42 " 0-100" 43 " 0-100" 44 " 0-100" 45 " 0-100" 46 " 0-100" 47 " 0-100" 48 " 0-100" 49 " 0-100" 50 " 0-100" 51 " 0-100" 52 " 0-100" 53 " 0-100" 54 " 0-100" 55 " 0-100" 56 " 0-100" 57 " 0-100" 58 " 0-100" 59 " 0-100" 60 " 0-100" 61 " 0-100" 62 " 0-100" 63 " 0-100" 64 " 0-100" 65 " 0-100" 66 " 0-100" 67 " 0-100" 68 " 0-100" 69 " 0-100" 70 " 0-100" 71 " 0-100" 72 " 0-100" 73 " 0-100" 74 " 0-100" 75 " 0-100" 76 " 0-100" 77 " 0-100" 78 " 0-100" 79 " 0-100" 80 " 0-100" 81 " 0-100" 82 " 0-100" 83 " 0-100" 84 " 0-100" 85 " 0-100" 86 " 0-100" 87 " 0-100" 88 " 0-100" 89 " 0-100" 90 " 0-100" 91 " 0-100" 92 " 0-100" 93 " 0-100" 94 " 0-100" 95 " 0-100" 96 " 0-100" 97 " 0-100" 98 " 0-100" 99 " 0-100" 100 " 0-100" 101 "reserved" 102 "reserved" 103 "reserved" 104 "reserved" 105 "reserved" 106 "reserved" 107 "reserved" 108 "reserved" 109 "reserved" 110 "reserved" 111 "reserved" 112 "reserved" 113 "reserved" 114 "reserved" 115 "reserved" 116 "reserved" 117 "reserved" 118 "reserved" 119 "reserved" 120 "reserved" 121 "reserved" 122 "reserved" 123 "reserved" 124 "reserved" 125 "reserved" 126 "reserved" 127 "reserved" 128 "reserved" 129 "reserved" 130 "reserved" 131 "reserved" 132 "reserved" 133 "reserved" 134 "reserved" 135 "reserved" 136 "reserved" 137 "reserved" 138 "reserved" 139 "reserved" 140 "reserved" 141 "reserved" 142 "reserved" 143 "reserved" 144 "reserved" 145 "reserved" 146 "reserved" 147 "reserved" 148 "reserved" 149 "reserved" 150 "reserved" 151 "reserved" 152 "reserved" 153 "reserved" 154 "reserved" 155 "reserved" 156 "reserved" 157 "reserved" 158 "reserved" 159 "reserved" 160 "reserved" 161 "reserved" 162 "reserved" 163 "reserved" 164 "reserved" 165 "reserved" 166 "reserved" 167 "reserved" 168 "reserved" 169 "reserved" 170 "reserved" 171 "reserved" 172 "reserved" 173 "reserved" 174 "reserved" 175 "reserved" 176 "reserved" 177 "reserved" 178 "reserved" 179 "reserved" 180 "reserved" 181 "reserved" 182 "reserved" 183 "reserved" 184 "reserved" 185 "reserved" 186 "reserved" 187 "reserved" 188 "reserved" 189 "reserved" 190 "reserved" 191 "reserved" 192 "reserved" 193 "reserved" 194 "reserved" 195 "reserved" 196 "reserved" 197 "reserved" 198 "reserved" 199 "reserved" 200 "reserved" 201 "reserved" 202 "reserved" 203 "reserved" 204 "reserved" 205 "reserved" 206 "reserved" 207 "reserved" 208 "reserved" 209 "reserved" 210 "reserved" 211 "reserved" 212 "reserved" 213 "reserved" 214 "reserved" 215 "reserved" 216 "reserved" 217 "reserved" 218 "reserved" 219 "reserved" 220 "reserved" 221 "reserved" 222 "reserved" 223 "reserved" 224 "reserved" 225 "reserved" 226 "reserved" 227 "reserved" 228 "reserved" 229 "reserved" 230 "reserved" 231 "reserved" 232 "reserved" 233 "reserved" 234 "reserved" 235 "reserved" 236 "reserved" 237 "reserved" 238 "reserved" 239 "reserved" 240 "reserved" 241 "reserved" 242 "reserved" 243 "reserved" 244 "reserved" 245 "reserved" 246 "reserved" 247 "reserved" 248 "reserved" 249 "reserved" 250 "reserved" 251 "reserved" 252 "reserved" 253 "reserved" 254 "reserved" 255 "no command" ;
+VAL_ 385 I_RR_PwrDoorTargetPos 0 " 0-100" 1 " 0-100" 2 " 0-100" 3 " 0-100" 4 " 0-100" 5 " 0-100" 6 " 0-100" 7 " 0-100" 8 " 0-100" 9 " 0-100" 10 " 0-100" 11 " 0-100" 12 " 0-100" 13 " 0-100" 14 " 0-100" 15 " 0-100" 16 " 0-100" 17 " 0-100" 18 " 0-100" 19 " 0-100" 20 " 0-100" 21 " 0-100" 22 " 0-100" 23 " 0-100" 24 " 0-100" 25 " 0-100" 26 " 0-100" 27 " 0-100" 28 " 0-100" 29 " 0-100" 30 " 0-100" 31 " 0-100" 32 " 0-100" 33 " 0-100" 34 " 0-100" 35 " 0-100" 36 " 0-100" 37 " 0-100" 38 " 0-100" 39 " 0-100" 40 " 0-100" 41 " 0-100" 42 " 0-100" 43 " 0-100" 44 " 0-100" 45 " 0-100" 46 " 0-100" 47 " 0-100" 48 " 0-100" 49 " 0-100" 50 " 0-100" 51 " 0-100" 52 " 0-100" 53 " 0-100" 54 " 0-100" 55 " 0-100" 56 " 0-100" 57 " 0-100" 58 " 0-100" 59 " 0-100" 60 " 0-100" 61 " 0-100" 62 " 0-100" 63 " 0-100" 64 " 0-100" 65 " 0-100" 66 " 0-100" 67 " 0-100" 68 " 0-100" 69 " 0-100" 70 " 0-100" 71 " 0-100" 72 " 0-100" 73 " 0-100" 74 " 0-100" 75 " 0-100" 76 " 0-100" 77 " 0-100" 78 " 0-100" 79 " 0-100" 80 " 0-100" 81 " 0-100" 82 " 0-100" 83 " 0-100" 84 " 0-100" 85 " 0-100" 86 " 0-100" 87 " 0-100" 88 " 0-100" 89 " 0-100" 90 " 0-100" 91 " 0-100" 92 " 0-100" 93 " 0-100" 94 " 0-100" 95 " 0-100" 96 " 0-100" 97 " 0-100" 98 " 0-100" 99 " 0-100" 100 " 0-100" 101 "reserved" 102 "reserved" 103 "reserved" 104 "reserved" 105 "reserved" 106 "reserved" 107 "reserved" 108 "reserved" 109 "reserved" 110 "reserved" 111 "reserved" 112 "reserved" 113 "reserved" 114 "reserved" 115 "reserved" 116 "reserved" 117 "reserved" 118 "reserved" 119 "reserved" 120 "reserved" 121 "reserved" 122 "reserved" 123 "reserved" 124 "reserved" 125 "reserved" 126 "reserved" 127 "reserved" 128 "reserved" 129 "reserved" 130 "reserved" 131 "reserved" 132 "reserved" 133 "reserved" 134 "reserved" 135 "reserved" 136 "reserved" 137 "reserved" 138 "reserved" 139 "reserved" 140 "reserved" 141 "reserved" 142 "reserved" 143 "reserved" 144 "reserved" 145 "reserved" 146 "reserved" 147 "reserved" 148 "reserved" 149 "reserved" 150 "reserved" 151 "reserved" 152 "reserved" 153 "reserved" 154 "reserved" 155 "reserved" 156 "reserved" 157 "reserved" 158 "reserved" 159 "reserved" 160 "reserved" 161 "reserved" 162 "reserved" 163 "reserved" 164 "reserved" 165 "reserved" 166 "reserved" 167 "reserved" 168 "reserved" 169 "reserved" 170 "reserved" 171 "reserved" 172 "reserved" 173 "reserved" 174 "reserved" 175 "reserved" 176 "reserved" 177 "reserved" 178 "reserved" 179 "reserved" 180 "reserved" 181 "reserved" 182 "reserved" 183 "reserved" 184 "reserved" 185 "reserved" 186 "reserved" 187 "reserved" 188 "reserved" 189 "reserved" 190 "reserved" 191 "reserved" 192 "reserved" 193 "reserved" 194 "reserved" 195 "reserved" 196 "reserved" 197 "reserved" 198 "reserved" 199 "reserved" 200 "reserved" 201 "reserved" 202 "reserved" 203 "reserved" 204 "reserved" 205 "reserved" 206 "reserved" 207 "reserved" 208 "reserved" 209 "reserved" 210 "reserved" 211 "reserved" 212 "reserved" 213 "reserved" 214 "reserved" 215 "reserved" 216 "reserved" 217 "reserved" 218 "reserved" 219 "reserved" 220 "reserved" 221 "reserved" 222 "reserved" 223 "reserved" 224 "reserved" 225 "reserved" 226 "reserved" 227 "reserved" 228 "reserved" 229 "reserved" 230 "reserved" 231 "reserved" 232 "reserved" 233 "reserved" 234 "reserved" 235 "reserved" 236 "reserved" 237 "reserved" 238 "reserved" 239 "reserved" 240 "reserved" 241 "reserved" 242 "reserved" 243 "reserved" 244 "reserved" 245 "reserved" 246 "reserved" 247 "reserved" 248 "reserved" 249 "reserved" 250 "reserved" 251 "reserved" 252 "reserved" 253 "reserved" 254 "reserved" 255 "no command" ;
+VAL_ 295 I_ESP_VehSpdVD 0 "NotInitialized" 1 "valid" 2 "Invalid" 3 "Reserved" ;
+VAL_ 279 I_LDCU_ExterTempVD 0 "Notvalid" 1 "Valid" ;
+
+
+
+

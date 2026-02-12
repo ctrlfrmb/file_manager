@@ -1,0 +1,626 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Upper_Computer DrvCtrlBox
+VAL_TABLE_ Channel_State 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_TABLE_ Channel_Off_Diag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_TABLE_ OV 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_TABLE_ PVDD_OV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_TABLE_ PVDD_UV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_TABLE_ nFault_State 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_TABLE_ Device_Err 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_TABLE_ Device_ID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_TABLE_ Chip_Num 1 "故障信息归属于控制vout2-3的芯片" 0 "故障信息归属于控制vout0-1的芯片" ;
+VAL_TABLE_ Peak_Time 15 "最小230.8ms，最大284ms" 14 "最小115.4ms，最大142ms" 13 "最小107.9ms，最大132.9ms" 12 "最小100.5ms，最大123.8ms" 11 "最小93.8ms，最大115.2ms" 10 "最小86.7ms，最大106.5ms" 9 "最小79.3ms，最大97.4ms" 8 "最小72.2ms，最大88.8ms" 7 "最小64.7ms，最大79.7ms" 6 "最小57.7ms，最大71ms" 5 "最小50.2ms，最大61.9ms" 4 "最小43.3ms，最大53.3ms" 3 "最小36.1ms，最大44.4ms" 2 "最小28.8ms，最大35.5ms" 1 "最小21.6ms，最大26.7ms" 0 "最小14.4ms，最大17.8ms" ;
+VAL_TABLE_ Channel_OnOff 1 "开启控制" 0 "关闭控制" ;
+VAL_TABLE_ Dither_Type 1 "三角波信号" 0 "伪随机信号" ;
+VAL_TABLE_ Dither_SPSP 3 "随颤振中心频率±20%波动" 2 "随颤振中心频率±10%波动" 1 "随颤振中心频率±5%波动" 0 "无波动" ;
+VAL_TABLE_ Dither_Freq 31 "20000Hz" 30 "19500Hz" 29 "19000Hz" 28 "18500Hz" 27 "18000Hz" 26 "17500Hz" 25 "17000Hz" 24 "16500Hz" 23 "16000Hz" 22 "15500Hz" 21 "17500Hz" 20 "14500Hz" 19 "14000Hz" 18 "13500Hz" 17 "13000Hz" 16 "12500Hz" 15 "12000Hz" 14 "11500Hz" 13 "11000Hz" 12 "10500Hz" 11 "10000Hz" 10 "9500Hz" 9 "9000Hz" 8 "8500Hz" 7 "8000Hz" 6 "7000Hz" 5 "6000Hz" 4 "5000Hz" 3 "4000Hz" 2 "2000Hz" 1 "1000Hz" 0 "500Hz" ;
+VAL_TABLE_ Channel_Num 3 "控制VBAT3" 2 "控制VBAT2" 1 "控制VBAT1" 0 "控制VBAT0" ;
+
+
+BO_ 1791 Slot6_Diagnostic_Message: 4 DrvCtrlBox
+ SG_ Cp2PVDDUV : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2PVDDOV : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2OT : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2nFault : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2DevID : 22|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Cp2DevErr : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDUV : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDOV : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1OT : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1nFault : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevErr : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevID : 6|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Ch4Status : 24|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch4OffDiag : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch3Status : 28|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch3OffDiag : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch2Status : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch2OffDiag : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch1Status : 12|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch1OffDiag : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1535 Slot5_Diagnostic_Message: 4 DrvCtrlBox
+ SG_ Cp2PVDDUV : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2PVDDOV : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2OT : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2nFault : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2DevID : 22|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Cp2DevErr : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDUV : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDOV : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1OT : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1nFault : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevErr : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevID : 6|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Ch4Status : 24|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch4OffDiag : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch3Status : 28|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch3OffDiag : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch2Status : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch2OffDiag : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch1Status : 12|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch1OffDiag : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1279 Slot4_Diagnostic_Message: 4 DrvCtrlBox
+ SG_ Cp2PVDDUV : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2PVDDOV : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2OT : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2nFault : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2DevID : 22|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Cp2DevErr : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDUV : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDOV : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1OT : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1nFault : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevErr : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevID : 6|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Ch4Status : 24|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch4OffDiag : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch3Status : 28|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch3OffDiag : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch2Status : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch2OffDiag : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch1Status : 12|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch1OffDiag : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1023 Slot3_Diagnostic_Message: 4 DrvCtrlBox
+ SG_ Cp2PVDDUV : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2PVDDOV : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2OT : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2nFault : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2DevID : 22|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Cp2DevErr : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDUV : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDOV : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1OT : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1nFault : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevErr : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevID : 6|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Ch4Status : 24|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch4OffDiag : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch3Status : 28|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch3OffDiag : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch2Status : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch2OffDiag : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch1Status : 12|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch1OffDiag : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 767 Slot2_Diagnostic_Message: 4 DrvCtrlBox
+ SG_ Cp2PVDDUV : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2PVDDOV : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2OT : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2nFault : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2DevID : 22|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Cp2DevErr : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDUV : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDOV : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1OT : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1nFault : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevErr : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevID : 6|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Ch4Status : 24|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch4OffDiag : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch3Status : 28|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch3OffDiag : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch2Status : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch2OffDiag : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch1Status : 12|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch1OffDiag : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 511 Slot1_Diagnostic_Message: 4 DrvCtrlBox
+ SG_ Cp2PVDDUV : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2PVDDOV : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2OT : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2nFault : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp2DevID : 22|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Cp2DevErr : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDUV : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1PVDDOV : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1OT : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1nFault : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevErr : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cp1DevID : 6|2@1+ (1,0) [1|2] "" Vector__XXX
+ SG_ Ch4Status : 24|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch4OffDiag : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch3Status : 28|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch3OffDiag : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch2Status : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch2OffDiag : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Ch1Status : 12|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Ch1OffDiag : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1536 Slot6_Control_Message: 8 Upper_Computer
+ SG_ TurnOnMaxTime : 40|24@1+ (1,0) [0|16777215] "ms" Vector__XXX
+ SG_ RippleThrs : 25|3@1+ (5,15) [15|50] "%" Vector__XXX
+ SG_ PeakTime : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ PeakCur : 8|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ OnOffState : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HoldCur : 16|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ DitherType : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DitherSPSP : 37|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DitherFreq : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Channel : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1280 Slot5_Control_Message: 8 Upper_Computer
+ SG_ TurnOnMaxTime : 40|24@1+ (1,0) [0|16777215] "ms" Vector__XXX
+ SG_ RippleThrs : 25|3@1+ (5,15) [15|50] "%" Vector__XXX
+ SG_ PeakTime : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ PeakCur : 8|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ OnOffState : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HoldCur : 16|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ DitherType : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DitherSPSP : 37|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DitherFreq : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Channel : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1024 Slot4_Control_Message: 8 Upper_Computer
+ SG_ TurnOnMaxTime : 40|24@1+ (1,0) [0|16777215] "ms" Vector__XXX
+ SG_ RippleThrs : 25|3@1+ (5,15) [15|50] "%" Vector__XXX
+ SG_ PeakTime : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ PeakCur : 8|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ OnOffState : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HoldCur : 16|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ DitherType : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DitherSPSP : 37|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DitherFreq : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Channel : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 768 Slot3_Control_Message: 8 Upper_Computer
+ SG_ TurnOnMaxTime : 40|24@1+ (1,0) [0|16777215] "ms" Vector__XXX
+ SG_ RippleThrs : 25|3@1+ (5,15) [15|50] "%" Vector__XXX
+ SG_ PeakTime : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ PeakCur : 8|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ OnOffState : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HoldCur : 16|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ DitherType : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DitherSPSP : 37|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DitherFreq : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Channel : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 512 Slot2_Control_Message: 8 Upper_Computer
+ SG_ TurnOnMaxTime : 40|24@1+ (1,0) [0|16777215] "ms" Vector__XXX
+ SG_ RippleThrs : 25|3@1+ (5,15) [15|50] "%" Vector__XXX
+ SG_ PeakTime : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ PeakCur : 8|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ OnOffState : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HoldCur : 16|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ DitherType : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DitherSPSP : 37|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DitherFreq : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Channel : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 256 Slot1_Control_Message: 8 Upper_Computer
+ SG_ TurnOnMaxTime : 40|24@1+ (1,0) [0|16777215] "ms" Vector__XXX
+ SG_ RippleThrs : 25|3@1+ (5,15) [15|50] "%" Vector__XXX
+ SG_ PeakTime : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ PeakCur : 8|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ OnOffState : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HoldCur : 16|8@1+ (0.0220588235294118,0.375) [0.375|6.00000000000001] "A" Vector__XXX
+ SG_ DitherType : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DitherSPSP : 37|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DitherFreq : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Channel : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+
+
+
+CM_ BU_ Upper_Computer "上位机";
+CM_ BU_ DrvCtrlBox "ECAS电磁阀驱动测试设备";
+CM_ BO_ 1791 "插槽6的诊断报文";
+CM_ SG_ 1791 Cp2PVDDUV "芯片2的PVDD欠压标志";
+CM_ SG_ 1791 Cp2PVDDOV "芯片2的PVDD过压标志";
+CM_ SG_ 1791 Cp2OT "芯片2的过温标志";
+CM_ SG_ 1791 Cp2nFault "芯片2的nFault引脚状态";
+CM_ SG_ 1791 Cp2DevID "芯片2设备标识";
+CM_ SG_ 1791 Cp2DevErr "芯片2的DEVICE_ERR标志";
+CM_ SG_ 1791 Cp1PVDDUV "芯片1的PVDD欠压标志";
+CM_ SG_ 1791 Cp1PVDDOV "芯片1的PVDD过压标志";
+CM_ SG_ 1791 Cp1OT "芯片1的过温标志";
+CM_ SG_ 1791 Cp1nFault "芯片1的nFault引脚状态";
+CM_ SG_ 1791 Cp1DevErr "芯片1的DEVICE_ERR标志";
+CM_ SG_ 1791 Cp1DevID "芯片1设备标识";
+CM_ SG_ 1791 Ch4Status "通道4状态";
+CM_ SG_ 1791 Ch4OffDiag "通道4关闭时诊断";
+CM_ SG_ 1791 Ch3Status "通道3状态";
+CM_ SG_ 1791 Ch3OffDiag "通道3关闭时诊断";
+CM_ SG_ 1791 Ch2Status "通道2状态";
+CM_ SG_ 1791 Ch2OffDiag "通道2关闭时诊断";
+CM_ SG_ 1791 Ch1Status "通道1状态";
+CM_ SG_ 1791 Ch1OffDiag "通道1关闭时诊断";
+CM_ BO_ 1535 "插槽5的诊断报文";
+CM_ SG_ 1535 Cp2PVDDUV "芯片2的PVDD欠压标志";
+CM_ SG_ 1535 Cp2PVDDOV "芯片2的PVDD过压标志";
+CM_ SG_ 1535 Cp2OT "芯片2的过温标志";
+CM_ SG_ 1535 Cp2nFault "芯片2的nFault引脚状态";
+CM_ SG_ 1535 Cp2DevID "芯片2设备标识";
+CM_ SG_ 1535 Cp2DevErr "芯片2的DEVICE_ERR标志";
+CM_ SG_ 1535 Cp1PVDDUV "芯片1的PVDD欠压标志";
+CM_ SG_ 1535 Cp1PVDDOV "芯片1的PVDD过压标志";
+CM_ SG_ 1535 Cp1OT "芯片1的过温标志";
+CM_ SG_ 1535 Cp1nFault "芯片1的nFault引脚状态";
+CM_ SG_ 1535 Cp1DevErr "芯片1的DEVICE_ERR标志";
+CM_ SG_ 1535 Cp1DevID "芯片1设备标识";
+CM_ SG_ 1535 Ch4Status "通道4状态";
+CM_ SG_ 1535 Ch4OffDiag "通道4关闭时诊断";
+CM_ SG_ 1535 Ch3Status "通道3状态";
+CM_ SG_ 1535 Ch3OffDiag "通道3关闭时诊断";
+CM_ SG_ 1535 Ch2Status "通道2状态";
+CM_ SG_ 1535 Ch2OffDiag "通道2关闭时诊断";
+CM_ SG_ 1535 Ch1Status "通道1状态";
+CM_ SG_ 1535 Ch1OffDiag "通道1关闭时诊断";
+CM_ BO_ 1279 "插槽4的诊断报文";
+CM_ SG_ 1279 Cp2PVDDUV "芯片2的PVDD欠压标志";
+CM_ SG_ 1279 Cp2PVDDOV "芯片2的PVDD过压标志";
+CM_ SG_ 1279 Cp2OT "芯片2的过温标志";
+CM_ SG_ 1279 Cp2nFault "芯片2的nFault引脚状态";
+CM_ SG_ 1279 Cp2DevID "芯片2设备标识";
+CM_ SG_ 1279 Cp2DevErr "芯片2的DEVICE_ERR标志";
+CM_ SG_ 1279 Cp1PVDDUV "芯片1的PVDD欠压标志";
+CM_ SG_ 1279 Cp1PVDDOV "芯片1的PVDD过压标志";
+CM_ SG_ 1279 Cp1OT "芯片1的过温标志";
+CM_ SG_ 1279 Cp1nFault "芯片1的nFault引脚状态";
+CM_ SG_ 1279 Cp1DevErr "芯片1的DEVICE_ERR标志";
+CM_ SG_ 1279 Cp1DevID "芯片1设备标识";
+CM_ SG_ 1279 Ch4Status "通道4状态";
+CM_ SG_ 1279 Ch4OffDiag "通道4关闭时诊断";
+CM_ SG_ 1279 Ch3Status "通道3状态";
+CM_ SG_ 1279 Ch3OffDiag "通道3关闭时诊断";
+CM_ SG_ 1279 Ch2Status "通道2状态";
+CM_ SG_ 1279 Ch2OffDiag "通道2关闭时诊断";
+CM_ SG_ 1279 Ch1Status "通道1状态";
+CM_ SG_ 1279 Ch1OffDiag "通道1关闭时诊断";
+CM_ BO_ 1023 "插槽3的诊断报文";
+CM_ SG_ 1023 Cp2PVDDUV "芯片2的PVDD欠压标志";
+CM_ SG_ 1023 Cp2PVDDOV "芯片2的PVDD过压标志";
+CM_ SG_ 1023 Cp2OT "芯片2的过温标志";
+CM_ SG_ 1023 Cp2nFault "芯片2的nFault引脚状态";
+CM_ SG_ 1023 Cp2DevID "芯片2设备标识";
+CM_ SG_ 1023 Cp2DevErr "芯片2的DEVICE_ERR标志";
+CM_ SG_ 1023 Cp1PVDDUV "芯片1的PVDD欠压标志";
+CM_ SG_ 1023 Cp1PVDDOV "芯片1的PVDD过压标志";
+CM_ SG_ 1023 Cp1OT "芯片1的过温标志";
+CM_ SG_ 1023 Cp1nFault "芯片1的nFault引脚状态";
+CM_ SG_ 1023 Cp1DevErr "芯片1的DEVICE_ERR标志";
+CM_ SG_ 1023 Cp1DevID "芯片1设备标识";
+CM_ SG_ 1023 Ch4Status "通道4状态";
+CM_ SG_ 1023 Ch4OffDiag "通道4关闭时诊断";
+CM_ SG_ 1023 Ch3Status "通道3状态";
+CM_ SG_ 1023 Ch3OffDiag "通道3关闭时诊断";
+CM_ SG_ 1023 Ch2Status "通道2状态";
+CM_ SG_ 1023 Ch2OffDiag "通道2关闭时诊断";
+CM_ SG_ 1023 Ch1Status "通道1状态";
+CM_ SG_ 1023 Ch1OffDiag "通道1关闭时诊断";
+CM_ BO_ 767 "插槽2的诊断报文";
+CM_ SG_ 767 Cp2PVDDUV "芯片2的PVDD欠压标志";
+CM_ SG_ 767 Cp2PVDDOV "芯片2的PVDD过压标志";
+CM_ SG_ 767 Cp2OT "芯片2的过温标志";
+CM_ SG_ 767 Cp2nFault "芯片2的nFault引脚状态";
+CM_ SG_ 767 Cp2DevID "芯片2设备标识";
+CM_ SG_ 767 Cp2DevErr "芯片2的DEVICE_ERR标志";
+CM_ SG_ 767 Cp1PVDDUV "芯片1的PVDD欠压标志";
+CM_ SG_ 767 Cp1PVDDOV "芯片1的PVDD过压标志";
+CM_ SG_ 767 Cp1OT "芯片1的过温标志";
+CM_ SG_ 767 Cp1nFault "芯片1的nFault引脚状态";
+CM_ SG_ 767 Cp1DevErr "芯片1的DEVICE_ERR标志";
+CM_ SG_ 767 Cp1DevID "芯片1设备标识";
+CM_ SG_ 767 Ch4Status "通道4状态";
+CM_ SG_ 767 Ch4OffDiag "通道4关闭时诊断";
+CM_ SG_ 767 Ch3Status "通道3状态";
+CM_ SG_ 767 Ch3OffDiag "通道3关闭时诊断";
+CM_ SG_ 767 Ch2Status "通道2状态";
+CM_ SG_ 767 Ch2OffDiag "通道2关闭时诊断";
+CM_ SG_ 767 Ch1Status "通道1状态";
+CM_ SG_ 767 Ch1OffDiag "通道1关闭时诊断";
+CM_ BO_ 511 "插槽1的诊断报文";
+CM_ SG_ 511 Cp2PVDDUV "芯片2的PVDD欠压标志";
+CM_ SG_ 511 Cp2PVDDOV "芯片2的PVDD过压标志";
+CM_ SG_ 511 Cp2OT "芯片2的过温标志";
+CM_ SG_ 511 Cp2nFault "芯片2的nFault引脚状态";
+CM_ SG_ 511 Cp2DevID "芯片2设备标识";
+CM_ SG_ 511 Cp2DevErr "芯片2的DEVICE_ERR标志";
+CM_ SG_ 511 Cp1PVDDUV "芯片1的PVDD欠压标志";
+CM_ SG_ 511 Cp1PVDDOV "芯片1的PVDD过压标志";
+CM_ SG_ 511 Cp1OT "芯片1的过温标志";
+CM_ SG_ 511 Cp1nFault "芯片1的nFault引脚状态";
+CM_ SG_ 511 Cp1DevErr "芯片1的DEVICE_ERR标志";
+CM_ SG_ 511 Cp1DevID "芯片1设备标识";
+CM_ SG_ 511 Ch4Status "通道4状态";
+CM_ SG_ 511 Ch4OffDiag "通道4关闭时诊断";
+CM_ SG_ 511 Ch3Status "通道3状态";
+CM_ SG_ 511 Ch3OffDiag "通道3关闭时诊断";
+CM_ SG_ 511 Ch2Status "通道2状态";
+CM_ SG_ 511 Ch2OffDiag "通道2关闭时诊断";
+CM_ SG_ 511 Ch1Status "通道1状态";
+CM_ SG_ 511 Ch1OffDiag "通道1关闭时诊断";
+CM_ BO_ 1536 "插槽6的控制报文";
+CM_ SG_ 1536 TurnOnMaxTime "驱动开启的最大持续时间，超过该时间没有关闭则强制关闭";
+CM_ SG_ 1536 RippleThrs "Peak阶段和Hold阶段颤振的幅度，相对于Peak电流和Hold电流";
+CM_ SG_ 1536 PeakTime "Peak阶段持续时间";
+CM_ SG_ 1536 PeakCur "Peak阶段电流值";
+CM_ SG_ 1536 OnOffState "开启或关断电磁阀驱动";
+CM_ SG_ 1536 HoldCur "Hold阶段电流值";
+CM_ SG_ 1536 DitherType "颤振类型";
+CM_ SG_ 1536 DitherSPSP "颤振频率随中心频率上下波动的范围";
+CM_ SG_ 1536 DitherFreq "颤振的中心频率";
+CM_ SG_ 1536 Channel "对应驱动板上的四路控制信号VBAT0~VBAT3";
+CM_ BO_ 1280 "插槽5的控制报文";
+CM_ SG_ 1280 TurnOnMaxTime "驱动开启的最大持续时间，超过该时间没有关闭则强制关闭";
+CM_ SG_ 1280 RippleThrs "Peak阶段和Hold阶段颤振的幅度，相对于Peak电流和Hold电流";
+CM_ SG_ 1280 PeakTime "Peak阶段持续时间";
+CM_ SG_ 1280 PeakCur "Peak阶段电流值";
+CM_ SG_ 1280 OnOffState "开启或关断电磁阀驱动";
+CM_ SG_ 1280 HoldCur "Hold阶段电流值";
+CM_ SG_ 1280 DitherType "颤振类型";
+CM_ SG_ 1280 DitherSPSP "颤振频率随中心频率上下波动的范围";
+CM_ SG_ 1280 DitherFreq "颤振的中心频率";
+CM_ SG_ 1280 Channel "对应驱动板上的四路控制信号VBAT0~VBAT3";
+CM_ BO_ 1024 "插槽4的控制报文";
+CM_ SG_ 1024 TurnOnMaxTime "驱动开启的最大持续时间，超过该时间没有关闭则强制关闭";
+CM_ SG_ 1024 RippleThrs "Peak阶段和Hold阶段颤振的幅度，相对于Peak电流和Hold电流";
+CM_ SG_ 1024 PeakTime "Peak阶段持续时间";
+CM_ SG_ 1024 PeakCur "Peak阶段电流值";
+CM_ SG_ 1024 OnOffState "开启或关断电磁阀驱动";
+CM_ SG_ 1024 HoldCur "Hold阶段电流值";
+CM_ SG_ 1024 DitherType "颤振类型";
+CM_ SG_ 1024 DitherSPSP "颤振频率随中心频率上下波动的范围";
+CM_ SG_ 1024 DitherFreq "颤振的中心频率";
+CM_ SG_ 1024 Channel "对应驱动板上的四路控制信号VBAT0~VBAT3";
+CM_ BO_ 768 "插槽3的控制报文";
+CM_ SG_ 768 TurnOnMaxTime "驱动开启的最大持续时间，超过该时间没有关闭则强制关闭";
+CM_ SG_ 768 RippleThrs "Peak阶段和Hold阶段颤振的幅度，相对于Peak电流和Hold电流";
+CM_ SG_ 768 PeakTime "Peak阶段持续时间";
+CM_ SG_ 768 PeakCur "Peak阶段电流值";
+CM_ SG_ 768 OnOffState "开启或关断电磁阀驱动";
+CM_ SG_ 768 HoldCur "Hold阶段电流值";
+CM_ SG_ 768 DitherType "颤振类型";
+CM_ SG_ 768 DitherSPSP "颤振频率随中心频率上下波动的范围";
+CM_ SG_ 768 DitherFreq "颤振的中心频率";
+CM_ SG_ 768 Channel "对应驱动板上的四路控制信号VBAT0~VBAT3";
+CM_ BO_ 512 "插槽2的控制报文";
+CM_ SG_ 512 TurnOnMaxTime "驱动开启的最大持续时间，超过该时间没有关闭则强制关闭";
+CM_ SG_ 512 RippleThrs "Peak阶段和Hold阶段颤振的幅度，相对于Peak电流和Hold电流";
+CM_ SG_ 512 PeakTime "Peak阶段持续时间";
+CM_ SG_ 512 PeakCur "Peak阶段电流值";
+CM_ SG_ 512 OnOffState "开启或关断电磁阀驱动";
+CM_ SG_ 512 HoldCur "Hold阶段电流值";
+CM_ SG_ 512 DitherType "颤振类型";
+CM_ SG_ 512 DitherSPSP "颤振频率随中心频率上下波动的范围";
+CM_ SG_ 512 DitherFreq "颤振的中心频率";
+CM_ SG_ 512 Channel "对应驱动板上的四路控制信号VBAT0~VBAT3";
+CM_ BO_ 256 "插槽1的控制报文";
+CM_ SG_ 256 TurnOnMaxTime "驱动开启的最大持续时间，超过该时间没有关闭则强制关闭";
+CM_ SG_ 256 RippleThrs "Peak阶段和Hold阶段颤振的幅度，相对于Peak电流和Hold电流";
+CM_ SG_ 256 PeakTime "Peak阶段持续时间";
+CM_ SG_ 256 PeakCur "Peak阶段电流值";
+CM_ SG_ 256 OnOffState "开启或关断电磁阀驱动";
+CM_ SG_ 256 HoldCur "Hold阶段电流值";
+CM_ SG_ 256 DitherType "颤振类型";
+CM_ SG_ 256 DitherSPSP "颤振频率随中心频率上下波动的范围";
+CM_ SG_ 256 DitherFreq "颤振的中心频率";
+CM_ SG_ 256 Channel "对应驱动板上的四路控制信号VBAT0~VBAT3";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "ECASTC";
+BA_ "NmStationAddress" BU_ Upper_Computer 1;
+VAL_ 1791 Cp2PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 1791 Cp2PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 1791 Cp2OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 1791 Cp2nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 1791 Cp2DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 1791 Cp2DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 1791 Cp1PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 1791 Cp1PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 1791 Cp1OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 1791 Cp1nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 1791 Cp1DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 1791 Cp1DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 1791 Ch4Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1791 Ch4OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1791 Ch3Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1791 Ch3OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1791 Ch2Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1791 Ch2OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1791 Ch1Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1791 Ch1OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1535 Cp2PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 1535 Cp2PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 1535 Cp2OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 1535 Cp2nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 1535 Cp2DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 1535 Cp2DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 1535 Cp1PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 1535 Cp1PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 1535 Cp1OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 1535 Cp1nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 1535 Cp1DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 1535 Cp1DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 1535 Ch4Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1535 Ch4OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1535 Ch3Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1535 Ch3OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1535 Ch2Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1535 Ch2OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1535 Ch1Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1535 Ch1OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1279 Cp2PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 1279 Cp2PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 1279 Cp2OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 1279 Cp2nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 1279 Cp2DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 1279 Cp2DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 1279 Cp1PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 1279 Cp1PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 1279 Cp1OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 1279 Cp1nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 1279 Cp1DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 1279 Cp1DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 1279 Ch4Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1279 Ch4OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1279 Ch3Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1279 Ch3OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1279 Ch2Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1279 Ch2OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1279 Ch1Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1279 Ch1OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1023 Cp2PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 1023 Cp2PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 1023 Cp2OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 1023 Cp2nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 1023 Cp2DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 1023 Cp2DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 1023 Cp1PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 1023 Cp1PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 1023 Cp1OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 1023 Cp1nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 1023 Cp1DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 1023 Cp1DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 1023 Ch4Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1023 Ch4OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1023 Ch3Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1023 Ch3OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1023 Ch2Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1023 Ch2OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1023 Ch1Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 1023 Ch1OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 767 Cp2PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 767 Cp2PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 767 Cp2OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 767 Cp2nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 767 Cp2DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 767 Cp2DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 767 Cp1PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 767 Cp1PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 767 Cp1OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 767 Cp1nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 767 Cp1DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 767 Cp1DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 767 Ch4Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 767 Ch4OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 767 Ch3Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 767 Ch3OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 767 Ch2Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 767 Ch2OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 767 Ch1Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 767 Ch1OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 511 Cp2PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 511 Cp2PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 511 Cp2OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 511 Cp2nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 511 Cp2DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 511 Cp2DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 511 Cp1PVDDUV 1 "芯片检测到PVDD欠压" 0 "芯片未检测到PVDD欠压" ;
+VAL_ 511 Cp1PVDDOV 1 "芯片检测到PVDD过压" 0 "芯片未检测到PVDD过压" ;
+VAL_ 511 Cp1OT 1 "芯片检测到过温" 0 "芯片未检测到过温" ;
+VAL_ 511 Cp1nFault 1 "芯片无nFAULT断言" 0 "芯片出现nFAULT断言" ;
+VAL_ 511 Cp1DevErr 1 "芯片产生DEVICE_ERR" 0 "芯片无DEVICE_ERR" ;
+VAL_ 511 Cp1DevID 2 "生产样品，设备选用的批次" 1 "预生产样品，设备未选用的批次" ;
+VAL_ 511 Ch4Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 511 Ch4OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 511 Ch3Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 511 Ch3OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 511 Ch2Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 511 Ch2OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 511 Ch1Status 7 "已发送开启指令，由于某种OV未开启" 6 "已发送开启指令，由于UCLO未开启" 5 "已发送开启指令，由于PVDDUV未开启" 4 "已发送开启指令，由于OCP_HS未开启" 3 "已发送开启指令，由于OCP_LS未开启" 2 "已发送开启指令，由于TSD未开启" 1 "已发送开启指令，正常运行" 0 "已发送关闭指令" ;
+VAL_ 511 Ch1OffDiag 1 "通道上负载短路" 0 "通道上负载无异常" ;
+VAL_ 1536 PeakTime 15 "最小230.8ms，最大284ms" 14 "最小115.4ms，最大142ms" 13 "最小107.9ms，最大132.9ms" 12 "最小100.5ms，最大123.8ms" 11 "最小93.8ms，最大115.2ms" 10 "最小86.7ms，最大106.5ms" 9 "最小79.3ms，最大97.4ms" 8 "最小72.2ms，最大88.8ms" 7 "最小64.7ms，最大79.7ms" 6 "最小57.7ms，最大71ms" 5 "最小50.2ms，最大61.9ms" 4 "最小43.3ms，最大53.3ms" 3 "最小36.1ms，最大44.4ms" 2 "最小28.8ms，最大35.5ms" 1 "最小21.6ms，最大26.7ms" 0 "最小14.4ms，最大17.8ms" ;
+VAL_ 1536 OnOffState 1 "开启控制" 0 "关闭控制" ;
+VAL_ 1536 DitherType 1 "三角波信号" 0 "伪随机信号" ;
+VAL_ 1536 DitherSPSP 3 "随颤振中心频率±20%波动" 2 "随颤振中心频率±10%波动" 1 "随颤振中心频率±5%波动" 0 "无波动" ;
+VAL_ 1536 DitherFreq 31 "20000Hz" 30 "19500Hz" 29 "19000Hz" 28 "18500Hz" 27 "18000Hz" 26 "17500Hz" 25 "17000Hz" 24 "16500Hz" 23 "16000Hz" 22 "15500Hz" 21 "17500Hz" 20 "14500Hz" 19 "14000Hz" 18 "13500Hz" 17 "13000Hz" 16 "12500Hz" 15 "12000Hz" 14 "11500Hz" 13 "11000Hz" 12 "10500Hz" 11 "10000Hz" 10 "9500Hz" 9 "9000Hz" 8 "8500Hz" 7 "8000Hz" 6 "7000Hz" 5 "6000Hz" 4 "5000Hz" 3 "4000Hz" 2 "2000Hz" 1 "1000Hz" 0 "500Hz" ;
+VAL_ 1536 Channel 3 "控制VBAT3" 2 "控制VBAT2" 1 "控制VBAT1" 0 "控制VBAT0" ;
+VAL_ 1280 PeakTime 15 "最小230.8ms，最大284ms" 14 "最小115.4ms，最大142ms" 13 "最小107.9ms，最大132.9ms" 12 "最小100.5ms，最大123.8ms" 11 "最小93.8ms，最大115.2ms" 10 "最小86.7ms，最大106.5ms" 9 "最小79.3ms，最大97.4ms" 8 "最小72.2ms，最大88.8ms" 7 "最小64.7ms，最大79.7ms" 6 "最小57.7ms，最大71ms" 5 "最小50.2ms，最大61.9ms" 4 "最小43.3ms，最大53.3ms" 3 "最小36.1ms，最大44.4ms" 2 "最小28.8ms，最大35.5ms" 1 "最小21.6ms，最大26.7ms" 0 "最小14.4ms，最大17.8ms" ;
+VAL_ 1280 OnOffState 1 "开启控制" 0 "关闭控制" ;
+VAL_ 1280 DitherType 1 "三角波信号" 0 "伪随机信号" ;
+VAL_ 1280 DitherSPSP 3 "随颤振中心频率±20%波动" 2 "随颤振中心频率±10%波动" 1 "随颤振中心频率±5%波动" 0 "无波动" ;
+VAL_ 1280 DitherFreq 31 "20000Hz" 30 "19500Hz" 29 "19000Hz" 28 "18500Hz" 27 "18000Hz" 26 "17500Hz" 25 "17000Hz" 24 "16500Hz" 23 "16000Hz" 22 "15500Hz" 21 "17500Hz" 20 "14500Hz" 19 "14000Hz" 18 "13500Hz" 17 "13000Hz" 16 "12500Hz" 15 "12000Hz" 14 "11500Hz" 13 "11000Hz" 12 "10500Hz" 11 "10000Hz" 10 "9500Hz" 9 "9000Hz" 8 "8500Hz" 7 "8000Hz" 6 "7000Hz" 5 "6000Hz" 4 "5000Hz" 3 "4000Hz" 2 "2000Hz" 1 "1000Hz" 0 "500Hz" ;
+VAL_ 1280 Channel 3 "控制VBAT3" 2 "控制VBAT2" 1 "控制VBAT1" 0 "控制VBAT0" ;
+VAL_ 1024 PeakTime 15 "最小230.8ms，最大284ms" 14 "最小115.4ms，最大142ms" 13 "最小107.9ms，最大132.9ms" 12 "最小100.5ms，最大123.8ms" 11 "最小93.8ms，最大115.2ms" 10 "最小86.7ms，最大106.5ms" 9 "最小79.3ms，最大97.4ms" 8 "最小72.2ms，最大88.8ms" 7 "最小64.7ms，最大79.7ms" 6 "最小57.7ms，最大71ms" 5 "最小50.2ms，最大61.9ms" 4 "最小43.3ms，最大53.3ms" 3 "最小36.1ms，最大44.4ms" 2 "最小28.8ms，最大35.5ms" 1 "最小21.6ms，最大26.7ms" 0 "最小14.4ms，最大17.8ms" ;
+VAL_ 1024 OnOffState 1 "开启控制" 0 "关闭控制" ;
+VAL_ 1024 DitherType 1 "三角波信号" 0 "伪随机信号" ;
+VAL_ 1024 DitherSPSP 3 "随颤振中心频率±20%波动" 2 "随颤振中心频率±10%波动" 1 "随颤振中心频率±5%波动" 0 "无波动" ;
+VAL_ 1024 DitherFreq 31 "20000Hz" 30 "19500Hz" 29 "19000Hz" 28 "18500Hz" 27 "18000Hz" 26 "17500Hz" 25 "17000Hz" 24 "16500Hz" 23 "16000Hz" 22 "15500Hz" 21 "17500Hz" 20 "14500Hz" 19 "14000Hz" 18 "13500Hz" 17 "13000Hz" 16 "12500Hz" 15 "12000Hz" 14 "11500Hz" 13 "11000Hz" 12 "10500Hz" 11 "10000Hz" 10 "9500Hz" 9 "9000Hz" 8 "8500Hz" 7 "8000Hz" 6 "7000Hz" 5 "6000Hz" 4 "5000Hz" 3 "4000Hz" 2 "2000Hz" 1 "1000Hz" 0 "500Hz" ;
+VAL_ 1024 Channel 3 "控制VBAT3" 2 "控制VBAT2" 1 "控制VBAT1" 0 "控制VBAT0" ;
+VAL_ 768 PeakTime 15 "最小230.8ms，最大284ms" 14 "最小115.4ms，最大142ms" 13 "最小107.9ms，最大132.9ms" 12 "最小100.5ms，最大123.8ms" 11 "最小93.8ms，最大115.2ms" 10 "最小86.7ms，最大106.5ms" 9 "最小79.3ms，最大97.4ms" 8 "最小72.2ms，最大88.8ms" 7 "最小64.7ms，最大79.7ms" 6 "最小57.7ms，最大71ms" 5 "最小50.2ms，最大61.9ms" 4 "最小43.3ms，最大53.3ms" 3 "最小36.1ms，最大44.4ms" 2 "最小28.8ms，最大35.5ms" 1 "最小21.6ms，最大26.7ms" 0 "最小14.4ms，最大17.8ms" ;
+VAL_ 768 OnOffState 1 "开启控制" 0 "关闭控制" ;
+VAL_ 768 DitherType 1 "三角波信号" 0 "伪随机信号" ;
+VAL_ 768 DitherSPSP 3 "随颤振中心频率±20%波动" 2 "随颤振中心频率±10%波动" 1 "随颤振中心频率±5%波动" 0 "无波动" ;
+VAL_ 768 DitherFreq 31 "20000Hz" 30 "19500Hz" 29 "19000Hz" 28 "18500Hz" 27 "18000Hz" 26 "17500Hz" 25 "17000Hz" 24 "16500Hz" 23 "16000Hz" 22 "15500Hz" 21 "17500Hz" 20 "14500Hz" 19 "14000Hz" 18 "13500Hz" 17 "13000Hz" 16 "12500Hz" 15 "12000Hz" 14 "11500Hz" 13 "11000Hz" 12 "10500Hz" 11 "10000Hz" 10 "9500Hz" 9 "9000Hz" 8 "8500Hz" 7 "8000Hz" 6 "7000Hz" 5 "6000Hz" 4 "5000Hz" 3 "4000Hz" 2 "2000Hz" 1 "1000Hz" 0 "500Hz" ;
+VAL_ 768 Channel 3 "控制VBAT3" 2 "控制VBAT2" 1 "控制VBAT1" 0 "控制VBAT0" ;
+VAL_ 512 PeakTime 15 "最小230.8ms，最大284ms" 14 "最小115.4ms，最大142ms" 13 "最小107.9ms，最大132.9ms" 12 "最小100.5ms，最大123.8ms" 11 "最小93.8ms，最大115.2ms" 10 "最小86.7ms，最大106.5ms" 9 "最小79.3ms，最大97.4ms" 8 "最小72.2ms，最大88.8ms" 7 "最小64.7ms，最大79.7ms" 6 "最小57.7ms，最大71ms" 5 "最小50.2ms，最大61.9ms" 4 "最小43.3ms，最大53.3ms" 3 "最小36.1ms，最大44.4ms" 2 "最小28.8ms，最大35.5ms" 1 "最小21.6ms，最大26.7ms" 0 "最小14.4ms，最大17.8ms" ;
+VAL_ 512 OnOffState 1 "开启控制" 0 "关闭控制" ;
+VAL_ 512 DitherType 1 "三角波信号" 0 "伪随机信号" ;
+VAL_ 512 DitherSPSP 3 "随颤振中心频率±20%波动" 2 "随颤振中心频率±10%波动" 1 "随颤振中心频率±5%波动" 0 "无波动" ;
+VAL_ 512 DitherFreq 31 "20000Hz" 30 "19500Hz" 29 "19000Hz" 28 "18500Hz" 27 "18000Hz" 26 "17500Hz" 25 "17000Hz" 24 "16500Hz" 23 "16000Hz" 22 "15500Hz" 21 "17500Hz" 20 "14500Hz" 19 "14000Hz" 18 "13500Hz" 17 "13000Hz" 16 "12500Hz" 15 "12000Hz" 14 "11500Hz" 13 "11000Hz" 12 "10500Hz" 11 "10000Hz" 10 "9500Hz" 9 "9000Hz" 8 "8500Hz" 7 "8000Hz" 6 "7000Hz" 5 "6000Hz" 4 "5000Hz" 3 "4000Hz" 2 "2000Hz" 1 "1000Hz" 0 "500Hz" ;
+VAL_ 512 Channel 3 "控制VBAT3" 2 "控制VBAT2" 1 "控制VBAT1" 0 "控制VBAT0" ;
+VAL_ 256 PeakTime 15 "最小230.8ms，最大284ms" 14 "最小115.4ms，最大142ms" 13 "最小107.9ms，最大132.9ms" 12 "最小100.5ms，最大123.8ms" 11 "最小93.8ms，最大115.2ms" 10 "最小86.7ms，最大106.5ms" 9 "最小79.3ms，最大97.4ms" 8 "最小72.2ms，最大88.8ms" 7 "最小64.7ms，最大79.7ms" 6 "最小57.7ms，最大71ms" 5 "最小50.2ms，最大61.9ms" 4 "最小43.3ms，最大53.3ms" 3 "最小36.1ms，最大44.4ms" 2 "最小28.8ms，最大35.5ms" 1 "最小21.6ms，最大26.7ms" 0 "最小14.4ms，最大17.8ms" ;
+VAL_ 256 OnOffState 1 "开启控制" 0 "关闭控制" ;
+VAL_ 256 DitherType 1 "三角波信号" 0 "伪随机信号" ;
+VAL_ 256 DitherSPSP 3 "随颤振中心频率±20%波动" 2 "随颤振中心频率±10%波动" 1 "随颤振中心频率±5%波动" 0 "无波动" ;
+VAL_ 256 DitherFreq 31 "20000Hz" 30 "19500Hz" 29 "19000Hz" 28 "18500Hz" 27 "18000Hz" 26 "17500Hz" 25 "17000Hz" 24 "16500Hz" 23 "16000Hz" 22 "15500Hz" 21 "17500Hz" 20 "14500Hz" 19 "14000Hz" 18 "13500Hz" 17 "13000Hz" 16 "12500Hz" 15 "12000Hz" 14 "11500Hz" 13 "11000Hz" 12 "10500Hz" 11 "10000Hz" 10 "9500Hz" 9 "9000Hz" 8 "8500Hz" 7 "8000Hz" 6 "7000Hz" 5 "6000Hz" 4 "5000Hz" 3 "4000Hz" 2 "2000Hz" 1 "1000Hz" 0 "500Hz" ;
+VAL_ 256 Channel 3 "控制VBAT3" 2 "控制VBAT2" 1 "控制VBAT1" 0 "控制VBAT0" ;
+

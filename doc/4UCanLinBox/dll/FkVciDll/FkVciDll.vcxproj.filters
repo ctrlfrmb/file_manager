@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\Device">
+      <UniqueIdentifier>{b0d689fb-2d50-4970-b3c6-3c889e4b83e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Device">
+      <UniqueIdentifier>{12da2c4c-f1ff-4cdc-a254-223cf6fbda20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Protocol">
+      <UniqueIdentifier>{9ce21814-4be0-4220-a84c-00fab8aa1360}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Protocol">
+      <UniqueIdentifier>{97a77d3c-70db-423e-8581-212a94fbe609}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseDevice.h">
+      <Filter>头文件\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseProtocol.h">
+      <Filter>头文件\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="FkVciDll.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VciDebugCf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LanDevice.h">
+      <Filter>头文件\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="AcanProtocol.h">
+      <Filter>头文件\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="j2534_v0404.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CanProtocol.h">
+      <Filter>头文件\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="LinProtocol.h">
+      <Filter>头文件\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="SentProtocol.h">
+      <Filter>头文件\Protocol</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseDevice.cpp">
+      <Filter>源文件\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseProtocol.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="LanDevice.cpp">
+      <Filter>源文件\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="FkVci.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AcanProtocol.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="CanProtocol.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="LinProtocol.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="SentProtocol.cpp">
+      <Filter>源文件\Protocol</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FkVci.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>

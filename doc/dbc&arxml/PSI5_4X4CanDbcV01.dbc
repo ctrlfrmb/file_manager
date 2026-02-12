@@ -1,0 +1,693 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: PSI5_Manager
+VAL_TABLE_ EEPFlag 1 "Write Cfg To EEP" 0 "Load Cfg From EEP" ;
+VAL_TABLE_ CurrentLevel 3 "25mA" 2 "20mA" 1 "15mA" 0 "10mA" ;
+VAL_TABLE_ CheckType 1 "EVEN" 0 "CRC3" ;
+VAL_TABLE_ PSI5VERSION 7 "PSI2.X_SerInit" 6 "PSI2.X_DataInit" 4 "PSI1.X" ;
+VAL_TABLE_ ENABLE 1 "ENABLE" 0 "DISABLE" ;
+VAL_TABLE_ PSIErrorDetection 1 "ODD" 0 "CRC3" ;
+VAL_TABLE_ PSI5_Speed 1 "189Kbps" 0 "125Kbps" ;
+VAL_TABLE_ PSI5Mode 3 "Triggered Synchronous Mode" 2 "Synchronous Daisy Chain Bus Mode" 1 "Synchronous Universal Bus Mode" 0 "Synchronous Parallel Bus Mode" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ CustomD2 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+
+BO_ 317 Chanl4Slot4CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 301 Chanl3Slot4CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 285 Chanl2Slot4CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 316 Chanl4Slot3CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 300 Chanl3Slot3CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 284 Chanl2Slot3CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 315 Chanl4Slot2CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 299 Chanl3Slot2CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 283 Chanl2Slot2CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 314 Chanl4Slot1CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 298 Chanl3Slot1CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 282 Chanl2Slot1CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 269 Chanl1Slot4CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 268 Chanl1Slot3CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 267 Chanl1Slot2CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 310 Chanl4Slot4Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 309 Chanl4Slot3Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 308 Chanl4Slot2Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 294 Chanl3Slot4Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 293 Chanl3Slot3Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 292 Chanl3Slot2Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 278 Chanl2Slot4Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 277 Chanl2Slot3Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 276 Chanl2Slot2Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 262 Chanl1Slot4Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 261 Chanl1Slot3Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 260 Chanl1Slot2Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 307 Chanl4Slot1Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 291 Chanl3Slot1Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 275 Chanl2Slot1Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 306 Chanl4SlotCfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 290 Chanl3SlotCfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 274 Chanl2SlotCfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 304 Chanl4Cfg: 4 PSI5_Manager
+ SG_ ChanlTimePar : 16|16@1+ (1,0) [0|50000] "us" Vector__XXX
+ SG_ ChanlBuads : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ChanlMode : 6|1@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ ChanlEn : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 288 Chanl3Cfg: 4 PSI5_Manager
+ SG_ ChanlTimePar : 16|16@1+ (1,0) [0|50000] "us" Vector__XXX
+ SG_ ChanlBuads : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ChanlMode : 6|1@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ ChanlEn : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 272 Chanl2Cfg: 4 PSI5_Manager
+ SG_ ChanlTimePar : 16|16@1+ (1,0) [0|50000] "us" Vector__XXX
+ SG_ ChanlBuads : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ChanlMode : 6|1@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ ChanlEn : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 305 Chanl4AnalogCfg: 6 PSI5_Manager
+ SG_ SinkCurrent : 32|16@1+ (0.1,0) [0|30] "mA" Vector__XXX
+ SG_ QuiescentCurrent : 16|16@1+ (0.1,0) [0|20] "mA" Vector__XXX
+ SG_ PulseComPareVol_mV : 0|16@1+ (1,0) [5000|12000] "mV" Vector__XXX
+
+BO_ 289 Chanl3AnalogCfg: 6 PSI5_Manager
+ SG_ SinkCurrent : 32|16@1+ (0.1,0) [0|30] "mA" Vector__XXX
+ SG_ QuiescentCurrent : 16|16@1+ (0.1,0) [0|20] "mA" Vector__XXX
+ SG_ PulseComPareVol_mV : 0|16@1+ (1,0) [5000|12000] "mV" Vector__XXX
+
+BO_ 273 Chanl2AnalogCfg: 6 PSI5_Manager
+ SG_ SinkCurrent : 32|16@1+ (0.1,0) [0|30] "mA" Vector__XXX
+ SG_ QuiescentCurrent : 16|16@1+ (0.1,0) [0|20] "mA" Vector__XXX
+ SG_ PulseComPareVol_mV : 0|16@1+ (1,0) [5000|12000] "mV" Vector__XXX
+
+BO_ 1023 StoreCfgToEEP: 1 PSI5_Manager
+ SG_ EEP_OperationMode : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 767 WriteSlotInitData: 4 PSI5_Manager
+ SG_ InitIndex : 16|8@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ InitData : 24|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ SlotIndex : 8|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ ChanlIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+
+BO_ 511 WriteSlotStus: 6 PSI5_Manager
+ SG_ StatusVal : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ StatusMask : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ SlotIndex : 8|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ ChanlIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+
+BO_ 256 Chanl1Cfg: 4 PSI5_Manager
+ SG_ ChanlTimePar : 16|16@1+ (1,0) [0|50000] "us" Vector__XXX
+ SG_ ChanlBuads : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ChanlMode : 6|1@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ ChanlEn : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 259 Chanl1Slot1Data: 4 PSI5_Manager
+ SG_ SensorData : 0|32@1+ (1,0) [0|268435455] "" Vector__XXX
+
+BO_ 257 Chanl1AnalogCfg: 6 PSI5_Manager
+ SG_ SinkCurrent : 32|16@1+ (0.1,0) [0|30] "mA" Vector__XXX
+ SG_ QuiescentCurrent : 16|16@1+ (0.1,0) [0|20] "mA" Vector__XXX
+ SG_ PulseComPareVol_mV : 0|16@1+ (1,0) [5000|12000] "mV" Vector__XXX
+
+BO_ 266 Chanl1Slot1CfgData: 8 PSI5_Manager
+ SG_ SlotIndex : 0|8@1- (1,0) [0|3] "" Vector__XXX
+ SG_ DataLen : 24|8@1+ (1,0) [8|16] "" Vector__XXX
+ SG_ CheckType : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutPutDelayBySync : 48|16@1+ (1,0) [5|65535] "us" Vector__XXX
+ SG_ MessageLen : 16|8@1+ (1,0) [8|32] "" Vector__XXX
+ SG_ InitIdNums : 40|8@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ InitCycles : 32|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SlotEnable : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "CanDbc";
+BA_ "GenMsgSendType" BO_ 317 7;
+BA_ "GenMsgSendType" BO_ 301 7;
+BA_ "GenMsgSendType" BO_ 285 7;
+BA_ "GenMsgSendType" BO_ 316 7;
+BA_ "GenMsgSendType" BO_ 300 7;
+BA_ "GenMsgSendType" BO_ 284 7;
+BA_ "GenMsgSendType" BO_ 315 7;
+BA_ "GenMsgSendType" BO_ 299 7;
+BA_ "GenMsgSendType" BO_ 283 7;
+BA_ "GenMsgSendType" BO_ 314 7;
+BA_ "GenMsgSendType" BO_ 298 7;
+BA_ "GenMsgSendType" BO_ 282 7;
+BA_ "GenMsgSendType" BO_ 269 7;
+BA_ "GenMsgSendType" BO_ 268 7;
+BA_ "GenMsgSendType" BO_ 267 7;
+BA_ "GenMsgSendType" BO_ 310 7;
+BA_ "GenMsgSendType" BO_ 309 7;
+BA_ "GenMsgSendType" BO_ 308 7;
+BA_ "GenMsgSendType" BO_ 294 7;
+BA_ "GenMsgSendType" BO_ 293 7;
+BA_ "GenMsgSendType" BO_ 292 7;
+BA_ "GenMsgSendType" BO_ 278 7;
+BA_ "GenMsgSendType" BO_ 277 7;
+BA_ "GenMsgSendType" BO_ 276 7;
+BA_ "GenMsgSendType" BO_ 262 7;
+BA_ "GenMsgSendType" BO_ 261 7;
+BA_ "GenMsgSendType" BO_ 260 7;
+BA_ "GenMsgSendType" BO_ 307 7;
+BA_ "GenMsgSendType" BO_ 291 7;
+BA_ "GenMsgSendType" BO_ 275 7;
+BA_ "GenMsgSendType" BO_ 306 7;
+BA_ "GenMsgSendType" BO_ 290 7;
+BA_ "GenMsgSendType" BO_ 274 7;
+BA_ "GenMsgSendType" BO_ 304 7;
+BA_ "GenMsgSendType" BO_ 288 7;
+BA_ "GenMsgSendType" BO_ 272 7;
+BA_ "GenMsgSendType" BO_ 305 7;
+BA_ "GenMsgSendType" BO_ 289 7;
+BA_ "GenMsgSendType" BO_ 273 7;
+BA_ "GenMsgSendType" BO_ 1023 7;
+BA_ "GenMsgSendType" BO_ 767 7;
+BA_ "GenMsgCycleTime" BO_ 767 0;
+BA_ "GenMsgSendType" BO_ 511 7;
+BA_ "GenMsgSendType" BO_ 256 7;
+BA_ "GenMsgSendType" BO_ 259 7;
+BA_ "GenMsgSendType" BO_ 257 7;
+BA_ "GenMsgSendType" BO_ 266 7;
+BA_ "GenSigSendType" SG_ 3221225472 CustomD2 1;
+BA_ "GenSigSendType" SG_ 3221225472 SlotIndex 1;
+BA_ "GenSigSendType" SG_ 317 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 317 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 317 DataLen 1;
+BA_ "GenSigSendType" SG_ 317 CheckType 1;
+BA_ "GenSigSendType" SG_ 317 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 317 MessageLen 1;
+BA_ "GenSigSendType" SG_ 317 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 317 InitCycles 1;
+BA_ "GenSigSendType" SG_ 317 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 301 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 301 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 301 DataLen 1;
+BA_ "GenSigSendType" SG_ 301 CheckType 1;
+BA_ "GenSigSendType" SG_ 301 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 301 MessageLen 1;
+BA_ "GenSigSendType" SG_ 301 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 301 InitCycles 1;
+BA_ "GenSigSendType" SG_ 301 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 285 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 285 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 285 DataLen 1;
+BA_ "GenSigSendType" SG_ 285 CheckType 1;
+BA_ "GenSigSendType" SG_ 285 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 285 MessageLen 1;
+BA_ "GenSigSendType" SG_ 285 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 285 InitCycles 1;
+BA_ "GenSigSendType" SG_ 285 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 316 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 316 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 316 DataLen 1;
+BA_ "GenSigSendType" SG_ 316 CheckType 1;
+BA_ "GenSigSendType" SG_ 316 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 316 MessageLen 1;
+BA_ "GenSigSendType" SG_ 316 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 316 InitCycles 1;
+BA_ "GenSigSendType" SG_ 316 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 300 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 300 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 300 DataLen 1;
+BA_ "GenSigSendType" SG_ 300 CheckType 1;
+BA_ "GenSigSendType" SG_ 300 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 300 MessageLen 1;
+BA_ "GenSigSendType" SG_ 300 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 300 InitCycles 1;
+BA_ "GenSigSendType" SG_ 300 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 284 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 284 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 284 DataLen 1;
+BA_ "GenSigSendType" SG_ 284 CheckType 1;
+BA_ "GenSigSendType" SG_ 284 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 284 MessageLen 1;
+BA_ "GenSigSendType" SG_ 284 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 284 InitCycles 1;
+BA_ "GenSigSendType" SG_ 284 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 315 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 315 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 315 DataLen 1;
+BA_ "GenSigSendType" SG_ 315 CheckType 1;
+BA_ "GenSigSendType" SG_ 315 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 315 MessageLen 1;
+BA_ "GenSigSendType" SG_ 315 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 315 InitCycles 1;
+BA_ "GenSigSendType" SG_ 315 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 299 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 299 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 299 DataLen 1;
+BA_ "GenSigSendType" SG_ 299 CheckType 1;
+BA_ "GenSigSendType" SG_ 299 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 299 MessageLen 1;
+BA_ "GenSigSendType" SG_ 299 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 299 InitCycles 1;
+BA_ "GenSigSendType" SG_ 299 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 283 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 283 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 283 DataLen 1;
+BA_ "GenSigSendType" SG_ 283 CheckType 1;
+BA_ "GenSigSendType" SG_ 283 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 283 MessageLen 1;
+BA_ "GenSigSendType" SG_ 283 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 283 InitCycles 1;
+BA_ "GenSigSendType" SG_ 283 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 314 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 314 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 314 DataLen 1;
+BA_ "GenSigSendType" SG_ 314 CheckType 1;
+BA_ "GenSigSendType" SG_ 314 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 314 MessageLen 1;
+BA_ "GenSigSendType" SG_ 314 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 314 InitCycles 1;
+BA_ "GenSigSendType" SG_ 314 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 298 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 298 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 298 DataLen 1;
+BA_ "GenSigSendType" SG_ 298 CheckType 1;
+BA_ "GenSigSendType" SG_ 298 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 298 MessageLen 1;
+BA_ "GenSigSendType" SG_ 298 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 298 InitCycles 1;
+BA_ "GenSigSendType" SG_ 298 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 282 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 282 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 282 DataLen 1;
+BA_ "GenSigSendType" SG_ 282 CheckType 1;
+BA_ "GenSigSendType" SG_ 282 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 282 MessageLen 1;
+BA_ "GenSigSendType" SG_ 282 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 282 InitCycles 1;
+BA_ "GenSigSendType" SG_ 282 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 269 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 269 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 269 DataLen 1;
+BA_ "GenSigSendType" SG_ 269 CheckType 1;
+BA_ "GenSigSendType" SG_ 269 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 269 MessageLen 1;
+BA_ "GenSigSendType" SG_ 269 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 269 InitCycles 1;
+BA_ "GenSigSendType" SG_ 269 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 268 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 268 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 268 DataLen 1;
+BA_ "GenSigSendType" SG_ 268 CheckType 1;
+BA_ "GenSigSendType" SG_ 268 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 268 MessageLen 1;
+BA_ "GenSigSendType" SG_ 268 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 268 InitCycles 1;
+BA_ "GenSigSendType" SG_ 268 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 267 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 267 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 267 DataLen 1;
+BA_ "GenSigSendType" SG_ 267 CheckType 1;
+BA_ "GenSigSendType" SG_ 267 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 267 MessageLen 1;
+BA_ "GenSigSendType" SG_ 267 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 267 InitCycles 1;
+BA_ "GenSigSendType" SG_ 267 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 310 SensorData 1;
+BA_ "GenSigSendType" SG_ 309 SensorData 1;
+BA_ "GenSigSendType" SG_ 308 SensorData 1;
+BA_ "GenSigSendType" SG_ 294 SensorData 1;
+BA_ "GenSigSendType" SG_ 293 SensorData 1;
+BA_ "GenSigSendType" SG_ 292 SensorData 1;
+BA_ "GenSigSendType" SG_ 278 SensorData 1;
+BA_ "GenSigSendType" SG_ 277 SensorData 1;
+BA_ "GenSigSendType" SG_ 276 SensorData 1;
+BA_ "GenSigSendType" SG_ 262 SensorData 1;
+BA_ "GenSigSendType" SG_ 261 SensorData 1;
+BA_ "GenSigSendType" SG_ 260 SensorData 1;
+BA_ "GenSigSendType" SG_ 307 SensorData 1;
+BA_ "GenSigSendType" SG_ 291 SensorData 1;
+BA_ "GenSigSendType" SG_ 275 SensorData 1;
+BA_ "GenSigSendType" SG_ 306 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 306 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 306 DataLen 1;
+BA_ "GenSigSendType" SG_ 306 CheckType 1;
+BA_ "GenSigSendType" SG_ 306 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 306 MessageLen 1;
+BA_ "GenSigSendType" SG_ 306 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 306 InitCycles 1;
+BA_ "GenSigSendType" SG_ 306 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 290 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 290 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 290 DataLen 1;
+BA_ "GenSigSendType" SG_ 290 CheckType 1;
+BA_ "GenSigSendType" SG_ 290 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 290 MessageLen 1;
+BA_ "GenSigSendType" SG_ 290 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 290 InitCycles 1;
+BA_ "GenSigSendType" SG_ 290 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 274 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 274 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 274 DataLen 1;
+BA_ "GenSigSendType" SG_ 274 CheckType 1;
+BA_ "GenSigSendType" SG_ 274 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 274 MessageLen 1;
+BA_ "GenSigSendType" SG_ 274 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 274 InitCycles 1;
+BA_ "GenSigSendType" SG_ 274 SlotEnable 1;
+BA_ "GenSigSendType" SG_ 304 ChanlTimePar 1;
+BA_ "GenSigSendType" SG_ 304 ChanlBuads 1;
+BA_ "GenSigSendType" SG_ 304 ChanlMode 1;
+BA_ "GenSigSendType" SG_ 304 ChanlEn 1;
+BA_ "GenSigSendType" SG_ 288 ChanlTimePar 1;
+BA_ "GenSigSendType" SG_ 288 ChanlBuads 1;
+BA_ "GenSigSendType" SG_ 288 ChanlMode 1;
+BA_ "GenSigSendType" SG_ 288 ChanlEn 1;
+BA_ "GenSigSendType" SG_ 272 ChanlTimePar 1;
+BA_ "GenSigSendType" SG_ 272 ChanlBuads 1;
+BA_ "GenSigSendType" SG_ 272 ChanlMode 1;
+BA_ "GenSigSendType" SG_ 272 ChanlEn 1;
+BA_ "GenSigSendType" SG_ 305 SinkCurrent 1;
+BA_ "GenSigSendType" SG_ 305 QuiescentCurrent 1;
+BA_ "GenSigSendType" SG_ 305 PulseComPareVol_mV 1;
+BA_ "GenSigSendType" SG_ 289 SinkCurrent 1;
+BA_ "GenSigSendType" SG_ 289 QuiescentCurrent 1;
+BA_ "GenSigSendType" SG_ 289 PulseComPareVol_mV 1;
+BA_ "GenSigSendType" SG_ 273 SinkCurrent 1;
+BA_ "GenSigSendType" SG_ 273 QuiescentCurrent 1;
+BA_ "GenSigSendType" SG_ 273 PulseComPareVol_mV 1;
+BA_ "GenSigSendType" SG_ 1023 EEP_OperationMode 1;
+BA_ "GenSigSendType" SG_ 767 InitIndex 1;
+BA_ "GenSigSendType" SG_ 767 InitData 1;
+BA_ "GenSigSendType" SG_ 767 SlotIndex 1;
+BA_ "GenSigSendType" SG_ 767 ChanlIndex 1;
+BA_ "GenSigSendType" SG_ 511 StatusVal 1;
+BA_ "GenSigSendType" SG_ 511 StatusMask 1;
+BA_ "GenSigSendType" SG_ 511 SlotIndex 1;
+BA_ "GenSigSendType" SG_ 511 ChanlIndex 1;
+BA_ "GenSigSendType" SG_ 256 ChanlTimePar 1;
+BA_ "GenSigSendType" SG_ 256 ChanlBuads 1;
+BA_ "GenSigSendType" SG_ 256 ChanlMode 1;
+BA_ "GenSigSendType" SG_ 256 ChanlEn 1;
+BA_ "GenSigSendType" SG_ 259 SensorData 1;
+BA_ "GenSigSendType" SG_ 257 SinkCurrent 1;
+BA_ "GenSigSendType" SG_ 257 QuiescentCurrent 1;
+BA_ "GenSigSendType" SG_ 257 PulseComPareVol_mV 1;
+BA_ "GenSigSendType" SG_ 266 SlotIndex 1;
+BA_ "GenSigInactiveValue" SG_ 266 SlotIndex 0;
+BA_ "GenSigSendType" SG_ 266 DataLen 1;
+BA_ "GenSigSendType" SG_ 266 CheckType 1;
+BA_ "GenSigSendType" SG_ 266 OutPutDelayBySync 1;
+BA_ "GenSigSendType" SG_ 266 MessageLen 1;
+BA_ "GenSigSendType" SG_ 266 InitIdNums 1;
+BA_ "GenSigSendType" SG_ 266 InitCycles 1;
+BA_ "GenSigSendType" SG_ 266 SlotEnable 1;
+VAL_ 317 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 317 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 301 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 301 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 285 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 285 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 316 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 316 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 300 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 300 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 284 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 284 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 315 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 315 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 299 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 299 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 283 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 283 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 314 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 314 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 298 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 298 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 282 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 282 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 269 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 269 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 268 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 268 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 267 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 267 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 306 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 306 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 290 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 290 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 274 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 274 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 304 ChanlBuads 1 "189Kbps" 0 "125Kbps" ;
+VAL_ 304 ChanlMode 1 "Triggered Synchronous Mode" 0 "Time Async Mode " ;
+VAL_ 304 ChanlEn 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 288 ChanlBuads 1 "189Kbps" 0 "125Kbps" ;
+VAL_ 288 ChanlMode 1 "Triggered Synchronous Mode" 0 "Time Async Mode " ;
+VAL_ 288 ChanlEn 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 272 ChanlBuads 1 "189Kbps" 0 "125Kbps" ;
+VAL_ 272 ChanlMode 1 "Triggered Synchronous Mode" 0 "Time Async Mode " ;
+VAL_ 272 ChanlEn 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 1023 EEP_OperationMode 1 "Write Cfg To EEP" 0 "Load Cfg From EEP" ;
+VAL_ 256 ChanlBuads 1 "189Kbps" 0 "125Kbps" ;
+VAL_ 256 ChanlMode 1 "Triggered Synchronous Mode" 0 "Time Async Mode " ;
+VAL_ 256 ChanlEn 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 266 CheckType 1 "CRC3" 0 "EVEN" ;
+VAL_ 266 SlotEnable 1 "ENABLE" 0 "DISABLE" ;
+

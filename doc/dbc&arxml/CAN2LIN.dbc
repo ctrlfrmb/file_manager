@@ -27,7 +27,7 @@ BS_:
 BU_: ECU PKE IP MCR
 
 BO_ 288 ECU_RPM_UP60: 8 ECU
- SG_ EngineSpeed : 8|16@0+ (1,0) [0|20000] "rpm"  PKE,IP,MCR
+ SG_ EngineSpeed : 7|16@0+ (1,0) [0|20000] "rpm"  PKE,IP,MCR
  SG_ EngineSpeedSignalFailure : 31|1@0+ (1,0) [0|1] ""  PKE,IP,MCR
 
 CM_ SG_ 288 EngineSpeedSignalFailure "0x0:Õý³£ 0x1:¹ÊÕÏ";

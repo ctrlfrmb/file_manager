@@ -1,0 +1,23 @@
+LIBRARY "FkVciDll"
+EXPORTS
+FkVciOpenDev @1
+FkVciCloseDev @2
+FkVciGetReceiveNum @3
+FkVciInitCAN @4
+FkVciResetCAN @5
+FkVciReceiveCAN @6
+FkVciTrsmitCAN @7
+FkVciConfigCAN @8
+FkVciInitLIN @9
+FkVciResetLIN @10
+FkVciRecieveLIN @11
+FkVciTrsmitLIN @12
+FkVciLinSchStart @13
+FkVciLinSchStop @14
+FkVciLinSlaveWriteMsg @15
+FkVciConfigLIN @16
+FkVciClearReceiveBuf @17
+FkVciInitCANFD @18
+FkVciInitSent @19
+FkVciResetSent @20
+FkVciRecievSent @21

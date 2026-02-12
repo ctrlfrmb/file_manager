@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>平台功能启动 - 智能网联汽车车载网络测试系统</title>
+
+<style>
+:root{
+  --bgA:#f5f9ff;
+  --bgB:#eef6ff;
+  --card: rgba(255,255,255,0.95);
+  --stroke: rgba(15,41,77,0.12);
+  --text: rgba(9,21,40,0.92);
+  --muted: rgba(9,21,40,0.62);
+  --brand1:#2b7bff;
+  --brand2:#20d3ff;
+  --shadow: 0 16px 40px rgba(12,30,60,0.12);
+  --radius:22px;
+  --max-width: 1300px;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:"Microsoft YaHei", system-ui, sans-serif;
+  background: linear-gradient(180deg,var(--bgA),var(--bgB));
+  min-height:100vh;
+}
+
+.page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.wrap{
+  width:min(var(--max-width), 92vw);
+  padding: 20px;
+}
+
+/* 顶部 */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.topbar h1{
+  font-size:24px;
+  margin:0;
+  font-weight:900;
+}
+
+.topbar span{
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* 主体 */
+.panel{
+  display:grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap:22px;
+}
+
+/* 卡片 */
+.left,.right{
+  background:var(--card);
+  border:1px solid var(--stroke);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:24px;
+}
+
+/* 左侧模块 */
+.module{
+  border:1px solid var(--stroke);
+  border-radius:18px;
+  padding:24px;
+  margin-bottom:20px;
+  cursor:pointer;
+  transition:all .2s ease;
+  height:230px; /* 增加卡片高度 */
+}
+
+.module:hover{
+  border-color:var(--brand1);
+  background:rgba(43,123,255,0.05);
+}
+
+.module.active{
+  border-color:var(--brand1);
+  background:rgba(43,123,255,0.12);
+}
+
+.module h3{
+  margin:0 0 10px 0;
+  font-size:16px;
+  font-weight:900;
+}
+
+.module p{
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.feature-list{
+  margin-top:14px;
+  padding-left:18px;
+}
+
+.feature-list li{
+  font-size:13.8px;
+  color:rgba(9,21,40,0.78);
+  margin-bottom:8px;
+  line-height:1.55;
+}
+
+/* 右侧启动区 */
+.right{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.start-title{
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:12px;
+}
+
+.start-desc{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:28px;
+  line-height:1.7;
+}
+
+.start-btn{
+  padding:16px;
+  font-size:16px;
+  font-weight:900;
+  border-radius:18px;
+  border:none;
+  color:white;
+  cursor:pointer;
+  background: linear-gradient(135deg,var(--brand1),var(--brand2));
+  box-shadow:0 14px 36px rgba(43,123,255,0.25);
+  transition:transform .15s ease, filter .15s ease;
+}
+
+.start-btn:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.05);
+}
+
+.status{
+  margin-top:24px;
+  font-size:14px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+  <div class="wrap">
+
+    <!-- 顶部 -->
+    <div class="topbar">
+      <h1>平台功能启动中心</h1>
+      <span>智能网联汽车车载网络测试系统开发创新平台</span>
+    </div>
+
+    <!-- 主体 -->
+    <div class="panel">
+
+      <!-- 左侧模块 -->
+      <div class="left">
+
+        <!-- 模块 1 -->
+        <div class="module active" onclick="selectModule(0)">
+          <h3>智能网联汽车车载网络测试系统开发创新平台软件</h3>
+          <p>平台核心软件，负责车载网络测试、诊断、分析与安全验证的统一管理。</p>
+          <ul class="feature-list">
+            <li>多协议总线仿真与通信基础（CAN / LIN / FlexRay / Ethernet）</li>
+            <li>深度诊断与 ECU 在线标定（UDS / XCP / CCP）</li>
+            <li>自动化测试引擎与二次开发接口支持</li>
+            <li>车载网络安全攻防测试与异常行为分析</li>
+            <li>全方位数据监控、分析与测试报告生成</li>
+          </ul>
+        </div>
+
+        <!-- 模块 2 -->
+        <div class="module" onclick="selectModule(1)">
+          <h3>多功能故障注入和测试平台</h3>
+          <p>面向通信链路、协议栈与系统级行为的多层次故障注入与压力测试平台。</p>
+          <ul class="feature-list">
+            <li>多通道 CAN / LIN 总线仿真与故障注入</li>
+            <li>车载以太网高性能交换与流量调度</li>
+            <li>以太网复杂流控与协议级故障模拟</li>
+            <li>WiFi 通信安全漏洞扫描与攻防测试</li>
+            <li>自动化测试管理与全景测试报告生成</li>
+          </ul>
+        </div>
+
+        <!-- 模块 3 -->
+        <div class="module" onclick="selectModule(2)">
+          <h3>无线设备诊断测试平台</h3>
+          <p>面向车载与外部无线通信设备的安全诊断、协议分析与攻防验证平台。</p>
+          <ul class="feature-list">
+            <li>全栈蓝牙协议嗅探与透视分析（BLE / BR-EDR）</li>
+            <li>高级无线攻防模拟与压力测试</li>
+            <li>海量 CVE 漏洞扫描、复现与验证</li>
+            <li>安全合规性与防护机制检测</li>
+            <li>灵活连接模式与自动化闭环管理</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- 右侧启动 -->
+      <div class="right">
+        <div class="start-title" id="title">
+          启动平台核心软件
+        </div>
+        <div class="start-desc" id="desc">
+          进入智能网联汽车车载网络测试系统开发创新平台软件，开展多协议通信、诊断、安全与自动化测试。
+        </div>
+        <button class="start-btn" onclick="startModule()">启动模块</button>
+        <div class="status" id="status">当前状态：待启动</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const titles = [
+  "启动平台核心软件",
+  "启动故障注入与测试平台",
+  "启动无线设备诊断平台"
+];
+
+const descs = [
+  "进入平台核心软件，进行车载网络通信、诊断、安全与自动化测试。",
+  "加载多功能故障注入与测试平台，构建复杂通信与协议异常场景并开展系统级联调。",
+  "进入无线设备诊断测试平台，对蓝牙/WiFi 等无线设备进行安全分析与攻防验证。"
+];
+
+function selectModule(i){
+  document.querySelectorAll(".module").forEach((m,idx)=>{
+    m.classList.toggle("active", idx===i);
+  });
+  document.getElementById("title").innerText = titles[i];
+  document.getElementById("desc").innerText = descs[i];
+  document.getElementById("status").innerText = "当前状态：待启动";
+}
+
+function startModule(){
+  document.getElementById("status").innerText = "当前状态：模块启动中……";
+}
+</script>
+</body>
+</html>
