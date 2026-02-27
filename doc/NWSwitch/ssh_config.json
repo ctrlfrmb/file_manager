@@ -1,0 +1,9 @@
+{
+    "connectionString": "root@192.168.1.120:22",
+    "isFolder": true,
+    "localPath": "D:/source/FKMaster/doc/NWSwitch/figkey",
+    "recentCommands": [
+        "/usr/local/bin/figkey/init_switch.sh"
+    ],
+    "remotePath": "/usr/local/bin/figkey/"
+}
