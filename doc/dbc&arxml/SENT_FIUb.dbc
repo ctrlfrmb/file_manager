@@ -1,0 +1,269 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: SpeedSensor SpeedMaster SentSlaver Master
+VAL_TABLE_ SpeedSensorType 1 "AK" 0 "PWM" ;
+VAL_TABLE_ SpeedFiuType 4 "Brige" 3 "Manual" 2 "ChageInfo" 1 "MissingTeeth" 0 "Normal" ;
+VAL_TABLE_ SlowIDTypeDef 1 "Enhance" 0 "Stand" ;
+VAL_TABLE_ DataBitDef 3 "BIT3" 2 "BIT2" 1 "BIT1" 0 "BIT0" ;
+VAL_TABLE_ DataByteDef 6 "DataNB5" 5 "DataNB4" 4 "DataNB3" 3 "DataNB2" 2 "DataNB1" 1 "DataNB0" 0 "DataStus" ;
+VAL_TABLE_ BrigeFormatDef 2 "D2D1D0" 1 "D0D1D2" 0 "Disable" ;
+VAL_TABLE_ Enable 1 "Enable" 0 "Disable" ;
+VAL_TABLE_ PolarityDef 1 "LOW" 0 "HIGH" ;
+VAL_TABLE_ SPC_MODE 3 "MODE_TRIGER_ID " 2 "MODE_TRIGER_SEQ" 1 "MODE_TIME_CONTINUS" 0 "MODE_TIME_MSGCNT" ;
+VAL_TABLE_ SENT_CRC_TYPE 3 "CRC_ST_F" 2 "CRC_NOST_F " 1 "CRC_ST_5" 0 "CRC_NOST_5" ;
+VAL_TABLE_ CHANL_CANMSGC_CFG 1 "ON" 0 "OFF" ;
+VAL_TABLE_ SENT_MODE 3 "Brige" 2 "Manual" 1 "Collect" 0 "Normal" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ DataBDelay : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Slot_Index : 0|8@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2147815441 SpeedInfoCh3Ch4: 8 SpeedSensor
+ SG_ Chanl4SpeedSensorType : 63|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chanl3SpeedSensorType : 31|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chanl4SpeedInfo : 48|15@1+ (1,0) [0|0] "AK/uS" Vector__XXX
+ SG_ Chanl3SpeedInfo : 16|15@1+ (1,0) [0|0] "AK/uS" Vector__XXX
+ SG_ Chanl4SpeedFrz : 32|16@1+ (1,0) [0|65535] "Hz" Vector__XXX
+ SG_ Chanl3SpeedFrz : 0|16@1+ (1,0) [0|65535] "Hz" Vector__XXX
+
+BO_ 2147815440 SpeedInfoCh1Ch2: 8 SpeedSensor
+ SG_ Chanl2SpeedSensorType : 63|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chanl1SpeedSensorType : 31|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chanl2SpeedInfo : 48|15@1+ (1,0) [0|0] "AK/uS" Vector__XXX
+ SG_ Chanl1SpeedInfo : 16|15@1+ (1,0) [0|0] "AK/uS" Vector__XXX
+ SG_ Chanl2SpeedFrz : 32|16@1+ (1,0) [0|65535] "Hz" Vector__XXX
+ SG_ Chanl1SpeedFrz : 0|16@1+ (1,0) [0|65535] "Hz" Vector__XXX
+
+BO_ 2147815936 SpeedBrige_Cfg: 24 SpeedMaster
+ SG_ SpeedFrzDelay : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpeedInfoLowPass : 96|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpeedFrzLowPass : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpeedInfoMin : 160|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpeedInfoMax : 144|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpeedFrzMin : 80|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpeedFrzMax : 64|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpeedInfoOffSet : 128|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SpeedInfoMulti : 112|16@1- (0.001,0) [0|0] "" Vector__XXX
+ SG_ SpeedFrzOffSet : 48|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SpeedFrzMulti : 32|16@1- (0.001,0) [0|0] "" Vector__XXX
+ SG_ Chanl_Index : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147815680 SpeedWrite: 8 SpeedMaster
+ SG_ SpeedInfo_MissNum : 32|16@1+ (1,0) [0|65535] "AK/Pulse/" Vector__XXX
+ SG_ SpeedFrz_TeethNum : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ChanlNum : 8|8@1+ (1,0) [1|12] "" Vector__XXX
+ SG_ SpeedFiuType : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147815424 SpeedCfg: 16 SpeedMaster
+ SG_ SpeedSensorType : 0|8@1+ (1,0) [0|1] "V" Vector__XXX
+ SG_ SpeedSensor_OutputCurrentM : 80|16@1+ (0.1,0) [1|40] "mA" Vector__XXX
+ SG_ SpeedSensor_OutputCurrentL : 96|16@1+ (0.1,0) [1|40] "mA" Vector__XXX
+ SG_ SpeedSensor_OutputCurrentH : 64|16@1+ (0.1,0) [1|40] "mA" Vector__XXX
+ SG_ SpeedSensor_CompareCurrentM : 32|16@1+ (0.1,0) [1|40] "mA" Vector__XXX
+ SG_ SpeedSensor_CompareCurrentL : 48|16@1+ (0.1,0) [1|40] "mA" Vector__XXX
+ SG_ SpeedSensor_CompareCurrentH : 16|16@1+ (0.1,0) [1|40] "mA" Vector__XXX
+ SG_ SpeedSensorPowSupply : 8|8@1+ (0.1,0) [5|16] "V" Vector__XXX
+
+BO_ 2147758081 SentWriteSlData: 7 Vector__XXX
+ SG_ SlowData : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SlowID : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SlowIDType : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Slot_Index : 16|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Sensor_Index : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chanl_Index : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147766273 SentResponseSlMsg: 8 SentSlaver
+ SG_ SlowData : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SlowID : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SlowIDType : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Sensor_Index : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chanl_Index : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147766272 SentResponseFsMsg: 12 SentSlaver
+ SG_ DLen : 16|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D6 : 80|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D5 : 72|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D4 : 64|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D3 : 56|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D2 : 48|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D1 : 40|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D0 : 32|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D_ST : 24|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Sensor_Index : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chanl_Index : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147758080 SentWriteFsData: 12 Master
+ SG_ Slot_Index : 16|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Sensor_Index : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ D_ST : 24|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D_CRC_TYPE : 80|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ D5 : 72|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D4 : 64|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D3 : 56|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D2 : 48|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D1 : 40|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ D0 : 32|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Chanl_Index : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147745792 SentSysCfg: 2 Master
+ SG_ SentChanl4Mode : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SentChanl4CanTrsEn : 11|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SentChanl3Mode : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SentChanl3CanTrsEn : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SentChanl2Mode : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SentChanl2CanTrsEn : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SentChanl1Mode : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SentChanl1CanTrsEn : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147762176 SentBrige_Cfg: 32 Master
+ SG_ BrigeCrcType : 240|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChangeAccpetCode : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataBStopByte : 68|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataBStopBit : 64|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataBStartByte : 60|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataBStartBit : 56|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataADelay : 72|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataAStopByte : 52|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataAStopBit : 48|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataAStartByte : 44|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataAStartBit : 40|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataBLowPass : 160|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataALowPass : 80|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Sensor_Index : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataBMin : 224|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataBMax : 208|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataAMin : 144|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataAMax : 128|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataBOffSet : 192|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DataBMulti : 176|16@1- (0.001,0) [0|0] "" Vector__XXX
+ SG_ DataBFormat : 36|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DataAOffSet : 112|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DataAMulti : 96|16@1- (0.001,0) [0|0] "" Vector__XXX
+ SG_ DataAFormat : 32|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChangeMaskCode : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chanl_Index : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147753984 SentSensor_Cfg: 6 Master
+ SG_ SlMsgNum : 28|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RollingFlag : 18|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NbNum : 20|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MsgTimePar : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FsMsgNum : 24|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DccFlag : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Sensor_Index : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chanl_Index : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147749888 SentChanl_Cfg: 6 Master
+ SG_ ChanlEnable : 11|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TotalsensorNum : 12|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SyncTickNum : 32|8@1+ (1,0) [0|0] "Tick" Vector__XXX
+ SG_ Senttick : 16|16@1+ (0.1,0) [0|900] "us" Vector__XXX
+ SG_ PulseTickNum : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Polarity : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SPC_Mode : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chanl_Index : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "CAN_FD";
+BA_ "VFrameFormat" BO_ 2147815441 15;
+BA_ "VFrameFormat" BO_ 2147815440 15;
+BA_ "VFrameFormat" BO_ 2147815936 15;
+BA_ "VFrameFormat" BO_ 2147815680 15;
+BA_ "VFrameFormat" BO_ 2147815424 15;
+BA_ "VFrameFormat" BO_ 2147758081 15;
+BA_ "VFrameFormat" BO_ 2147766273 15;
+BA_ "VFrameFormat" BO_ 2147766272 15;
+BA_ "VFrameFormat" BO_ 2147758080 15;
+BA_ "VFrameFormat" BO_ 2147745792 15;
+BA_ "VFrameFormat" BO_ 2147762176 15;
+BA_ "VFrameFormat" BO_ 2147753984 15;
+BA_ "VFrameFormat" BO_ 2147749888 15;
+VAL_ 2147815441 Chanl4SpeedSensorType 1 "AK" 0 "PWM" ;
+VAL_ 2147815441 Chanl3SpeedSensorType 1 "AK" 0 "PWM" ;
+VAL_ 2147815440 Chanl2SpeedSensorType 1 "AK" 0 "PWM" ;
+VAL_ 2147815440 Chanl1SpeedSensorType 1 "AK" 0 "PWM" ;
+VAL_ 2147815680 SpeedFiuType 4 "Brige" 3 "Manual" 2 "ChageInfo" 1 "MissingTeeth" 0 "Normal" ;
+VAL_ 2147815424 SpeedSensorType 1 "AK" 0 "PWM" ;
+VAL_ 2147758081 SlowIDType 1 "Enhance" 0 "Stand" ;
+VAL_ 2147766273 SlowIDType 1 "Enhance" 0 "Stand" ;
+VAL_ 2147758080 D_CRC_TYPE 3 "CRC_ST_F" 2 "CRC_NOST_F " 1 "CRC_ST_5" 0 "CRC_NOST_5" ;
+VAL_ 2147745792 SentChanl4Mode 3 "Brige" 2 "Manual" 1 "Collect" 0 "Normal" ;
+VAL_ 2147745792 SentChanl4CanTrsEn 1 "ON" 0 "OFF" ;
+VAL_ 2147745792 SentChanl3Mode 3 "Brige" 2 "Manual" 1 "Collect" 0 "Normal" ;
+VAL_ 2147745792 SentChanl3CanTrsEn 1 "ON" 0 "OFF" ;
+VAL_ 2147745792 SentChanl2Mode 3 "Brige" 2 "Manual" 1 "Collect" 0 "Normal" ;
+VAL_ 2147745792 SentChanl2CanTrsEn 1 "ON" 0 "OFF" ;
+VAL_ 2147745792 SentChanl1Mode 3 "Brige" 2 "Manual" 1 "Collect" 0 "Normal" ;
+VAL_ 2147745792 SentChanl1CanTrsEn 1 "ON" 0 "OFF" ;
+VAL_ 2147762176 BrigeCrcType 3 "CRC_ST_F" 2 "CRC_NOST_F " 1 "CRC_ST_5" 0 "CRC_NOST_5" ;
+VAL_ 2147762176 DataBStopByte 6 "DataNB5" 5 "DataNB4" 4 "DataNB3" 3 "DataNB2" 2 "DataNB1" 1 "DataNB0" 0 "DataStus" ;
+VAL_ 2147762176 DataBStopBit 3 "BIT3" 2 "BIT2" 1 "BIT1" 0 "BIT0" ;
+VAL_ 2147762176 DataBStartByte 6 "DataNB5" 5 "DataNB4" 4 "DataNB3" 3 "DataNB2" 2 "DataNB1" 1 "DataNB0" 0 "DataStus" ;
+VAL_ 2147762176 DataBStartBit 3 "BIT3" 2 "BIT2" 1 "BIT1" 0 "BIT0" ;
+VAL_ 2147762176 DataAStopByte 6 "DataNB5" 5 "DataNB4" 4 "DataNB3" 3 "DataNB2" 2 "DataNB1" 1 "DataNB0" 0 "DataStus" ;
+VAL_ 2147762176 DataAStopBit 3 "BIT3" 2 "BIT2" 1 "BIT1" 0 "BIT0" ;
+VAL_ 2147762176 DataAStartByte 6 "DataNB5" 5 "DataNB4" 4 "DataNB3" 3 "DataNB2" 2 "DataNB1" 1 "DataNB0" 0 "DataStus" ;
+VAL_ 2147762176 DataAStartBit 3 "BIT3" 2 "BIT2" 1 "BIT1" 0 "BIT0" ;
+VAL_ 2147762176 DataBFormat 2 "D2D1D0" 1 "D0D1D2" 0 "Disable" ;
+VAL_ 2147762176 DataAFormat 2 "D2D1D0" 1 "D0D1D2" 0 "Disable" ;
+VAL_ 2147749888 ChanlEnable 1 "Enable" 0 "Disable" ;
+VAL_ 2147749888 Polarity 1 "LOW" 0 "HIGH" ;
+VAL_ 2147749888 SPC_Mode 3 "MODE_TRIGER_ID " 2 "MODE_TRIGER_SEQ" 1 "MODE_TIME_CONTINUS" 0 "MODE_TIME_MSGCNT" ;
+
